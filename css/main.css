@@ -1318,12 +1318,6 @@ header.header {
 .links-of-author a {
   font-size: 0.8125em;
 }
-.links-of-author .fa,
-.links-of-author .fab,
-.links-of-author .far,
-.links-of-author .fas {
-  margin-right: 2px;
-}
 .sidebar .sidebar-button:not(:first-child) {
   margin-top: 15px;
 }
@@ -2647,7 +2641,7 @@ ul.breadcrumb li:last-child {
   vertical-align: middle;
 }
 .links-of-author a::before {
-  background: #583e1a;
+  background: #c61711;
   display: inline-block;
   margin-right: 3px;
   transform: translateY(-2px);
