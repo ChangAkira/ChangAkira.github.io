@@ -109,7 +109,62 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">1.</span> <span class="nav-text">关于C语言？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">2.</span> <span class="nav-text">什么是数字黑洞？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">3.</span> <span class="nav-text">好啦知道啦快让我看看</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">1.</span> <span class="nav-text">戳我了解更多
+421数字黑洞是很简单的数字黑洞:如果一个数是偶数，则除以二。如果是奇数，则乘三再加一。重复此步骤，最后我们一定会得到4-&gt;2-&gt;1的序列。博主第一个上手写的C语言程序不是HelloWord，而就是这个数字黑洞。
+
+1)
+    {
+        printf((a % 2 &#x3D;&#x3D; 0) ? (&quot;%d是偶数，除以二得\n&quot;) : (&quot;%d是奇数，乘三再加一得\n&quot;), a);
+        a &#x3D; a % 2 &#x3D;&#x3D; 0 ? a &#x2F; 2 : a * 3 + 1;
+            printf(&quot;%d\n&quot;, a);
+    }
+    return 0;
+}
+
+下面做出简单的解释：
+#include&lt;stdio.h&gt;
+引用一个叫做&lt;stdio.h&gt;的头文件。
+在C语言编写的程序开头会见到许多#include语句，它的作用就是“引用”或者“包含”其它的文件，这样在下文中就可以使用这些文件中的内容。以&lt;stdio.h&gt;为例，这个头文件叫做“标准输入输出”。下面我们就会看到它的作用。
+int main()
+{
+
+
+}这是一个函数，叫“主函数”。main是一个特殊的函数名——程序将从 main函数的起点开始执行。也因此，一个程序只能有一个main函数。没有它也可以，但那就像吃饭的时候没有饭一样奇怪了。这也是“主函数”的含义：它是主体部分。函数内部的语句用花括号括起来。如果只有一条语句，则括不括无所谓。
+return 0;
+return语句提供终止函数执行的方式。当return语句提供的值就是函数的返回值。当程序运行到此处时，可以看出它代表的是main函数的返回值。为0表示程序正常退出，为1表示程序异常退出。这里再提一下：在C语言中，函数也可以叫做子程序。在某些时候称其为函数比较好理解，在另一些时候称其为子程序比较好理解。若其它“子程序”异常退出，则返回主函数继续向下执行。主函数的退出也可以看作是“继续向下执行”，不过再向下就出了主函数，也就是程序的主体了。
+另外强调C语言的语句必须以“;”结尾(半角)。
+int a&#x3D;0;
+创建一个整形变量，值为0 。int是一种数据类型，叫整形。其它的数据类型会在以后介绍。（不想写了好多啊QAQ）
+太多了今天就这样吧QAQ
+
+
+</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">2.</span> <span class="nav-text">1)
+    {
+        printf((a % 2 &#x3D;&#x3D; 0) ? (&quot;%d是偶数，除以二得\n&quot;) : (&quot;%d是奇数，乘三再加一得\n&quot;), a);
+        a &#x3D; a % 2 &#x3D;&#x3D; 0 ? a &#x2F; 2 : a * 3 + 1;
+            printf(&quot;%d\n&quot;, a);
+    }
+    return 0;
+}
+
+下面做出简单的解释：
+#include&lt;stdio.h&gt;
+引用一个叫做&lt;stdio.h&gt;的头文件。
+在C语言编写的程序开头会见到许多#include语句，它的作用就是“引用”或者“包含”其它的文件，这样在下文中就可以使用这些文件中的内容。以&lt;stdio.h&gt;为例，这个头文件叫做“标准输入输出”。下面我们就会看到它的作用。
+int main()
+{
+
+
+}这是一个函数，叫“主函数”。main是一个特殊的函数名——程序将从 main函数的起点开始执行。也因此，一个程序只能有一个main函数。没有它也可以，但那就像吃饭的时候没有饭一样奇怪了。这也是“主函数”的含义：它是主体部分。函数内部的语句用花括号括起来。如果只有一条语句，则括不括无所谓。
+return 0;
+return语句提供终止函数执行的方式。当return语句提供的值就是函数的返回值。当程序运行到此处时，可以看出它代表的是main函数的返回值。为0表示程序正常退出，为1表示程序异常退出。这里再提一下：在C语言中，函数也可以叫做子程序。在某些时候称其为函数比较好理解，在另一些时候称其为子程序比较好理解。若其它“子程序”异常退出，则返回主函数继续向下执行。主函数的退出也可以看作是“继续向下执行”，不过再向下就出了主函数，也就是程序的主体了。
+另外强调C语言的语句必须以“;”结尾(半角)。
+int a&#x3D;0;
+创建一个整形变量，值为0 。int是一种数据类型，叫整形。其它的数据类型会在以后介绍。（不想写了好多啊QAQ）
+太多了今天就这样吧QAQ
+
+
+</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -243,7 +298,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-09-19 09:34:11" itemprop="dateModified" datetime="2022-09-19T09:34:11+08:00">2022-09-19</time>
+      <time title="修改时间：2022-10-09 09:21:34" itemprop="dateModified" datetime="2022-10-09T09:21:34+08:00">2022-10-09</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -275,18 +330,18 @@
         <html>
 <body>
 <span id="more"></span>
-<h2 class="前言"><a href="#前言"></a>关于C语言？</h2>
+<h2 class="前言"><a href="#前言" class="headerlink></a>关于C语言？</h2>
 <p>由于这是我C语言的第一篇博客，所以还是做一些简单的介绍：</p>
 <p><q>C语言是一门面向过程的计算机编程语言，与C++、C#、Java等面向对象编程语言有所不同。C语言的设计目标是提供一种能以简易的方式编译、处理低级存储器、仅产生少量的机器码以及不需要任何运行环境支持便能运行的编程语言。C语言描述问题比汇编语言迅速、工作量小、可读性好、易于调试、修改和移植，而代码质量与汇编语言相当。C语言一般只比汇编语言代码生成的目标程序效率低10%-20%。因此，C语言可以编写系统软件。当前阶段，在编程领域中，C语言的运用非常之多，它兼顾了高级语言和汇编语言的优点，相较于其它编程语言具有较大优势。计算机系统设计以及应用程序编写是C语言应用的两大领域。同时，C语言的普适较强，在许多计算机操作系统中都能够得到适用，且效率显著。
 C语言拥有经过了漫长发展历史的完整的理论体系，在编程语言中具有举足轻重的地位。</q></p>
 
 
-<h2 class="背景"><a href="#背景"></a>什么是数字黑洞？</h2>
+<h2 class="背景"><a href="#背景" class="headerlink></a>什么是数字黑洞？</h2>
 <p>数字黑洞，指的是某种运算，一般限定从某些整数出发，反复迭代后结果必然落入一个点或若干点的情况叫数字黑洞。</p><p>
 <a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E6%95%B0%E5%AD%97%E9%BB%91%E6%B4%9E/7386730">戳我了解更多</a></p>
 421数字黑洞是很简单的数字黑洞:如果一个数是偶数，则除以二。如果是奇数，则乘三再加一。重复此步骤，最后我们一定会得到4->2->1的序列。博主第一个上手写的C语言程序不是HelloWord，而就是这个数字黑洞。</p>
 </p>
-<h2 class="just go"><a href="#just go"></a>好啦知道啦快让我看看</h2>
+<h2 class="just go"><a href="#just go" class="headerlink></a>好啦知道啦快让我看看</h2>
 <p>用循环和判断语句可以很轻易地写出。不过，这里使用三目操作符代替了判断语句：</p>
 <pre><code>#include&lt;stdio.h&gt;
 int main()
