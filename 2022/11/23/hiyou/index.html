@@ -109,23 +109,139 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1"><span class="nav-number">1.</span> <span class="nav-text">说明</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2"><span class="nav-number">2.</span> <span class="nav-text">成品简介</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2_1"><span class="nav-number">2.1.</span> <span class="nav-text">1.0版本</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2_1_1"><span class="nav-number">2.1.1.</span> <span class="nav-text">具有显示时间和环境温度功能
-在屏幕上分别显示着当前的年、月、日、时、分、秒、环境温度（可以通过按动一次按钮在摄氏温度与华氏温度之间相互转换），以及一个数学公式（下文介绍其用途）。
-具有闹钟功能（超强力唤醒功能）
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1"><span class="nav-number">1.</span> <span class="nav-text">说明</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2"><span class="nav-number">2.</span> <span class="nav-text">成品简介</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2_1"><span class="nav-number">2.1.</span> <span class="nav-text">【1.0版本】</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2_1_1"><span class="nav-number">2.1.1.</span> <span class="nav-text">具有显示时间和环境温度功能
+在屏幕上分别显示着当前的年、月、日、时、分、秒、环境温度（可以通过按动一次红色按钮在摄氏温度与华氏温度之间相互转换），以及一个数学公式（下文介绍其用途）。
+具有闹钟功能
 使用者可以通过两个按钮来分别设置闹钟时间的时和分（24小时制）。通过DS3231时钟模块返回的当前时间值与使用者设置的时间比较，若相同则开始响铃。
+强力唤醒功能
 为了使使用者尽快清醒，想要使闹钟正确地停止，使用者必须计算一道简单的数学题（三个1~100的数字相加，数字在到达闹钟预设时间后随机给出），并按动第一个按钮对应的次数，使屏幕上显示的等式成立（屏幕上显示的等式为“x+y+z&#x3D;count”，每按动一次按钮使count值加一，count初始值为零；x、y、z均为随机数）。若不小心按过头，只能按下第二个按钮重置count值到零。
 如此一来，相信使用者能够很快清醒过来，更妙的是————使用者可以通过大力按动按钮来发泄自己的起床气！天呐真是太精妙的设计！！！！
 
-
 因为现在的作品已经进入了1.0增强版与2.0版本交界点，先前也没有留下正常的照片，所以1.0版本的图片暂缺……请直接开始查看下面的1.0增强版吧！
-</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2_1_2"><span class="nav-number">2.1.2.</span> <span class="nav-text">具有闹钟功能（超强力唤醒功能）
+
+【1.0增强版本】（红色字体为与1.0相比改进的部分，黑色字体读者可以直接略过）
+
+该版本由Arduino UNO主板一块儿、1.3寸OLED屏幕一块儿、DS3231时钟模块一个、无源蜂鸣器一个、面包板一块儿、按钮三个、10kΩ电阻三个、跳线杜邦线若干组成。
+
+具有显示时间和环境温度功能
+在屏幕上分别显示着当前的年、月、日、时、分、秒、环境温度（可以通过按动一次红色按钮在摄氏温度与华氏温度之间相互转换），以及一个数学公式（下文介绍其用途）。
+具有闹钟功能
+使用者可以通过两个按钮（黄色和绿色按钮）来分别设置闹钟时间的时和分（24小时制）。通过DS3231时钟模块返回的当前时间值与使用者设置的时间比较，若相同则开始响铃。为避免吵醒室友，闹钟音量较低，一般来讲，只能叫醒使用者一个人。对于特殊情况，下文会有考虑到。
+强力唤醒功能
+为了使使用者尽快清醒，想要使闹钟正确地停止，使用者必须计算一道简单的数学题（三个1~100的数字相加，数字在到达闹钟预设时间后随机给出），并按动蓝色按钮对应的次数，使屏幕上显示的等式成立（屏幕上显示的等式为“x+y+z&#x3D;count”，每按动一次按钮使count值加一，count初始值为零；x、y、z均为随机数）。若不小心按过头，只能同时按下蓝色和绿色按钮重置count值到零。
+如此一来，相信使用者能够很快清醒过来，更妙的是————使用者可以通过大力按动按钮来发泄自己的起床气！天呐真是太精妙的设计！！！！
+强制唤醒功能
+若使用者很不幸，在闹钟有效振铃时间内（若不对闹钟做任何事，它将会振铃五分钟后自动停止）仍未清醒，或使用某种能够穿越时空的魔法免疫了闹钟，或闹钟没有将使用者叫醒而是将他的大冤种室友叫醒，则室友可以使用这个功能来将使用者强制唤醒。同时按住所有按钮（黄、绿、蓝色），闹钟将发出一种更大声、更强力的声音，以便将其唤醒。
+那么此时，大冤种室友和闹钟使用者都有了一股很强的起床气。这该怎么办呢？
+没关系，看看屏幕上显示的当前时间，再想想早八和核酸，他们应该就没空去生气了。
+另注：之所以要同时按下三个按钮，比较麻烦，是为了防止你的室友滥用此功能，影响宿舍和谐友爱氛围。
+学习功能
+计时器功能
+通过同时按下黄色和蓝色按钮开始计时。通过在屏幕上实时显示现在的时间与开始计时时的时间之差实现。十分钟内以秒数表示，十分钟后以分钟数表示。同时按下红色和黄色按钮停止并自动清零。
+激励功能
+在学习时，小闹钟不仅可以充当计时器，还有一个强大的激励功能——同时按下黄色和绿色按钮，你可以听到一串尖利的美妙的旋律（《欢乐颂》）。它可以使你精神大受振奋，以更加饱满的精神状态投入到学习当中。播放时，屏幕上只会显示曲子的名称而不再显示时间和闹钟等，让你暂时忘却压力，远离烦恼。
+作者原本想增加更多的曲子，使得每次按下按钮可以切换曲目，也想再加入在屏幕上显示、切换英语单词的功能，但是很遗憾，内存此时已经不够用了……
+作品照片
+源码
+#include &lt;Arduino.h&gt;#include &lt;SPI.h&gt;#include &lt;U8g2lib.h&gt;#include &quot;RTClib.h&quot;#define TIME_24_HOUR      true
+int count&#x3D;0;
+int x&#x3D;0;int y&#x3D;0;int z&#x3D;0;
+int hour&#x3D;0;int minute&#x3D;0;
+int tune[]&#x3D;                 &#x2F;&#x2F;根据简谱列出各频率
+{
+  350,350,393,441,
+  441,393,350,330,
+  294,294,330,350,
+  350,330,330,
+  350,350,393,441,
+  441,393,350,330,
+  294,294,330,350,
+  330,294,294,
+};
+float durt[]&#x3D;                   &#x2F;&#x2F;根据简谱列出各节拍
+{
+  1,1,1,1,
+  1,1,1,1,
+  1,1,1,1,
+  1+0.5,0.5,1+1,
+  1,1,1,1,
+  1,1,1,1,
+  1,1,1,1,
+  1+0.5,0.5,1+1,
+};
+U8G2_SSD1306_128X64_NONAME_F_4W_SW_SPI u8g2(U8G2_R0, &#x2F;* clock&#x3D;*&#x2F; 11, &#x2F;* data&#x3D;*&#x2F; 12, &#x2F;* cs&#x3D;*&#x2F; 10, &#x2F;* dc&#x3D;*&#x2F; 8, &#x2F;* reset&#x3D;*&#x2F; 9);
+RTC_DS3231 rtc;
+
+void setup(){  pinMode(13,OUTPUT);&#x2F;&#x2F;闹钟，第13口  pinMode(7,INPUT);&#x2F;&#x2F;计数，第7口  pinMode(6,INPUT);   pinMode(5,INPUT); &#x2F;&#x2F;设置闹钟时间，第6口和第5口  randomSeed(analogRead(0));  u8g2.begin();  if(!rtc.begin())  {    abort();  }}
+void loop(){  u8g2.clearBuffer();&#x2F;&#x2F;清除内部缓冲区&#x2F;&#x2F;——————————————————————————————时间设置  &#x2F;&#x2F; rtc.adjust(DateTime(2022,11,13,16,03,00));  DateTime now&#x3D;rtc.now();&#x2F;&#x2F;——————————————————————————————计数–7口if(digitalRead(5)&#x3D;&#x3D;HIGH&amp;&amp;digitalRead(6)&#x3D;&#x3D;HIGH&amp;&amp;digitalRead(7)&#x3D;&#x3D;LOW){  delay(100);  count&#x3D;count+1;  delay(100);}&#x2F;&#x2F;———————————————————————————————-计数重置–7口加6口if(digitalRead(5)&#x3D;&#x3D;HIGH&amp;&amp;digitalRead(6)&#x3D;&#x3D;LOW&amp;&amp;digitalRead(7)&#x3D;&#x3D;LOW){  delay(100);  count&#x3D;0;  delay(100);}&#x2F;&#x2F;———————————————————————————————设置闹钟时间if(digitalRead(5)&#x3D;&#x3D;HIGH&amp;&amp;digitalRead(6)&#x3D;&#x3D;LOW&amp;&amp;digitalRead(7)&#x3D;&#x3D;HIGH)&#x2F;&#x2F;6口设置闹钟的时{  delay(100);  hour&#x3D;hour+1;  delay(100);  if(hour&gt;&#x3D;24)  {    hour&#x3D;hour-24;  }}if(digitalRead(5)&#x3D;&#x3D;LOW&amp;&amp;digitalRead(6)&#x3D;&#x3D;HIGH&amp;&amp;digitalRead(7)&#x3D;&#x3D;HIGH)&#x2F;&#x2F;5口设置闹钟的分{  delay(100);  minute&#x3D;minute+1;  delay(100);  if(minute&gt;&#x3D;60)  {    minute&#x3D;minute-60;  }}&#x2F;&#x2F;—————————————————————————————————随机出题–只和当前时间有关系  if(now.hour()&#x3D;&#x3D;hour&amp;&amp;now.minute()&#x3D;&#x3D;minute&amp;&amp;(now.second()&#x3D;&#x3D;0||now.second()&#x3D;&#x3D;1||now.second()&#x3D;&#x3D;2)){ x&#x3D;random(1,101); y&#x3D;random(1,101); z&#x3D;random(1,101);}&#x2F;&#x2F;——————————————————————————————————-AL部分–和当前时间以及count有关系，而count由7口和重置（7口加6口）控制if((count!&#x3D;x+y+z)&amp;&amp;now.hour()&#x3D;&#x3D;hour&amp;&amp;(now.minute()&gt;&#x3D;minute&amp;&amp;now.minute()&lt;&#x3D;minute+5)){digitalWrite(13,HIGH); &#x2F;&#x2F;高电平delay(100);digitalWrite(13,LOW);  &#x2F;&#x2F;低电平delay(100);}&#x2F;&#x2F;————————————————————————————————————————手动唤醒部分（5口加6口加7口）if(digitalRead(5)&#x3D;&#x3D;LOW&amp;&amp;digitalRead(6)&#x3D;&#x3D;LOW&amp;&amp;digitalRead(7)&#x3D;&#x3D;LOW){delay(100);unsigned char i;for(i&#x3D;0;i&lt;80;i++){digitalWrite(13,HIGH);delay(1);digitalWrite(13,LOW);delay(1);}
+for(i&#x3D;0;i&lt;180;i++){digitalWrite(13,HIGH);delay(2);digitalWrite(13,LOW);delay(2);}delay(100);}&#x2F;&#x2F;——————————————————————————————————-5口加6口–八音盒if(digitalRead(5)&#x3D;&#x3D;LOW&amp;&amp;digitalRead(6)&#x3D;&#x3D;LOW&amp;&amp;digitalRead(7)&#x3D;&#x3D;HIGH){  for(char TUNE_1&#x3D;0;TUNE_1&lt;sizeof(tune)&#x2F;sizeof(tune[0]);TUNE_1++)  {    u8g2.setFont( u8g2_font_ncenB08_tr);    u8g2.setCursor(10, 30);    u8g2.print(“Ode an die Freude”);    u8g2.sendBuffer();    tone(13,tune[TUNE_1]);    delay(500*durt[TUNE_1]);   &#x2F;&#x2F;这里用来根据节拍调节延时，500这个指数可以自己调整，在该音乐中，我发现用500比较合适。    noTone(13);  }}&#x2F;&#x2F;—————————————————————————————————-主体内容打印  u8g2.setFont( u8g2_font_10x20_tf);  u8g2.setCursor(10, 15);  u8g2.print(now.year()); u8g2.print(“&#x2F;“); u8g2.print(now.month()); u8g2.print(“&#x2F;“); u8g2.print(now.day());  u8g2.setCursor(10, 30);  if(now.hour()&lt;10)  {   u8g2.print(“0”);  }  u8g2.print(now.hour());  u8g2.print(“:”);  if(now.minute()&lt;10)  {   u8g2.print(“0”);  }  u8g2.print(now.minute());  u8g2.print(“:”);  if(now.second()&lt;10)  {   u8g2.print(“0”);  }  u8g2.print(now.second());  u8g2.setCursor(10, 45);  u8g2.print(“AL.”);  if(hour&lt;10)  {   u8g2.print(“0”);  }  u8g2.print(hour);  u8g2.print(“:”);  if(minute&lt;10)  {   u8g2.print(“0”);  }  u8g2.print(minute);  u8g2.setCursor(10, 60);  u8g2.print(x);  u8g2.print(“+”);  u8g2.print(y);  u8g2.print(“+”);  u8g2.print(z);  u8g2.print(“&#x3D;”);   u8g2.print(count);
+  u8g2.sendBuffer();}
+</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2_1_2"><span class="nav-number">2.1.2.</span> <span class="nav-text">具有闹钟功能
 使用者可以通过两个按钮来分别设置闹钟时间的时和分（24小时制）。通过DS3231时钟模块返回的当前时间值与使用者设置的时间比较，若相同则开始响铃。
+强力唤醒功能
 为了使使用者尽快清醒，想要使闹钟正确地停止，使用者必须计算一道简单的数学题（三个1~100的数字相加，数字在到达闹钟预设时间后随机给出），并按动第一个按钮对应的次数，使屏幕上显示的等式成立（屏幕上显示的等式为“x+y+z&#x3D;count”，每按动一次按钮使count值加一，count初始值为零；x、y、z均为随机数）。若不小心按过头，只能按下第二个按钮重置count值到零。
 如此一来，相信使用者能够很快清醒过来，更妙的是————使用者可以通过大力按动按钮来发泄自己的起床气！天呐真是太精妙的设计！！！！
 
-
 因为现在的作品已经进入了1.0增强版与2.0版本交界点，先前也没有留下正常的照片，所以1.0版本的图片暂缺……请直接开始查看下面的1.0增强版吧！
-</span></a></li></ol></li></ol></li></ol></div>
+
+【1.0增强版本】（红色字体为与1.0相比改进的部分，黑色字体读者可以直接略过）
+
+该版本由Arduino UNO主板一块儿、1.3寸OLED屏幕一块儿、DS3231时钟模块一个、无源蜂鸣器一个、面包板一块儿、按钮三个、10kΩ电阻三个、跳线杜邦线若干组成。
+
+具有显示时间和环境温度功能
+在屏幕上分别显示着当前的年、月、日、时、分、秒、环境温度（可以通过按动一次红色按钮在摄氏温度与华氏温度之间相互转换），以及一个数学公式（下文介绍其用途）。
+具有闹钟功能
+使用者可以通过两个按钮（黄色和绿色按钮）来分别设置闹钟时间的时和分（24小时制）。通过DS3231时钟模块返回的当前时间值与使用者设置的时间比较，若相同则开始响铃。为避免吵醒室友，闹钟音量较低，一般来讲，只能叫醒使用者一个人。对于特殊情况，下文会有考虑到。
+强力唤醒功能
+为了使使用者尽快清醒，想要使闹钟正确地停止，使用者必须计算一道简单的数学题（三个1~100的数字相加，数字在到达闹钟预设时间后随机给出），并按动蓝色按钮对应的次数，使屏幕上显示的等式成立（屏幕上显示的等式为“x+y+z&#x3D;count”，每按动一次按钮使count值加一，count初始值为零；x、y、z均为随机数）。若不小心按过头，只能同时按下蓝色和绿色按钮重置count值到零。
+如此一来，相信使用者能够很快清醒过来，更妙的是————使用者可以通过大力按动按钮来发泄自己的起床气！天呐真是太精妙的设计！！！！
+强制唤醒功能
+若使用者很不幸，在闹钟有效振铃时间内（若不对闹钟做任何事，它将会振铃五分钟后自动停止）仍未清醒，或使用某种能够穿越时空的魔法免疫了闹钟，或闹钟没有将使用者叫醒而是将他的大冤种室友叫醒，则室友可以使用这个功能来将使用者强制唤醒。同时按住所有按钮（黄、绿、蓝色），闹钟将发出一种更大声、更强力的声音，以便将其唤醒。
+那么此时，大冤种室友和闹钟使用者都有了一股很强的起床气。这该怎么办呢？
+没关系，看看屏幕上显示的当前时间，再想想早八和核酸，他们应该就没空去生气了。
+另注：之所以要同时按下三个按钮，比较麻烦，是为了防止你的室友滥用此功能，影响宿舍和谐友爱氛围。
+学习功能
+计时器功能
+通过同时按下黄色和蓝色按钮开始计时。通过在屏幕上实时显示现在的时间与开始计时时的时间之差实现。十分钟内以秒数表示，十分钟后以分钟数表示。同时按下红色和黄色按钮停止并自动清零。
+激励功能
+在学习时，小闹钟不仅可以充当计时器，还有一个强大的激励功能——同时按下黄色和绿色按钮，你可以听到一串尖利的美妙的旋律（《欢乐颂》）。它可以使你精神大受振奋，以更加饱满的精神状态投入到学习当中。播放时，屏幕上只会显示曲子的名称而不再显示时间和闹钟等，让你暂时忘却压力，远离烦恼。
+作者原本想增加更多的曲子，使得每次按下按钮可以切换曲目，也想再加入在屏幕上显示、切换英语单词的功能，但是很遗憾，内存此时已经不够用了……
+作品照片
+源码
+#include &lt;Arduino.h&gt;#include &lt;SPI.h&gt;#include &lt;U8g2lib.h&gt;#include &quot;RTClib.h&quot;#define TIME_24_HOUR      true
+int count&#x3D;0;
+int x&#x3D;0;int y&#x3D;0;int z&#x3D;0;
+int hour&#x3D;0;int minute&#x3D;0;
+int tune[]&#x3D;                 &#x2F;&#x2F;根据简谱列出各频率
+{
+  350,350,393,441,
+  441,393,350,330,
+  294,294,330,350,
+  350,330,330,
+  350,350,393,441,
+  441,393,350,330,
+  294,294,330,350,
+  330,294,294,
+};
+float durt[]&#x3D;                   &#x2F;&#x2F;根据简谱列出各节拍
+{
+  1,1,1,1,
+  1,1,1,1,
+  1,1,1,1,
+  1+0.5,0.5,1+1,
+  1,1,1,1,
+  1,1,1,1,
+  1,1,1,1,
+  1+0.5,0.5,1+1,
+};
+U8G2_SSD1306_128X64_NONAME_F_4W_SW_SPI u8g2(U8G2_R0, &#x2F;* clock&#x3D;*&#x2F; 11, &#x2F;* data&#x3D;*&#x2F; 12, &#x2F;* cs&#x3D;*&#x2F; 10, &#x2F;* dc&#x3D;*&#x2F; 8, &#x2F;* reset&#x3D;*&#x2F; 9);
+RTC_DS3231 rtc;
+
+void setup(){  pinMode(13,OUTPUT);&#x2F;&#x2F;闹钟，第13口  pinMode(7,INPUT);&#x2F;&#x2F;计数，第7口  pinMode(6,INPUT);   pinMode(5,INPUT); &#x2F;&#x2F;设置闹钟时间，第6口和第5口  randomSeed(analogRead(0));  u8g2.begin();  if(!rtc.begin())  {    abort();  }}
+void loop(){  u8g2.clearBuffer();&#x2F;&#x2F;清除内部缓冲区&#x2F;&#x2F;——————————————————————————————时间设置  &#x2F;&#x2F; rtc.adjust(DateTime(2022,11,13,16,03,00));  DateTime now&#x3D;rtc.now();&#x2F;&#x2F;——————————————————————————————计数–7口if(digitalRead(5)&#x3D;&#x3D;HIGH&amp;&amp;digitalRead(6)&#x3D;&#x3D;HIGH&amp;&amp;digitalRead(7)&#x3D;&#x3D;LOW){  delay(100);  count&#x3D;count+1;  delay(100);}&#x2F;&#x2F;———————————————————————————————-计数重置–7口加6口if(digitalRead(5)&#x3D;&#x3D;HIGH&amp;&amp;digitalRead(6)&#x3D;&#x3D;LOW&amp;&amp;digitalRead(7)&#x3D;&#x3D;LOW){  delay(100);  count&#x3D;0;  delay(100);}&#x2F;&#x2F;———————————————————————————————设置闹钟时间if(digitalRead(5)&#x3D;&#x3D;HIGH&amp;&amp;digitalRead(6)&#x3D;&#x3D;LOW&amp;&amp;digitalRead(7)&#x3D;&#x3D;HIGH)&#x2F;&#x2F;6口设置闹钟的时{  delay(100);  hour&#x3D;hour+1;  delay(100);  if(hour&gt;&#x3D;24)  {    hour&#x3D;hour-24;  }}if(digitalRead(5)&#x3D;&#x3D;LOW&amp;&amp;digitalRead(6)&#x3D;&#x3D;HIGH&amp;&amp;digitalRead(7)&#x3D;&#x3D;HIGH)&#x2F;&#x2F;5口设置闹钟的分{  delay(100);  minute&#x3D;minute+1;  delay(100);  if(minute&gt;&#x3D;60)  {    minute&#x3D;minute-60;  }}&#x2F;&#x2F;—————————————————————————————————随机出题–只和当前时间有关系  if(now.hour()&#x3D;&#x3D;hour&amp;&amp;now.minute()&#x3D;&#x3D;minute&amp;&amp;(now.second()&#x3D;&#x3D;0||now.second()&#x3D;&#x3D;1||now.second()&#x3D;&#x3D;2)){ x&#x3D;random(1,101); y&#x3D;random(1,101); z&#x3D;random(1,101);}&#x2F;&#x2F;——————————————————————————————————-AL部分–和当前时间以及count有关系，而count由7口和重置（7口加6口）控制if((count!&#x3D;x+y+z)&amp;&amp;now.hour()&#x3D;&#x3D;hour&amp;&amp;(now.minute()&gt;&#x3D;minute&amp;&amp;now.minute()&lt;&#x3D;minute+5)){digitalWrite(13,HIGH); &#x2F;&#x2F;高电平delay(100);digitalWrite(13,LOW);  &#x2F;&#x2F;低电平delay(100);}&#x2F;&#x2F;————————————————————————————————————————手动唤醒部分（5口加6口加7口）if(digitalRead(5)&#x3D;&#x3D;LOW&amp;&amp;digitalRead(6)&#x3D;&#x3D;LOW&amp;&amp;digitalRead(7)&#x3D;&#x3D;LOW){delay(100);unsigned char i;for(i&#x3D;0;i&lt;80;i++){digitalWrite(13,HIGH);delay(1);digitalWrite(13,LOW);delay(1);}
+for(i&#x3D;0;i&lt;180;i++){digitalWrite(13,HIGH);delay(2);digitalWrite(13,LOW);delay(2);}delay(100);}&#x2F;&#x2F;——————————————————————————————————-5口加6口–八音盒if(digitalRead(5)&#x3D;&#x3D;LOW&amp;&amp;digitalRead(6)&#x3D;&#x3D;LOW&amp;&amp;digitalRead(7)&#x3D;&#x3D;HIGH){  for(char TUNE_1&#x3D;0;TUNE_1&lt;sizeof(tune)&#x2F;sizeof(tune[0]);TUNE_1++)  {    u8g2.setFont( u8g2_font_ncenB08_tr);    u8g2.setCursor(10, 30);    u8g2.print(“Ode an die Freude”);    u8g2.sendBuffer();    tone(13,tune[TUNE_1]);    delay(500*durt[TUNE_1]);   &#x2F;&#x2F;这里用来根据节拍调节延时，500这个指数可以自己调整，在该音乐中，我发现用500比较合适。    noTone(13);  }}&#x2F;&#x2F;—————————————————————————————————-主体内容打印  u8g2.setFont( u8g2_font_10x20_tf);  u8g2.setCursor(10, 15);  u8g2.print(now.year()); u8g2.print(“&#x2F;“); u8g2.print(now.month()); u8g2.print(“&#x2F;“); u8g2.print(now.day());  u8g2.setCursor(10, 30);  if(now.hour()&lt;10)  {   u8g2.print(“0”);  }  u8g2.print(now.hour());  u8g2.print(“:”);  if(now.minute()&lt;10)  {   u8g2.print(“0”);  }  u8g2.print(now.minute());  u8g2.print(“:”);  if(now.second()&lt;10)  {   u8g2.print(“0”);  }  u8g2.print(now.second());  u8g2.setCursor(10, 45);  u8g2.print(“AL.”);  if(hour&lt;10)  {   u8g2.print(“0”);  }  u8g2.print(hour);  u8g2.print(“:”);  if(minute&lt;10)  {   u8g2.print(“0”);  }  u8g2.print(minute);  u8g2.setCursor(10, 60);  u8g2.print(x);  u8g2.print(“+”);  u8g2.print(y);  u8g2.print(“+”);  u8g2.print(z);  u8g2.print(“&#x3D;”);   u8g2.print(count);
+  u8g2.sendBuffer();}
+</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#2_1_2_1"><span class="nav-number">2.1.2.1.</span> <span class="nav-text">强力唤醒功能</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2_2"><span class="nav-number">2.2.</span> <span class="nav-text">【1.0增强版本】（红色字体为与1.0相比改进的部分，黑色字体读者可以直接略过）</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2_2_1"><span class="nav-number">2.2.1.</span> <span class="nav-text">具有显示时间和环境温度功能</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2_2_2"><span class="nav-number">2.2.2.</span> <span class="nav-text">具有闹钟功能</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#2_2_2_1"><span class="nav-number">2.2.2.1.</span> <span class="nav-text">强力唤醒功能</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2_2_2_2"><span class="nav-number">2.2.2.2.</span> <span class="nav-text">强制唤醒功能</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2_2_3"><span class="nav-number">2.2.3.</span> <span class="nav-text">学习功能</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#2_2_3_1"><span class="nav-number">2.2.3.1.</span> <span class="nav-text">计时器功能</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2_2_3_2"><span class="nav-number">2.2.3.2.</span> <span class="nav-text">激励功能</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2_2_4"><span class="nav-number">2.2.4.</span> <span class="nav-text">作品照片</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2_2_5"><span class="nav-number">2.2.5.</span> <span class="nav-text">源码</span></a></li></ol></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -251,9 +367,15 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
-      
 
-      <time title="创建时间：2022-11-23 22:45:00 / 修改时间：23:29:45" itemprop="dateCreated datePublished" datetime="2022-11-23T22:45:00+08:00">2022-11-23</time>
+      <time title="创建时间：2022-11-23 22:45:00" itemprop="dateCreated datePublished" datetime="2022-11-23T22:45:00+08:00">2022-11-23</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2022-11-24 09:32:22" itemprop="dateModified" datetime="2022-11-24T09:32:22+08:00">2022-11-24</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -300,18 +422,78 @@
 另注：可能由于hexo上Next主题的限制，在我的博客中所有的h2、h3、h4等等子标题看起来都没有区别。您可以点击左侧目录栏中点击他们来查看标题之间的上下级关系。
 </p>
 <h2 id="2"><a href="#2"></a>成品简介</h2>
-<h3 id="2_1"><a href="#2_1"></a>1.0版本</h3>
-<p>该版本由Arduino UNO主板一块儿、0.96寸OLED屏幕一块儿、DS3231时钟模块一个、无源蜂鸣器一个、面包板一块儿、按钮四个、10kΩ电阻四个、跳线杜邦线若干组成。
+<h3 id="2_1"><a href="#2_1"></a>【1.0版本】</h3>
+<p>
+该版本由Arduino UNO主板一块儿、0.96寸OLED屏幕一块儿、DS3231时钟模块一个、无源蜂鸣器一个、面包板一块儿、按钮四个、10kΩ电阻四个、跳线杜邦线若干组成。
+</p>
 <h4 id="2_1_1"><a href="#2_1_1"></a>具有显示时间和环境温度功能</h3>
-在屏幕上分别显示着当前的年、月、日、时、分、秒、环境温度（可以通过按动一次按钮在摄氏温度与华氏温度之间相互转换），以及一个数学公式（下文介绍其用途）。
-<h4 id="2_1_2"><a href="#2_1_2"></a>具有闹钟功能（超强力唤醒功能）</h3>
-使用者可以通过两个按钮来分别设置闹钟时间的时和分（24小时制）。通过DS3231时钟模块返回的当前时间值与使用者设置的时间比较，若相同则开始响铃。<br/>
+在屏幕上分别显示着当前的年、月、日、时、分、秒、环境温度（可以通过按动一次红色按钮在摄氏温度与华氏温度之间相互转换），以及一个数学公式（下文介绍其用途）。
+<h4 id="2_1_2"><a href="#2_1_2"></a>具有闹钟功能</h3>
+使用者可以通过两个按钮来分别设置闹钟时间的时和分（24小时制）。通过DS3231时钟模块返回的当前时间值与使用者设置的时间比较，若相同则开始响铃。
+<h5 id="2_1_2_1"><a href="#2_1_2_1"></a>强力唤醒功能</h5>
 为了使使用者尽快清醒，想要使闹钟正确地停止，使用者必须计算一道简单的数学题（三个1~100的数字相加，数字在到达闹钟预设时间后随机给出），并按动第一个按钮对应的次数，使屏幕上显示的等式成立（屏幕上显示的等式为“x+y+z=count”，每按动一次按钮使count值加一，count初始值为零；x、y、z均为随机数）。若不小心按过头，只能按下第二个按钮重置count值到零。<br/>
 如此一来，相信使用者能够很快清醒过来，更妙的是————使用者可以通过大力按动按钮来发泄自己的起床气！天呐真是太精妙的设计！！！！
-</p>
 <p>
 因为现在的作品已经进入了1.0增强版与2.0版本交界点，先前也没有留下正常的照片，所以1.0版本的图片暂缺……请直接开始查看下面的1.0增强版吧！
 </p>
+<h3 id="2_2"><a href="#2_2"></a>【1.0增强版本】（红色字体为与1.0相比改进的部分，黑色字体读者可以直接略过）</h3>
+<p>
+该版本由Arduino UNO主板一块儿、<font color="red">1.3</font>寸OLED屏幕一块儿、DS3231时钟模块一个、无源蜂鸣器一个、面包板一块儿、按钮<font color="red">三</font>个、10kΩ电阻<font color="red">三</font>个、跳线杜邦线若干组成。
+</p>
+<h4 id="2_2_1"><a href="#2_2_1"></a>具有显示时间和环境温度功能</h4>
+在屏幕上分别显示着当前的年、月、日、时、分、秒、环境温度（可以通过按动一次红色按钮在摄氏温度与华氏温度之间相互转换），以及一个数学公式（下文介绍其用途）。
+<h4 id="2_2_2"><a href="#2_2_2"></a>具有闹钟功能</h4>
+使用者可以通过两个按钮<font color="red">（黄色和绿色按钮）</font>来分别设置闹钟时间的时和分（24小时制）。通过DS3231时钟模块返回的当前时间值与使用者设置的时间比较，若相同则开始响铃。<font color="red">为避免吵醒室友，闹钟音量较低，一般来讲，只能叫醒使用者一个人。对于特殊情况，下文会有考虑到。</font>
+<h5 id="2_2_2_1"><a href="#2_2_2_1"></a>强力唤醒功能</h5>
+为了使使用者尽快清醒，想要使闹钟正确地停止，使用者必须计算一道简单的数学题（三个1~100的数字相加，数字在到达闹钟预设时间后随机给出），并按动<font color="red">蓝色</font>按钮对应的次数，使屏幕上显示的等式成立（屏幕上显示的等式为“x+y+z=count”，每按动一次按钮使count值加一，count初始值为零；x、y、z均为随机数）。若不小心按过头，只能<font color="red">同时按下蓝色和绿色按钮</font>重置count值到零。<br/>
+如此一来，相信使用者能够很快清醒过来，更妙的是————使用者可以通过大力按动按钮来发泄自己的起床气！天呐真是太精妙的设计！！！！
+<h5 id="2_2_2_2"><font color="red"><a href="#2_2_2_2"></a>强制唤醒功能</h5>
+若使用者很不幸，在闹钟有效振铃时间内（若不对闹钟做任何事，它将会振铃五分钟后自动停止）仍未清醒，或使用某种能够穿越时空的魔法免疫了闹钟，或闹钟没有将使用者叫醒而是将他的大冤种室友叫醒，则室友可以使用这个功能来将使用者强制唤醒。同时按住所有按钮（黄、绿、蓝色），闹钟将发出一种更大声、更强力的声音，以便将其唤醒。<br/>
+那么此时，大冤种室友和闹钟使用者都有了一股很强的起床气。这该怎么办呢？<br/>
+没关系，看看屏幕上显示的当前时间，再想想早八和核酸，他们应该就没空去生气了。<br/>
+另注：之所以要同时按下三个按钮，比较麻烦，是为了防止你的室友滥用此功能，影响宿舍和谐友爱氛围。
+<h4 id="2_2_3"><a href="#2_2_3"></a>学习功能</h4>
+<h5 id="2_2_3_1"><a href="#2_2_3_1"></a>计时器功能</h5>
+通过同时按下黄色和蓝色按钮开始计时。通过在屏幕上实时显示现在的时间与开始计时时的时间之差实现。十分钟内以秒数表示，十分钟后以分钟数表示。同时按下红色和黄色按钮停止并自动清零。
+<h5 id="2_2_3_2"><a href="#2_2_3_2"></a>激励功能</h5>
+在学习时，小闹钟不仅可以充当计时器，还有一个强大的激励功能——同时按下黄色和绿色按钮，你可以听到一串<del>尖利的</del>美妙的旋律（《欢乐颂》）。它可以使你精神大受振奋，以更加饱满的精神状态投入到学习当中。播放时，屏幕上只会显示曲子的名称而不再显示时间和闹钟等，让你暂时忘却压力，远离烦恼。</font><br/>
+<font color="blue">作者原本想增加更多的曲子，使得每次按下按钮可以切换曲目，也想再加入在屏幕上显示、切换英语单词的功能，但是很遗憾，内存此时已经不够用了……</font>
+<h4 id="2_2_4"><a href="#2_2_4"></a>作品照片</h4>
+<h4 id="2_2_5"><a href="#2_2_5"></a>源码</h4>
+<pre><code>#include &lt;Arduino.h&gt;<br/>#include &lt;SPI.h&gt;<br/>#include &lt;U8g2lib.h&gt;<br/>#include "RTClib.h"<br/>#define TIME_24_HOUR      true
+int count=0;
+int x=0;int y=0;int z=0;
+int hour=0;int minute=0;
+int tune[]=                 //根据简谱列出各频率
+&#123;
+  350,350,393,441,
+  441,393,350,330,
+  294,294,330,350,
+  350,330,330,
+  350,350,393,441,
+  441,393,350,330,
+  294,294,330,350,
+  330,294,294,
+&#125;;
+float durt[]=                   //根据简谱列出各节拍
+&#123;
+  1,1,1,1,
+  1,1,1,1,
+  1,1,1,1,
+  1+0.5,0.5,1+1,
+  1,1,1,1,
+  1,1,1,1,
+  1,1,1,1,
+  1+0.5,0.5,1+1,
+&#125;;
+U8G2_SSD1306_128X64_NONAME_F_4W_SW_SPI u8g2(U8G2_R0, /* clock=*/ 11, /* data=*/ 12, /* cs=*/ 10, /* dc=*/ 8, /* reset=*/ 9);
+RTC_DS3231 rtc;
+
+<p>void setup()<br>&#123;<br>  pinMode(13,OUTPUT);&#x2F;&#x2F;闹钟，第13口<br>  pinMode(7,INPUT);&#x2F;&#x2F;计数，第7口<br>  pinMode(6,INPUT);   pinMode(5,INPUT); &#x2F;&#x2F;设置闹钟时间，第6口和第5口<br>  randomSeed(analogRead(0));<br>  u8g2.begin();<br>  if(!rtc.begin())<br>  &#123;<br>    abort();<br>  &#125;<br>&#125;</p>
+<p>void loop()<br>&#123;<br>  u8g2.clearBuffer();&#x2F;&#x2F;清除内部缓冲区<br>&#x2F;&#x2F;——————————————————————————————时间设置<br>  &#x2F;&#x2F; rtc.adjust(DateTime(2022,11,13,16,03,00));<br>  DateTime now&#x3D;rtc.now();<br>&#x2F;&#x2F;——————————————————————————————计数–7口<br>if(digitalRead(5)&#x3D;&#x3D;HIGH&amp;&amp;digitalRead(6)&#x3D;&#x3D;HIGH&amp;&amp;digitalRead(7)&#x3D;&#x3D;LOW)<br>&#123;<br>  delay(100);<br>  count&#x3D;count+1;<br>  delay(100);<br>&#125;<br>&#x2F;&#x2F;———————————————————————————————-计数重置–7口加6口<br>if(digitalRead(5)&#x3D;&#x3D;HIGH&amp;&amp;digitalRead(6)&#x3D;&#x3D;LOW&amp;&amp;digitalRead(7)&#x3D;&#x3D;LOW)<br>&#123;<br>  delay(100);<br>  count&#x3D;0;<br>  delay(100);<br>&#125;<br>&#x2F;&#x2F;———————————————————————————————设置闹钟时间<br>if(digitalRead(5)&#x3D;&#x3D;HIGH&amp;&amp;digitalRead(6)&#x3D;&#x3D;LOW&amp;&amp;digitalRead(7)&#x3D;&#x3D;HIGH)&#x2F;&#x2F;6口设置闹钟的时<br>&#123;<br>  delay(100);<br>  hour&#x3D;hour+1;<br>  delay(100);<br>  if(hour&gt;&#x3D;24)<br>  &#123;<br>    hour&#x3D;hour-24;<br>  &#125;<br>&#125;<br>if(digitalRead(5)&#x3D;&#x3D;LOW&amp;&amp;digitalRead(6)&#x3D;&#x3D;HIGH&amp;&amp;digitalRead(7)&#x3D;&#x3D;HIGH)&#x2F;&#x2F;5口设置闹钟的分<br>&#123;<br>  delay(100);<br>  minute&#x3D;minute+1;<br>  delay(100);<br>  if(minute&gt;&#x3D;60)<br>  &#123;<br>    minute&#x3D;minute-60;<br>  &#125;<br>&#125;<br>&#x2F;&#x2F;—————————————————————————————————随机出题–只和当前时间有关系<br>  if(now.hour()&#x3D;&#x3D;hour&amp;&amp;now.minute()&#x3D;&#x3D;minute&amp;&amp;(now.second()&#x3D;&#x3D;0||now.second()&#x3D;&#x3D;1||now.second()&#x3D;&#x3D;2))<br>&#123;<br> x&#x3D;random(1,101);<br> y&#x3D;random(1,101);<br> z&#x3D;random(1,101);<br>&#125;<br>&#x2F;&#x2F;——————————————————————————————————-AL部分–和当前时间以及count有关系，而count由7口和重置（7口加6口）控制<br>if((count!&#x3D;x+y+z)&amp;&amp;now.hour()&#x3D;&#x3D;hour&amp;&amp;(now.minute()&gt;&#x3D;minute&amp;&amp;now.minute()&lt;&#x3D;minute+5))<br>&#123;<br>digitalWrite(13,HIGH); &#x2F;&#x2F;高电平<br>delay(100);<br>digitalWrite(13,LOW);  &#x2F;&#x2F;低电平<br>delay(100);<br>&#125;<br>&#x2F;&#x2F;————————————————————————————————————————手动唤醒部分（5口加6口加7口）<br>if(digitalRead(5)&#x3D;&#x3D;LOW&amp;&amp;digitalRead(6)&#x3D;&#x3D;LOW&amp;&amp;digitalRead(7)&#x3D;&#x3D;LOW)<br>&#123;<br>delay(100);<br>unsigned char i;<br>for(i&#x3D;0;i&lt;80;i++)<br>&#123;<br>digitalWrite(13,HIGH);<br>delay(1);<br>digitalWrite(13,LOW);<br>delay(1);<br>&#125;</p>
+<p>for(i&#x3D;0;i&lt;180;i++)<br>&#123;<br>digitalWrite(13,HIGH);<br>delay(2);<br>digitalWrite(13,LOW);<br>delay(2);<br>&#125;<br>delay(100);<br>&#125;<br>&#x2F;&#x2F;——————————————————————————————————-5口加6口–八音盒<br>if(digitalRead(5)&#x3D;&#x3D;LOW&amp;&amp;digitalRead(6)&#x3D;&#x3D;LOW&amp;&amp;digitalRead(7)&#x3D;&#x3D;HIGH)<br>&#123;<br>  for(char TUNE_1&#x3D;0;TUNE_1&lt;sizeof(tune)&#x2F;sizeof(tune[0]);TUNE_1++)<br>  &#123;<br>    u8g2.setFont( u8g2_font_ncenB08_tr);<br>    u8g2.setCursor(10, 30);<br>    u8g2.print(“Ode an die Freude”);<br>    u8g2.sendBuffer();<br>    tone(13,tune[TUNE_1]);<br>    delay(500*durt[TUNE_1]);   &#x2F;&#x2F;这里用来根据节拍调节延时，500这个指数可以自己调整，在该音乐中，我发现用500比较合适。<br>    noTone(13);<br>  &#125;<br>&#125;<br>&#x2F;&#x2F;—————————————————————————————————-主体内容打印<br>  u8g2.setFont( u8g2_font_10x20_tf);<br>  u8g2.setCursor(10, 15);<br>  u8g2.print(now.year()); u8g2.print(“&#x2F;“); u8g2.print(now.month()); u8g2.print(“&#x2F;“); u8g2.print(now.day());<br>  u8g2.setCursor(10, 30);<br>  if(now.hour()&lt;10)<br>  &#123;<br>   u8g2.print(“0”);<br>  &#125;<br>  u8g2.print(now.hour());<br>  u8g2.print(“:”);<br>  if(now.minute()&lt;10)<br>  &#123;<br>   u8g2.print(“0”);<br>  &#125;<br>  u8g2.print(now.minute());<br>  u8g2.print(“:”);<br>  if(now.second()&lt;10)<br>  &#123;<br>   u8g2.print(“0”);<br>  &#125;<br>  u8g2.print(now.second());<br>  u8g2.setCursor(10, 45);<br>  u8g2.print(“AL.”);<br>  if(hour&lt;10)<br>  &#123;<br>   u8g2.print(“0”);<br>  &#125;<br>  u8g2.print(hour);<br>  u8g2.print(“:”);<br>  if(minute&lt;10)<br>  &#123;<br>   u8g2.print(“0”);<br>  &#125;<br>  u8g2.print(minute);<br>  u8g2.setCursor(10, 60);<br>  u8g2.print(x);  u8g2.print(“+”);  u8g2.print(y);  u8g2.print(“+”);  u8g2.print(z);  u8g2.print(“&#x3D;”);   u8g2.print(count);</p>
+<p>  u8g2.sendBuffer();<br>&#125;</code></pre></p>
+
     </div>
 
     
