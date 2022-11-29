@@ -213,10 +213,23 @@ void loop() {  &#x2F;&#x2F; put your main code here, to run repeatedly:        &
 }啊~事情就是这样，看起来很简单。
 Arduino板
 我在这次星火杯中使用的是Arduino UNO板。这是很适合新手使用的板子。Arduino板分为官方板和一种通常称作“行家改进板”两种，通俗的讲，因为Arduino是完全开源的，任何人只要有意愿都可以生产Arduino板。官方板就是字面意思，因为是进口的，所以价格会贵上不少。有的视频建议初学者使用官方板开始学习，因为质量有保证，以防出现板子出现问题而不知道如何解决的情况，但在我本人使用的过程中，自己感觉两者其实没什么区别。
-关于板子的详细介绍，因为是改进板，所以具体细节上我手中拿的和你们买到的可能有些区别。但有这些是一定要认识的：
+关于板子的详细介绍，因为是改进板，所以具体细节上我手中拿的和你们买到的可能有些区别。但有这些是一定要认识的。请在你的板子上找到这些字样：
 usb口：为Arduino板供电。
 reset按钮：将板子重启。（断电再通电一次。一直按着会一直断电（滑稽））
-数字输入端口：
+14路数字IO出口（0~13口）。
+6路模拟输入（A0到A5口）。
+GND：接地线。
+5.0V 。
+3.3V 。
+面包板
+面包板是搭建电路时常用的器材。使用时，将各种线插在面包板的合适位置，能够大大简化排线难度，使作品更美观，也更不容易出错。如果你从前没有接触过面包板，此时手里拿着一个面包版的话应该是不知所措的。常见的面包板后面是有一层胶粘着的，阻碍了我们的观察。我已经把我的面包板剥开了，你们不用剥自己的。
+如图所示，可以清晰地看出一块面包版由三块儿组成。其中有两块小的是完全贯通的。在正面，我们也可以看到上面表示的“+”和“-”的字样。它们可以被称作电源轨。arduino板一般只有一个5V口，而将arduino板的正负口通过跳线连接在面包板上的位置，就可以使整个电源轨都具有正负性。这样，再连接别的器件需要正负极时，只需要连在电源轨上即可。大的那部分面包板，又可以看到上下两部分中是分别连通的。事实上，那是五个孔为一组的。我们应该对面包板的内部构造了如指掌，才能在使用的时候不会出错。
+发光二极管
+点亮它
+众所周知，发光二极管（LED）有正负引脚之分。对于一个基本的直插式器件来说，长脚为正，短脚为负。使用USB线将你的Arduino主板通电。然后将一个LED按照正确的正负极分别插入主板的5.0V和GND口中。现在，它应该亮起。
+使它可以熄灭
+如果我们只是把它这样通电，那么它会一直亮着。能不能让它亮一会儿，然后熄灭呢？
+其实我们要解决的问题是：
 前方施工中
 </span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2_1_2"><span class="nav-number">2.1.2.</span> <span class="nav-text">具有闹钟功能
 使用者可以通过两个按钮来分别设置闹钟时间的时和分（24小时制）。通过DS3231时钟模块返回的当前时间值与使用者设置的时间比较，若相同则开始响铃。
@@ -320,12 +333,25 @@ void loop() {  &#x2F;&#x2F; put your main code here, to run repeatedly:        &
 }啊~事情就是这样，看起来很简单。
 Arduino板
 我在这次星火杯中使用的是Arduino UNO板。这是很适合新手使用的板子。Arduino板分为官方板和一种通常称作“行家改进板”两种，通俗的讲，因为Arduino是完全开源的，任何人只要有意愿都可以生产Arduino板。官方板就是字面意思，因为是进口的，所以价格会贵上不少。有的视频建议初学者使用官方板开始学习，因为质量有保证，以防出现板子出现问题而不知道如何解决的情况，但在我本人使用的过程中，自己感觉两者其实没什么区别。
-关于板子的详细介绍，因为是改进板，所以具体细节上我手中拿的和你们买到的可能有些区别。但有这些是一定要认识的：
+关于板子的详细介绍，因为是改进板，所以具体细节上我手中拿的和你们买到的可能有些区别。但有这些是一定要认识的。请在你的板子上找到这些字样：
 usb口：为Arduino板供电。
 reset按钮：将板子重启。（断电再通电一次。一直按着会一直断电（滑稽））
-数字输入端口：
+14路数字IO出口（0~13口）。
+6路模拟输入（A0到A5口）。
+GND：接地线。
+5.0V 。
+3.3V 。
+面包板
+面包板是搭建电路时常用的器材。使用时，将各种线插在面包板的合适位置，能够大大简化排线难度，使作品更美观，也更不容易出错。如果你从前没有接触过面包板，此时手里拿着一个面包版的话应该是不知所措的。常见的面包板后面是有一层胶粘着的，阻碍了我们的观察。我已经把我的面包板剥开了，你们不用剥自己的。
+如图所示，可以清晰地看出一块面包版由三块儿组成。其中有两块小的是完全贯通的。在正面，我们也可以看到上面表示的“+”和“-”的字样。它们可以被称作电源轨。arduino板一般只有一个5V口，而将arduino板的正负口通过跳线连接在面包板上的位置，就可以使整个电源轨都具有正负性。这样，再连接别的器件需要正负极时，只需要连在电源轨上即可。大的那部分面包板，又可以看到上下两部分中是分别连通的。事实上，那是五个孔为一组的。我们应该对面包板的内部构造了如指掌，才能在使用的时候不会出错。
+发光二极管
+点亮它
+众所周知，发光二极管（LED）有正负引脚之分。对于一个基本的直插式器件来说，长脚为正，短脚为负。使用USB线将你的Arduino主板通电。然后将一个LED按照正确的正负极分别插入主板的5.0V和GND口中。现在，它应该亮起。
+使它可以熄灭
+如果我们只是把它这样通电，那么它会一直亮着。能不能让它亮一会儿，然后熄灭呢？
+其实我们要解决的问题是：
 前方施工中
-</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#2_1_2_1"><span class="nav-number">2.1.2.1.</span> <span class="nav-text">强力唤醒功能</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2_2"><span class="nav-number">2.2.</span> <span class="nav-text">【1.0增强版本】（红色字体为与1.0相比改进的部分，黑色字体读者可以直接略过）</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2_2_1"><span class="nav-number">2.2.1.</span> <span class="nav-text">具有显示时间和环境温度功能</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2_2_2"><span class="nav-number">2.2.2.</span> <span class="nav-text">具有闹钟功能</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#2_2_2_1"><span class="nav-number">2.2.2.1.</span> <span class="nav-text">强力唤醒功能</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2_2_2_2"><span class="nav-number">2.2.2.2.</span> <span class="nav-text">强制唤醒功能</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2_2_3"><span class="nav-number">2.2.3.</span> <span class="nav-text">学习功能</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#2_2_3_1"><span class="nav-number">2.2.3.1.</span> <span class="nav-text">计时器功能</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2_2_3_2"><span class="nav-number">2.2.3.2.</span> <span class="nav-text">激励功能</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2_2_4"><span class="nav-number">2.2.4.</span> <span class="nav-text">作品展示</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2_2_5"><span class="nav-number">2.2.5.</span> <span class="nav-text">源码</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2_3"><span class="nav-number">3.</span> <span class="nav-text">2.0版本</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2_3_1"><span class="nav-number">3.1.</span> <span class="nav-text">图片展示</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3"><span class="nav-number">4.</span> <span class="nav-text">教程</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3_1"><span class="nav-number">4.1.</span> <span class="nav-text">Arduino</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#3_1_1"><span class="nav-number">4.1.1.</span> <span class="nav-text">Arduino IDE</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3_1_2"><span class="nav-number">4.1.2.</span> <span class="nav-text">Arduino板</span></a></li></ol></li></ol></li></ol></div>
+</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#2_1_2_1"><span class="nav-number">2.1.2.1.</span> <span class="nav-text">强力唤醒功能</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2_2"><span class="nav-number">2.2.</span> <span class="nav-text">【1.0增强版本】（红色字体为与1.0相比改进的部分，黑色字体读者可以直接略过）</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2_2_1"><span class="nav-number">2.2.1.</span> <span class="nav-text">具有显示时间和环境温度功能</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2_2_2"><span class="nav-number">2.2.2.</span> <span class="nav-text">具有闹钟功能</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#2_2_2_1"><span class="nav-number">2.2.2.1.</span> <span class="nav-text">强力唤醒功能</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2_2_2_2"><span class="nav-number">2.2.2.2.</span> <span class="nav-text">强制唤醒功能</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2_2_3"><span class="nav-number">2.2.3.</span> <span class="nav-text">学习功能</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#2_2_3_1"><span class="nav-number">2.2.3.1.</span> <span class="nav-text">计时器功能</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2_2_3_2"><span class="nav-number">2.2.3.2.</span> <span class="nav-text">激励功能</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2_2_4"><span class="nav-number">2.2.4.</span> <span class="nav-text">作品展示</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2_2_5"><span class="nav-number">2.2.5.</span> <span class="nav-text">源码</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2_3"><span class="nav-number">3.</span> <span class="nav-text">2.0版本</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2_3_1"><span class="nav-number">3.1.</span> <span class="nav-text">图片展示</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3"><span class="nav-number">4.</span> <span class="nav-text">教程</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3_1"><span class="nav-number">4.1.</span> <span class="nav-text">Arduino</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#3_1_1"><span class="nav-number">4.1.1.</span> <span class="nav-text">Arduino IDE</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3_1_2"><span class="nav-number">4.1.2.</span> <span class="nav-text">Arduino板</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3_2"><span class="nav-number">4.2.</span> <span class="nav-text">面包板</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3_3"><span class="nav-number">4.3.</span> <span class="nav-text">发光二极管</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#3_3_1"><span class="nav-number">4.3.1.</span> <span class="nav-text">点亮它</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3_3_2"><span class="nav-number">4.3.2.</span> <span class="nav-text">使它可以熄灭</span></a></li></ol></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -459,7 +485,7 @@ reset按钮：将板子重启。（断电再通电一次。一直按着会一直
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-11-29 23:06:16" itemprop="dateModified" datetime="2022-11-29T23:06:16+08:00">2022-11-29</time>
+      <time title="修改时间：2022-11-29 23:29:23" itemprop="dateModified" datetime="2022-11-29T23:29:23+08:00">2022-11-29</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -613,10 +639,23 @@ void setup() &#123;
 <p>&#125;</code></pre><br>啊~事情就是这样，看起来很简单。</p>
 <h4 id="3_1_2"><a href="#3_1_2"></a>Arduino板</h4>
 我在这次星火杯中使用的是Arduino UNO板。这是很适合新手使用的板子。Arduino板分为官方板和一种通常称作“行家改进板”两种，通俗的讲，因为Arduino是完全开源的，任何人只要有意愿都可以生产Arduino板。官方板就是字面意思，因为是进口的，所以价格会贵上不少。有的视频建议初学者使用官方板开始学习，因为质量有保证，以防出现板子出现问题而不知道如何解决的情况，但在我本人使用的过程中，自己感觉两者其实没什么区别。<br/>
-关于板子的详细介绍，因为是改进板，所以具体细节上我手中拿的和你们买到的可能有些区别。但有这些是一定要认识的：
+关于板子的详细介绍，因为是改进板，所以具体细节上我手中拿的和你们买到的可能有些区别。但有这些是一定要认识的。请在你的板子上找到这些字样：
 usb口：为Arduino板供电。<br/>
-reset按钮：将板子重启。（断电再通电一次。一直按着会一直断电（滑稽））
-数字输入端口：
+reset按钮：将板子重启。（断电再通电一次。一直按着会一直断电（滑稽））<br/>
+14路数字IO出口（0~13口）。<br/>
+6路模拟输入（A0到A5口）。<br/>
+GND：接地线。<br/>
+5.0V 。<br/>
+3.3V 。<br/>
+<h3 id="3_2"><a href="#3_2"></a>面包板</h3>
+面包板是搭建电路时常用的器材。使用时，将各种线插在面包板的合适位置，能够大大简化排线难度，使作品更美观，也更不容易出错。如果你从前没有接触过面包板，此时手里拿着一个面包版的话应该是不知所措的。常见的面包板后面是有一层胶粘着的，阻碍了我们的观察。我已经把我的面包板剥开了，你们不用剥自己的。
+如图所示，可以清晰地看出一块面包版由三块儿组成。其中有两块小的是完全贯通的。在正面，我们也可以看到上面表示的“+”和“-”的字样。它们可以被称作电源轨。arduino板一般只有一个5V口，而将arduino板的正负口通过跳线连接在面包板上的位置，就可以使整个电源轨都具有正负性。这样，再连接别的器件需要正负极时，只需要连在电源轨上即可。大的那部分面包板，又可以看到上下两部分中是分别连通的。事实上，那是五个孔为一组的。我们应该对面包板的内部构造了如指掌，才能在使用的时候不会出错。<br/>
+<h3 id="3_3"><a href="#3_3"></a>发光二极管</h3>
+<h4 id="3_3_1"><a href="#3_3_1"></a>点亮它</h4>
+众所周知，发光二极管（LED）有正负引脚之分。对于一个基本的直插式器件来说，长脚为正，短脚为负。使用USB线将你的Arduino主板通电。然后将一个LED按照正确的正负极分别插入主板的5.0V和GND口中。现在，它应该亮起。
+<h4 id="3_3_2"><a href="#3_3_2"></a>使它可以熄灭</h4>
+如果我们只是把它这样通电，那么它会一直亮着。能不能让它亮一会儿，然后熄灭呢？<br/>
+其实我们要解决的问题是：
 <p><font size="50" color="green">前方施工中</font></p>
 
     </div>
