@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+  
+    
+    <entry>
+      <title>win11家庭版启用Hyper-V并搭载win10家庭版系统</title>
+      <link href="/2024/02/08/Hyper-V/"/>
+      <url>/2024/02/08/Hyper-V/</url>
+      
+        <content type="html"><![CDATA[<p>Hyper-V是win8及以上内置的虚拟机平台。本文以win11（家庭版）物理机上启用Hyper-V并搭载win10（家庭版）系统为例，其它情况可酌情参考。</p><span id="more"></span><p>确认您的系统版本。必须为64位机，且支持CPU虚拟化。</p><p>注意Hyper-V与VirthalBox不兼容。</p><p>注意官方不建议在家庭版开启Hyper-V功能，原文为：</p><blockquote><p>关于 “启用 Hyper-V 虚拟机” 的问题， 十分抱歉，Hyper-V 功能仅适用于 Windows 10 企业版、专业版与教育版，暂不支持 Windows 10 家庭版。 如果您希望使用 Hyper-V 相关功能的话，建议您改为使用 Windows 10 专业版系统。 注意：请勿尝试在 Windows 10 家庭版上安装 Hyper-V 角色，避免设备出现意料之外的故障。</p></blockquote><p>我已知存在的问题有<a href="https://answers.microsoft.com/zh-hans/windows/forum/all/win10%E5%AE%B6%E5%BA%AD%E7%89%88%E5%A6%82%E4%BD%95/dbed5740-f2f2-4ae1-b661-34abaeacc819">不能完全关闭</a>，但似乎也<a href="https://blog.csdn.net/qq_41890209/article/details/113844451">已经找到了解决办法</a>。（我没有尝试奥）（我用着到目前为止还没出什么幺蛾子）</p><p>如果你仍然决定在家庭版中使用就看下去吧！</p><h2 id="开启CPU虚拟化"><a href="#开启CPU虚拟化" class="headerlink" title="开启CPU虚拟化"></a>开启CPU虚拟化</h2><p>首先打开任务管理器（您可以右键开始菜单找到它），点击性能-CPU，在右下角查看是否已开启CPU虚拟化。若为是，跳至下一章节。</p><p><img src="https://i0.hdslb.com/bfs/article/851705a5779ba402a92e58fd1a8a7f89481184837.png" class="lazyload" data-srcset="https://i0.hdslb.com/bfs/article/851705a5779ba402a92e58fd1a8a7f89481184837.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="任务管理器内图示"></p><p>若为否，则需要先开启CPU虚拟化（VT）功能。各品牌电脑操作不同，可以参考雷电模拟器提供的详细操作：<a href="https://help.ldmnq.com/docs/jg8S1J">https://help.ldmnq.com/docs/jg8S1J</a>或<a href="https://zhuanlan.zhihu.com/p/115103952">https://zhuanlan.zhihu.com/p/115103952</a>。雷电模拟器是我曾使用的一款安卓模拟器，它基于VirthalBox，与Hyper-V不兼容，因为它开启VT的教程比较详细所以放上来。</p><h2 id="启用Hyper-V功能"><a href="#启用Hyper-V功能" class="headerlink" title="启用Hyper-V功能"></a>启用Hyper-V功能</h2><h3 id="Windows专业版、企业版与教育版"><a href="#Windows专业版、企业版与教育版" class="headerlink" title="Windows专业版、企业版与教育版"></a>Windows专业版、企业版与教育版</h3><p>Hyper-V在Windows专业版、企业版与教育版中已内置，只需打开即可。进入控制面板-程序&#x2F;卸载程序-启用或关闭Windows功能，找到Hyper-V，勾选复选框，点击确定，点击重新启动即可。</p><h3 id="Windows家庭版"><a href="#Windows家庭版" class="headerlink" title="Windows家庭版"></a>Windows家庭版</h3><p>新建一个文本文档，输入以下：</p><pre><code>pushd &quot;%~dp0&quot; dir /b %SystemRoot%\servicing\Packages\*Hyper-V*.mum &gt;hv.txt for /f %%i in (&#39;findstr /i . hv.txt 2^&gt;nul&#39;) do dism /online /norestart /add-package:&quot;%SystemRoot%\servicing\Packages\%%i&quot; del hv.txt Dism /online /enable-feature /featurename:Microsoft-Hyper-V -All /LimitAccess /ALL pause </code></pre><p>修改后缀名为.bat，以管理员身份运行并等待（等待时间比较长，终端窗口的输出看起来是重复的，实际上是正确的，耐心等待运行结束），根据提示输入y并回车使设备重启。</p><h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><p>首先我们需要一个系统映像文件，我选择win10的ISO文件。我是从<a href="https://msdn.itellyou.cn/">MSDN - I tell you </a>下载的。本站完全免费，支持BT下载。</p><p>Windows版本中，business_editions 版本包含：Education(教育版); Enterprise (企业版); Professional(专业版)；consumer_editions 版本包含：Home(家庭版); Education(教育版) ; Professional(专业版)；LTSC是Windows企业版的特殊版本，更加专注于操作系统的长期稳定运行和兼容性。</p><p><img src="https://i0.hdslb.com/bfs/article/d7bc3a813bb7b2fdc78c59cc2f17e7eb481184837.png" class="lazyload" data-srcset="https://i0.hdslb.com/bfs/article/d7bc3a813bb7b2fdc78c59cc2f17e7eb481184837.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="各版本图示"></p><p>因为我想搭载家庭版，选择consumer_editions。</p><p>打开HYyper-V管理器，选择新建-虚拟机。</p><p>在第二页中，可以给虚拟机起个名字并选择一个地方安装。根据自己使用电脑的经验推断至少需要多少空间。</p><p><img src="https://i0.hdslb.com/bfs/article/88dfb81af71caaa1b5d007fbfc4d6aeb481184837.png" class="lazyload" data-srcset="https://i0.hdslb.com/bfs/article/88dfb81af71caaa1b5d007fbfc4d6aeb481184837.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="第二页图示"></p><p>第三页中选择代数。win7选择第一代，高版本Windows需要选择第二代。</p><p>第四页分配动态内存。默认的4G也可以，设一个更大的数也可以。因为在微软介绍中，win10的硬件条件为4G以上，所以最好不要往低调。</p><p>配置网络需选择Default Switch。</p><p>选择创建虚拟硬盘。</p><p><img src="https://i0.hdslb.com/bfs/article/efd1c4734ebc339073e583f6d9fbd5be481184837.png" class="lazyload" data-srcset="https://i0.hdslb.com/bfs/article/efd1c4734ebc339073e583f6d9fbd5be481184837.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="创建虚拟硬盘页图示"></p><p>这会在你物理机的磁盘中创建一个虚拟硬盘来存储虚拟机的信息。</p><p>最后的安装选项，选择“从可启动的映像文件安装操作系统”，并选择我们刚才下载的ISO文件。</p><p><img src="https://i0.hdslb.com/bfs/article/ffbf259094089abc2d245dca4f029956481184837.png" class="lazyload" data-srcset="https://i0.hdslb.com/bfs/article/ffbf259094089abc2d245dca4f029956481184837.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="安装操作系统图示"></p><p>点击完成。</p><p>双击我们刚刚新建的虚拟机，点击启动，然后不停按任意键，进入Windows安装界面。根据自己的喜好安装，等待结束即可。（选择我没有激活序列码）</p><h2 id="激活与分辨率调整"><a href="#激活与分辨率调整" class="headerlink" title="激活与分辨率调整"></a>激活与分辨率调整</h2><p>这时我们的虚拟机是很小的一个屏幕。我们直接在虚拟机设置中调整分辨率即可，不用看网上其他的复杂操作。</p><p>在这里放一个我用着好用的win10激活工具：<a href="https://www.xitongtiandi.net/wenzhang/win10/44982.html">https://www.xitongtiandi.net/wenzhang/win10/44982.html</a>。包很小，本地下载即可。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> windows </category>
+          
+          <category> Hyper-V </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> windows </tag>
+            
+            <tag> Hyper-V </tag>
+            
+            <tag> 虚拟机 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>B站图床</title>
+      <link href="/2024/02/07/bili%E5%9B%BE%E5%BA%8A/"/>
+      <url>/2024/02/07/bili%E5%9B%BE%E5%BA%8A/</url>
+      
+        <content type="html"><![CDATA[<p>好！本站现在起改用B站图床啦！以后的图片肯定能加载好！以下是使用中遇到的问题与解决方法。</p><span id="more"></span><h2 id="有关介绍"><a href="#有关介绍" class="headerlink" title="有关介绍"></a>有关介绍</h2><p>这里使用的图床为<a href="https://blog.csdn.net/qq_31201781?type=blog">执笔看墨花开</a>大佬开发的插件。图床本身是很容易使用的，这里记录一下在hexo上使用时需要用到“注入器”的问题。</p><p><a href="https://blog.csdn.net/qq_31201781/article/details/102801912?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522170731367616800182118640%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fblog.%2522%257D&request_id=170731367616800182118640&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~blog~first_rank_ecpm_v1~rank_v31_ecpm-3-102801912-null-null.nonecase&utm_term=%E5%9B%BE%E5%BA%8A&spm=1018.2226.3001.4450">大佬的首篇有关博客</a>记录的是Ta在开发chrome插件时遇到的问题与项目地址，大佬后续又开发了edge插件。</p><p>因为我主要使用的是edge浏览器，因此可以直接给出<a href="https://microsoftedge.microsoft.com/addons/detail/b%E7%AB%99%E5%9B%BE%E5%BA%8A/hfjlcmnnkgeppnaigbphhiibhnbnmbip?hl=zh-CN">edge插件的下载地址</a>，而chrome插件下载需要您自己查找。</p><p><img src="https://i0.hdslb.com/bfs/article/af5d2a7da92150d22f0fd3a99b464e25481184837.png" class="lazyload" data-srcset="https://i0.hdslb.com/bfs/article/af5d2a7da92150d22f0fd3a99b464e25481184837.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="插件打开长这样"></p><h2 id="使用hexo时存在的问题"><a href="#使用hexo时存在的问题" class="headerlink" title="使用hexo时存在的问题"></a>使用hexo时存在的问题</h2><p>上传图片之后就可以获得链接或代码。但是由于B站开启了防盗链，利用HTTP的Referer属性做判断。如果Referer是其白名单之外的网站，就会返回403。我们需要在html的<code>&lt;</code>head<code>&gt;</code>标签中设置如下标志，使资源引用不会携带referrer。<br><code>&lt;meta name=&quot;referrer&quot; content=&quot;no-referrer&quot;&gt;</code></p><p>如果自己就是使用html语法写网站的，该问题就此结束。而在hexo中，我们写博客时只使用markdown语法写正文部分，其它部分是由hexo生成的。</p><h2 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h2><p>这里需要使用到注入器。官方介绍点<a href="https://hexo.io/zh-cn/api/injector.html">这里</a>。</p><p>在博客的根目录下创建 scripts 文件夹，然后在里面任意命名创建一个 js 文件。在里面编写即可。</p><p>在这个具体的问题中，我们需要写上：<br><code>hexo.extend.injector.register(&#39;head_end&#39;, &#39;&lt;meta name=&quot;referrer&quot; content=&quot;no-referrer&quot;/&gt;&#39;,&#39;default&#39;)</code></p><p>第一个参数head_end表示在html的<code>&lt;</code>head<code>&gt;</code>标签后注入。第二个参数是我们需要注入的内容,第三个参数default默认全部页面注入。注意都是字符串形式。</p><p>这样，我们就可以顺利地使用该图床了。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Hexo </category>
+          
+          <category> 注入器 </category>
+          
+          <category> 图床 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Hexo </tag>
+            
+            <tag> 博客 </tag>
+            
+            <tag> 图床 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>在此系统上禁止运行脚本或未对文件数字签名而不能运行脚本</title>
+      <link href="/2024/02/07/%E5%9C%A8%E6%AD%A4%E7%B3%BB%E7%BB%9F%E4%B8%8A%E7%A6%81%E6%AD%A2%E8%BF%90%E8%A1%8C%E8%84%9A%E6%9C%AC%EF%BC%9F/"/>
+      <url>/2024/02/07/%E5%9C%A8%E6%AD%A4%E7%B3%BB%E7%BB%9F%E4%B8%8A%E7%A6%81%E6%AD%A2%E8%BF%90%E8%A1%8C%E8%84%9A%E6%9C%AC%EF%BC%9F/</url>
+      
+        <content type="html"><![CDATA[<p>使用终端时遇到问题“在此系统上禁止运行脚本或未对文件数字签名而不能运行脚本”。</p><span id="more"></span><h2 id="问题详述"><a href="#问题详述" class="headerlink" title="问题详述"></a>问题详述</h2><p>书接上回，长时间未使用过hexo，且曾对电脑安装内容进行过数次大幅改动，在检查hexo是否完整时发生如图所示在此系统上禁止运行脚本错误。</p><p><img src="https://i0.hdslb.com/bfs/article/f271735ca123e4a75e1cafc800de637a481184837.png" class="lazyload" data-srcset="https://i0.hdslb.com/bfs/article/f271735ca123e4a75e1cafc800de637a481184837.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="在此系统上禁止运行脚本"></p><h2 id="问题分析"><a href="#问题分析" class="headerlink" title="问题分析"></a>问题分析</h2><p>既然给出了<a href="https://learn.microsoft.com/zh-cn/powershell/module/microsoft.powershell.core/about/about_execution_policies?view=powershell-7.4">参阅网址</a>，那我们就去看一看。网址写的还是很详尽的。</p><p><img src="https://i0.hdslb.com/bfs/article/92976e64cd0ba4ad147eeff7b230a991481184837.png" class="lazyload" data-srcset="https://i0.hdslb.com/bfs/article/92976e64cd0ba4ad147eeff7b230a991481184837.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="获取有效的执行策略、获取影响当前会话的所有执行策略"></p><p>如上图。我们尝试获取有效的执行策略，返回为“Restricted”，意为“阻止运行所有脚本文件”。但我们获取影响当前会话的所有执行策略时，返回均为“Undefined”，意为“当前范围内没有设置执行策略”。</p><p>这看起来不对，因为这样的话我们获取当前 PowerShell 会话的有效执行策略（在这个具体问题中，即UserPolicy）时返回的也应该是“Undefined”。</p><p>对于这个问题参阅网址上也已经写明：如果所有范围内的执行策略均为 Undefined，则对于 Windows 客户端，有效执行策略为 Restricted；对于 Windows Server，有效执行策略为 RemoteSigned。我的环境显然属于前者。</p><p><img src="https://i0.hdslb.com/bfs/article/1dee4e13d87979b6c80935f3f8866641481184837.png" class="lazyload" data-srcset="https://i0.hdslb.com/bfs/article/1dee4e13d87979b6c80935f3f8866641481184837.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Restricted和Undefined执行策略描述"></p><h2 id="问题解决"><a href="#问题解决" class="headerlink" title="问题解决"></a>问题解决</h2><p>根据参阅网址的提示，我输入了更改执行策略的命令：</p><p><code>Set-ExecutionPolicy -ExecutionPolicy AllSigned</code></p><p>之后重新输入我原来需要的命令hexo -v，此时的报错提示发生了变化：未对文件数字签名而不能运行脚本。这是由于AllSigned策略只允许运行带有数字签名的脚本。</p><p><img src="https://i0.hdslb.com/bfs/article/d02bd71126635d9fcf2ec3ab97688381481184837.png" class="lazyload" data-srcset="https://i0.hdslb.com/bfs/article/d02bd71126635d9fcf2ec3ab97688381481184837.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="AllSigned策略描述"></p><p>虽然不知道为什么我的hexo脚本没有数字签名，但我相信它是清白的（这一点很重要！）。于是我将策略改为了Bypass：</p><p><code>Set-ExecutionPolicy -ExecutionPolicy Bypass</code></p><p><img src="https://i0.hdslb.com/bfs/article/9b509d110db8b184bba971def7a8200a481184837.png" class="lazyload" data-srcset="https://i0.hdslb.com/bfs/article/9b509d110db8b184bba971def7a8200a481184837.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Bypass策略描述"></p><p>问题解决：</p><p><img src="https://i0.hdslb.com/bfs/article/d6267e51fbff2e75ec60476469093f34481184837.png" class="lazyload" data-srcset="https://i0.hdslb.com/bfs/article/d6267e51fbff2e75ec60476469093f34481184837.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="问题解决图示"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> windows </category>
+          
+          <category> terminal </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> windows </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>我回来啦</title>
+      <link href="/2024/02/07/%E6%88%91%E5%9B%9E%E6%9D%A5%E5%95%A6/"/>
+      <url>/2024/02/07/%E6%88%91%E5%9B%9E%E6%9D%A5%E5%95%A6/</url>
+      
+        <content type="html"><![CDATA[<p>哎哟终于连上了！这个这个hexo就是这样有点难连，在学校里想写博客时，一写！一上传！死活上传不上来。放寒假回家啦，试试，果然还是在家里用的顺利。</p><span id="more"></span><p>过去的一年也是充当废物的一年。有时间稍微整理一下自己都做了什么事情吧。</p><p>过去写的内容也会稍有整理！过去一年里有过重装系统，有过换用系统，来来去去的，有些操作、学习断断续续的，现在竟然回想不起来一点，尽量写一点吧。</p><p>写博客真的是一件很累的事情，有时候心血来潮还要面对连接不上的问题。我也想过要不要转战知乎、csdn或者博客园，但思来想去，还是觉得自己的这一片小天地最适合自己。</p><p>在学校多次连接无果后，已经有相当长的时间没有打开过自己的博客页面了。而因为校内的学习和项目，磁盘空间日益捉急，很多内容卸了下下了卸，崩溃至极，已决定下学期就购置硬盘。兜兜转转，node.js和git在此情形下也没有幸免。而当我刚刚要重启博客计划时，嘿！您猜怎么着？</p><p>我发现node.js没有也可以正常部署博客！只要还保有node和npm即可。我还意外遇到了一桩怪事，下一篇单独拿出来讲。</p><p>这一篇就先这样吧！回看一年前自己的博客，未免有些幼稚，我将重新整理整理自己的措辞。</p><p>另：默元祝各位龙年快乐！</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> misc </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 随想 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Begin  Hexo博客指南</title>
+      <link href="/2023/07/23/BeginYourCreattiveMindFromHere/"/>
+      <url>/2023/07/23/BeginYourCreattiveMindFromHere/</url>
+      
+        <content type="html"><![CDATA[<p>你好呀！这里是默元。我将为您介绍如何使用Hexo和Github来方便快捷地搭建自己的博客页面。<br><em>真的非常抱歉！我使用的图床在国内环境下访问速度极慢，可能您自己探索配好以后回到网站才发现我有放详细的过程图！</em></p><h2 id="Hexo简要介绍（以及杂谈）"><a href="#Hexo简要介绍（以及杂谈）" class="headerlink" title="Hexo简要介绍（以及杂谈）"></a>Hexo简要介绍（以及杂谈）</h2><p><a href="https://hexo.io/zh-cn/index.html">Hexo</a>是一个快速、简洁且高效的静态博客框架，搭配Github可以让您快速完成自己的静态博客搭建，十分简明友好。Hexo提供极丰富的主题风格与功能模块，对于新手来说也能快速拥有很好的效果。</p><p>Hexo使用的是Markdown语法。你可以在<a href="https://markdown.com.cn/basic-syntax/">这里</a>学习Markdown语法。</p><p>Hexo使用的是Markdown语法，但使用HTML来书写你的博客也是可以的。虽然这样会复杂一些……我也只是顺口一提。如果想学习HTML，我个人推荐<a href="https://www.w3school.com.cn/">w3school</a>。</p><h2 id="让我们开始吧！"><a href="#让我们开始吧！" class="headerlink" title="让我们开始吧！"></a>让我们开始吧！</h2><p>以下我所说的全部内容，你也可以在<a href="https://hexo.io/zh-cn/docs/">Hexo官方文档</a>中找到。</p><h3 id="一、前置准备"><a href="#一、前置准备" class="headerlink" title="一、前置准备"></a>一、前置准备</h3><p>为了使用Hexo，你需要下载<a href="https://nodejs.org/en">Node.JS</a>和<a href="https://git-scm.com/">git</a>。</p><p>Node.js官网十分简洁明了：<img src="https://s2.loli.net/2023/07/23/rQoqHCZxshawWyR.png" class="lazyload" data-srcset="https://s2.loli.net/2023/07/23/rQoqHCZxshawWyR.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Node.js官网截图">左为“推荐给大多数用户的版本”，也就是通俗意义上的“稳定版”，右为最新版。选择哪个无所谓。你可以更改安装目录，接下来一直点击next即可。</p><p>将光标置于开始菜单徽标上，右键选择终端。</p><p>第一次选择终端（管理员）时可能报错找不到程序，先以普通权限打开终端即可自动解决。输入<code>node -v</code>、<code>npm -v</code>来查看版本，若成功显示则安装完成。<br><img src="https://s2.loli.net/2023/07/23/UsqWBdJQOt8zPDi.png" class="lazyload" data-srcset="https://s2.loli.net/2023/07/23/UsqWBdJQOt8zPDi.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="屏幕截图 2023-07-23 165843.png"></p><p>注：npm是Node的开放式模块登记和管理系统，是Node.js包的标准发布平台，用于Node.js包的发布、传播、依赖控制，npm在安装Node.js时会连带被安装。如果你仔细查看安装步骤过程的英文，应该对其有所印象。</p><p>npm全局下载的东西默认存在C盘，如果你对此不满意，可以进行如下操作。</p><p>使用<code>npm get prefix</code>查看npm全局模块的存放路径；使用<code>npm get cache</code>查看npm缓存默认存放路径。你应该会看到两个C盘路径。在自己安装Node.js的路径中新建node_cache、node_global文件夹（名字不要更改），在node_global文件夹中再新建node_modules文件夹。下图以E盘安装Node.js为例，图一中node_modules文件夹是本来就有的，不要动。<br><img src="https://s2.loli.net/2023/07/23/yVaFjkptib4MHZ8.png" class="lazyload" data-srcset="https://s2.loli.net/2023/07/23/yVaFjkptib4MHZ8.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="图一"><br><img src="https://s2.loli.net/2023/07/23/RO4kybcHn5GQjEg.png" class="lazyload" data-srcset="https://s2.loli.net/2023/07/23/RO4kybcHn5GQjEg.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="图二"><br>在终端执行以下命令来设置全局模块的安装路径到 “node_global” 文件夹，<br><code>npm config set prefix &quot;刚刚建的node_global文件夹地址&quot;</code><br>在终端执行以下命令来设置缓存到 “node_cache” 文件夹<br><code>npm config set cache &quot;刚刚建的node_cache文件夹地址&quot;</code><br>Tips:不会写文件夹地址的同学，可以在文件资源管理器中打开那个文件夹，然后单击上方路径，CTRL+C复制即可。<br><img src="https://s2.loli.net/2023/07/23/dbzJBpoPrxqtknS.png" class="lazyload" data-srcset="https://s2.loli.net/2023/07/23/dbzJBpoPrxqtknS.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="屏幕截图 2023-07-23 152318.png"></p><p>由于 node 全局模块大多数都是可以通过命令行访问的，还要把[node_global]的路径加入到系统变量中，方便直接使用命令行运行.</p><p>现在大家基本都用win10及更高系统，最简单的打开环境变量的方法是在搜索中直接搜索“环境”或“高级”，点击对应选项，点击“环境变量”。<br><img src="https://s2.loli.net/2023/07/23/6Y3dD9uCLBOVT48.png" class="lazyload" data-srcset="https://s2.loli.net/2023/07/23/6Y3dD9uCLBOVT48.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="搜索环境变量"></p><p><img src="https://s2.loli.net/2023/07/23/fmdoPFY3MjcLibD.png" class="lazyload" data-srcset="https://s2.loli.net/2023/07/23/fmdoPFY3MjcLibD.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="搜索高级系统配置"></p><p><img src="https://s2.loli.net/2023/07/23/uYGcrdt6KBJjyqO.png" class="lazyload" data-srcset="https://s2.loli.net/2023/07/23/uYGcrdt6KBJjyqO.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="点击环境变量"><br>可以看到环境变量分为用户变量和系统变量。用户变量只针对当前电脑登录的用户有效，而系统变量对所有使用这台电脑的用户有效。<a href="https://zhuanlan.zhihu.com/p/93719752">更多区别可以点我了解</a><br>双击系统变量（下边那堆）中的PATH，对最下面空白的一个格子双击（或点击新建），写入刚刚创建的node_global文件夹对应路径。然后点击确定。</p><p>最后对刚刚新建的三个文件夹进行如下操作：右键-属性-安全-编辑-勾选完全控制。这样才能确保使用npm时有权限写入文件夹。<br><img src="https://s2.loli.net/2023/07/23/vC8ijWFbuB7zlOf.png" class="lazyload" data-srcset="https://s2.loli.net/2023/07/23/vC8ijWFbuB7zlOf.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="屏幕截图 2023-07-23 153525.png"><br><img src="https://s2.loli.net/2023/07/23/L3vq1m6lU2xVo5Y.png" class="lazyload" data-srcset="https://s2.loli.net/2023/07/23/L3vq1m6lU2xVo5Y.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="屏幕截图 2023-07-23 153553.png"></p><p>接下来我们安装Git吧！</p><p>Git安装会自动添加到环境变量，因此省心不少，唯独安装过程中大量的选择和英文比较麻烦。<a href="https://zhuanlan.zhihu.com/p/242540359">这位作者</a>的翻译非常好，大家可以看看。如果不关心安装过程中的具体内容，也可以（除更换安装路径外）全部选择默认（下一步）。</p><p>我们还需要一个强大的文件编辑软件。很多文件，我们虽然可以用记事本(Notepad)打开，却无法编辑。我使用<a href="https://gitee.com/cxasm/notepad--">Notepad–</a>打开并编辑。</p><p>找到下载界面，选择Notepad–v2.6.0-win10-single-portable.zip下载。解压缩至合适位置。</p><h3 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h3><p>使用 npm 安装 Hexo。在终端输入<code>npm install -g hexo-cli</code>，回车并稍后。依旧用<code>hexo -v</code>查看一下版本确认安装成功。<br>新建一个文件夹，任意名字都行，它将会是你博客所有内容存储的地方，比如我在D盘新建一个文件夹blog_byHexo。然后右键-更多，选择Git bash here。<br><img src="https://s2.loli.net/2023/07/23/TjhvorW2bi43uCa.png" class="lazyload" data-srcset="https://s2.loli.net/2023/07/23/TjhvorW2bi43uCa.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="屏幕截图 2023-07-20 220454.png"></p><p>在Git bash中，不可以使用CTRL+C&#x2F;V来复制粘贴。你可以右键选择copy和paste。</p><p>输入<code>hexo init</code>，回车。结束后你将发现文件夹中多了许多东西，这就是初始化的内容。<br>输入<code>hexo g</code>,回车稍候，生成静态文件。输入<code>hexo s</code>，回车稍候，开启本地预览服务。<br>这时，在浏览器访问<a href="http://localhost:4000/">http://localhost:4000/</a>就可以查看你的初始博客页面了。博客页面的美化与各种功能模块的添加可以自行探索。</p><p>此时我们的博客页面只能在本地访问，接下来我们将通过Github将其部署至互联网上。</p><h3 id="Github上要做的事情"><a href="#Github上要做的事情" class="headerlink" title="Github上要做的事情"></a>Github上要做的事情</h3><p>确保你有一个Github账号。注册时如果一个邮箱注册不上，换一个邮箱。我当时QQ邮箱无法注册，使用学校邮箱注册的，但是有人QQ邮箱就能注册上。</p><p>顺便介绍一下这个地方：点击右上角自己的头像，选择Your profile，<br><img src="https://s2.loli.net/2023/07/23/7f8RwBbqEcp5A2J.png" class="lazyload" data-srcset="https://s2.loli.net/2023/07/23/7f8RwBbqEcp5A2J.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="屏幕截图 2023-07-23 161010.png"><br>下面这些格子，每个格子代表一天，颜色越绿，表示你在这一天向Github上传的代码数量越多（GitHub是世界上最大的代码托管平台）。<br><img src="https://s2.loli.net/2023/07/23/AMEHxJi2C3yNK4k.png" class="lazyload" data-srcset="https://s2.loli.net/2023/07/23/AMEHxJi2C3yNK4k.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="屏幕截图 2023-07-23 161503.png"><br>如果你的大学生涯中这些格子全是绿的，面试时给考官一看，相信考官一定会对你惊为天人，青睐有加。<br><img src="https://s2.loli.net/2023/07/23/12pRZGbOhJyUYci.png" class="lazyload" data-srcset="https://s2.loli.net/2023/07/23/12pRZGbOhJyUYci.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="R.png"></p><p>说回正题，在自己的个人主页，新建一个仓库。注意记住仓库这个词。<br><img src="https://s2.loli.net/2023/07/23/B9TtjvbVEYnl5ON.png" class="lazyload" data-srcset="https://s2.loli.net/2023/07/23/B9TtjvbVEYnl5ON.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="屏幕截图 2023-07-23 160941.png"><br>Repository name<strong>一定</strong>要填写[自己的github账户名].github.io（没有中括号）。剩下的可以不动。确保一定是public！</p><p>对博客文件夹右键-Git bash here（翻译：在此文件夹路径中打开git bash），输入<code>git config --global user.name &quot;你的github用户名&quot;</code>,<code>git config --global user.email &quot;你的github注册邮箱&quot;</code>。<br>接下来<code>ssh-keygen -t rsa -C &quot;你的github注册邮箱&quot;</code>，生成ssh密钥文件。有提示按提示输入yes，无提示按回车。</p><p>这样会生成id_rsa和id_rsa.pub两个文件（在C:\Users\你的电脑用户名.ssh）。接着用记事本或Notepad–打开id_rsa.pub 密钥，将全部内容复制（CTRL+A，CTRL+C）。<br>注：使用Notepad–打开的方式：1.右键-打开方式-选择其他应用-在电脑上选择应用-找到你安装Notepad–的位置，点击Notepad–。2.或者先打开Notepad–，再将文件拖入Notepad–窗口中。</p><p>接下来回到Github，点击右上角头像，选择settings，选择SSH and GPG keys那一项，点击new SSH Key.title为你key的名称，任意填写。将刚刚复制的内容全部粘贴在下方Key输入框中。<br><img src="https://s2.loli.net/2023/07/23/42sV8wBhREzQ6xA.png" class="lazyload" data-srcset="https://s2.loli.net/2023/07/23/42sV8wBhREzQ6xA.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="屏幕截图 2023-07-23 163650.png"></p><h3 id="开始部署"><a href="#开始部署" class="headerlink" title="开始部署"></a>开始部署</h3><p>在你的博客文件夹中找到站点配置文件<code>_config.yml</code>,将最后一段更改为</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">type: git</span><br><span class="line">repo: https://github.com/ChangAkira/ChangAkira.github.io.git(你Github上建好的的仓库地址)</span><br><span class="line">branch: master</span><br></pre></td></tr></table></figure><h3 id="到这里就全部结束啦！"><a href="#到这里就全部结束啦！" class="headerlink" title="到这里就全部结束啦！"></a>到这里就全部结束啦！</h3><p>git bash中，依次执行<code>hexo clean</code>,<code>hexo g</code>,<code>hexo d</code>。等待一会儿（延迟）后，你就可以在”Github用户名.github.io”网站看到自己的博客了。</p><h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><p>终于将建站步骤大致梳理清晰了。</p><p>本文难免有各种疏漏之处，建站也经常会遇到各种诡异的现象，还请大家多多包含。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Hexo </category>
+          
+          <category> 建站 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Hexo </tag>
+            
+            <tag> 博客 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>easyx分享会代码</title>
+      <link href="/2023/07/23/easyx/"/>
+      <url>/2023/07/23/easyx/</url>
+      
+        <content type="html"><![CDATA[<h2 id="跟随鼠标壁纸（需要自行引入资源图片）："><a href="#跟随鼠标壁纸（需要自行引入资源图片）：" class="headerlink" title="跟随鼠标壁纸（需要自行引入资源图片）："></a>跟随鼠标壁纸（需要自行引入资源图片）：</h2><pre><code>#define _CRT_SECURE_NO_WARNINGS#include&lt;stdio.h&gt;#include&lt;graphics.h&gt;#include&quot;resource.h&quot;#include&lt;conio.h&gt;int main()&#123;    ExMessage message;    IMAGE bg;    int cx = GetSystemMetrics(SM_CXSCREEN);    int cy = GetSystemMetrics(SM_CYSCREEN);    initgraph(cx, cy, EX_NOCLOSE | EX_NOMINIMIZE);    HWND hwnd = GetForegroundWindow();    SetWindowLong(hwnd, GWL_STYLE, GetWindowLong(hwnd, GWL_STYLE) &amp; ~WS_CAPTION &amp; ~WS_THICKFRAME &amp; ~WS_BORDER);    SetWindowPos(hwnd, HWND_TOP, 0, 0, cx, cy, SWP_SHOWWINDOW);    loadimage(&amp;bg, _T(&quot;JPG&quot;),  MAKEINTRESOURCE(IDR_JPG1), cx * 1.2, cy * 1.2, 0 );    putimage(-0.1 * cx, -0.1 * cy, &amp;bg);    BeginBatchDraw();    while(!_kbhit())    &#123;        peekmessage(&amp;message, EX_MOUSE, TRUE);        putimage(0.2 * (message.x - cx), 0.2 * (message.y - cy),&amp;bg);        FlushBatchDraw();        cleardevice();    &#125;    EndBatchDraw();    closegraph();    return 0;&#125;</code></pre><h2 id="立方体开始动画"><a href="#立方体开始动画" class="headerlink" title="立方体开始动画"></a>立方体开始动画</h2><pre><code>#include &lt;graphics.h&gt;#include &lt;math.h&gt;#include&lt;conio.h&gt;#definesquare_root_two1.4142135623731#definesquare_root_three1.7320508075689#define     square_root_six2.4494897427832#definePI3.1415926535898#definecubenum5// 正方体数量#defineLineCOLORBLACK#definebkCOLORWHITE#defineturnrate3// 正方体之间旋转等待#defineStardelay800#defineEnddelay750#defineFPS50// 帧数int cx = GetSystemMetrics(SM_CXSCREEN);int cy = GetSystemMetrics(SM_CYSCREEN);int center_x = cx / 2;int center_y = cy / 2;int sidegap = 35;///////////////////////// 结构定义// 定义三维点class POINT3D&#123;public:    double x, y, z;    POINT3D() &#123;&#125;    POINT3D(double x, double y, double z) &#123;        this-&gt;x = x;        this-&gt;y = y;        this-&gt;z = z;    &#125;    POINT3D(POINT3D&amp; P) &#123;        x = P.x;        y = P.y;        z = P.z;    &#125;private:&#125;;//定义正方体struct  Cube&#123;    doubleside_length;// 边长    POINT3D P[8];// 当前坐标    POINT3D tP[8];// 初始坐标    POINTp[8];// 投影坐标    inttaking;// 是否在可以运动 0否1是 初始为1 运动结束为0    intshoptime;// 暂停时间    inthaddone;// 已完成帧数，到 FPS值 停止 taking变为0&#125;cube[cubenum];// cubenum个边长低为10 公差10int end;// 0为初始值，所有正方体停止后end变为1int temp;// 临时变量，可以随便用///////////////////////// 函数声明// 功能函数POINT projection(POINT3D&amp; P3);// 降维投影得到起始二维坐标// 过程函数void Initcube();// 初始化所有正方体信息void rotation();// 旋转void Drawcube();// 描点连线void changing();// 计算二维点void ifend();// 判断是否结束///////////////////////// 函数定义int main()&#123;    // 设置画布相关信息    initgraph(cx, cy, EX_NOCLOSE | EX_NOMINIMIZE);    HWND hwnd = GetForegroundWindow();    SetWindowLong(hwnd, GWL_STYLE, GetWindowLong(hwnd, GWL_STYLE) &amp; ~WS_CAPTION &amp; ~WS_THICKFRAME &amp; ~WS_BORDER);    SetWindowPos(hwnd, HWND_TOP, 0, 0, cx, cy, SWP_SHOWWINDOW);    setbkcolor(bkCOLOR);    setbkmode(TRANSPARENT);    setlinecolor(LineCOLOR);    setlinestyle(PS_SOLID, 2);    BeginBatchDraw();        cleardevice();        Initcube();        // 静态输出        Drawcube();        FlushBatchDraw();        Sleep(Stardelay);        // 开始动画        while (end == 0)        &#123;            cleardevice();            rotation();            changing();            Drawcube();            FlushBatchDraw();            ifend();            Sleep(1000 / FPS);          // 1000/帧数 = 延迟时间        &#125;    Sleep(Enddelay);    for (int i = 1; i &lt;= 255; i+=(i/51+1))    &#123;        cleardevice();        sidegap = sidegap + i;        Initcube();        // 静态输出        setbkcolor(RGB(255-i, 255-i, 255-i));        setlinecolor(RGB(i, i, i));        //setlinecolor(RGB(255 - i, 255 - i, 255 - i));        //setbkcolor(RGB(i, i, i));        Drawcube();        FlushBatchDraw();        cleardevice();        Sleep(5);    &#125;    system(&quot;pause&quot;);    EndBatchDraw();    closegraph();    return 0;&#125;// 初始化所有正方体信息void Initcube()&#123;    end = 0;    for (int num = 0; num &lt; cubenum; num++)    &#123;        // 设置边长        cube[num].side_length = square_root_two * (num + 1) * sidegap;        // 设置三维点        cube[num].tP[0] = &#123; 0,0,0 &#125;;        cube[num].tP[1] = &#123; cube[num].side_length / square_root_two ,                            cube[num].side_length / square_root_two ,                            0 &#125;;        cube[num].tP[2] = &#123; 0,                            cube[num].side_length * square_root_two ,                            0 &#125;;        cube[num].tP[3] = &#123; cube[num].side_length / square_root_two * (-1) ,                            cube[num].side_length / square_root_two ,                            0 &#125;;        for (int num1 = 4; num1 &lt; 9; num1++)        &#123;            cube[num].P[(num1 - 4)] = cube[num].tP[(num1 - 4)];            cube[num].tP[num1] = &#123; cube[num].P[(num1 - 4)].x ,cube[num].P[(num1 - 4)].y ,                cube[num].P[(num1 - 4)].z + cube[num].side_length &#125;;            cube[num].P[num1] = cube[num].tP[num1];        &#125;        cube[num].taking = 1;        cube[num].shoptime = (int)(num * turnrate);        cube[num].haddone = 0;    &#125;    // 转换得到投影点    changing();&#125;// 旋转void rotation()&#123;    // 旋转轴点为（0，cube[num].side_length / square_root_two，z)    for (int num = 0; num &lt; cubenum; num++)    &#123;        if (cube[num].taking == 1)        &#123;            if (cube[num].shoptime == 0)            &#123;                // 底面做旋转操作                for (int num1 = 0; num1 &lt; 4; num1++)                &#123;                    cube[num].P[num1].x = (cube[num].tP[num1].x - 0) * cos(-cube[num].haddone * PI / FPS) - (cube[num].tP[num1].y - cube[num].side_length / square_root_two) * sin(-cube[num].haddone * PI / FPS) + 0;                    cube[num].P[num1].y = (cube[num].tP[num1].x - 0) * sin(-cube[num].haddone * PI / FPS) + (cube[num].tP[num1].y - cube[num].side_length / square_root_two) * cos(-cube[num].haddone * PI / FPS) + cube[num].side_length / square_root_two;                &#125;                // 顶面                for (int num2 = 4; num2 &lt; 8; num2++)                &#123;                    cube[num].P[num2].x = cube[num].P[(num2 - 4)].x;                    cube[num].P[num2].y = cube[num].P[(num2 - 4)].y;                    cube[num].P[num2].z = cube[num].P[(num2 - 4)].z + cube[num].side_length;                &#125;                cube[num].haddone++;                if (cube[num].haddone == (FPS + 1))                    cube[num].taking = 0;            &#125;            elsecube[num].shoptime--;        &#125;    &#125;&#125;// 计算二维点void changing()&#123;    for (int num = 0; num &lt; cubenum; num++)        for (int num1 = 0; num1 &lt; 8; num1++)            cube[num].p[num1] = projection(cube[num].P[num1]);&#125;// 描点连线void Drawcube()&#123;    for (int num = 0; num &lt; cubenum; num++)    &#123;        for (int num1 = 0; num1 &lt; 4; num1++)        &#123;            // 底层            temp = ((num1 + 1) == 4) ? 0 : (num1 + 1);            line(cube[num].p[num1].x, cube[num].p[num1].y, cube[num].p[temp].x, cube[num].p[temp].y);            // 侧楞            temp = num1 + 4;            line(cube[num].p[num1].x, cube[num].p[num1].y, cube[num].p[temp].x, cube[num].p[temp].y);            // 顶层            temp = ((num1 + 5) == 8) ? 4 : (num1 + 5);            line(cube[num].p[(num1 + 4)].x, cube[num].p[(num1 + 4)].y, cube[num].p[temp].x, cube[num].p[temp].y);        &#125;    &#125;&#125;// 判断是否结束void ifend()&#123;    if (cube[(cubenum - 1)].taking == 0)        end = 1;&#125;// 投影得到起始二维坐标POINT projection(POINT3D&amp; p3)&#123;    POINT p2;    // x直接取值    p2.x = (long)p3.x + center_x;    // y用点到直线公式    p2.y = (long)((p3.y * square_root_two - p3.z * 2) / square_root_six + center_y);    return p2;&#125;</code></pre><p>立方体开始动画作品由星羽1704（email <a href="mailto:&#x31;&#52;&#55;&#57;&#x32;&#52;&#53;&#48;&#53;&#48;&#x40;&#113;&#113;&#46;&#x63;&#111;&#109;">&#x31;&#52;&#55;&#57;&#x32;&#52;&#53;&#48;&#53;&#48;&#x40;&#113;&#113;&#46;&#x63;&#111;&#109;</a> 联系方式 qq 1479245050 ）在<a href="https://codebus.cn/featherstar/dynamic-figure" title="将三维空间的点投影到二维平面，感受三维正方体的旋转的视觉盛宴">easyx例程文档</a>中给出。本文将其做少量的修改，得到另外的效果。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> forBOEclub </category>
+          
+          <category> easyx </category>
+          
+          <category> easyx </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> forBOEclub </tag>
+            
+            <tag> easyx </tag>
+            
+            <tag> freshman </tag>
+            
+            <tag> C语言 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Hello World</title>
+      <link href="/2023/07/20/hello-world/"/>
+      <url>/2023/07/20/hello-world/</url>
+      
+        <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+  
+  
+</search>
