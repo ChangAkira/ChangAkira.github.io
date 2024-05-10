@@ -247,8 +247,8 @@
   <meta name="Volantis" content="5.8.0">
   <meta charset="utf-8">
   <!-- SEO相关 -->
-  <meta name="robots" content="noindex,follow">
-  <link rel="canonical" href="https://changakira.github.io/tags/vs/"/>
+  
+  <link rel="canonical" href="https://changakira.github.io/2024/05/10/mysql-reset-password/"/>
   <!-- 渲染优化 -->
     <meta http-equiv='x-dns-prefetch-control' content='on' />
       <link rel='dns-prefetch' href='https://unpkg.com'>
@@ -276,19 +276,21 @@
 
   <!-- feed -->
   <!-- 页面元数据 -->
-  <title>标签：VS - 是默元的博客</title>
-  <meta name="keywords" content="默元">
-  <meta desc name="description" content="是默元的博客 - Chang Akira - 是默元的博客">
+  <title>mysql修改密码报错 - 是默元的博客</title>
+  <meta name="keywords" content="mysql,默元">
+  <meta desc name="description" content="本文讨论两个报错：Operation ALTER USER failed for &#39;root&#39;@&#39;%&#39;与Plugin &#39;mysql_native_password&#39; is not loaded - Chang Akira - 是默元的博客">
   
-<meta property="og:type" content="website">
-<meta property="og:title" content="是默元的博客">
-<meta property="og:url" content="https://changakira.github.io/tags/VS/index.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="mysql修改密码报错">
+<meta property="og:url" content="https://changakira.github.io/2024/05/10/mysql-reset-password/index.html">
 <meta property="og:site_name" content="是默元的博客">
-<meta property="og:description" content="是默元的博客">
+<meta property="og:description" content="本文讨论两个报错：Operation ALTER USER failed for &#39;root&#39;@&#39;%&#39;与Plugin &#39;mysql_native_password&#39; is not loaded">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://s2.loli.net/2023/07/21/PGyugoK3YMWkeba.png">
+<meta property="article:published_time" content="2024-05-10T04:32:46.000Z">
+<meta property="article:modified_time" content="2024-05-10T05:22:44.954Z">
 <meta property="article:author" content="Chang Akira">
-<meta property="article:tag" content="默元">
+<meta property="article:tag" content="mysql">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://s2.loli.net/2023/07/21/PGyugoK3YMWkeba.png">
   <style>
@@ -2916,25 +2918,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       <div id="safearea">
         <div class="body-wrapper">
           
-
 <div id="l_main" class=''>
-  
-    
-      
-  <section class="post-list">
-    
-      
-        
-          
-        
-      
-    
-    
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="https://changakira.github.io/2024/02/08/QT5-7-1与VisualStudio2015/">
+  <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow floatable blur article-type-post" id="post" itemscope itemprop="blogPost">
+  <link itemprop="mainEntityOfPage" href="https://changakira.github.io/2024/05/10/mysql-reset-password/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="是默元的博客">
   </span>
@@ -2943,68 +2929,241 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <meta itemprop="description" content="是默元的博客">
   </span>
   
-  
+
+
   
     <span hidden>
       <meta itemprop="image" content="https://s2.loli.net/2023/07/21/PGyugoK3YMWkeba.png">
     </span>
   
-  
+  <div class="article-meta" id="top">
     
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2024/02/08/QT5-7-1%E4%B8%8EVisualStudio2015/"  itemprop="url">
-        QT5.7.1与VisualStudio2015
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
     
-      <p>因为项目的需要，我需要使用QT5.7.1与VisualStudio2015进行联合开发，由于都是很老的版本了，在配置过程中遇上了数不尽的坑，这些坑还大多是网上很多人有同样问题却未能解决的。在无数次失败后我终于找到了完美的源，在此分享。</p>
+    
+      <h1 class="title" itemprop="name headline">
+        mysql修改密码报错
+      </h1>
+      <div class='new-meta-box'>
+        
+          
+            
+  <div class='new-meta-item category'>
+    <i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i>
+    <a class="category-link" href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/">数据库</a>
+    
+      <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+        <a href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/" itemprop="url"><span itemprop="name">数据库</span></a>
+      </span>
     
   </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2024-02-08T20:43:17+08:00">2024-02-08</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/Qt/">Qt</a><span class="sep"></span><a class="category-link" href="/categories/VS/">VS</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/VS/" itemprop="url"><span itemprop="name">VS</span></a>
-            </span>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/Qt/" itemprop="url"><span itemprop="name">Qt</span></a>
-            </span>
+
+
           
         
-      </div>
+          
+            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2024-05-10T12:32:46+08:00">
+  <a class='notlink'>
+    <i class="fa-solid fa-calendar-alt fa-fw" aria-hidden="true"></i>
+    <p>发布于：2024年5月10日</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+
+
+<div class="new-meta-item browse">
+  <a class='notlink'>
+    <p>
+      <i class="fa-solid fa-eye fa-fw" aria-hidden="true"></i>
       
-        <div>
-          <a class='readmore' href='/2024/02/08/QT5-7-1%E4%B8%8EVisualStudio2015/' itemprop="url">
-            阅读全文
-          </a>
-        </div>
+      <span id="lc-pv" data-title="mysql修改密码报错" data-path="/2024/05/10/mysql-reset-password/">
+        <span id='number'><i class="fa-solid fa-loader fa-spin fa-fw" aria-hidden="true"></i></span>
+      </span>
+      
+      <span>次浏览</span>
+    </p>
+  </a>
+</div>
+
+
+          
+        
+        <!-- Custom Files topMeta begin-->
+        
+        <!-- Custom Files topMeta end-->
+      </div>
+    
+  </div>
+
+
+  <div id="layoutHelper-page-plugins"></div>
+  <div id="post-body" itemprop="articleBody">
+    <p>本文讨论两个报错：<code>Operation ALTER USER failed for &#39;root&#39;@&#39;%&#39;</code>与<code>Plugin &#39;mysql_native_password&#39; is not loaded</code></p>
+<span id="more"></span>
+
+<h2 id="报错Operation-ALTER-USER-failed-for-‘root‘-’-’"><a href="#报错Operation-ALTER-USER-failed-for-‘root‘-’-’" class="headerlink" title="报错Operation ALTER USER failed for ‘root‘@’%’"></a>报错Operation ALTER USER failed for ‘root‘@’%’</h2><p>安装mysql后，更改初始密码时，按照教程输入<code>ALTER USER &#39;root&#39;@&#39;%&#39; IDENTIFIED BY &#39;123&#39;;</code>，报错<code>Operation ALTER USER failed for &#39;root&#39;@&#39;%&#39;</code>。（或者输入<code>ALTER USER &#39;root&#39;@&#39;localhost&#39; IDENTIFIED BY &#39;123&#39;;</code>，报错<code>Operation ALTER USER failed for &#39;root&#39;@&#39;localhost&#39;</code>）</p>
+<p>解决：在已登录mysql后输入</p>
+<pre><code>`select user,host from user;`
+</code></pre>
+<p><img src="https://i0.hdslb.com/bfs/article/5049e94dd1af39f4c9c005ecc92dca9f481184837.png" class="lazyload" data-srcset="https://i0.hdslb.com/bfs/article/5049e94dd1af39f4c9c005ecc92dca9f481184837.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="输入`select user,host from user;`"></p>
+<p>如上图，显示user中<code>root</code>的host为<code>localhost</code>，则应输入<code>ALTER USER &#39;root&#39;@&#39;localhost&#39; IDENTIFIED BY &#39;123&#39;;</code></p>
+<p>反之，若显示user中<code>root</code>的host为<code>%</code>，则应输入<code>ALTER USER &#39;root&#39;@&#39;%&#39; IDENTIFIED BY &#39;123&#39;;</code></p>
+<h2 id="报错Plugin-‘mysql-native-password’-is-not-loaded"><a href="#报错Plugin-‘mysql-native-password’-is-not-loaded" class="headerlink" title="报错Plugin ‘mysql_native_password’ is not loaded"></a>报错Plugin ‘mysql_native_password’ is not loaded</h2><p>上文中的代码已经避开了接下来讨论的这一个ERROR。实际上，在网上教程中，我查到的代码是<code>ALTER USER &#39;root&#39;@&#39;localhost&#39; IDENTIFIED WITH mysql_native_password BY &#39;123&#39;;</code>，然后遇到报错<code>Plugin &#39;mysql_native_password&#39; is not loaded</code>，如下图所示。</p>
+<p><img src="https://i0.hdslb.com/bfs/article/ea0aa144583aadcf51af96f7bc36d43a481184837.png" class="lazyload" data-srcset="https://i0.hdslb.com/bfs/article/ea0aa144583aadcf51af96f7bc36d43a481184837.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="报错显示"></p>
+<p>我在网上查到的资料中没有线索。这时，我发现有人提到</p>
+<blockquote>
+<p>MySQL5.8从开始将caching_sha2_password替代mysql_native_password作为默认的身份验证插件</p>
+</blockquote>
+<p>于是我将代码中的<code>mysql_native_password</code>改为<code>caching_sha2_password</code>，即输入：</p>
+<pre><code>ALTER USER &#39;root&#39;@&#39;localhost&#39; IDENTIFIED WITH caching_sha2_password BY &#39;123&#39;;
+</code></pre>
+<p><img src="https://i0.hdslb.com/bfs/article/c0a58b89bd050f3c44e6e65f1c85acb5481184837.png" class="lazyload" data-srcset="https://i0.hdslb.com/bfs/article/c0a58b89bd050f3c44e6e65f1c85acb5481184837.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="替换后"><br>成功。<br>后来我查阅资料，又发现直接省略这部分就行：</p>
+<pre><code>ALTER USER &#39;root&#39;@&#39;localhost&#39; IDENTIFIED BY &#39;123456&#39;;
+</code></pre>
+<p><img src="https://i0.hdslb.com/bfs/article/4c299ab527d0e79d62930e6640352ec9481184837.png" class="lazyload" data-srcset="https://i0.hdslb.com/bfs/article/4c299ab527d0e79d62930e6640352ec9481184837.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="省略"></p>
+
+  </div>
+  
+  
+    
+    <div class='footer'>
+       <!-- 参考资料、相关资料等 -->
+      
+       <!-- 相关文章 -->
+      
+      <!-- 版权声明组件 -->
+      
+      <!-- 打赏组件 -->
       
     </div>
   
+  
+    
 
+
+  <div class='article-meta' id="bottom">
+    <div class='new-meta-box'>
+      
+        
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2024-05-10T13:22:44+08:00">
+  <a class='notlink'>
+    <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
+    <p>更新于：2024年5月10日</p>
+  </a>
 </div>
 
-          </div>
         
       
-    
-  </section>
+        
+          
   
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/mysql/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>mysql</p></a></div>
+  <span hidden itemprop="keywords">mysql</span>
+
+
+        
+      
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
     
+      
+        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://changakira.github.io/2024/05/10/mysql-reset-password/&title=mysql修改密码报错 - 是默元的博客&summary=本文讨论两个报错：Operation ALTER USER failed for &#39;root&#39;@&#39;%&#39;与Plugin &#39;mysql_native_password&#39; is not loaded"
+          
+          >
+          
+            <img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qq.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qq.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://changakira.github.io/2024/05/10/mysql-reset-password/&title=mysql修改密码报错 - 是默元的博客&summary=本文讨论两个报错：Operation ALTER USER failed for &#39;root&#39;@&#39;%&#39;与Plugin &#39;mysql_native_password&#39; is not loaded"
+          
+          >
+          
+            <img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qzone.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qzone.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://service.weibo.com/share/share.php?url=https://changakira.github.io/2024/05/10/mysql-reset-password/&title=mysql修改密码报错 - 是默元的博客&summary=本文讨论两个报错：Operation ALTER USER failed for &#39;root&#39;@&#39;%&#39;与Plugin &#39;mysql_native_password&#39; is not loaded"
+          
+          >
+          
+            <img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/weibo.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/weibo.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+
+
+        
+      
+    </div>
+    <!-- Custom Files bottomMeta begin -->
+    
+    <!-- Custom Files bottomMeta end -->
+  </div>
+
+
+  
+  
+
+  
+    <div class="prev-next">
+      
+      
+        <a class='next' href='/2024/02/08/QT5-7-1%E4%B8%8EVisualStudio2015/'>
+          <p class='title'>QT5.7.1与VisualStudio2015<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>因为项目的需要，我需要使用QT5.7.1与VisualStudio2015进行联合开发，由于都是很老的版本了，在配置过程中遇上了数不尽的坑，这些坑还大多是网上很多人有同样问题却未能解决的。在无数...</p>
+        </a>
+      
+    </div>
+  
+  <!-- Custom Files postEnd begin-->
+  
+  <!-- Custom Files postEnd end-->
+</article>
+
+
   
 
 
+  <article class="post white-box shadow floatable blur" id="comments">
+    <span hidden>
+      <meta itemprop="discussionUrl" content="/2024/05/10/mysql-reset-password/index.html#comments">
+    </span>
+    <p ct><i class='fa-solid fa-comments'></i> 评论</p>
     
-  
+
+    <div id="layoutHelper-comments"></div>
+
+  </article>
+
+
+
+
+
+
 </div>
 <aside id='l_side' itemscope itemtype="http://schema.org/WPSideBar">
   
@@ -3013,201 +3172,48 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
       
-<section class="widget blogger desktop mobile pjax">
-  <div class='content'>
     
-      
-        <a class='avatar flat-box rectangle' href='/about/'>
-          <img no-lazy src='https://i0.hdslb.com/bfs/article/b6f1fe6f8c3694b54046013d64089db9481184837.png'/>
-        </a>
-      
-    
-    
-      <div class='text'>
-        
-          <h2>沉默哒！新年！</h2>
-        
-        
-        
-          <p><span id="jinrishici-sentence">是默元的博客</span></p>
-          <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
-        
-      </div>
-    
-    
-      <div class="social-wrapper">
-        
-          
-            <a href="https://space.bilibili.com/481184837"
-              class="social fab fa-bilibili flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="mailto:2161879699@qq.com"
-              class="social fa-solid fa-envelope flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="https://qm.qq.com/cgi-bin/qm/qr?k=8I-qmUHwMVHFcphbHYEqT2LQxGK4YaC6&amp;noverify=0"
-              class="social fa-brands fa-qq flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="https://github.com/ChangAkira"
-              class="social fab fa-github flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-      </div>
-    
-  </div>
-</section>
-
-    
-  
-
-  
-    
-    
-      
-  
-  <section class="widget category desktop mobile pjax">
-    
-  <header>
-    
-      <a href='/blog/categories/'><i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i><span class='name'>文章分类</span></a>
-    
-  </header>
-
-
-    <div class='content'>
-      <ul class="entry navigation">
-        
-          <li><a class="flat-box"
-            title="/categories/Hexo/" href="/categories/Hexo/"
-            active-action="action-categoriesHexo"
-            ><div class='name'>Hexo</div><div class='badge'>(2)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/Hexo/%E5%9B%BE%E5%BA%8A/" href="/categories/Hexo/%E5%9B%BE%E5%BA%8A/"
-            active-action="action-categoriesHexoE59BBEE5BA8A"
-            ><div class='name'>图床</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/Hexo/%E5%BB%BA%E7%AB%99/" href="/categories/Hexo/%E5%BB%BA%E7%AB%99/"
-            active-action="action-categoriesHexoE5BBBAE7AB99"
-            ><div class='name'>建站</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/Hexo/%E6%B3%A8%E5%85%A5%E5%99%A8/" href="/categories/Hexo/%E6%B3%A8%E5%85%A5%E5%99%A8/"
-            active-action="action-categoriesHexoE6B3A8E585A5E599A8"
-            ><div class='name'>注入器</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/Qt/" href="/categories/Qt/"
-            active-action="action-categoriesQt"
-            ><div class='name'>Qt</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/VS/" href="/categories/VS/"
-            active-action="action-categoriesVS"
-            ><div class='name'>VS</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/easyx/" href="/categories/easyx/"
-            active-action="action-categorieseasyx"
-            ><div class='name'>easyx</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/forBOEclub/" href="/categories/forBOEclub/"
-            active-action="action-categoriesforBOEclub"
-            ><div class='name'>forBOEclub</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/forBOEclub/easyx/" href="/categories/forBOEclub/easyx/"
-            active-action="action-categoriesforBOEclubeasyx"
-            ><div class='name'>easyx</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/misc/" href="/categories/misc/"
-            active-action="action-categoriesmisc"
-            ><div class='name'>misc</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/windows/" href="/categories/windows/"
-            active-action="action-categorieswindows"
-            ><div class='name'>windows</div><div class='badge'>(2)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/windows/Hyper-V/" href="/categories/windows/Hyper-V/"
-            active-action="action-categorieswindowsHyper-V"
-            ><div class='name'>Hyper-V</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/windows/terminal/" href="/categories/windows/terminal/"
-            active-action="action-categorieswindowsterminal"
-            ><div class='name'>terminal</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/" href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"
-            active-action="action-categoriesE695B0E68DAEE5BA93"
-            ><div class='name'>数据库</div><div class='badge'>(1)</div></a></li>
-        
-      </ul>
-    </div>
-  </section>
-
-
-    
-  
-
-  
-    
-    
-      
-  
-  <section class="widget tagcloud desktop mobile pjax">
-    
-  <header>
-    
-      <a href='/blog/tags/'><i class="fa-solid fa-tags fa-fw" aria-hidden="true"></i><span class='name'>热门标签</span></a>
-    
-  </header>
-
-
-    <div class='content'>
-      <a href="/tags/C%E8%AF%AD%E8%A8%80/" style="font-size: 14px; color: #999">C语言</a> <a href="/tags/Hexo/" style="font-size: 24px; color: #555">Hexo</a> <a href="/tags/Hyper-V/" style="font-size: 14px; color: #999">Hyper-V</a> <a href="/tags/Qt/" style="font-size: 14px; color: #999">Qt</a> <a href="/tags/VS/" style="font-size: 14px; color: #999">VS</a> <a href="/tags/easyx/" style="font-size: 14px; color: #999">easyx</a> <a href="/tags/forBOEclub/" style="font-size: 14px; color: #999">forBOEclub</a> <a href="/tags/freshman/" style="font-size: 14px; color: #999">freshman</a> <a href="/tags/mysql/" style="font-size: 14px; color: #999">mysql</a> <a href="/tags/windows/" style="font-size: 24px; color: #555">windows</a> <a href="/tags/%E5%8D%9A%E5%AE%A2/" style="font-size: 24px; color: #555">博客</a> <a href="/tags/%E5%9B%BE%E5%BA%8A/" style="font-size: 14px; color: #999">图床</a> <a href="/tags/%E8%99%9A%E6%8B%9F%E6%9C%BA/" style="font-size: 14px; color: #999">虚拟机</a> <a href="/tags/%E9%9A%8F%E6%83%B3/" style="font-size: 14px; color: #999">随想</a>
-    </div>
-  </section>
-
-
-    
-  
-
   
 
 
 <div class="widget-sticky pjax">
 
+  
+  
+
+
+  <section class="widget toc-wrapper desktop mobile " id="toc-div" >
+    
+  <header>
+    
+      <i class="fa-solid fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
+    
+  </header>
+
+
+    <div class='content'>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8A%A5%E9%94%99Operation-ALTER-USER-failed-for-%E2%80%98root%E2%80%98-%E2%80%99-%E2%80%99"><span class="toc-text">报错Operation ALTER USER failed for ‘root‘@’%’</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8A%A5%E9%94%99Plugin-%E2%80%98mysql-native-password%E2%80%99-is-not-loaded"><span class="toc-text">报错Plugin ‘mysql_native_password’ is not loaded</span></a></li></ol>
+    </div>
+  </section>
+
+  
+
 </div>
 
 
 <!-- 没有 pjax 占位会报错 万恶的 pjax -->
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
 
   <div class="pjax">
     <!-- pjax占位 -->
@@ -3235,13 +3241,14 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </aside>
 
 
+
           <!--此文件用来存放一些不方便取值的变量-->
 <!--思路大概是将值藏到重加载的区域内-->
 
 <pjax>
 <script>
   window.pdata={}
-  pdata.ispage=false;
+  pdata.ispage=true;
   pdata.commentPath="";
   pdata.commentPlaceholder="";
   pdata.commentConfig={};
@@ -4496,7 +4503,7 @@ volantis.js("https://sidecar.gitter.im/dist/sidecar.v1.js")
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"是默元的博客","url":"https://changakira.github.io/","logo":{"@type":"ImageObject","url":"https://s2.loli.net/2023/07/21/PGyugoK3YMWkeba.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Chang Akira","image":{"@type":"ImageObject","url":"https://s2.loli.net/2023/07/21/PGyugoK3YMWkeba.png"},"url":"https://changakira.github.io/","sameAs":["https://github.com/volantis-x"],"description":"是默元的博客"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://changakira.github.io/","name":"是默元的博客"}},{"@type":"ListItem","position":2,"item":{"@id":"https://changakira.github.io/tags/VS/","name":"VS"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"是默元的博客","url":"https://changakira.github.io/","keywords":"默元","description":"是默元的博客","author":{"@type":"Person","name":"Chang Akira","image":{"@type":"ImageObject","url":"https://s2.loli.net/2023/07/21/PGyugoK3YMWkeba.png"},"url":"https://changakira.github.io/","description":"是默元的博客"},"publisher":{"@type":"Organization","name":"是默元的博客","url":"https://changakira.github.io/","logo":{"@type":"ImageObject","url":"https://s2.loli.net/2023/07/21/PGyugoK3YMWkeba.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://changakira.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","description":"是默元的博客","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage"},"author":{"@type":"Person","name":"Chang Akira","image":{"@type":"ImageObject","url":"https://s2.loli.net/2023/07/21/PGyugoK3YMWkeba.png"},"url":"https://changakira.github.io/"},"publisher":{"@type":"Organization","name":"是默元的博客","logo":{"@type":"ImageObject","url":"https://s2.loli.net/2023/07/21/PGyugoK3YMWkeba.png","width":192,"height":192}},"wordCount":0,"image":{"@type":"ImageObject","url":"https://s2.loli.net/2023/07/21/PGyugoK3YMWkeba.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"是默元的博客","url":"https://changakira.github.io/","logo":{"@type":"ImageObject","url":"https://s2.loli.net/2023/07/21/PGyugoK3YMWkeba.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Chang Akira","image":{"@type":"ImageObject","url":"https://s2.loli.net/2023/07/21/PGyugoK3YMWkeba.png"},"url":"https://changakira.github.io/","sameAs":["https://github.com/volantis-x"],"description":"是默元的博客"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://changakira.github.io/","name":"是默元的博客"}},{"@type":"ListItem","position":2,"item":{"@id":"https://changakira.github.io/categories/数据库/","name":"数据库"}},{"@type":"ListItem","position":3,"item":{"@id":"https://changakira.github.io/2024/05/10/mysql-reset-password/","name":"mysql修改密码报错"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"是默元的博客","url":"https://changakira.github.io/","keywords":"默元","description":"是默元的博客","author":{"@type":"Person","name":"Chang Akira","image":{"@type":"ImageObject","url":"https://s2.loli.net/2023/07/21/PGyugoK3YMWkeba.png"},"url":"https://changakira.github.io/","description":"是默元的博客"},"publisher":{"@type":"Organization","name":"是默元的博客","url":"https://changakira.github.io/","logo":{"@type":"ImageObject","url":"https://s2.loli.net/2023/07/21/PGyugoK3YMWkeba.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://changakira.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"mysql修改密码报错","description":"本文讨论两个报错：Operation ALTER USER failed for &#39;root&#39;@&#39;%&#39;与Plugin &#39;mysql_native_password&#39; is not loaded","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://changakira.github.io/2024/05/10/mysql-reset-password/"},"author":{"@type":"Person","name":"Chang Akira","image":{"@type":"ImageObject","url":"https://s2.loli.net/2023/07/21/PGyugoK3YMWkeba.png"},"url":"https://changakira.github.io/"},"publisher":{"@type":"Organization","name":"是默元的博客","logo":{"@type":"ImageObject","url":"https://s2.loli.net/2023/07/21/PGyugoK3YMWkeba.png","width":192,"height":192}},"url":"https://changakira.github.io/2024/05/10/mysql-reset-password/","wordCount":120,"datePublished":"2024-05-10T04:32:46.000Z","dateModified":"2024-05-10T05:22:44.954Z","articleSection":"数据库","keywords":"mysql","image":{"@type":"ImageObject","url":"https://s2.loli.net/2023/07/21/PGyugoK3YMWkeba.png","width":192,"height":192}}]</script>
 
 
 
