@@ -2151,7 +2151,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1716560842763),
+    lastupdate: new Date(1716629370774),
     sidebar: {
       for_page: ["blogger","category","tagcloud","donate"],
       for_post: ["toc"],
@@ -2739,6 +2739,23 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
             
               <li>
+                <a class="menuitem flat-box faa-parent animated-hover"
+                href="/mystic/" title="魔法屋"
+                  
+                  
+                  
+                    active-action="action-mystic"
+                  >
+                  魔法屋
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
                 <a class="menuitem flat-box header toggle-mode-btn" onclick="switchNightMode()">
                   <i class='fa-solid fa-sun fa-fw'></i>夜间模式
                 </a>
@@ -2880,6 +2897,23 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                     active-action="action-about"
                   >
                   <i class='fa-solid fa-info-circle fa-fw'></i>关于
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover"
+                href="/mystic/" title="魔法屋"
+                  
+                  
+                  
+                    active-action="action-mystic"
+                  >
+                  魔法屋
                 </a>
                 
               </li>
@@ -3048,18 +3082,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
     
       
-        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
-          
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://changakira.github.io/2024/05/23/Qt-%E6%97%A0%E7%BC%96%E8%AF%91%E5%99%A8/&title=Qt_无编译器 - 是默元的博客&summary="
-          
-          >
-          
-            <img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qzone.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qzone.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
-          
-        </a>
-      
-    
-      
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
           target="_blank" href="http://service.weibo.com/share/share.php?url=https://changakira.github.io/2024/05/23/Qt-%E6%97%A0%E7%BC%96%E8%AF%91%E5%99%A8/&title=Qt_无编译器 - 是默元的博客&summary="
@@ -3072,7 +3094,25 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
     
       
+        
+        <div class='hoverbox'>
+          <a class='share'><img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/wechat.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/wechat.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a>
+          <div class='target'>
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAVgAAAFYCAAAAAAzB7ucAAAEZElEQVR42u3awXIjIQwEUP//T2fv2XINaglwXI+b7TGGRw5I6dePsWW8EIAFa4AFC9YAewT2FY7/Jvz1/rvnqt979/ppPe9+J51/1QMsWLBgwYIFCxbsWdjlC/Ai7NT7UweWHmz5+2DBggULFixYsGCvwD5egB+en4Zqb7Q4f9sDLFiwYMGCBQsW7J+CXW0UpxDdxnb34MGCBQsWLFiwYMF+J2y1od39/Gl9q5+vQoMFCxYsWLBgwYL9bNhuI7m6kF2Bimqh8nFJGLBgwYIFCxYsWLBLsNWRBjL+yuvYAyxYsGDBggULFuwR2O7obqR60d9VUIx5gAULFixYsGDBgj0Cm16QqxBpsKPbWJ9ukD/uHyxYsGDBggULFuxR2KlgxBRwN0A89YdTDqSABQsWLFiwYMGCPQI7fSGfen51fd0GeVoIlP+DABYsWLBgwYIFC3YUNi0QqmDdQEW3EV5dfxwYAQsWLFiwYMGCBXsUtruRKaD0gl5tjFcPZLkxDhYsWLBgwYIFC/Yo7OpF+WdopI3o6kFPBTaWDwQsWLBgwYIFCxbsFdipAEe3oZ0WInHQoli4vH0eLFiwYMGCBQsW7FXYLkR6Ie8eWBo86QZKwIIFCxYsWLBgwZ6F7V6Ydxcatxvm1QIELFiwYMGCBQsW7BnYNLCRNp678KtwaeM9DXKABQsWLFiwYMGCvQObbqC70GrDO4WdDmwsFwhgwYIFCxYsWLBgj8DuuujvBp4+6HZgAyxYsGDBggULFuwR2BSkemGvFiLdg0yfTwsGsGDBggULFixYsGdgu43dbmO62khfBUv31S1owIIFCxYsWLBgwd6B7V70uw3s1fmnLv7pAT82usGCBQsWLFiwYMEegd3dmK4GJLoN9l2FwiM8WLBgwYIFCxYs2I+ATRvf6QbTA+wWGmnhARYsWLBgwYIFC/YubDVwMbWgKaipA0zXCRYsWLBgwYIFC/YubPeH0nmnAhTpvOk+xpMwYMGCBQsWLFiwYFuwaWAjHWlhkQY4uoXA2/WCBQsWLFiwYMGCPQqbXqirBcFUwVDdeNrwLhcoYMGCBQsWLFiwYI/ApoGJp+d3XcTThvXuAAlYsGDBggULFizYu7BpcCLd6K5G91QgpLxvsGDBggULFixYsFdhpxrZ3QDEaiEyPX/qAxYsWLBgwYIFC/YO7Gt4rAYtuhf6qUKjvS+wYMGCBQsWLFiwR2B3FQZTAZDpgEj3D+DxfbBgwYIFCxYsWLBHYKcWUl1AN+ixOk8Zprt+sGDBggULFixYsEdh04LgCXo6GFINhKSN9LECASxYsGDBggULFuwR2G4QolswTMFMBUdWvw8WLFiwYMGCBQv2O2CrwY7dQZC0wV1usIMFCxYsWLBgwYL9KthuATB1MN3GOFiwYMGCBQsWLNjPhN294G4w43Yh8ugAFixYsGDBggUL9ihsdVQBuwXE6karENXC53EesGDBggULFixYsEdgjdkBFixYAyxYsAbYreMfa7OTJxfUvCMAAAAASUVORK5CYII=">
+          </div>
+        </div>
+      
     
+      
+        <a class="-mob-share-telegram" title="" rel="external nofollow noopener noreferrer noopener"
+          
+            target="_blank" href="https://t.me/share/url?url=https://changakira.github.io/2024/05/23/Qt-%E6%97%A0%E7%BC%96%E8%AF%91%E5%99%A8/&text=Qt_无编译器 - 是默元的博客"
+          
+          >
+          
+            <img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/telegram.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/telegram.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
       
     
   </div>
@@ -3126,6 +3166,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       <meta itemprop="discussionUrl" content="/2024/05/23/Qt-%E6%97%A0%E7%BC%96%E8%AF%91%E5%99%A8/index.html#comments">
     </span>
     <p ct><i class='fa-solid fa-comments'></i> 评论</p>
+    
+      <p cst>评论区不是无人区喵</p>
     
 
     <div id="layoutHelper-comments"></div>

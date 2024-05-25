@@ -2152,7 +2152,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1716560842763),
+    lastupdate: new Date(1716629370774),
     sidebar: {
       for_page: ["blogger","category","tagcloud","donate"],
       for_post: ["toc"],
@@ -2740,6 +2740,23 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
             
               <li>
+                <a class="menuitem flat-box faa-parent animated-hover"
+                href="/mystic/" title="魔法屋"
+                  
+                  
+                  
+                    active-action="action-mystic"
+                  >
+                  魔法屋
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
                 <a class="menuitem flat-box header toggle-mode-btn" onclick="switchNightMode()">
                   <i class='fa-solid fa-sun fa-fw'></i>夜间模式
                 </a>
@@ -2881,6 +2898,23 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                     active-action="action-about"
                   >
                   <i class='fa-solid fa-info-circle fa-fw'></i>关于
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover"
+                href="/mystic/" title="魔法屋"
+                  
+                  
+                  
+                    active-action="action-mystic"
+                  >
+                  魔法屋
                 </a>
                 
               </li>
@@ -3087,18 +3121,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
     
       
-        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
-          
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://changakira.github.io/2024/02/08/QT5-7-1%E4%B8%8EVisualStudio2015/&title=QT5.7.1与VisualStudio2015 - 是默元的博客&summary=因为项目的需要，我需要使用QT5.7.1与VisualStudio2015进行联合开发，由于都是很老的版本了，在配置过程中遇上了数不尽的坑，这些坑还大多是网上很多人有同样问题却未能解决的。在无数次失败后我终于找到了完美的源，在此分享。"
-          
-          >
-          
-            <img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qzone.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qzone.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
-          
-        </a>
-      
-    
-      
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
           target="_blank" href="http://service.weibo.com/share/share.php?url=https://changakira.github.io/2024/02/08/QT5-7-1%E4%B8%8EVisualStudio2015/&title=QT5.7.1与VisualStudio2015 - 是默元的博客&summary=因为项目的需要，我需要使用QT5.7.1与VisualStudio2015进行联合开发，由于都是很老的版本了，在配置过程中遇上了数不尽的坑，这些坑还大多是网上很多人有同样问题却未能解决的。在无数次失败后我终于找到了完美的源，在此分享。"
@@ -3111,7 +3133,25 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
     
       
+        
+        <div class='hoverbox'>
+          <a class='share'><img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/wechat.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/wechat.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a>
+          <div class='target'>
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAATgAAAE4CAAAAADqFLC2AAADo0lEQVR42u3aQXZaQQwEQO5/aecAeX5ILREEqdnZGP5MjRdttR8/VrQeCMCBAwfOAgfuCNwjXL+9v/v9317/a8O//Hz74NPzggMHDhw4cODAHYPrPrgLsQ1cha1eTPm84MCBAwcOHDhwR+G6AfVZYK0G0G5Q7QbatfOCAwcOHDhw4MB9CVx10Ji+/qoBKzhw4MCBAwcO3P8OVwXpBubtAhocOHDgwIEDB+7b4bobmQ4uu4XztGg+0+SDAwcOHDhw4MAtwU0Hhp/2dXxecODAgQMHDhy4I3DbKy2kt4J2GnTL5wMHDhw4cODAgTsC1x1APguI3YOk/8CYBt7q55X/cgAHDhw4cODAgXsTXBogu4DTAJzub/0XAhw4cODAgQMH7kPg0kJ3a9A5LZSr7ytfGDhw4MCBAwcO3IfApQPDdINdgO4FpQEZHDhw4MCBAwfuGtwUrPzApQOng9a1AhwcOHDgwIEDB+4IXDcY/jRXN/im+5kOVsuQ4MCBAwcOHDhwR+BetbHtYvpV+2oPXMGBAwcOHDhw4I7BbRXSacEcH2R4Qe39ggMHDhw4cODAHYWbDh5fFXCnxfNWIQ4OHDhw4MCBA3cFLgXcKpgfzfXzolX9fHDgwIEDBw4cuGtwWwPLNJhuv2+676eFNDhw4MCBAwcO3BG4rY12A+wUIA3oaaENDhw4cODAgQP3KXDbG+wW1VvF99aAFBw4cODAgQMH7grcVtE7/ZzqwdILSAe34MCBAwcOHDhwV+G2C9904FkFnT5vXLSDAwcOHDhw4MAdg0uD7NYAcgq5dYFPQcGBAwcOHDhw4I7BbRXNKfw0+KaD0fagExw4cODAgQMH7ghc9YO3Bobpwab7nBbX4MCBAwcOHDhwnwI3Laa3CuLpQDQdsD4tpMGBAwcOHDhw4I7A/asNVwNnN5imF9fdJzhw4MCBAwcO3HW4tEBOB5BbF9cdmLZhwYEDBw4cOHDgjsBNV/cA5aD54u/HvzjgwIEDBw4cOHBH4MaBMCyA14Np88K6+wMHDhw4cODAgbsKtx1404K5e9Au8DgggwMHDhw4cODAHYXrBs3pBqfBeStQjwMwOHDgwIEDBw7ch8J1A3QVugubPrc8MAUHDhw4cODAgfsSuLWiNwRNn/f2QSY4cODAgQMHDtybC+kq4DZI+rxpoQ0OHDhw4MCBA3cNLi1wu8EyLYKrAT0N2uXBLThw4MCBAwcO3BE4q7fAgQMHDpwFDtyb1x9G04CXb9ADkAAAAABJRU5ErkJggg==">
+          </div>
+        </div>
+      
     
+      
+        <a class="-mob-share-telegram" title="" rel="external nofollow noopener noreferrer noopener"
+          
+            target="_blank" href="https://t.me/share/url?url=https://changakira.github.io/2024/02/08/QT5-7-1%E4%B8%8EVisualStudio2015/&text=QT5.7.1与VisualStudio2015 - 是默元的博客"
+          
+          >
+          
+            <img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/telegram.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/telegram.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
       
     
   </div>
@@ -3164,6 +3204,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       <meta itemprop="discussionUrl" content="/2024/02/08/QT5-7-1%E4%B8%8EVisualStudio2015/index.html#comments">
     </span>
     <p ct><i class='fa-solid fa-comments'></i> 评论</p>
+    
+      <p cst>评论区不是无人区喵</p>
     
 
     <div id="layoutHelper-comments"></div>

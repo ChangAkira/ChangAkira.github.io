@@ -2151,7 +2151,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1716560842763),
+    lastupdate: new Date(1716629370774),
     sidebar: {
       for_page: ["blogger","category","tagcloud","donate"],
       for_post: ["toc"],
@@ -2739,6 +2739,23 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
             
               <li>
+                <a class="menuitem flat-box faa-parent animated-hover"
+                href="/mystic/" title="魔法屋"
+                  
+                  
+                  
+                    active-action="action-mystic"
+                  >
+                  魔法屋
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
                 <a class="menuitem flat-box header toggle-mode-btn" onclick="switchNightMode()">
                   <i class='fa-solid fa-sun fa-fw'></i>夜间模式
                 </a>
@@ -2880,6 +2897,23 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                     active-action="action-about"
                   >
                   <i class='fa-solid fa-info-circle fa-fw'></i>关于
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover"
+                href="/mystic/" title="魔法屋"
+                  
+                  
+                  
+                    active-action="action-mystic"
+                  >
+                  魔法屋
                 </a>
                 
               </li>
@@ -3060,18 +3094,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
     
       
-        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
-          
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://changakira.github.io/2023/07/20/hello-world/&title=Hello World - 是默元的博客&summary="
-          
-          >
-          
-            <img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qzone.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qzone.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
-          
-        </a>
-      
-    
-      
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
           target="_blank" href="http://service.weibo.com/share/share.php?url=https://changakira.github.io/2023/07/20/hello-world/&title=Hello World - 是默元的博客&summary="
@@ -3084,7 +3106,25 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
     
       
+        
+        <div class='hoverbox'>
+          <a class='share'><img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/wechat.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/wechat.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a>
+          <div class='target'>
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAARgAAAEYCAAAAACi5bZQAAAC8klEQVR42u3aS44CMQwFwL7/pZk9GtT+BWGo7ECBjqs3ll+uh/XvuhCAAQMGDBgwa2Cu4nr5x8XfP3+f3T9VDxgwYMCAAQNmH0y4AQoeKFpwdH/0vN16wIABAwYMGDB7YaoHjxaQLTR6rrF6wIABAwYMGDA/BxOFOgUGBgwYMGDAgAEz1eCVB0XRYGxr5wsGDBgwYMCAOQbTLWQqODvdGIIBAwYMGDBgvgcmu6oA7/pcrgcMGDBgwIABswamu7KDpGwwF70wNFYPGDBgwIABA2YNzPTBTjWC2QCtfH4wYMCAAQMGzBqYaBCVDbqyB6vurzaOt4EbGDBgwIABA+ZrYKoB1hRAdyAW3g8GDBgwYMCAWQcTbYiiD8gGdtMvoDq4AgMGDBgwYMDsgbmKKxu4ndo/fh4wYMCAAQMGzDqY7h++O2irBm63+8CAAQMGDBgwa2Cqg51okHV6ADZ+XjBgwIABAwbMWphoMHZX+BTM1AWjKDwYMGDAgAEDZi9MNcCqwmUbu2wDl34RYMCAAQMGDJg1MN2AqwtYbdiqgdvt/4IBAwYMGDBg1sB0B0zdQVUVvNv4hQdVYMCAAQMGDJiPh6kGcNVCqwVmG7csFBgwYMCAAQNmP0z1Yk83SDv1/PA5wIABAwYMGDBrYKqFdRuu7iCrChFu8MCAAQMGDBgwa2C6ENXBVjdoqzaOL+sEAwYMGDBgwKyF6QZj3YZr+jnpz2DAgAEDBgyYtTDdwdKjuKYCt+qFIzBgwIABAwbMPpjuCj/w0EWkbIN6CwYGDBgwYMCAWQNzFVd2UNQN6roNaBgSDBgwYMCAAbMOZmqg1G3AssHbVGAHBgwYMGDAgNkPMx24ZRvEqYYvCwIGDBgwYMCA+V2YaKHTDV31xbztRhUYMGDAgAED5uNhpi/0PIqrHfCBAQMGDBgwYNbCZAdF1UCuegFpOhAEAwYMGDBgwOyHqQZX2SAtC3IqwHv5OzBgwIABAwbMGhgLDBgwYMCAAbNs/QGItV733ig7TQAAAABJRU5ErkJggg==">
+          </div>
+        </div>
+      
     
+      
+        <a class="-mob-share-telegram" title="" rel="external nofollow noopener noreferrer noopener"
+          
+            target="_blank" href="https://t.me/share/url?url=https://changakira.github.io/2023/07/20/hello-world/&text=Hello World - 是默元的博客"
+          
+          >
+          
+            <img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/telegram.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/telegram.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
       
     
   </div>
@@ -3131,6 +3171,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       <meta itemprop="discussionUrl" content="/2023/07/20/hello-world/index.html#comments">
     </span>
     <p ct><i class='fa-solid fa-comments'></i> 评论</p>
+    
+      <p cst>评论区不是无人区喵</p>
     
 
     <div id="layoutHelper-comments"></div>

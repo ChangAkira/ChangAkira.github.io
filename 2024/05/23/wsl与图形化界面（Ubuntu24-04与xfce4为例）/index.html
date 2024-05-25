@@ -2151,7 +2151,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1716560842763),
+    lastupdate: new Date(1716629370774),
     sidebar: {
       for_page: ["blogger","category","tagcloud","donate"],
       for_post: ["toc"],
@@ -2739,6 +2739,23 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
             
               <li>
+                <a class="menuitem flat-box faa-parent animated-hover"
+                href="/mystic/" title="魔法屋"
+                  
+                  
+                  
+                    active-action="action-mystic"
+                  >
+                  魔法屋
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
                 <a class="menuitem flat-box header toggle-mode-btn" onclick="switchNightMode()">
                   <i class='fa-solid fa-sun fa-fw'></i>夜间模式
                 </a>
@@ -2880,6 +2897,23 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                     active-action="action-about"
                   >
                   <i class='fa-solid fa-info-circle fa-fw'></i>关于
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover"
+                href="/mystic/" title="魔法屋"
+                  
+                  
+                  
+                    active-action="action-mystic"
+                  >
+                  魔法屋
                 </a>
                 
               </li>
@@ -3048,18 +3082,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
     
       
-        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
-          
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://changakira.github.io/2024/05/23/wsl%E4%B8%8E%E5%9B%BE%E5%BD%A2%E5%8C%96%E7%95%8C%E9%9D%A2%EF%BC%88Ubuntu24-04%E4%B8%8Exfce4%E4%B8%BA%E4%BE%8B%EF%BC%89/&title=wsl与图形化界面（Ubuntu24.04与xfce4为例） - 是默元的博客&summary="
-          
-          >
-          
-            <img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qzone.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qzone.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
-          
-        </a>
-      
-    
-      
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
           target="_blank" href="http://service.weibo.com/share/share.php?url=https://changakira.github.io/2024/05/23/wsl%E4%B8%8E%E5%9B%BE%E5%BD%A2%E5%8C%96%E7%95%8C%E9%9D%A2%EF%BC%88Ubuntu24-04%E4%B8%8Exfce4%E4%B8%BA%E4%BE%8B%EF%BC%89/&title=wsl与图形化界面（Ubuntu24.04与xfce4为例） - 是默元的博客&summary="
@@ -3072,7 +3094,25 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
     
       
+        
+        <div class='hoverbox'>
+          <a class='share'><img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/wechat.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/wechat.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a>
+          <div class='target'>
+            <img src="data:image/png;base64,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">
+          </div>
+        </div>
+      
     
+      
+        <a class="-mob-share-telegram" title="" rel="external nofollow noopener noreferrer noopener"
+          
+            target="_blank" href="https://t.me/share/url?url=https://changakira.github.io/2024/05/23/wsl%E4%B8%8E%E5%9B%BE%E5%BD%A2%E5%8C%96%E7%95%8C%E9%9D%A2%EF%BC%88Ubuntu24-04%E4%B8%8Exfce4%E4%B8%BA%E4%BE%8B%EF%BC%89/&text=wsl与图形化界面（Ubuntu24.04与xfce4为例） - 是默元的博客"
+          
+          >
+          
+            <img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/telegram.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/telegram.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
       
     
   </div>
@@ -3124,6 +3164,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       <meta itemprop="discussionUrl" content="/2024/05/23/wsl%E4%B8%8E%E5%9B%BE%E5%BD%A2%E5%8C%96%E7%95%8C%E9%9D%A2%EF%BC%88Ubuntu24-04%E4%B8%8Exfce4%E4%B8%BA%E4%BE%8B%EF%BC%89/index.html#comments">
     </span>
     <p ct><i class='fa-solid fa-comments'></i> 评论</p>
+    
+      <p cst>评论区不是无人区喵</p>
     
 
     <div id="layoutHelper-comments"></div>

@@ -2151,7 +2151,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1716560842763),
+    lastupdate: new Date(1716629370774),
     sidebar: {
       for_page: ["blogger","category","tagcloud","donate"],
       for_post: ["toc"],
@@ -2739,6 +2739,23 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
             
               <li>
+                <a class="menuitem flat-box faa-parent animated-hover"
+                href="/mystic/" title="魔法屋"
+                  
+                  
+                  
+                    active-action="action-mystic"
+                  >
+                  魔法屋
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
                 <a class="menuitem flat-box header toggle-mode-btn" onclick="switchNightMode()">
                   <i class='fa-solid fa-sun fa-fw'></i>夜间模式
                 </a>
@@ -2880,6 +2897,23 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                     active-action="action-about"
                   >
                   <i class='fa-solid fa-info-circle fa-fw'></i>关于
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover"
+                href="/mystic/" title="魔法屋"
+                  
+                  
+                  
+                    active-action="action-mystic"
+                  >
+                  魔法屋
                 </a>
                 
               </li>
@@ -3038,18 +3072,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
     
       
-        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
-          
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://changakira.github.io/friends/index.html&title=友情链接 - 是默元的博客&summary="
-          
-          >
-          
-            <img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qzone.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qzone.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
-          
-        </a>
-      
-    
-      
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
           target="_blank" href="http://service.weibo.com/share/share.php?url=https://changakira.github.io/friends/index.html&title=友情链接 - 是默元的博客&summary="
@@ -3062,7 +3084,25 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
     
       
+        
+        <div class='hoverbox'>
+          <a class='share'><img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/wechat.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/wechat.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a>
+          <div class='target'>
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAARgAAAEYCAAAAACi5bZQAAAC+klEQVR42u3aS1LDMBAFQN//0nAAcGl+JBnc2oGdWOpsXs3z9WX9ui4EYMCAAQMGzBqYq7h+fOHN9bv7T9dPz81+LnoeMGDAgAEDBsw+mHAACt4fBTkdOPrDTJ0HDBgwYMCAAbMXJhusqvd3oU8Br7w/MGDAgAEDBsxjYU7/jwJEDw4GDBgwYMCAATMd2KpFWrfIAwMGDBgwYMA8F2Z6YJSFmBpMvb2JBAMGDBgwYMC8DCa7qoXaq/4unwcMGDBgwIABswamu7qFW/Vg1UB3PA8YMGDAgAEDZg1Md2NZoO7AKQpVHZSBAQMGDBgwYPbDZDee3XC3oOv+QOkmEgwYMGDAgAGzDqZbuE0Hx6n93T4PDBgwYMCAAbMOpj3gKRZjV3N1CzwwYMCAAQMGzF6Y6As43aIrGwi7By3/UGDAgAEDBgyYdTDVF32mgU5Q2WIw+zwwYMCAAQMGzB6Y7uCnXGwNB8AxWDBgwIABAwbMepjsg7Ibrwa0arAMF4dgwIABAwYMmDUw1QFVdzCUDXLdwi1c6IEBAwYMGDBg1sFkBztTA6LsIKv6ufBgDAwYMGDAgAGzDqY6IKoOtrJBb7oYPBZuYMCAAQMGDJj1MNnrU4B/VdCBAQMGDBgwYP4PzHFw03xB513Br1wgggEDBgwYMGDWwUwNoLKBrRospwHBgAEDBgwYMHthsgXWVAEWBckOqqr7AAMGDBgwYMDshelCVYNfNRBWr9/eDwYMGDBgwIBZC9MNaFMDqe4LQVkwMGDAgAEDBsw+mO7qDpSmBmDV/YEBAwYMGDBg9sJ0g9KrQaPBbaxwAwMGDBgwYMB8PMzUgdIbKcJ3B2fhgAcGDBgwYMCAWQNTDVDZAVJ20NR9MSi8HzBgwIABAwbM42CiASxbqFWfM1a4gQEDBgwYMGAeD5MNZt1BWjlwggEDBgwYMGDWwnQHS9OBrBrUsveBAQMGDBgwYPbCVIuraLGV/Z5sAZcGuNsnGDBgwIABA2YNjAUGDBgwYMCAWba+AVhJ5Q4qdA7vAAAAAElFTkSuQmCC">
+          </div>
+        </div>
+      
     
+      
+        <a class="-mob-share-telegram" title="" rel="external nofollow noopener noreferrer noopener"
+          
+            target="_blank" href="https://t.me/share/url?url=https://changakira.github.io/friends/index.html&text=友情链接 - 是默元的博客"
+          
+          >
+          
+            <img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/telegram.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/telegram.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
       
     
   </div>
@@ -3089,6 +3129,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       <meta itemprop="discussionUrl" content="/friends/index.html#comments">
     </span>
     <p ct><i class='fa-solid fa-comments'></i> 评论</p>
+    
+      <p cst>评论区不是无人区喵</p>
     
 
     <div id="layoutHelper-comments"></div>

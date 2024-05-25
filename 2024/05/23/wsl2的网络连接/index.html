@@ -2151,7 +2151,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1716560842763),
+    lastupdate: new Date(1716629370774),
     sidebar: {
       for_page: ["blogger","category","tagcloud","donate"],
       for_post: ["toc"],
@@ -2739,6 +2739,23 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
             
               <li>
+                <a class="menuitem flat-box faa-parent animated-hover"
+                href="/mystic/" title="魔法屋"
+                  
+                  
+                  
+                    active-action="action-mystic"
+                  >
+                  魔法屋
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
                 <a class="menuitem flat-box header toggle-mode-btn" onclick="switchNightMode()">
                   <i class='fa-solid fa-sun fa-fw'></i>夜间模式
                 </a>
@@ -2880,6 +2897,23 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                     active-action="action-about"
                   >
                   <i class='fa-solid fa-info-circle fa-fw'></i>关于
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover"
+                href="/mystic/" title="魔法屋"
+                  
+                  
+                  
+                    active-action="action-mystic"
+                  >
+                  魔法屋
                 </a>
                 
               </li>
@@ -3048,18 +3082,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
     
       
-        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
-          
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://changakira.github.io/2024/05/23/wsl2%E7%9A%84%E7%BD%91%E7%BB%9C%E8%BF%9E%E6%8E%A5/&title=wsl2的网络连接 - 是默元的博客&summary="
-          
-          >
-          
-            <img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qzone.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qzone.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
-          
-        </a>
-      
-    
-      
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
           target="_blank" href="http://service.weibo.com/share/share.php?url=https://changakira.github.io/2024/05/23/wsl2%E7%9A%84%E7%BD%91%E7%BB%9C%E8%BF%9E%E6%8E%A5/&title=wsl2的网络连接 - 是默元的博客&summary="
@@ -3072,7 +3094,25 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
     
       
+        
+        <div class='hoverbox'>
+          <a class='share'><img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/wechat.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/wechat.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a>
+          <div class='target'>
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAVgAAAFYCAAAAAAzB7ucAAAEYUlEQVR42u3aS3LjMAwFQN//0skBplIG8EDKnmrulET8NLUAELx+jCPjhQAsWAMsWLAG2Cuwr+H4Z8I/fv7nBt7M052vOk/1HFMPsGDBggULFixYsHdhU5DuwarPXfDuxVTXL78PFixYsGDBggUL9hHYtwHwMOBOIbuwaWIx9gALFixYsGDBggX7lbDTwLwKU12/XJgOzwcWLFiwYMGCBQv2/4CdBv5bgf6phAYsWLBgwYIFCxbsZ8OmheBpQXu7oeJWoRwsWLBgwYIFCxbss7CnC8Xf9jz2AAsWLFiwYMGCBXsFNh3TwvVWg8dWQrHmARYsWLBgwYIFC/YK7DRATiHSC0nnmRbI354LLFiwYMGCBQsW7BXY6gLpBroNHNX5pg0f0/nfuoAFCxYsWLBgwYJ9BLY64alC9amLThOV+D8IYMGCBQsWLFiwYFdhuwF22iiRXkw38Uj30d4nWLBgwYIFCxYs2Kuw3Q1NC97pe1uF8WmjSLsTBixYsGDBggULFuwR2GrAXH2eHjCFm+5zmkiUGzbAggULFixYsGDBHoWdFo67F9EF7TaSTAv0W4V5sGDBggULFixYsJ8Fuw26nRikjRbdhg+wYMGCBQsWLFiwnwE7hdo+0Bbgqffjhg2wYMGCBQsWLFiwR2GnDRxd0O5B0saQaWG7nCCBBQsWLFiwYMGCfRQ2LSCvB95h4jBNaNrrggULFixYsGDBgn0UtpoQTA8yDciPgYQFc7BgwYIFCxYsWLDPwKZg2xfQLYRvfwjjDwAsWLBgwYIFCxbsFdguVFpIThOI9MJPrQ8WLFiwYMGCBQv2GditAvS4QLwU6KfzxYkMWLBgwYIFCxYs2Kuw3UaHtGGjeyHpRU/nae8TLFiwYMGCBQsW7KOwaYA+BU0L0WmikSYKYMGCBQsWLFiwYO/CdgvT3QaPacA+TQTShGCaQIAFCxYsWLBgwYJ9BnZrbDVodBOEaQKwVpAHCxYsWLBgwYIF+xGw0wL3FkCaOKRw7Q8GLFiwYMGCBQsW7BXYbmC+tfGthGELKv2QwIIFCxYsWLBgwd6FnTZqdA+SbnjaGNL9YOIEBSxYsGDBggULFuyjsKcC9u3APL2oakG7/HdgwYIFCxYsWLBgH4GtHmAaQE9HF3Y7QSjvByxYsGDBggULFuwjsF2wciPDMNFIA/tqwrJ2TrBgwYIFCxYsWLBXYLcC925BeivAP10Qr14IWLBgwYIFCxYs2LuwWwHy9P30ubr+tLAdZ15gwYIFCxYsWLBgj8JOGye6B5kG/p/2+3KCABYsWLBgwYIFC/YKbBrQb13EVuC/ldiUExiwYMGCBQsWLFiwXwXbDqSbDRbTRpHufrrPYMGCBQsWLFiwYL8bNg3w04uLC9TDBKHcsAEWLFiwYMGCBQv2KOy0gWKaCHTnTRswths2wIIFCxYsWLBgwT4L2x1bcNMCdJrYTBOTdoIAFixYsGDBggUL9gissTvAggVrgAUL1gB7dPwC97SSNusb4hIAAAAASUVORK5CYII=">
+          </div>
+        </div>
+      
     
+      
+        <a class="-mob-share-telegram" title="" rel="external nofollow noopener noreferrer noopener"
+          
+            target="_blank" href="https://t.me/share/url?url=https://changakira.github.io/2024/05/23/wsl2%E7%9A%84%E7%BD%91%E7%BB%9C%E8%BF%9E%E6%8E%A5/&text=wsl2的网络连接 - 是默元的博客"
+          
+          >
+          
+            <img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/telegram.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/telegram.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
       
     
   </div>
@@ -3124,6 +3164,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       <meta itemprop="discussionUrl" content="/2024/05/23/wsl2%E7%9A%84%E7%BD%91%E7%BB%9C%E8%BF%9E%E6%8E%A5/index.html#comments">
     </span>
     <p ct><i class='fa-solid fa-comments'></i> 评论</p>
+    
+      <p cst>评论区不是无人区喵</p>
     
 
     <div id="layoutHelper-comments"></div>

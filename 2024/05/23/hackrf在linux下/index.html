@@ -2151,7 +2151,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1716560842763),
+    lastupdate: new Date(1716629370774),
     sidebar: {
       for_page: ["blogger","category","tagcloud","donate"],
       for_post: ["toc"],
@@ -2739,6 +2739,23 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
             
               <li>
+                <a class="menuitem flat-box faa-parent animated-hover"
+                href="/mystic/" title="魔法屋"
+                  
+                  
+                  
+                    active-action="action-mystic"
+                  >
+                  魔法屋
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
                 <a class="menuitem flat-box header toggle-mode-btn" onclick="switchNightMode()">
                   <i class='fa-solid fa-sun fa-fw'></i>夜间模式
                 </a>
@@ -2880,6 +2897,23 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                     active-action="action-about"
                   >
                   <i class='fa-solid fa-info-circle fa-fw'></i>关于
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover"
+                href="/mystic/" title="魔法屋"
+                  
+                  
+                  
+                    active-action="action-mystic"
+                  >
+                  魔法屋
                 </a>
                 
               </li>
@@ -3048,18 +3082,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
     
       
-        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
-          
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://changakira.github.io/2024/05/23/hackrf%E5%9C%A8linux%E4%B8%8B/&title=hackrf在linux下 - 是默元的博客&summary="
-          
-          >
-          
-            <img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qzone.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qzone.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
-          
-        </a>
-      
-    
-      
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
           target="_blank" href="http://service.weibo.com/share/share.php?url=https://changakira.github.io/2024/05/23/hackrf%E5%9C%A8linux%E4%B8%8B/&title=hackrf在linux下 - 是默元的博客&summary="
@@ -3072,7 +3094,25 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
     
       
+        
+        <div class='hoverbox'>
+          <a class='share'><img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/wechat.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/wechat.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a>
+          <div class='target'>
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAATgAAAE4CAAAAADqFLC2AAADrklEQVR42u3aQVLDQAwEwPz/03CnKuXVSI4F9N4wxFn3cpjS+PVlReuFABw4cOAscOCWwL3C9fbGP35/9bnXTet0P+X7gQMHDhw4cODALYM7DoCHcFcPcAobB9WL70vvAw4cOHDgwIEDtxUuDZSnAbMbjMsPGu4XHDhw4MCBAwfuv8F1AVOoqUErOHDgwIEDBw7cf4ebCsjdQeWvC8DgwIEDBw4cOHAhXHdQmG54qkjuHsjHmnxw4MCBAwcOHLghuOrqBs6nf46fFxw4cODAgQMHbglcd1UL5DQ4VwPw100LHDhw4MCBAwduC1waELsDxPSFwOn7lD8PDhw4cODAgQO3BK774ClM+uJgtdBOi/C3/yDgwIEDBw4cOHBL4KoPVn3g0+D66ftXgz84cODAgQMHDtw2uNONTQXR04Ho9PWxfwRw4MCBAwcOHLglcMfBbzhQxgG0eH18n+DAgQMHDhw4cEvgrlY6WOwWz91CfDr4ggMHDhw4cODAbYO7Co7dQjg9kO7B3ha0wYEDBw4cOHDglsBNDSrTjaUF91SALt8XHDhw4MCBAwduKVy3UL76fHegOTXYjIM7OHDgwIEDBw7cErjuQLH6YOkLhqdBeWpgelxIgwMHDhw4cODAPQRXDbxpcd09mLtfHDw+WHDgwIEDBw4cuCVw3eK2e5/T+04F6G7hDQ4cOHDgwIEDtwWuGli7xXM16E4fbLs4BwcOHDhw4MCBWwJXDYrpALG68amiefzvwIEDBw4cOHDglsBVg2k1qKYHMzUwTYv24yYfHDhw4MCBAwfuIbhu0E1/nwbUtBivBu2318GBAwcOHDhw4JbDTV2fAukW1N3CGxw4cODAgQMHbitcdYPdgDpVTE8/R7nJBwcOHDhw4MCBWwJ39wuFdwNND1iPAzA4cODAgQMHDtwSuHQAmb6IePo93YFn+z7gwIEDBw4cOHDL4aoAVai0MJ4+yGrgBwcOHDhw4MCB2wLXXSnQVAF+V0F+WUiDAwcOHDhw4MA9DPcK11Rh3C2ipw/yMsiDAwcOHDhw4MAtg+sG3u4gsjqQ7Abu+PvAgQMHDhw4cOCWwqXF8umAMr2eFuBpwX5ZSIMDBw4cOHDgwP0xuLteVEyDaxrQPx6AwYEDBw4cOHDgHoJLC+T0RcC7BqngwIEDBw4cOHC/Fa5aSFeDZBqou7BTg1hw4MCBAwcOHLhtcN0CtxuUu1DT+zwOwODAgQMHDhw4cA/BWcUBJwJw4MCBs8CBe3Z9A7cofNMa3FkeAAAAAElFTkSuQmCC">
+          </div>
+        </div>
+      
     
+      
+        <a class="-mob-share-telegram" title="" rel="external nofollow noopener noreferrer noopener"
+          
+            target="_blank" href="https://t.me/share/url?url=https://changakira.github.io/2024/05/23/hackrf%E5%9C%A8linux%E4%B8%8B/&text=hackrf在linux下 - 是默元的博客"
+          
+          >
+          
+            <img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/telegram.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/telegram.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
       
     
   </div>
@@ -3124,6 +3164,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       <meta itemprop="discussionUrl" content="/2024/05/23/hackrf%E5%9C%A8linux%E4%B8%8B/index.html#comments">
     </span>
     <p ct><i class='fa-solid fa-comments'></i> 评论</p>
+    
+      <p cst>评论区不是无人区喵</p>
     
 
     <div id="layoutHelper-comments"></div>

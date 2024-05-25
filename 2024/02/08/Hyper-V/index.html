@@ -2153,7 +2153,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1716560842763),
+    lastupdate: new Date(1716629370774),
     sidebar: {
       for_page: ["blogger","category","tagcloud","donate"],
       for_post: ["toc"],
@@ -2741,6 +2741,23 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
             
               <li>
+                <a class="menuitem flat-box faa-parent animated-hover"
+                href="/mystic/" title="魔法屋"
+                  
+                  
+                  
+                    active-action="action-mystic"
+                  >
+                  魔法屋
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
                 <a class="menuitem flat-box header toggle-mode-btn" onclick="switchNightMode()">
                   <i class='fa-solid fa-sun fa-fw'></i>夜间模式
                 </a>
@@ -2882,6 +2899,23 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                     active-action="action-about"
                   >
                   <i class='fa-solid fa-info-circle fa-fw'></i>关于
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover"
+                href="/mystic/" title="魔法屋"
+                  
+                  
+                  
+                    active-action="action-mystic"
+                  >
+                  魔法屋
                 </a>
                 
               </li>
@@ -3115,18 +3149,6 @@ pause
       
     
       
-        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
-          
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://changakira.github.io/2024/02/08/Hyper-V/&title=win11家庭版启用Hyper-V并搭载win10家庭版系统 - 是默元的博客&summary=Hyper-V是win8及以上内置的虚拟机平台。本文以win11（家庭版）物理机上启用Hyper-V并搭载win10（家庭版）系统为例，其它情况可酌情参考。"
-          
-          >
-          
-            <img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qzone.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qzone.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
-          
-        </a>
-      
-    
-      
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
           target="_blank" href="http://service.weibo.com/share/share.php?url=https://changakira.github.io/2024/02/08/Hyper-V/&title=win11家庭版启用Hyper-V并搭载win10家庭版系统 - 是默元的博客&summary=Hyper-V是win8及以上内置的虚拟机平台。本文以win11（家庭版）物理机上启用Hyper-V并搭载win10（家庭版）系统为例，其它情况可酌情参考。"
@@ -3139,7 +3161,25 @@ pause
       
     
       
+        
+        <div class='hoverbox'>
+          <a class='share'><img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/wechat.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/wechat.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a>
+          <div class='target'>
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAARgAAAEYCAAAAACi5bZQAAADB0lEQVR42u3aQVLDMAwF0N7/0nAA6ERfMiVqn3cMTSI/b/5YenxZv64HAjBgwIABA2YNzKO5qs8/+92Pgorvffb7Y/sBAwYMGDBgwKyDKQegiwKrG6+CVeGO7QcMGDBgwIABsxamG6yqz6fvSd8/3Q8YMGDAgAED5nNgTj1fvUjqBlAwYMCAAQMGDJhuoyu9yKqC3D75ggEDBgwYMGBeBpMWkjbOqu+fBsx/70SCAQMGDBgwYF4Gk65uoa/6u70fMGDAgAEDBswamOlKG2TdQaLu9+L9gAEDBgwYMGDWwFwFpLSg7kVRt1HXhS8nXzBgwIABAwbMbWGqH67+vwtXBeo2/uLBITBgwIABAwbM7WG6Dba0gG4DrbrxUwcFBgwYMGDAgNkDk34wvQBKg9s0EE4PAAwYMGDAgAGzD+Z04JsCTy+y0gsqMGDAgAEDBsw+mFMDQf826DMcVAIDBgwYMGDA7IWZAqSFtxthYaBLvwcGDBgwYMCA2QfTbVh1G19pMDx9UQYGDBgwYMCAeT+YbqHlC6AQOt349IDBgAEDBgwYMO8Dcyp4nQKvQo0PDAwYMGDAgAGzFuZVwezUxVY3CMYBDwwYMGDAgAFzW5jqYE3awOq+568O7LIOMGDAgAEDBswamBSo+qHHcF2971TgBAMGDBgwYMDshekO6qTBqxvgugfUHWACAwYMGDBgwOyBmTa2UpAUoltHd6AIDBgwYMCAAbMP5lRh44ZXGASndYEBAwYMGDBg9sKcGhSaDvJ0D+RUIw8MGDBgwIABsw9muqbBsHvhNA5y1YkqMGDAgAEDBsxtYaZBaRyoTjfMpkETDBgwYMCAAbMO5lRDLG3AnQ6G1eee/h4MGDBgwIABsxamGqzSAqYB8FSj7fJvMGDAgAEDBszHwKQXT2mwPPVc+f1gwIABAwYMmI+DmTbmpoBXB1F+HgwYMGDAgAGzFqYbnKaDPumAz7SeOOCBAQMGDBgwYG4LMw1g6WBPdwCoO3BUhgYDBgwYMGDArIGxwIABAwYMGDDL1jcejuFKviPGOgAAAABJRU5ErkJggg==">
+          </div>
+        </div>
+      
     
+      
+        <a class="-mob-share-telegram" title="" rel="external nofollow noopener noreferrer noopener"
+          
+            target="_blank" href="https://t.me/share/url?url=https://changakira.github.io/2024/02/08/Hyper-V/&text=win11家庭版启用Hyper-V并搭载win10家庭版系统 - 是默元的博客"
+          
+          >
+          
+            <img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/telegram.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/telegram.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
       
     
   </div>
@@ -3192,6 +3232,8 @@ pause
       <meta itemprop="discussionUrl" content="/2024/02/08/Hyper-V/index.html#comments">
     </span>
     <p ct><i class='fa-solid fa-comments'></i> 评论</p>
+    
+      <p cst>评论区不是无人区喵</p>
     
 
     <div id="layoutHelper-comments"></div>
