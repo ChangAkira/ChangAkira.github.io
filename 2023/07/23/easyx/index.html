@@ -2154,7 +2154,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1717562289496),
+    lastupdate: new Date(1719044836167),
     sidebar: {
       for_page: ["blogger","category","tagcloud","donate"],
       for_post: ["toc"],
@@ -2170,7 +2170,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       }
     },
     plugins: {
-      message: {"enable":true,"css":"https://unpkg.com/volantis-static@0.0.1654736714924/libs/izitoast/dist/css/iziToast.min.css","js":"https://unpkg.com/volantis-static@0.0.1654736714924/libs/izitoast/dist/js/iziToast.min.js","icon":{"default":"fa-solid fa-info-circle light-blue","quection":"fa-solid fa-question-circle light-blue"},"time":{"default":5000,"quection":20000},"position":"topRight","transitionIn":"bounceInLeft","transitionOut":"fadeOutRight","titleColor":"var(--color-text)","messageColor":"var(--color-text)","backgroundColor":"var(--color-card)","zindex":2147483647,"copyright":{"enable":true,"title":"知识共享许可协议","message":"请遵守 CC BY-NC-SA 4.0 协议。","icon":"far fa-copyright light-blue"},"aplayer":{"enable":true,"play":"fa-solid fa-play","pause":"fa-solid fa-pause"},"rightmenu":{"enable":true,"notice":true}},
+      message: {"enable":true,"css":"https://unpkg.com/volantis-static@0.0.1654736714924/libs/izitoast/dist/css/iziToast.min.css","js":"https://unpkg.com/volantis-static@0.0.1654736714924/libs/izitoast/dist/js/iziToast.min.js","icon":{"default":"fa-solid fa-info-circle light-blue","quection":"fa-solid fa-question-circle light-blue"},"time":{"default":5000,"quection":20000},"position":"topRight","transitionIn":"bounceInLeft","transitionOut":"fadeOutRight","titleColor":"var(--color-text)","messageColor":"var(--color-text)","backgroundColor":"var(--color-card)","zindex":2147483647,"copyright":{"enable":true,"title":"知识共享许可协议","message":"请遵守 CC BY-NC-SA 4.0 协议。","icon":"far fa-copyright light-blue"},"aplayer":{"enable":false,"play":"fa-solid fa-play","pause":"fa-solid fa-pause"},"rightmenu":{"enable":true,"notice":true}},
       fancybox: {"css":"https://unpkg.com/volantis-static@0.0.1654736714924/libs/@fancyapps/ui/dist/fancybox.css","js":"https://unpkg.com/volantis-static@0.0.1654736714924/libs/@fancyapps/ui/dist/fancybox.umd.js"},
       
       aplayer: {
@@ -3326,7 +3326,7 @@ POINT projection(POINT3D&amp; p3)
     return p2;
 &#125;
 </code></pre>
-<p>立方体开始动画作品由星羽1704（email <a href="mailto:&#49;&#x34;&#55;&#57;&#50;&#x34;&#53;&#x30;&#53;&#x30;&#64;&#x71;&#x71;&#46;&#x63;&#111;&#109;">&#49;&#x34;&#55;&#57;&#50;&#x34;&#53;&#x30;&#53;&#x30;&#64;&#x71;&#x71;&#46;&#x63;&#111;&#109;</a> 联系方式 qq 1479245050 ）在<a target="_blank" rel="noopener" href="https://codebus.cn/featherstar/dynamic-figure" title="将三维空间的点投影到二维平面，感受三维正方体的旋转的视觉盛宴">easyx例程文档</a>中给出。本文将其做少量的修改，得到另外的效果。</p>
+<p>立方体开始动画作品由星羽1704（email <a href="mailto:&#x31;&#x34;&#55;&#x39;&#50;&#x34;&#53;&#48;&#x35;&#x30;&#64;&#113;&#x71;&#x2e;&#99;&#111;&#109;">&#x31;&#x34;&#55;&#x39;&#50;&#x34;&#53;&#48;&#x35;&#x30;&#64;&#113;&#x71;&#x2e;&#99;&#111;&#109;</a> 联系方式 qq 1479245050 ）在<a target="_blank" rel="noopener" href="https://codebus.cn/featherstar/dynamic-figure" title="将三维空间的点投影到二维平面，感受三维正方体的旋转的视觉盛宴">easyx例程文档</a>中给出。本文将其做少量的修改，得到另外的效果。</p>
 
   </div>
   
@@ -4201,48 +4201,6 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
       })
       // message see: /layout/_plugins/message/script.ejs
       
-        try {
-          setTimeout(() => {
-            Metings.forEach((item, index) => {
-              const aplayerItem = item.aplayer; if(!aplayerItem) return;
-              const rightAplayerCheck = 'true' === 'true'
-                && item.meta.id === '3175833810';
-              if(rightAplayerCheck && typeof RightMenuAplayer !="undefined") RightMenuAplayer.checkAPlayer();
-              if(aplayerItem.events.events.play.every(item => {return item.name !== 'messagePlay'})) {
-                aplayerItem.on('play', function messagePlay() {
-                  let index = aplayerItem.list.index;
-                  let title = aplayerItem.list.audios[index].title;
-                  let artist = aplayerItem.list.audios[index].artist;
-                  setTimeout(() => {
-                    VolantisApp.message('音乐通知', title + ' - ' + artist, {
-                      icon: 'fa-solid fa-play',
-                      transitionIn: 'flipInX',
-                      transitionOut: 'flipOutX'
-                    });
-                  }, 100)
-                });
-              }
-              if(aplayerItem.events.events.pause.every(item => {return item.name !== 'messagePause'})) {
-                aplayerItem.on('pause', function messagePause() {
-                  let index = aplayerItem.list.index;
-                  let title = aplayerItem.list.audios[index].title;
-                  let artist = aplayerItem.list.audios[index].artist;
-                  setTimeout(() => {
-                    // 歌曲播放结束也会触发 pause 事件，为了避免错误提示，等待一会儿
-                    if(aplayerItem.paused) {
-                      VolantisApp.message('音乐通知', title + ' - ' + artist, {
-                        icon: 'fa-solid fa-pause',
-                        transitionIn: 'flipInX',
-                        transitionOut: 'flipOutX'
-                      });
-                    }
-                  }, 100)
-                });
-              }
-            });
-          }, 500)
-        } catch (error) { console.error(error); }
-      
     }else{
       volantis.requestAnimationFrame(SetAPlayerPlugin)
     }
@@ -4626,7 +4584,7 @@ document.addEventListener("DOMContentLoaded", function () {
   <script>
 // https://sidecar.gitter.im/
 ((window.gitter = {}).chat = {}).options = {
-  room: `ChangAkira/maimuju`
+  room: `https://gitter.im/ChangAkira/maimuju`
 };
 volantis.js("https://sidecar.gitter.im/dist/sidecar.v1.js")
 </script>
