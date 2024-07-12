@@ -247,8 +247,8 @@
   <meta name="Volantis" content="5.8.0">
   <meta charset="utf-8">
   <!-- SEO相关 -->
-  <meta name="robots" content="noindex,follow">
-  <link rel="canonical" href="https://changakira.github.io/tags/easyx/"/>
+  
+  <link rel="canonical" href="https://changakira.github.io/html/test.html"/>
   <!-- 渲染优化 -->
     <meta http-equiv='x-dns-prefetch-control' content='on' />
       <link rel='dns-prefetch' href='https://unpkg.com'>
@@ -276,17 +276,19 @@
 
   <!-- feed -->
   <!-- 页面元数据 -->
-  <title>标签：easyx - 是默元的博客</title>
+  <title>是默元的博客</title>
   <meta name="keywords" content="默元">
   <meta desc name="description" content="是默元的博客 - Chang Akira - 是默元的博客">
   
 <meta property="og:type" content="website">
 <meta property="og:title" content="是默元的博客">
-<meta property="og:url" content="https://changakira.github.io/tags/easyx/index.html">
+<meta property="og:url" content="https://changakira.github.io/HTML/test.html">
 <meta property="og:site_name" content="是默元的博客">
-<meta property="og:description" content="是默元的博客">
+<meta property="og:description" content=".collapsible {   background-color: #777;   color: white;   cursor: pointer;   padding: 18px;   width: 100%;   border: none;   text-align: left;   outline: none;   font-size: 15px; }  .active, .c">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://s2.loli.net/2023/07/21/PGyugoK3YMWkeba.png">
+<meta property="article:published_time" content="2024-07-12T10:29:06.561Z">
+<meta property="article:modified_time" content="2024-07-12T10:29:06.561Z">
 <meta property="article:author" content="Chang Akira">
 <meta property="article:tag" content="默元">
 <meta name="twitter:card" content="summary">
@@ -2950,25 +2952,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       <div id="safearea">
         <div class="body-wrapper">
           
-
 <div id="l_main" class=''>
-  
-    
-      
-  <section class="post-list">
-    
-      
-        
-          
-        
-      
-    
-    
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="https://changakira.github.io/2023/07/23/easyx/">
+  <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow floatable article-type-page" id="page" itemscope itemprop="blogPost">
+  <link itemprop="mainEntityOfPage" href="https://changakira.github.io/HTML/test.html">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="是默元的博客">
   </span>
@@ -2977,82 +2963,248 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <meta itemprop="description" content="是默元的博客">
   </span>
   
-  
+
+
   
     <span hidden>
       <meta itemprop="image" content="https://s2.loli.net/2023/07/21/PGyugoK3YMWkeba.png">
     </span>
   
+  <div class="article-meta" id="top">
+    
+    
+    
+      <span hidden itemprop="name headline">
+        
+      </span>
+    
+  </div>
+
+
+  <div id="layoutHelper-page-plugins"></div>
+  <div id="post-body" itemprop="articleBody">
+    <!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<base target="_blank" />
+<style>
+.collapsible {
+  background-color: #777;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+.active, .collapsible:hover {
+  background-color: #555;
+}
+
+.content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: #f1f1f1;
+}
+</style>
+</head>
+
+<h1>在QT中打印当前QT版本支持的数据库代码</h1>
+
+
+<body>
+
+<p>该部分内容（按钮，折叠）师承W3schools的<a target="_blank" rel="noopener" href="https://www.w3ccoo.com/howto/howto_js_collapsible.asp">这一篇文章</a>。我在<a href="https://changakira.github.io/2023/07/23/BeginYourCreattiveMindFromHere/?keyword=markdown">如何使用hexo搭建个人博客的文章</a>中推荐过该网站。</p>
+
+<p>事实上，你现在所看到的这个网页是使用html标记语言写的，因为hexo的主题会覆盖一些我们自定义的html样式，所以我们需要让拥有自定义样式的html文件跳过渲染。你可以在<a href="">这一篇文章中</a>学习它。我的魔法屋也将计划以这样的形式建设。</p>
+
+<button type="button" class="collapsible">查看/隐藏 untitled.pro 代码</button>
+<div class="content">
+  <pre><code>QT += core sql
+	QT -= gui
+
+	CONFIG += c++11
+
+	TARGET = untitled
+	CONFIG += console
+	CONFIG -= app_bundle
+
+	TEMPLATE = app
+
+	SOURCES += main.cpp
+
+	# The following define makes your compiler emit warnings if you use
+	# any feature of Qt which as been marked deprecated (the exact warnings
+	# depend on your compiler). Please consult the documentation of the
+	# deprecated API in order to know how to port your code away from it.
+	DEFINES += QT_DEPRECATED_WARNINGS
+
+	# You can also make your code fail to compile if you use deprecated APIs.
+	# In order to do so, uncomment the following line.
+	# You can also select to disable deprecated APIs only up to a certain version of Qt.
+	#DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0  </code></pre>
+</div>
+<button type="button" class="collapsible">查看/隐藏 main.cpp 代码</button>
+<div class="content">
+  <pre><code>	#include &lt;QCoreApplication&gt;
+	#include &lt;QtSql/QSqlDatabase&gt;
+	#include &lt;QDebug&gt;
+
+	int main(int argc, char *argv[])
+	&#123;
+		QCoreApplication a(argc, argv);
+		qDebug() &lt;&lt; QSqlDatabase::drivers();
+		return a.exec();
+	&#125;	</code></pre>
+</div>
+
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}
+</script>
+
+</body>
+</html>
+
+
+  </div>
+  
+  
   
     
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2023/07/23/easyx/"  itemprop="url">
-        easyx分享会代码
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
+
+
+  <div class='article-meta' id="bottom">
+    <div class='new-meta-box'>
+      
+        
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2024-07-12T18:29:06+08:00">
+  <a class='notlink'>
+    <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
+    <p>更新于：2024年7月12日</p>
+  </a>
+</div>
+
+        
+      
+        
+          
+
+        
+      
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
     
       
-        跟随鼠标壁纸（需要自行引入资源图片）：#define _CRT_SECURE_NO_WARNINGS
-#include&lt;stdio.h&gt;
-#include&lt;graphics.h&gt;
-#include&quot;resource.h&quot;
-#include&lt;conio.h&gt;
-
-int main()
-&#123;
-    ExMessage message...
+        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://changakira.github.io/HTML/test.html&title= - 是默元的博客&summary="
+          
+          >
+          
+            <img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qq.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qq.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://service.weibo.com/share/share.php?url=https://changakira.github.io/HTML/test.html&title= - 是默元的博客&summary="
+          
+          >
+          
+            <img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/weibo.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/weibo.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
+      
+    
+      
+        
+        <div class='hoverbox'>
+          <a class='share'><img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/wechat.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/wechat.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a>
+          <div class='target'>
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAARgAAAEYCAAAAACi5bZQAAAC80lEQVR42u3aQW7kMAwEwPn/pzcfWMBqknaGcekWjGJT5UuD1Oef9d/1QQAGDBgwYMCsgfkUV7uAi+ddvTf9v9PzgAEDBgwYMGD2waQH6u4/PXD6Qbr1gQEDBgwYMGD2wqTBaurgaSC8em/5PGDAgAEDBgyY18GkDaW0gZVCgAEDBgwYMGDApAHt9HmnDajqfjBgwIABAwbM+2DiAdVNF42qg7ivmUSCAQMGDBgwYB6DSVc38N39d/k8YMCAAQMGDJg1MN11OgibDozV4HhZDxgwYMCAAQNmDcxdA7Iu5NW+q8BZrh8MGDBgwIABswbm6YZQeuA0QJ6CXQ7cwIABAwYMGDBfD3N64Orv3eBV/UBpcAQDBgwYMGDA7IXpBqm7gl21rlM4MGDAgAEDBsx+mG6Amx6sdS8SlYMoGDBgwIABA+bPwqQrbSCl7ysP1sCAAQMGDBgwr4HpBr4uWDUAps8FAwYMGDBgwOyBmQ5kxwU0B3zTv4MBAwYMGDBg9sNUG0PTjaSpQJdeQAIDBgwYMGDA7INJGz1PB7r0PeULT2DAgAEDBgyYNTBpYVNg3eelAfC4oQUGDBgwYMCAWQtTLaDbqLrrw5w+BwwYMGDAgAGzDyYdtE1fLEobTekHSoMeGDBgwIABA2YPTBqApgLfdEDsAoEBAwYMGDBg9sJMAVQbS+nALq13bBIJBgwYMGDAgPlamKmg14WKB2XhhaHjRhUYMGDAgAEDZg1M2mBKG03dQPcpruP3ggEDBgwYMGDWwHRX9UJPN8idwsf7wYABAwYMGDBrYKYCU3XfKXC18dUeuIEBAwYMGDBgvh6mO1ArF1Ic8HUD5HHAAwMGDBgwYMCsgZkKUGONo+aFoDhQggEDBgwYMGBeB1Pdnw7w0qAX1wcGDBgwYMCAeT3M3UEsbWD9WqMKDBgwYMCAAfMYTDpw6zaUugGvWxcYMGDAgAEDZj/MVACbCoDdi0DVwSAYMGDAgAEDZg+MBQYMGDBgwIBZtn4ABOTkHa7LA/4AAAAASUVORK5CYII=">
+          </div>
+        </div>
+      
+    
+      
+        <a class="-mob-share-telegram" title="" rel="external nofollow noopener noreferrer noopener"
+          
+            target="_blank" href="https://t.me/share/url?url=https://changakira.github.io/HTML/test.html&text= - 是默元的博客"
+          
+          >
+          
+            <img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/telegram.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/telegram.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
       
     
   </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2023-07-23T11:26:57+08:00">2023-07-23</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/easyx/">easyx</a><span class="sep"></span><a class="category-link" href="/categories/forBOEclub/">forBOEclub</a><span class="sep"></span><a class="category-link" href="/categories/forBOEclub/easyx/">easyx</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/forBOEclub/" itemprop="url"><span itemprop="name">forBOEclub</span></a>
-            </span>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/forBOEclub/easyx/" itemprop="url"><span itemprop="name">easyx</span></a>
-            </span>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/easyx/" itemprop="url"><span itemprop="name">easyx</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2023/07/23/easyx/' itemprop="url">
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
 </div>
 
-          </div>
+
+
         
       
+    </div>
+    <!-- Custom Files bottomMeta begin -->
     
-  </section>
+    <!-- Custom Files bottomMeta end -->
+  </div>
+
+
   
-    
+  
+
+  
+  <!-- Custom Files postEnd begin-->
+  
+  <!-- Custom Files postEnd end-->
+</article>
+
+
   
 
 
+  <article class="post white-box shadow floatable" id="comments">
+    <span hidden>
+      <meta itemprop="discussionUrl" content="/HTML/test.html#comments">
+    </span>
+    <p ct><i class='fa-solid fa-comments'></i> 评论</p>
     
-  
+      <p cst>评论区不是无人区喵</p>
+    
+
+    <div id="layoutHelper-comments"></div>
+
+  </article>
+
+
+
+
+
+
 </div>
 <aside id='l_side' itemscope itemtype="http://schema.org/WPSideBar">
   
@@ -3061,192 +3213,31 @@ int main()
     
     
       
-<section class="widget blogger desktop mobile pjax">
-  <div class='content'>
     
-      
-        <a class='avatar flat-box rectangle' href='/about/'>
-          <img no-lazy src='https://i0.hdslb.com/bfs/article/fc6b8a71faac19d2b1d1643be170646b481184837.jpg'/>
-        </a>
-      
-    
-    
-      <div class='text'>
-        
-          <h2>沉默哒！新年！</h2>
-        
-        
-        
-          <p><span id="jinrishici-sentence">是默元的博客</span></p>
-          <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
-        
-      </div>
-    
-    
-      <div class="social-wrapper">
-        
-          
-            <a href="https://space.bilibili.com/481184837"
-              class="social fab fa-bilibili flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="mailto:2161879699@qq.com"
-              class="social fa-solid fa-envelope flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="https://github.com/ChangAkira"
-              class="social fab fa-github flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-      </div>
-    
-  </div>
-</section>
-
-    
-  
-
-  
-    
-    
-      
-  
-  <section class="widget category desktop mobile pjax">
-    
-  <header>
-    
-      <a href='/blog/categories/'><i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i><span class='name'>文章分类</span></a>
-    
-  </header>
-
-
-    <div class='content'>
-      <ul class="entry navigation">
-        
-          <li><a class="flat-box"
-            title="/categories/Hexo/" href="/categories/Hexo/"
-            active-action="action-categoriesHexo"
-            ><div class='name'>Hexo</div><div class='badge'>(2)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/Hexo/%E5%9B%BE%E5%BA%8A/" href="/categories/Hexo/%E5%9B%BE%E5%BA%8A/"
-            active-action="action-categoriesHexoE59BBEE5BA8A"
-            ><div class='name'>图床</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/Hexo/%E5%BB%BA%E7%AB%99/" href="/categories/Hexo/%E5%BB%BA%E7%AB%99/"
-            active-action="action-categoriesHexoE5BBBAE7AB99"
-            ><div class='name'>建站</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/Hexo/%E6%B3%A8%E5%85%A5%E5%99%A8/" href="/categories/Hexo/%E6%B3%A8%E5%85%A5%E5%99%A8/"
-            active-action="action-categoriesHexoE6B3A8E585A5E599A8"
-            ><div class='name'>注入器</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/Qt/" href="/categories/Qt/"
-            active-action="action-categoriesQt"
-            ><div class='name'>Qt</div><div class='badge'>(2)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/Qt/%E6%95%B0%E6%8D%AE%E5%BA%93/" href="/categories/Qt/%E6%95%B0%E6%8D%AE%E5%BA%93/"
-            active-action="action-categoriesQtE695B0E68DAEE5BA93"
-            ><div class='name'>数据库</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/VS/" href="/categories/VS/"
-            active-action="action-categoriesVS"
-            ><div class='name'>VS</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/easyx/" href="/categories/easyx/"
-            active-action="action-categorieseasyx"
-            ><div class='name'>easyx</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/forBOEclub/" href="/categories/forBOEclub/"
-            active-action="action-categoriesforBOEclub"
-            ><div class='name'>forBOEclub</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/forBOEclub/easyx/" href="/categories/forBOEclub/easyx/"
-            active-action="action-categoriesforBOEclubeasyx"
-            ><div class='name'>easyx</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/misc/" href="/categories/misc/"
-            active-action="action-categoriesmisc"
-            ><div class='name'>misc</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/windows/" href="/categories/windows/"
-            active-action="action-categorieswindows"
-            ><div class='name'>windows</div><div class='badge'>(2)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/windows/Hyper-V/" href="/categories/windows/Hyper-V/"
-            active-action="action-categorieswindowsHyper-V"
-            ><div class='name'>Hyper-V</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/windows/terminal/" href="/categories/windows/terminal/"
-            active-action="action-categorieswindowsterminal"
-            ><div class='name'>terminal</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/" href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"
-            active-action="action-categoriesE695B0E68DAEE5BA93"
-            ><div class='name'>数据库</div><div class='badge'>(2)</div></a></li>
-        
-      </ul>
-    </div>
-  </section>
-
-
-    
-  
-
-  
-    
-    
-      
-  
-  <section class="widget tagcloud desktop mobile pjax">
-    
-  <header>
-    
-      <a href='/blog/tags/'><i class="fa-solid fa-tags fa-fw" aria-hidden="true"></i><span class='name'>热门标签</span></a>
-    
-  </header>
-
-
-    <div class='content'>
-      <a href="/tags/C%E8%AF%AD%E8%A8%80/" style="font-size: 14px; color: #999">C语言</a> <a href="/tags/Hexo/" style="font-size: 24px; color: #555">Hexo</a> <a href="/tags/Hyper-V/" style="font-size: 14px; color: #999">Hyper-V</a> <a href="/tags/Qt/" style="font-size: 24px; color: #555">Qt</a> <a href="/tags/VS/" style="font-size: 14px; color: #999">VS</a> <a href="/tags/easyx/" style="font-size: 14px; color: #999">easyx</a> <a href="/tags/forBOEclub/" style="font-size: 14px; color: #999">forBOEclub</a> <a href="/tags/freshman/" style="font-size: 14px; color: #999">freshman</a> <a href="/tags/mysql/" style="font-size: 24px; color: #555">mysql</a> <a href="/tags/windows/" style="font-size: 24px; color: #555">windows</a> <a href="/tags/%E5%8D%9A%E5%AE%A2/" style="font-size: 24px; color: #555">博客</a> <a href="/tags/%E5%9B%BE%E5%BA%8A/" style="font-size: 14px; color: #999">图床</a> <a href="/tags/%E8%99%9A%E6%8B%9F%E6%9C%BA/" style="font-size: 14px; color: #999">虚拟机</a> <a href="/tags/%E9%9A%8F%E6%83%B3/" style="font-size: 14px; color: #999">随想</a>
-    </div>
-  </section>
-
-
-    
-  
-
   
 
 
 <div class="widget-sticky pjax">
+
+  
+  
+
+
+  <section class="widget toc-wrapper desktop mobile " id="toc-div" >
+    
+  <header>
+    
+      <i class="fa-solid fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
+    
+  </header>
+
+
+    <div class='content'>
+        
+    </div>
+  </section>
+
+  
 
 </div>
 
@@ -3273,10 +3264,23 @@ int main()
     <!-- pjax占位 -->
   </div>
 
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
+
   <!-- Custom Files side begin -->
   
   <!-- Custom Files side end -->
 </aside>
+
 
 
           <!--此文件用来存放一些不方便取值的变量-->
@@ -4498,7 +4502,7 @@ volantis.js("https://sidecar.gitter.im/dist/sidecar.v1.js")
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"是默元的博客","url":"https://changakira.github.io/","logo":{"@type":"ImageObject","url":"https://s2.loli.net/2023/07/21/PGyugoK3YMWkeba.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Chang Akira","image":{"@type":"ImageObject","url":"https://s2.loli.net/2023/07/21/PGyugoK3YMWkeba.png"},"url":"https://changakira.github.io/","sameAs":["https://github.com/volantis-x"],"description":"是默元的博客"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://changakira.github.io/","name":"是默元的博客"}},{"@type":"ListItem","position":2,"item":{"@id":"https://changakira.github.io/tags/easyx/","name":"easyx"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"是默元的博客","url":"https://changakira.github.io/","keywords":"默元","description":"是默元的博客","author":{"@type":"Person","name":"Chang Akira","image":{"@type":"ImageObject","url":"https://s2.loli.net/2023/07/21/PGyugoK3YMWkeba.png"},"url":"https://changakira.github.io/","description":"是默元的博客"},"publisher":{"@type":"Organization","name":"是默元的博客","url":"https://changakira.github.io/","logo":{"@type":"ImageObject","url":"https://s2.loli.net/2023/07/21/PGyugoK3YMWkeba.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://changakira.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","description":"是默元的博客","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage"},"author":{"@type":"Person","name":"Chang Akira","image":{"@type":"ImageObject","url":"https://s2.loli.net/2023/07/21/PGyugoK3YMWkeba.png"},"url":"https://changakira.github.io/"},"publisher":{"@type":"Organization","name":"是默元的博客","logo":{"@type":"ImageObject","url":"https://s2.loli.net/2023/07/21/PGyugoK3YMWkeba.png","width":192,"height":192}},"wordCount":0,"image":{"@type":"ImageObject","url":"https://s2.loli.net/2023/07/21/PGyugoK3YMWkeba.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"是默元的博客","url":"https://changakira.github.io/","logo":{"@type":"ImageObject","url":"https://s2.loli.net/2023/07/21/PGyugoK3YMWkeba.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Chang Akira","image":{"@type":"ImageObject","url":"https://s2.loli.net/2023/07/21/PGyugoK3YMWkeba.png"},"url":"https://changakira.github.io/","sameAs":["https://github.com/volantis-x"],"description":"是默元的博客"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://changakira.github.io/","name":"是默元的博客"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"是默元的博客","url":"https://changakira.github.io/","keywords":"默元","description":"是默元的博客","author":{"@type":"Person","name":"Chang Akira","image":{"@type":"ImageObject","url":"https://s2.loli.net/2023/07/21/PGyugoK3YMWkeba.png"},"url":"https://changakira.github.io/","description":"是默元的博客"},"publisher":{"@type":"Organization","name":"是默元的博客","url":"https://changakira.github.io/","logo":{"@type":"ImageObject","url":"https://s2.loli.net/2023/07/21/PGyugoK3YMWkeba.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://changakira.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","description":"是默元的博客","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://changakira.github.io/HTML/test.html"},"author":{"@type":"Person","name":"Chang Akira","image":{"@type":"ImageObject","url":"https://s2.loli.net/2023/07/21/PGyugoK3YMWkeba.png"},"url":"https://changakira.github.io/"},"publisher":{"@type":"Organization","name":"是默元的博客","logo":{"@type":"ImageObject","url":"https://s2.loli.net/2023/07/21/PGyugoK3YMWkeba.png","width":192,"height":192}},"url":"https://changakira.github.io/HTML/test.html","wordCount":0,"datePublished":"2024-07-12T10:29:06.561Z","dateModified":"2024-07-12T10:29:06.561Z","image":{"@type":"ImageObject","url":"https://s2.loli.net/2023/07/21/PGyugoK3YMWkeba.png","width":192,"height":192}}]</script>
 
 
 

@@ -278,17 +278,17 @@
   <!-- 页面元数据 -->
   <title>Qt旧版本（以5.7.1.0为例）连接mysql数据库 - 是默元的博客</title>
   <meta name="keywords" content="Qt,mysql,默元">
-  <meta desc name="description" content="网上查阅Qt如何连接mysql数据库，多为新版本Qt（需要自己编译动态链接库），对旧版本Qt连接描述较少，回答也不甚清晰。在此记录一下我的成功记录。忙完这段时间写 - Chang Akira - 是默元的博客">
+  <meta desc name="description" content="网上查阅Qt如何连接mysql数据库，多为新版本Qt（需要自己编译动态链接库），对旧版本Qt连接描述较少，回答也不甚清晰。 - Chang Akira - 是默元的博客">
   
 <meta property="og:type" content="article">
 <meta property="og:title" content="Qt旧版本（以5.7.1.0为例）连接mysql数据库">
 <meta property="og:url" content="https://changakira.github.io/2024/05/11/qt-connect-mysql/index.html">
 <meta property="og:site_name" content="是默元的博客">
-<meta property="og:description" content="网上查阅Qt如何连接mysql数据库，多为新版本Qt（需要自己编译动态链接库），对旧版本Qt连接描述较少，回答也不甚清晰。在此记录一下我的成功记录。忙完这段时间写">
+<meta property="og:description" content="网上查阅Qt如何连接mysql数据库，多为新版本Qt（需要自己编译动态链接库），对旧版本Qt连接描述较少，回答也不甚清晰。">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://s2.loli.net/2023/07/21/PGyugoK3YMWkeba.png">
 <meta property="article:published_time" content="2024-05-11T10:49:36.000Z">
-<meta property="article:modified_time" content="2024-05-24T14:22:37.356Z">
+<meta property="article:modified_time" content="2024-07-12T10:44:54.861Z">
 <meta property="article:author" content="Chang Akira">
 <meta property="article:tag" content="Qt">
 <meta property="article:tag" content="mysql">
@@ -2152,7 +2152,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1719044836167),
+    lastupdate: new Date(1720781110756),
     sidebar: {
       for_page: ["blogger","category","tagcloud","donate"],
       for_post: ["toc"],
@@ -2954,7 +2954,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         <div class="body-wrapper">
           
 <div id="l_main" class=''>
-  <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow floatable blur article-type-post" id="post" itemscope itemprop="blogPost">
+  <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow floatable article-type-post" id="post" itemscope itemprop="blogPost">
   <link itemprop="mainEntityOfPage" href="https://changakira.github.io/2024/05/11/qt-connect-mysql/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="是默元的博客">
@@ -2987,11 +2987,11 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <a class="category-link" href="/categories/Qt/">Qt</a><span class="sep"></span><a class="category-link" href="/categories/Qt/%E6%95%B0%E6%8D%AE%E5%BA%93/">数据库</a><span class="sep"></span><a class="category-link" href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/">数据库</a>
     
       <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-        <a href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/" itemprop="url"><span itemprop="name">数据库</span></a>
+        <a href="/categories/Qt/" itemprop="url"><span itemprop="name">Qt</span></a>
       </span>
     
       <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-        <a href="/categories/Qt/" itemprop="url"><span itemprop="name">Qt</span></a>
+        <a href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/" itemprop="url"><span itemprop="name">数据库</span></a>
       </span>
     
       <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
@@ -3044,9 +3044,25 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    <p>网上查阅Qt如何连接mysql数据库，多为新版本Qt（需要自己编译动态链接库），对旧版本Qt连接描述较少，回答也不甚清晰。在此记录一下我的成功记录。<br>忙完这段时间写</p>
+    <p>网上查阅Qt如何连接mysql数据库，多为新版本Qt（需要自己编译动态链接库），对旧版本Qt连接描述较少，回答也不甚清晰。</p>
 <span id="more"></span>
 
+<h2 id="在QT中打印当前QT版本支持的数据库"><a href="#在QT中打印当前QT版本支持的数据库" class="headerlink" title="在QT中打印当前QT版本支持的数据库"></a>在QT中打印当前QT版本支持的数据库</h2><p>为简便起见，新建一个Qt console application即可。</p>
+<p><img src="https://i0.hdslb.com/bfs/article/1b6ac5933c70ea2956d6700b01a6596f481184837.png" class="lazyload" data-srcset="https://i0.hdslb.com/bfs/article/1b6ac5933c70ea2956d6700b01a6596f481184837.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Qt_console_App"></p>
+<p>全部选择默认创建。</p>
+<p>.pro文件中，添加</p>
+<pre><code>qt += sql
+</code></pre>
+<p>.cpp文件中，添加</p>
+<pre><code>#include &lt;QDebug&gt;
+</code></pre>
+<p>和</p>
+<pre><code>qDebug() &lt;&lt; QSqlDatabase::drivers();
+</code></pre>
+<p>运行，在下方“3 应用程序输出”中查看结果，如下图所示，在旧版本Qt中，已经默认自带MySQL的动态链接库（结果中有“QMYSQL”）。</p>
+<p><img src="https://i0.hdslb.com/bfs/article/7dfe213be1d4c434bd0484edc0d8994b481184837.png" class="lazyload" data-srcset="https://i0.hdslb.com/bfs/article/7dfe213be1d4c434bd0484edc0d8994b481184837.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="结果中有“QMYSQL”"></p>
+<p><a href ="https://changakira.github.io/HTML/test.html" target = "_blank"><em>全部代码跳转此处查看</em></a>（本文中除上述三条代码外未做任何改动）（也可以将如上三条语句放在任意已经存在的项目中）</p>
+<p>稍迟些更新</p>
 
   </div>
   
@@ -3071,10 +3087,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2024-05-24T22:22:37+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2024-07-12T18:44:54+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：2024年5月24日</p>
+    <p>更新于：2024年7月12日</p>
   </a>
 </div>
 
@@ -3097,7 +3113,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://changakira.github.io/2024/05/11/qt-connect-mysql/&title=Qt旧版本（以5.7.1.0为例）连接mysql数据库 - 是默元的博客&summary=网上查阅Qt如何连接mysql数据库，多为新版本Qt（需要自己编译动态链接库），对旧版本Qt连接描述较少，回答也不甚清晰。在此记录一下我的成功记录。忙完这段时间写"
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://changakira.github.io/2024/05/11/qt-connect-mysql/&title=Qt旧版本（以5.7.1.0为例）连接mysql数据库 - 是默元的博客&summary=网上查阅Qt如何连接mysql数据库，多为新版本Qt（需要自己编译动态链接库），对旧版本Qt连接描述较少，回答也不甚清晰。"
           
           >
           
@@ -3109,7 +3125,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=https://changakira.github.io/2024/05/11/qt-connect-mysql/&title=Qt旧版本（以5.7.1.0为例）连接mysql数据库 - 是默元的博客&summary=网上查阅Qt如何连接mysql数据库，多为新版本Qt（需要自己编译动态链接库），对旧版本Qt连接描述较少，回答也不甚清晰。在此记录一下我的成功记录。忙完这段时间写"
+          target="_blank" href="http://service.weibo.com/share/share.php?url=https://changakira.github.io/2024/05/11/qt-connect-mysql/&title=Qt旧版本（以5.7.1.0为例）连接mysql数据库 - 是默元的博客&summary=网上查阅Qt如何连接mysql数据库，多为新版本Qt（需要自己编译动态链接库），对旧版本Qt连接描述较少，回答也不甚清晰。"
           
           >
           
@@ -3183,7 +3199,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
 
 
-  <article class="post white-box shadow floatable blur" id="comments">
+  <article class="post white-box shadow floatable" id="comments">
     <span hidden>
       <meta itemprop="discussionUrl" content="/2024/05/11/qt-connect-mysql/index.html#comments">
     </span>
@@ -3219,9 +3235,19 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
 
 
-  <div class="">
-    <!-- pjax占位 -->
-  </div>
+  <section class="widget toc-wrapper desktop mobile " id="toc-div" >
+    
+  <header>
+    
+      <i class="fa-solid fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
+    
+  </header>
+
+
+    <div class='content'>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9C%A8QT%E4%B8%AD%E6%89%93%E5%8D%B0%E5%BD%93%E5%89%8DQT%E7%89%88%E6%9C%AC%E6%94%AF%E6%8C%81%E7%9A%84%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="toc-text">在QT中打印当前QT版本支持的数据库</span></a></li></ol>
+    </div>
+  </section>
 
   
 
@@ -4488,7 +4514,7 @@ volantis.js("https://sidecar.gitter.im/dist/sidecar.v1.js")
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"是默元的博客","url":"https://changakira.github.io/","logo":{"@type":"ImageObject","url":"https://s2.loli.net/2023/07/21/PGyugoK3YMWkeba.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Chang Akira","image":{"@type":"ImageObject","url":"https://s2.loli.net/2023/07/21/PGyugoK3YMWkeba.png"},"url":"https://changakira.github.io/","sameAs":["https://github.com/volantis-x"],"description":"是默元的博客"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://changakira.github.io/","name":"是默元的博客"}},{"@type":"ListItem","position":2,"item":{"@id":"https://changakira.github.io/categories/数据库/","name":"数据库"}},{"@type":"ListItem","position":2,"item":{"@id":"https://changakira.github.io/categories/Qt/","name":"Qt"}},{"@type":"ListItem","position":2,"item":{"@id":"https://changakira.github.io/categories/Qt/数据库/","name":"数据库"}},{"@type":"ListItem","position":3,"item":{"@id":"https://changakira.github.io/2024/05/11/qt-connect-mysql/","name":"Qt旧版本（以5.7.1.0为例）连接mysql数据库"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"是默元的博客","url":"https://changakira.github.io/","keywords":"默元","description":"是默元的博客","author":{"@type":"Person","name":"Chang Akira","image":{"@type":"ImageObject","url":"https://s2.loli.net/2023/07/21/PGyugoK3YMWkeba.png"},"url":"https://changakira.github.io/","description":"是默元的博客"},"publisher":{"@type":"Organization","name":"是默元的博客","url":"https://changakira.github.io/","logo":{"@type":"ImageObject","url":"https://s2.loli.net/2023/07/21/PGyugoK3YMWkeba.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://changakira.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"Qt旧版本（以5.7.1.0为例）连接mysql数据库","description":"网上查阅Qt如何连接mysql数据库，多为新版本Qt（需要自己编译动态链接库），对旧版本Qt连接描述较少，回答也不甚清晰。在此记录一下我的成功记录。忙完这段时间写","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://changakira.github.io/2024/05/11/qt-connect-mysql/"},"author":{"@type":"Person","name":"Chang Akira","image":{"@type":"ImageObject","url":"https://s2.loli.net/2023/07/21/PGyugoK3YMWkeba.png"},"url":"https://changakira.github.io/"},"publisher":{"@type":"Organization","name":"是默元的博客","logo":{"@type":"ImageObject","url":"https://s2.loli.net/2023/07/21/PGyugoK3YMWkeba.png","width":192,"height":192}},"url":"https://changakira.github.io/2024/05/11/qt-connect-mysql/","wordCount":81,"datePublished":"2024-05-11T10:49:36.000Z","dateModified":"2024-05-24T14:22:37.356Z","articleSection":"数据库","keywords":"Qt,mysql","image":{"@type":"ImageObject","url":"https://s2.loli.net/2023/07/21/PGyugoK3YMWkeba.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"是默元的博客","url":"https://changakira.github.io/","logo":{"@type":"ImageObject","url":"https://s2.loli.net/2023/07/21/PGyugoK3YMWkeba.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Chang Akira","image":{"@type":"ImageObject","url":"https://s2.loli.net/2023/07/21/PGyugoK3YMWkeba.png"},"url":"https://changakira.github.io/","sameAs":["https://github.com/volantis-x"],"description":"是默元的博客"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://changakira.github.io/","name":"是默元的博客"}},{"@type":"ListItem","position":2,"item":{"@id":"https://changakira.github.io/categories/Qt/","name":"Qt"}},{"@type":"ListItem","position":2,"item":{"@id":"https://changakira.github.io/categories/数据库/","name":"数据库"}},{"@type":"ListItem","position":2,"item":{"@id":"https://changakira.github.io/categories/Qt/数据库/","name":"数据库"}},{"@type":"ListItem","position":3,"item":{"@id":"https://changakira.github.io/2024/05/11/qt-connect-mysql/","name":"Qt旧版本（以5.7.1.0为例）连接mysql数据库"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"是默元的博客","url":"https://changakira.github.io/","keywords":"默元","description":"是默元的博客","author":{"@type":"Person","name":"Chang Akira","image":{"@type":"ImageObject","url":"https://s2.loli.net/2023/07/21/PGyugoK3YMWkeba.png"},"url":"https://changakira.github.io/","description":"是默元的博客"},"publisher":{"@type":"Organization","name":"是默元的博客","url":"https://changakira.github.io/","logo":{"@type":"ImageObject","url":"https://s2.loli.net/2023/07/21/PGyugoK3YMWkeba.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://changakira.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"Qt旧版本（以5.7.1.0为例）连接mysql数据库","description":"网上查阅Qt如何连接mysql数据库，多为新版本Qt（需要自己编译动态链接库），对旧版本Qt连接描述较少，回答也不甚清晰。","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://changakira.github.io/2024/05/11/qt-connect-mysql/"},"author":{"@type":"Person","name":"Chang Akira","image":{"@type":"ImageObject","url":"https://s2.loli.net/2023/07/21/PGyugoK3YMWkeba.png"},"url":"https://changakira.github.io/"},"publisher":{"@type":"Organization","name":"是默元的博客","logo":{"@type":"ImageObject","url":"https://s2.loli.net/2023/07/21/PGyugoK3YMWkeba.png","width":192,"height":192}},"url":"https://changakira.github.io/2024/05/11/qt-connect-mysql/","wordCount":61,"datePublished":"2024-05-11T10:49:36.000Z","dateModified":"2024-07-12T10:44:54.861Z","articleSection":"Qt","keywords":"Qt,mysql","image":{"@type":"ImageObject","url":"https://s2.loli.net/2023/07/21/PGyugoK3YMWkeba.png","width":192,"height":192}}]</script>
 
 
 
