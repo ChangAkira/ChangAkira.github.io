@@ -288,7 +288,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://s2.loli.net/2023/07/21/PGyugoK3YMWkeba.png">
 <meta property="article:published_time" content="2024-05-11T10:49:36.000Z">
-<meta property="article:modified_time" content="2024-07-12T10:44:54.861Z">
+<meta property="article:modified_time" content="2024-07-12T14:03:06.347Z">
 <meta property="article:author" content="Chang Akira">
 <meta property="article:tag" content="Qt">
 <meta property="article:tag" content="mysql">
@@ -2152,7 +2152,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1720781110756),
+    lastupdate: new Date(1720793484262),
     sidebar: {
       for_page: ["blogger","category","tagcloud","donate"],
       for_post: ["toc"],
@@ -2987,11 +2987,11 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <a class="category-link" href="/categories/Qt/">Qt</a><span class="sep"></span><a class="category-link" href="/categories/Qt/%E6%95%B0%E6%8D%AE%E5%BA%93/">数据库</a><span class="sep"></span><a class="category-link" href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/">数据库</a>
     
       <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-        <a href="/categories/Qt/" itemprop="url"><span itemprop="name">Qt</span></a>
+        <a href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/" itemprop="url"><span itemprop="name">数据库</span></a>
       </span>
     
       <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-        <a href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/" itemprop="url"><span itemprop="name">数据库</span></a>
+        <a href="/categories/Qt/" itemprop="url"><span itemprop="name">Qt</span></a>
       </span>
     
       <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
@@ -3062,7 +3062,26 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p>运行，在下方“3 应用程序输出”中查看结果，如下图所示，在旧版本Qt中，已经默认自带MySQL的动态链接库（结果中有“QMYSQL”）。</p>
 <p><img src="https://i0.hdslb.com/bfs/article/7dfe213be1d4c434bd0484edc0d8994b481184837.png" class="lazyload" data-srcset="https://i0.hdslb.com/bfs/article/7dfe213be1d4c434bd0484edc0d8994b481184837.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="结果中有“QMYSQL”"></p>
 <p><a href ="https://changakira.github.io/HTML/test.html" target = "_blank"><em>全部代码跳转此处查看</em></a>（本文中除上述三条代码外未做任何改动）（也可以将如上三条语句放在任意已经存在的项目中）</p>
-<p>稍迟些更新</p>
+<h2 id="库文件拷贝"><a href="#库文件拷贝" class="headerlink" title="库文件拷贝"></a>库文件拷贝</h2><p>确认该版本的Qt默认支持MySQL后，将MySQL安装目录下的lib文件夹中这两个库文件（如图所示）拷贝到QT安装目录的bin文件夹下。</p>
+<p><img src="https://i0.hdslb.com/bfs/article/e419e90f5cd00bd62c570d35abcd3dca481184837.png" class="lazyload" data-srcset="https://i0.hdslb.com/bfs/article/e419e90f5cd00bd62c570d35abcd3dca481184837.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="源文件"></p>
+<p><img src="https://i0.hdslb.com/bfs/article/aa6abc3a6ff58038410dc7c6072241df481184837.png" class="lazyload" data-srcset="https://i0.hdslb.com/bfs/article/aa6abc3a6ff58038410dc7c6072241df481184837.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="目标文件夹"></p>
+<h2 id="检查是否可以成功连接数据库"><a href="#检查是否可以成功连接数据库" class="headerlink" title="检查是否可以成功连接数据库"></a>检查是否可以成功连接数据库</h2><p>使用如下代码：</p>
+<pre><code>QSqlDatabase db = QSqlDatabase::addDatabase(&quot;QMYSQL&quot;);
+//链接数据库
+db.setHostName(&quot;127.0.0.1&quot;);
+db.setUserName(&quot;root&quot;);
+db.setPassword(&quot;123456&quot;);
+db.setDatabaseName(&quot;mysql&quot;);
+if(!db.open())&#123;
+    qDebug() &lt;&lt; &quot;0&quot;;
+&#125;else&#123;
+    qDebug() &lt;&lt; &quot;1&quot;;
+&#125;
+</code></pre>
+<p>将其添加至上面创建的main.cpp中。</p>
+<p>需要注意的是，这样写，点击运行会导致程序异常退出。推测原因是程序还在等待操作的循环中，具体原因也不太清楚。发现若删除<code>return a.exec();</code>代码，则变为每次重新运行时报错。读到<code>return a.exec()</code>的<a target="_blank" rel="noopener" href="https://blog.csdn.net/hxp1994/article/details/102673538"><em>具体含义解释文章</em></a>，尝试在<code>return a.exec()</code>之前添加<code>exit(0)</code>，问题解决。</p>
+<p>输出0表示连接不成功，输出1表示连接成功。</p>
+<p><a href ="https://changakira.github.io/HTML/test.html" target = "_blank"><em>全部代码跳转此处查看</em></a>（和上面的全部代码传送门指向一个地方）</p>
 
   </div>
   
@@ -3087,7 +3106,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2024-07-12T18:44:54+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2024-07-12T22:03:06+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
     <p>更新于：2024年7月12日</p>
@@ -3245,7 +3264,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9C%A8QT%E4%B8%AD%E6%89%93%E5%8D%B0%E5%BD%93%E5%89%8DQT%E7%89%88%E6%9C%AC%E6%94%AF%E6%8C%81%E7%9A%84%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="toc-text">在QT中打印当前QT版本支持的数据库</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9C%A8QT%E4%B8%AD%E6%89%93%E5%8D%B0%E5%BD%93%E5%89%8DQT%E7%89%88%E6%9C%AC%E6%94%AF%E6%8C%81%E7%9A%84%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="toc-text">在QT中打印当前QT版本支持的数据库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BA%93%E6%96%87%E4%BB%B6%E6%8B%B7%E8%B4%9D"><span class="toc-text">库文件拷贝</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A3%80%E6%9F%A5%E6%98%AF%E5%90%A6%E5%8F%AF%E4%BB%A5%E6%88%90%E5%8A%9F%E8%BF%9E%E6%8E%A5%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="toc-text">检查是否可以成功连接数据库</span></a></li></ol>
     </div>
   </section>
 
@@ -4514,7 +4533,7 @@ volantis.js("https://sidecar.gitter.im/dist/sidecar.v1.js")
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"是默元的博客","url":"https://changakira.github.io/","logo":{"@type":"ImageObject","url":"https://s2.loli.net/2023/07/21/PGyugoK3YMWkeba.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Chang Akira","image":{"@type":"ImageObject","url":"https://s2.loli.net/2023/07/21/PGyugoK3YMWkeba.png"},"url":"https://changakira.github.io/","sameAs":["https://github.com/volantis-x"],"description":"是默元的博客"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://changakira.github.io/","name":"是默元的博客"}},{"@type":"ListItem","position":2,"item":{"@id":"https://changakira.github.io/categories/Qt/","name":"Qt"}},{"@type":"ListItem","position":2,"item":{"@id":"https://changakira.github.io/categories/数据库/","name":"数据库"}},{"@type":"ListItem","position":2,"item":{"@id":"https://changakira.github.io/categories/Qt/数据库/","name":"数据库"}},{"@type":"ListItem","position":3,"item":{"@id":"https://changakira.github.io/2024/05/11/qt-connect-mysql/","name":"Qt旧版本（以5.7.1.0为例）连接mysql数据库"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"是默元的博客","url":"https://changakira.github.io/","keywords":"默元","description":"是默元的博客","author":{"@type":"Person","name":"Chang Akira","image":{"@type":"ImageObject","url":"https://s2.loli.net/2023/07/21/PGyugoK3YMWkeba.png"},"url":"https://changakira.github.io/","description":"是默元的博客"},"publisher":{"@type":"Organization","name":"是默元的博客","url":"https://changakira.github.io/","logo":{"@type":"ImageObject","url":"https://s2.loli.net/2023/07/21/PGyugoK3YMWkeba.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://changakira.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"Qt旧版本（以5.7.1.0为例）连接mysql数据库","description":"网上查阅Qt如何连接mysql数据库，多为新版本Qt（需要自己编译动态链接库），对旧版本Qt连接描述较少，回答也不甚清晰。","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://changakira.github.io/2024/05/11/qt-connect-mysql/"},"author":{"@type":"Person","name":"Chang Akira","image":{"@type":"ImageObject","url":"https://s2.loli.net/2023/07/21/PGyugoK3YMWkeba.png"},"url":"https://changakira.github.io/"},"publisher":{"@type":"Organization","name":"是默元的博客","logo":{"@type":"ImageObject","url":"https://s2.loli.net/2023/07/21/PGyugoK3YMWkeba.png","width":192,"height":192}},"url":"https://changakira.github.io/2024/05/11/qt-connect-mysql/","wordCount":61,"datePublished":"2024-05-11T10:49:36.000Z","dateModified":"2024-07-12T10:44:54.861Z","articleSection":"Qt","keywords":"Qt,mysql","image":{"@type":"ImageObject","url":"https://s2.loli.net/2023/07/21/PGyugoK3YMWkeba.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"是默元的博客","url":"https://changakira.github.io/","logo":{"@type":"ImageObject","url":"https://s2.loli.net/2023/07/21/PGyugoK3YMWkeba.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Chang Akira","image":{"@type":"ImageObject","url":"https://s2.loli.net/2023/07/21/PGyugoK3YMWkeba.png"},"url":"https://changakira.github.io/","sameAs":["https://github.com/volantis-x"],"description":"是默元的博客"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://changakira.github.io/","name":"是默元的博客"}},{"@type":"ListItem","position":2,"item":{"@id":"https://changakira.github.io/categories/数据库/","name":"数据库"}},{"@type":"ListItem","position":2,"item":{"@id":"https://changakira.github.io/categories/Qt/","name":"Qt"}},{"@type":"ListItem","position":2,"item":{"@id":"https://changakira.github.io/categories/Qt/数据库/","name":"数据库"}},{"@type":"ListItem","position":3,"item":{"@id":"https://changakira.github.io/2024/05/11/qt-connect-mysql/","name":"Qt旧版本（以5.7.1.0为例）连接mysql数据库"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"是默元的博客","url":"https://changakira.github.io/","keywords":"默元","description":"是默元的博客","author":{"@type":"Person","name":"Chang Akira","image":{"@type":"ImageObject","url":"https://s2.loli.net/2023/07/21/PGyugoK3YMWkeba.png"},"url":"https://changakira.github.io/","description":"是默元的博客"},"publisher":{"@type":"Organization","name":"是默元的博客","url":"https://changakira.github.io/","logo":{"@type":"ImageObject","url":"https://s2.loli.net/2023/07/21/PGyugoK3YMWkeba.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://changakira.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"Qt旧版本（以5.7.1.0为例）连接mysql数据库","description":"网上查阅Qt如何连接mysql数据库，多为新版本Qt（需要自己编译动态链接库），对旧版本Qt连接描述较少，回答也不甚清晰。","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://changakira.github.io/2024/05/11/qt-connect-mysql/"},"author":{"@type":"Person","name":"Chang Akira","image":{"@type":"ImageObject","url":"https://s2.loli.net/2023/07/21/PGyugoK3YMWkeba.png"},"url":"https://changakira.github.io/"},"publisher":{"@type":"Organization","name":"是默元的博客","logo":{"@type":"ImageObject","url":"https://s2.loli.net/2023/07/21/PGyugoK3YMWkeba.png","width":192,"height":192}},"url":"https://changakira.github.io/2024/05/11/qt-connect-mysql/","wordCount":61,"datePublished":"2024-05-11T10:49:36.000Z","dateModified":"2024-07-12T14:03:06.347Z","articleSection":"数据库","keywords":"Qt,mysql","image":{"@type":"ImageObject","url":"https://s2.loli.net/2023/07/21/PGyugoK3YMWkeba.png","width":192,"height":192}}]</script>
 
 
 
