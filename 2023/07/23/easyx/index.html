@@ -2154,7 +2154,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1720873826482),
+    lastupdate: new Date(1720923860093),
     sidebar: {
       for_page: ["blogger","category","tagcloud","donate"],
       for_post: ["toc"],
@@ -3326,7 +3326,7 @@ POINT projection(POINT3D&amp; p3)
     return p2;
 &#125;
 </code></pre>
-<p>立方体开始动画作品由星羽1704（email <a href="mailto:&#49;&#52;&#55;&#57;&#50;&#x34;&#x35;&#x30;&#53;&#48;&#64;&#x71;&#x71;&#46;&#x63;&#x6f;&#109;">&#49;&#52;&#55;&#57;&#50;&#x34;&#x35;&#x30;&#53;&#48;&#64;&#x71;&#x71;&#46;&#x63;&#x6f;&#109;</a> 联系方式 qq 1479245050 ）在<a target="_blank" rel="noopener" href="https://codebus.cn/featherstar/dynamic-figure" title="将三维空间的点投影到二维平面，感受三维正方体的旋转的视觉盛宴">easyx例程文档</a>中给出。本文将其做少量的修改，得到另外的效果。</p>
+<p>立方体开始动画作品由星羽1704（email <a href="mailto:&#49;&#x34;&#x37;&#57;&#x32;&#52;&#53;&#48;&#53;&#48;&#x40;&#x71;&#113;&#46;&#x63;&#111;&#109;">&#49;&#x34;&#x37;&#57;&#x32;&#52;&#53;&#48;&#53;&#48;&#x40;&#x71;&#113;&#46;&#x63;&#111;&#109;</a> 联系方式 qq 1479245050 ）在<a target="_blank" rel="noopener" href="https://codebus.cn/featherstar/dynamic-figure" title="将三维空间的点投影到二维平面，感受三维正方体的旋转的视觉盛宴">easyx例程文档</a>中给出。本文将其做少量的修改，得到另外的效果。</p>
 
   </div>
   
@@ -3582,7 +3582,11 @@ POINT projection(POINT3D&amp; p3)
         <div class="aplayer-container">
           
 
-  
+   
+     
+    <script>
+      const MetingPlusAudio = [{"name":"俺也不知道","title":"俺也不知道","artist":"俺也不知道","url":"/music/ihztw-4ldhw-001.aac","lrc":"/music/Flower Dance.lrc","cover":"/music/Flower Dance.jpg"}];
+    </script>
     <meting-js
       theme='#1BCDFC'
       autoplay='false'
@@ -3594,11 +3598,12 @@ POINT projection(POINT3D&amp; p3)
       server='netease'
       type='playlist'
       id='3175833810'
-      list-folded='true'>
-    </meting-js>
-  
-
-
+      list-folded='true'
+      audio='MetingPlusAudio'
+      >
+      </meting-js>
+    
+ 
         </div>
       
     
@@ -4184,7 +4189,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
   (async () => {
     // APlayer 需要在  MetingJS 之前加载
     await volantis.js("https://unpkg.com/volantis-static@0.0.1654736714924/libs/aplayer/dist/APlayer.min.js")
-    await volantis.js("https://unpkg.com/volantis-static@0.0.1654736714924/libs/meting/dist/Meting.min.js")
+    await volantis.js("/meting-plus.js")
   
     // 右键 music 需要在 APlayer  MetingJS 之后加载
     await volantis.js('/js/plugins/aplayer.js')
