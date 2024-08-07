@@ -1,5 +1,4 @@
-<!DOCTYPE html>
-<script>
+<!DOCTYPE html><script>
     function music_on() {
         var audio1 = document.getElementById('bg_music');
         if (audio1.paused) {
@@ -109,9 +108,7 @@
         }
     }
     BackTOP();
-</script>
- 
-<style>
+</script><style>
     #RightDownBtn {
         position: fixed;
         left: 1.875rem;
@@ -240,62 +237,7 @@
         content: "";
         background: linear-gradient(#fefefe, #fffbe8)
     }
-</style>
-<html lang="zh-CN">
-    <head hexo-theme='https://github.com/volantis-x/hexo-theme-volantis/#5.8.0'>
-  <meta name="generator" content="Hexo 6.3.0">
-  <meta name="Volantis" content="5.8.0">
-  <meta charset="utf-8">
-  <!-- SEO相关 -->
-  
-  <link rel="canonical" href="https://changakira.github.io/2024/05/23/wsl与图形化界面（ubuntu24-04与xfce4为例）/"/>
-  <!-- 渲染优化 -->
-    <meta http-equiv='x-dns-prefetch-control' content='on' />
-      <link rel='dns-prefetch' href='https://unpkg.com'>
-      <link rel="preconnect" href="https://unpkg.com" crossorigin>
-  <meta name="renderer" content="webkit">
-  <meta name="force-rendering" content="webkit">
-  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
-    <meta http-equiv="Content-Security-Policy" content=" default-src 'self' https:; block-all-mixed-content; base-uri 'self' https:; form-action 'self' https:; worker-src 'self' https:; connect-src 'self' https: *; img-src 'self' data: https: *; media-src 'self' https: *; font-src 'self' data: https: *; frame-src 'self' https: *; manifest-src 'self' https: *; child-src https:; script-src 'self' https: 'unsafe-inline' *; style-src 'self' https: 'unsafe-inline' *; ">
-  <meta name="HandheldFriendly" content="True" >
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
-  <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
-  <meta content="telephone=no" name="format-detection">
-  <!-- import head_begin begin -->
-  <!-- import head_begin end -->
-  <!-- Custom Files headBegin begin-->
-  
-  <!-- Custom Files headBegin end-->
-  <!-- front-matter head_begin begin -->
-  <!-- front-matter head_begin end -->
-    <link rel="shortcut icon" type='image/x-icon' href="https://img1.imgtp.com/2023/07/21/PMqCVeD4.ico">
-  <link rel="preload" href="/css/style.css" as="style">
-  <link rel="preload" href="https://unpkg.com/volantis-static@0.0.1654736714924/media/fonts/VarelaRound/VarelaRound-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
-<link rel="preload" href="https://unpkg.com/volantis-static@0.0.1654736714924/media/fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
-
-  <!-- feed -->
-  <!-- 页面元数据 -->
-  <title>wsl，xfce4与XLaunch的图形化界面 - 是默元的博客</title>
-  <meta name="keywords" content="wsl,linux,xfce4,默元">
-  <meta desc name="description" content="使用xfce4与XLaunch的小伙伴们，相信在究竟如何稳定打开图形化界面一定受过很多困扰。按照网上的教程，有时候可行，有时候哐哐报错。这里我摸索出来稳定的方法。 - Chang Akira - 是默元的博客">
-  
-<meta property="og:type" content="article">
-<meta property="og:title" content="wsl，xfce4与XLaunch的图形化界面">
-<meta property="og:url" content="https://changakira.github.io/2024/05/23/wsl%E4%B8%8E%E5%9B%BE%E5%BD%A2%E5%8C%96%E7%95%8C%E9%9D%A2%EF%BC%88Ubuntu24-04%E4%B8%8Exfce4%E4%B8%BA%E4%BE%8B%EF%BC%89/index.html">
-<meta property="og:site_name" content="是默元的博客">
-<meta property="og:description" content="使用xfce4与XLaunch的小伙伴们，相信在究竟如何稳定打开图形化界面一定受过很多困扰。按照网上的教程，有时候可行，有时候哐哐报错。这里我摸索出来稳定的方法。">
-<meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://s2.loli.net/2023/07/21/PGyugoK3YMWkeba.png">
-<meta property="article:published_time" content="2024-05-23T09:24:24.000Z">
-<meta property="article:modified_time" content="2024-07-14T02:51:20.613Z">
-<meta property="article:author" content="Chang Akira">
-<meta property="article:tag" content="wsl">
-<meta property="article:tag" content="linux">
-<meta property="article:tag" content="xfce4">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://s2.loli.net/2023/07/21/PGyugoK3YMWkeba.png">
-  <style>
+</style><html lang=zh-CN><head hexo-theme=https://github.com/volantis-x/hexo-theme-volantis/#5.8.0><meta name=generator content="Hexo 6.3.0"><meta name=Volantis content=5.8.0><meta charset=utf-8><link rel=canonical href="https://changakira.github.io/2024/05/23/wsl与图形化界面（ubuntu24-04与xfce4为例）/"><meta http-equiv=x-dns-prefetch-control content=on><link rel=dns-prefetch href=https://unpkg.com><link rel=preconnect href=https://unpkg.com crossorigin><meta name=renderer content=webkit><meta name=force-rendering content=webkit><meta http-equiv=X-UA-Compatible content="IE=Edge,chrome=1"><meta http-equiv=Content-Security-Policy content="default-src 'self' https:; block-all-mixed-content; base-uri 'self' https:; form-action 'self' https:; worker-src 'self' https:; connect-src 'self' https: *; img-src 'self' data: https: *; media-src 'self' https: *; font-src 'self' data: https: *; frame-src 'self' https: *; manifest-src 'self' https: *; child-src https:; script-src 'self' https: 'unsafe-inline' *; style-src 'self' https: 'unsafe-inline' *;"><meta name=HandheldFriendly content=True><meta name=apple-mobile-web-app-capable content=yes><meta name=viewport content="width=device-width, initial-scale=1, maximum-scale=5"><meta content=black-translucent name=apple-mobile-web-app-status-bar-style><meta content="telephone=no" name=format-detection><link rel="shortcut icon" type=image/x-icon href=https://img1.imgtp.com/2023/07/21/PMqCVeD4.ico><link rel=preload href=/css/style.css as=style><link rel=preload href=https://unpkg.com/volantis-static@0.0.1654736714924/media/fonts/VarelaRound/VarelaRound-Regular.ttf as=font type=font/ttf crossorigin=anonymous><link rel=preload href=https://unpkg.com/volantis-static@0.0.1654736714924/media/fonts/UbuntuMono/UbuntuMono-Regular.ttf as=font type=font/ttf crossorigin=anonymous><title>wsl，xfce4与XLaunch的图形化界面 - 是默元的博客</title><meta name=keywords content=wsl,linux,xfce4,默元><meta desc name=description content="使用xfce4与XLaunch的小伙伴们，相信在究竟如何稳定打开图形化界面一定受过很多困扰。按照网上的教程，有时候可行，有时候哐哐报错。这里我摸索出来稳定的方法。 - Chang Akira - 是默元的博客"><meta property=og:type content=article><meta property=og:title content=wsl，xfce4与XLaunch的图形化界面><meta property=og:url content=https://changakira.github.io/2024/05/23/wsl%E4%B8%8E%E5%9B%BE%E5%BD%A2%E5%8C%96%E7%95%8C%E9%9D%A2%EF%BC%88Ubuntu24-04%E4%B8%8Exfce4%E4%B8%BA%E4%BE%8B%EF%BC%89/index.html><meta property=og:site_name content=是默元的博客><meta property=og:description content=使用xfce4与XLaunch的小伙伴们，相信在究竟如何稳定打开图形化界面一定受过很多困扰。按照网上的教程，有时候可行，有时候哐哐报错。这里我摸索出来稳定的方法。><meta property=og:locale content=zh_CN><meta property=og:image content=https://s2.loli.net/2023/07/21/PGyugoK3YMWkeba.png><meta property=article:published_time content=2024-05-23T09:24:24.000Z><meta property=article:modified_time content=2024-07-14T02:51:20.613Z><meta property=article:author content="Chang Akira"><meta property=article:tag content=wsl><meta property=article:tag content=linux><meta property=article:tag content=xfce4><meta name=twitter:card content=summary><meta name=twitter:image content=https://s2.loli.net/2023/07/21/PGyugoK3YMWkeba.png><style>
     /* 首屏样式 */
     #safearea {
   display: none;
@@ -2071,17 +2013,12 @@ ul.list-v >li>a:hover {
   }
 }
 
-  </style>
-  <link rel="stylesheet" href="/css/style.css" media="print" onload="this.media='all';this.onload=null">
-  <noscript><link rel="stylesheet" href="/css/style.css"></noscript>
-    <script>
+  </style><link rel=stylesheet href=/css/style.css media=print onload="this.media='all';this.onload=null"><noscript><link rel=stylesheet href=/css/style.css></noscript><script>
       let userColorScheme=localStorage.getItem("color-scheme")
       if(userColorScheme){
         document.documentElement.setAttribute("color-scheme", userColorScheme);
       }
-    </script>
-  
-<script>
+    </script><script>
 if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMode))
     document.write(
 	'<style>'+
@@ -2110,11 +2047,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         `<span class="kill-c">微软已经于2016年终止了对 Internet Explorer (IE) 10 及更早版本的支持，<br/>继续使用存在极大的安全隐患，请使用当代主流的浏览器进行访问。</span><br/>`+
         `<a target="_blank" rel="noopener" href="https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/"><strong>了解详情 ></strong></a>`+
     '</div>');
-</script>
-
-
-<noscript>
-	<style>
+</script><noscript><style>
 		html{
 			overflow-x: hidden !important;
 			overflow-y: hidden !important;
@@ -2134,16 +2067,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 		#l_header,#l_body{
 			display: none;
 		}
-	</style>
-    <div class="kill-noscript">
-        <span class="kill-t"><b>抱歉，您的浏览器无法访问本站</b></span><br/>
-        <span class="kill-c">本页面需要浏览器支持（启用）JavaScript</span><br/>
-        <a target="_blank" rel="noopener" href="https://www.baidu.com/s?wd=启用JavaScript"><strong>了解详情 ></strong></a>
-    </div>
-</noscript>
-
-
-  <script>
+	</style><div class=kill-noscript><span class=kill-t><b>抱歉，您的浏览器无法访问本站</b></span><br><span class=kill-c>本页面需要浏览器支持（启用）JavaScript</span><br><a target=_blank rel=noopener href="https://www.baidu.com/s?wd=启用JavaScript"><strong>了解详情 ></strong></a></div></noscript><script>
   /************这个文件存放不需要重载的全局变量和全局函数*********/
   window.volantis = {}; // volantis 全局变量
   volantis.debug = "env"; // 调试模式
@@ -2153,7 +2077,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1722690193982),
+    lastupdate: new Date(1723024833229),
     sidebar: {
       for_page: ["blogger","category","tagcloud","donate"],
       for_post: ["toc"],
@@ -2565,768 +2489,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     img.onerror = null;
   }
   /******************************************************************************/
-</script>
-
-  <!-- import head_end begin -->
-  <!-- import head_end end -->
-  <!-- Custom Files headEnd begin-->
-  
-  <!-- Custom Files headEnd end-->
-  <!-- front-matter head_end begin -->
-  <!-- front-matter head_end end -->
-<!-- hexo injector head_end start --><meta name="referrer" content="no-referrer"/><!-- hexo injector head_end end --></head>
-  <body itemscope itemtype="http://schema.org/WebPage">
-    <!-- import body_begin begin-->
-    <!-- import body_begin end-->
-    <!-- Custom Files bodyBegin begin-->
-    
-    <!-- Custom Files bodyBegin end-->
-    <!-- front-matter body_begin begin -->
-    <!-- front-matter body_begin end -->
-    <header itemscope itemtype="http://schema.org/WPHeader" id="l_header" class="l_header auto shadow floatable blur show" style='opacity: 0' >
-  <div class='container'>
-  <div id='wrapper'>
-    <div class='nav-sub'>
-      <p class="title"></p>
-      <ul class='switcher nav-list-h m-phone' id="pjax-header-nav-list">
-        <li><a id="s-comment" class="fa-solid fa-comments fa-fw" target="_self"  href="/" onclick="return false;" title="comment"></a></li>
-        
-          <li><a id="s-toc" class="s-toc fa-solid fa-list fa-fw" target="_self"  href="/" onclick="return false;" title="toc"></a></li>
-        
-      </ul>
-    </div>
-		<div class="nav-main">
-      
-        
-        <a class="title flat-box" target="_self" href='/'>
-          
-          
-          
-            MOYUAN
-          
-        </a>
-      
-
-			<div class='menu navigation'>
-				<ul class='nav-list-h m-pc'>
-          
-          
-          
-            
-            
-              <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                href="/" title="首页"
-                  
-                  
-                  
-                    active-action="action-home"
-                  >
-                  首页
-                </a>
-                
-              </li>
-            
-          
-          
-            
-            
-              <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                 href="/" onclick="return false;" title="归档"
-                  
-                  
-                  >
-                  归档
-                </a>
-                
-                  <ul class="list-v">
-                    
-                      
-            
-              <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                href="/categories/" title="分类"
-                  
-                  
-                  
-                    active-action="action-categories"
-                  >
-                  分类
-                </a>
-                
-              </li>
-            
-          
-                    
-                      
-            
-              <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                href="/tags/" title="标签"
-                  
-                  
-                  
-                    active-action="action-tags"
-                  >
-                  标签
-                </a>
-                
-              </li>
-            
-          
-                    
-                      
-            
-              <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                href="/archives/" title="历程"
-                  
-                  
-                  
-                    active-action="action-archives"
-                  >
-                  历程
-                </a>
-                
-              </li>
-            
-          
-                    
-                  </ul>
-                
-              </li>
-            
-          
-          
-            
-            
-              <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                href="/friends/" title="友链"
-                  
-                  
-                  
-                    active-action="action-friends"
-                  >
-                  友链
-                </a>
-                
-              </li>
-            
-          
-          
-            
-            
-              <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                href="/about/" title="关于"
-                  
-                  
-                  
-                    active-action="action-about"
-                  >
-                  关于
-                </a>
-                
-              </li>
-            
-          
-          
-            
-            
-              <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                href="/mystic/" title="魔法屋"
-                  
-                  
-                  
-                    active-action="action-mystic"
-                  >
-                  魔法屋
-                </a>
-                
-              </li>
-            
-          
-          
-            
-            
-              <li>
-                <a class="menuitem flat-box header toggle-mode-btn" onclick="switchNightMode()">
-                  <i class=' fa-fw'></i>夜间模式
-                </a>
-              <li>
-            
-          
-          
-				</ul>
-			</div>
-      
-      <div class="m_search">
-        <form name="searchform" class="form u-search-form">
-          <i class="icon fa-solid fa-search fa-fw"></i>
-          <input type="text" class="input u-search-input" placeholder="你想找什么鸭 >_<" />
-        </form>
-      </div>
-      
-
-			<ul class='switcher nav-list-h m-phone'>
-				
-					<li><a class="s-search fa-solid fa-search fa-fw" target="_self" href="/" onclick="return false;" title="search"></a></li>
-				
-				<li>
-          <a class="s-menu fa-solid fa-bars fa-fw" target="_self" href="/" onclick="return false;" title="menu"></a>
-          <ul class="menu-phone list-v navigation white-box">
-            
-              
-            
-              <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                href="/" title="首页"
-                  
-                  
-                  
-                    active-action="action-home"
-                  >
-                  首页
-                </a>
-                
-              </li>
-            
-          
-            
-              
-            
-              <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                 href="/" onclick="return false;" title="归档"
-                  
-                  
-                  >
-                  归档
-                </a>
-                
-                  <ul class="list-v">
-                    
-                      
-            
-              <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                href="/categories/" title="分类"
-                  
-                  
-                  
-                    active-action="action-categories"
-                  >
-                  分类
-                </a>
-                
-              </li>
-            
-          
-                    
-                      
-            
-              <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                href="/tags/" title="标签"
-                  
-                  
-                  
-                    active-action="action-tags"
-                  >
-                  标签
-                </a>
-                
-              </li>
-            
-          
-                    
-                      
-            
-              <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                href="/archives/" title="历程"
-                  
-                  
-                  
-                    active-action="action-archives"
-                  >
-                  历程
-                </a>
-                
-              </li>
-            
-          
-                    
-                  </ul>
-                
-              </li>
-            
-          
-            
-              
-            
-              <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                href="/friends/" title="友链"
-                  
-                  
-                  
-                    active-action="action-friends"
-                  >
-                  友链
-                </a>
-                
-              </li>
-            
-          
-            
-              
-            
-              <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                href="/about/" title="关于"
-                  
-                  
-                  
-                    active-action="action-about"
-                  >
-                  关于
-                </a>
-                
-              </li>
-            
-          
-            
-              
-            
-              <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                href="/mystic/" title="魔法屋"
-                  
-                  
-                  
-                    active-action="action-mystic"
-                  >
-                  魔法屋
-                </a>
-                
-              </li>
-            
-          
-            
-              
-            
-              <li>
-                <a class="menuitem flat-box header toggle-mode-btn" onclick="switchNightMode()">
-                  <i class=' fa-fw'></i>夜间模式
-                </a>
-              <li>
-            
-          
-            
-          </ul>
-        </li>
-			</ul>
-
-      <!-- Custom Files header begin -->
-      
-      <!-- Custom Files header end -->
-		</div>
-	</div>
-  </div>
-</header>
-
-    <div id="l_body">
-      <div id="l_cover">
-  
-      
-  
-</div>
-
-      <div id="safearea">
-        <div class="body-wrapper">
-          
-<div id="l_main" class=''>
-  <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow floatable article-type-post" id="post" itemscope itemprop="blogPost">
-  <link itemprop="mainEntityOfPage" href="https://changakira.github.io/2024/05/23/wsl与图形化界面（Ubuntu24-04与xfce4为例）/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="是默元的博客">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="是默元的博客">
-    <meta itemprop="description" content="是默元的博客">
-  </span>
-  
-
-
-  
-    <span hidden>
-      <meta itemprop="image" content="https://s2.loli.net/2023/07/21/PGyugoK3YMWkeba.png">
-    </span>
-  
-  <div class="article-meta" id="top">
-    
-    
-    
-      <h1 class="title" itemprop="name headline">
-        wsl，xfce4与XLaunch的图形化界面
-      </h1>
-      <div class='new-meta-box'>
-        
-          
-            
-  <div class='new-meta-item category'>
-    <i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i>
-    <a class="category-link" href="/categories/wsl/">wsl</a><span class="sep"></span><a class="category-link" href="/categories/xfce4/">xfce4</a>
-    
-      <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-        <a href="/categories/wsl/" itemprop="url"><span itemprop="name">wsl</span></a>
-      </span>
-    
-      <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-        <a href="/categories/xfce4/" itemprop="url"><span itemprop="name">xfce4</span></a>
-      </span>
-    
-  </div>
-
-
-          
-        
-          
-            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2024-05-23T17:24:24+08:00">
-  <a class='notlink'>
-    <i class="fa-solid fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p>发布于：2024年5月23日</p>
-  </a>
-</div>
-
-          
-        
-          
-            
-
-
-<div class="new-meta-item browse">
-  <a class='notlink'>
-    <p>
-      <i class="fa-solid fa-eye fa-fw" aria-hidden="true"></i>
-      
-      <span id="lc-pv" data-title="wsl，xfce4与XLaunch的图形化界面" data-path="/2024/05/23/wsl%E4%B8%8E%E5%9B%BE%E5%BD%A2%E5%8C%96%E7%95%8C%E9%9D%A2%EF%BC%88Ubuntu24-04%E4%B8%8Exfce4%E4%B8%BA%E4%BE%8B%EF%BC%89/">
-        <span id='number'><i class="fa-solid fa-loader fa-spin fa-fw" aria-hidden="true"></i></span>
-      </span>
-      
-      <span>次浏览</span>
-    </p>
-  </a>
-</div>
-
-
-          
-        
-        <!-- Custom Files topMeta begin-->
-        
-        <!-- Custom Files topMeta end-->
-      </div>
-    
-  </div>
-
-
-  <div id="layoutHelper-page-plugins"></div>
-  <div id="post-body" itemprop="articleBody">
-    <p>使用xfce4与XLaunch的小伙伴们，相信在究竟如何稳定打开图形化界面一定受过很多困扰。按照网上的教程，有时候可行，有时候哐哐报错。这里我摸索出来稳定的方法。</p>
-<span id="more"></span>
-
-<p>已经安装好xfce4与XLaunch,只是不知道如何稳定打开图形化界面的同学，请点击右侧目录跳转至第3节。</p>
-<psw>另注：这一篇文章中我尝试了使用volantis主题提供的标签插件，还有更改了插入图片的写法</psw>
-
-<p>搭配食用~</p>
-<div class="audio"><audio controls preload><source src='/musics/ihztw-4ldhw-001.aac' type='audio/mp3'>Your browser does not support the audio tag.</audio></div>
-
-<h2 id="1-WSL安装xfce4"><a href="#1-WSL安装xfce4" class="headerlink" title="1.WSL安装xfce4"></a>1.WSL安装xfce4</h2><p>先更新apt-get</p>
-<pre><code>sudo apt-get update &amp;&amp; sudo apt-get upgrade -y
-</code></pre>
-<p>xorg是xfce桌面需要的一个基础依赖</p>
-<pre><code>sudo apt-get install xorg
-</code></pre>
-<p>安装XFCE桌面环境</p>
-<pre><code>sudo apt-get install xfce4 -y
-</code></pre>
-<p>xfce4-goodies是一个丰富某些功能的包。具体内容可以<a target="_blank" rel="noopener" href="https://www.jianshu.com/p/95c24f4d96e3#:~:text=Xfce4%2D-,goodies,-%E6%98%AF%E7%94%B1%E4%B8%8B%E9%9D%A2"><em>移步此处</em></a>。</p>
-<pre><code>sudo apt-get install xfce4-goodies -y
-</code></pre>
-<h2 id="2-安装XLaunch"><a href="#2-安装XLaunch" class="headerlink" title="2.安装XLaunch"></a>2.安装XLaunch</h2><div class="note info"><p>这是Windows软件</p></div>
-
-<div class="note done"><p>默认安装即可</p></div>
-
-<span class='btn center large'><a class="button" target="_blank" rel="noopener" href='https://sourceforge.net/projects/vcxsrv/' title='去下载网站！'><i class='fas fa-download'></i>去下载网站！</a></span>
-
-<h2 id="3-打开图形化界面"><a href="#3-打开图形化界面" class="headerlink" title="3.打开图形化界面"></a>3.打开图形化界面</h2><p>打开X-Launch软件，选择One large window，Display number选择0。</p>
-<div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://i0.hdslb.com/bfs/article/ff486af82d102b12b921bd3c61bbdb42481184837.png' data-fancybox='default' data-caption='X-Launch软件'><img fancybox itemprop="contentUrl" src="https://i0.hdslb.com/bfs/article/ff486af82d102b12b921bd3c61bbdb42481184837.png" class="lazyload" data-srcset="https://i0.hdslb.com/bfs/article/ff486af82d102b12b921bd3c61bbdb42481184837.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="X-Launch软件"></a><span class='image-caption'>X-Launch软件</span></div></div>
-
-<p>点击几次下一页，这里将最后一项勾选上，然后点下一页、完成。出现一个大的黑窗口。</p>
-<div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://i0.hdslb.com/bfs/article/e6c84de84ef6e9748670d59cdbc50615481184837.png' data-fancybox='default' data-caption='将最后一项勾选上'><img fancybox itemprop="contentUrl" src="https://i0.hdslb.com/bfs/article/e6c84de84ef6e9748670d59cdbc50615481184837.png" class="lazyload" data-srcset="https://i0.hdslb.com/bfs/article/e6c84de84ef6e9748670d59cdbc50615481184837.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="将最后一项勾选上"></a><span class='image-caption'>将最后一项勾选上</span></div></div>
-
-<p>Linux中输入</p>
-<pre><code>export DISPLAY=localhost:0
-</code></pre>
-<p>然后输入</p>
-<pre><code>startxfce4
-</code></pre>
-<p>等待完成后，就能在刚刚的黑窗口中看到图形化窗口了。</p>
-<div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://i0.hdslb.com/bfs/article/4cc6572051b5028536c91c851e058e2b481184837.png' data-fancybox='default' data-caption='linux中显示内容'><img fancybox itemprop="contentUrl" src="https://i0.hdslb.com/bfs/article/4cc6572051b5028536c91c851e058e2b481184837.png" class="lazyload" data-srcset="https://i0.hdslb.com/bfs/article/4cc6572051b5028536c91c851e058e2b481184837.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="linux中显示内容"></a><span class='image-caption'>linux中显示内容</span></div></div>
-
-<div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://i0.hdslb.com/bfs/article/d83e41dcacaba56c1e19f7ac6b627dec481184837.png' data-fancybox='default' data-caption='桌面。悄悄告诉你，我的壁纸来自《风灵玉秀》'><img fancybox itemprop="contentUrl" src="https://i0.hdslb.com/bfs/article/d83e41dcacaba56c1e19f7ac6b627dec481184837.png" class="lazyload" data-srcset="https://i0.hdslb.com/bfs/article/d83e41dcacaba56c1e19f7ac6b627dec481184837.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="桌面。悄悄告诉你，我的壁纸来自《风灵玉秀》"></a><span class='image-caption'>桌面。悄悄告诉你，我的壁纸来自《风灵玉秀》</span></div></div>
-
-<h2 id="4-关闭图形化界面"><a href="#4-关闭图形化界面" class="headerlink" title="4.关闭图形化界面"></a>4.关闭图形化界面</h2><p>直接点击右上角关闭，点击Exit。</p>
-<div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://i0.hdslb.com/bfs/article/076f8836ced01f762429cb705c76a12c481184837.png' data-fancybox='default' data-caption='点击Exit'><img fancybox itemprop="contentUrl" src="https://i0.hdslb.com/bfs/article/076f8836ced01f762429cb705c76a12c481184837.png" class="lazyload" data-srcset="https://i0.hdslb.com/bfs/article/076f8836ced01f762429cb705c76a12c481184837.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="点击Exit"></a><span class='image-caption'>点击Exit</span></div></div>
-
-<p>然后在Linux中按<kbd>CTRL</kbd> + <kbd>C</kbd>。</p>
-<div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://i0.hdslb.com/bfs/article/04965e67b5c14a97a812de50872126e9481184837.png' data-fancybox='default' data-caption='按Ctrl+C'><img fancybox itemprop="contentUrl" src="https://i0.hdslb.com/bfs/article/04965e67b5c14a97a812de50872126e9481184837.png" class="lazyload" data-srcset="https://i0.hdslb.com/bfs/article/04965e67b5c14a97a812de50872126e9481184837.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="按Ctrl+C"></a><span class='image-caption'>按Ctrl+C</span></div></div>
-
-<h2 id="5-总结"><a href="#5-总结" class="headerlink" title="5.总结"></a>5.总结</h2><p>要再打开图形化界面，只要重复做3和4即可。</p>
-
-  </div>
-  
-  
-    
-    <div class='footer'>
-       <!-- 参考资料、相关资料等 -->
-      
-       <!-- 相关文章 -->
-      
-      <!-- 版权声明组件 -->
-      
-      <!-- 打赏组件 -->
-      
-    </div>
-  
-  
-    
-
-
-  <div class='article-meta' id="bottom">
-    <div class='new-meta-box'>
-      
-        
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2024-07-14T10:51:20+08:00">
-  <a class='notlink'>
-    <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：2024年7月14日</p>
-  </a>
-</div>
-
-        
-      
-        
-          
-  
-  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/wsl/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>wsl</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/linux/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>linux</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/xfce4/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>xfce4</p></a></div>
-  <span hidden itemprop="keywords">wsl linux xfce4</span>
-
-
-        
-      
-        
-          
-  <div class="new-meta-item share -mob-share-list">
-  <div class="-mob-share-list share-body">
-    
-      
-        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
-          
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://changakira.github.io/2024/05/23/wsl%E4%B8%8E%E5%9B%BE%E5%BD%A2%E5%8C%96%E7%95%8C%E9%9D%A2%EF%BC%88Ubuntu24-04%E4%B8%8Exfce4%E4%B8%BA%E4%BE%8B%EF%BC%89/&title=wsl，xfce4与XLaunch的图形化界面 - 是默元的博客&summary=使用xfce4与XLaunch的小伙伴们，相信在究竟如何稳定打开图形化界面一定受过很多困扰。按照网上的教程，有时候可行，有时候哐哐报错。这里我摸索出来稳定的方法。"
-          
-          >
-          
-            <img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qq.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qq.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
-          
-        </a>
-      
-    
-      
-        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
-          
-          target="_blank" href="http://service.weibo.com/share/share.php?url=https://changakira.github.io/2024/05/23/wsl%E4%B8%8E%E5%9B%BE%E5%BD%A2%E5%8C%96%E7%95%8C%E9%9D%A2%EF%BC%88Ubuntu24-04%E4%B8%8Exfce4%E4%B8%BA%E4%BE%8B%EF%BC%89/&title=wsl，xfce4与XLaunch的图形化界面 - 是默元的博客&summary=使用xfce4与XLaunch的小伙伴们，相信在究竟如何稳定打开图形化界面一定受过很多困扰。按照网上的教程，有时候可行，有时候哐哐报错。这里我摸索出来稳定的方法。"
-          
-          >
-          
-            <img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/weibo.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/weibo.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
-          
-        </a>
-      
-    
-      
-        
-        <div class='hoverbox'>
-          <a class='share'><img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/wechat.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/wechat.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a>
-          <div class='target'>
-            <img src="data:image/png;base64,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">
-          </div>
-        </div>
-      
-    
-      
-        <a class="-mob-share-telegram" title="" rel="external nofollow noopener noreferrer noopener"
-          
-            target="_blank" href="https://t.me/share/url?url=https://changakira.github.io/2024/05/23/wsl%E4%B8%8E%E5%9B%BE%E5%BD%A2%E5%8C%96%E7%95%8C%E9%9D%A2%EF%BC%88Ubuntu24-04%E4%B8%8Exfce4%E4%B8%BA%E4%BE%8B%EF%BC%89/&text=wsl，xfce4与XLaunch的图形化界面 - 是默元的博客"
-          
-          >
-          
-            <img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/telegram.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/telegram.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
-          
-        </a>
-      
-    
-  </div>
-</div>
-
-
-
-        
-      
-    </div>
-    <!-- Custom Files bottomMeta begin -->
-    
-    <!-- Custom Files bottomMeta end -->
-  </div>
-
-
-  
-  
-
-  
-    <div class="prev-next">
-      
-        <a class='prev' href='/2024/05/23/wsl2%E7%9A%84%E7%BD%91%E7%BB%9C%E8%BF%9E%E6%8E%A5/'>
-          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>wsl2的网络连接</p>
-          <p class='content'>忙完这段时间写
-</p>
-        </a>
-      
-      
-        <a class='next' href='/2024/05/23/hackrf%E5%9C%A8linux%E4%B8%8B/'>
-          <p class='title'>hackrf在linux下<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
-          <p class='content'>忙完这段时间写
-hackrf_transfer -r hackrf_copied.iq -f 95500000 -a 1 -l 16 -s 8000000
- explorer.exe .
-</p>
-        </a>
-      
-    </div>
-  
-  <!-- Custom Files postEnd begin-->
-  
-  <!-- Custom Files postEnd end-->
-</article>
-
-
-  
-
-
-  <article class="post white-box shadow floatable" id="comments">
-    <span hidden>
-      <meta itemprop="discussionUrl" content="/2024/05/23/wsl%E4%B8%8E%E5%9B%BE%E5%BD%A2%E5%8C%96%E7%95%8C%E9%9D%A2%EF%BC%88Ubuntu24-04%E4%B8%8Exfce4%E4%B8%BA%E4%BE%8B%EF%BC%89/index.html#comments">
-    </span>
-    <p ct><i class='fa-solid fa-comments'></i> 评论</p>
-    
-      <p cst>评论区不是无人区喵</p>
-    
-
-    <div id="layoutHelper-comments"></div>
-
-  </article>
-
-
-
-
-
-
-</div>
-<aside id='l_side' itemscope itemtype="http://schema.org/WPSideBar">
-  
-
-  
-    
-    
-      
-    
-  
-
-
-<div class="widget-sticky pjax">
-
-  
-  
-
-
-  <section class="widget toc-wrapper desktop mobile " id="toc-div" >
-    
-  <header>
-    
-      <i class="fa-solid fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
-    
-  </header>
-
-
-    <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-WSL%E5%AE%89%E8%A3%85xfce4"><span class="toc-text">1.WSL安装xfce4</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E5%AE%89%E8%A3%85XLaunch"><span class="toc-text">2.安装XLaunch</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E6%89%93%E5%BC%80%E5%9B%BE%E5%BD%A2%E5%8C%96%E7%95%8C%E9%9D%A2"><span class="toc-text">3.打开图形化界面</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-%E5%85%B3%E9%97%AD%E5%9B%BE%E5%BD%A2%E5%8C%96%E7%95%8C%E9%9D%A2"><span class="toc-text">4.关闭图形化界面</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-%E6%80%BB%E7%BB%93"><span class="toc-text">5.总结</span></a></li></ol>
-    </div>
-  </section>
-
-  
-
-</div>
-
-
-<!-- 没有 pjax 占位会报错 万恶的 pjax -->
-
-  <div class="pjax">
-    <!-- pjax占位 -->
-  </div>
-
-  <div class="pjax">
-    <!-- pjax占位 -->
-  </div>
-
-  <div class="pjax">
-    <!-- pjax占位 -->
-  </div>
-
-  <div class="pjax">
-    <!-- pjax占位 -->
-  </div>
-
-  <div class="pjax">
-    <!-- pjax占位 -->
-  </div>
-
-  <div class="pjax">
-    <!-- pjax占位 -->
-  </div>
-
-  <div class="pjax">
-    <!-- pjax占位 -->
-  </div>
-
-  <div class="pjax">
-    <!-- pjax占位 -->
-  </div>
-
-  <!-- Custom Files side begin -->
-  
-  <!-- Custom Files side end -->
-</aside>
-
-
-
-          <!--此文件用来存放一些不方便取值的变量-->
-<!--思路大概是将值藏到重加载的区域内-->
-
-<pjax>
-<script>
+</script><meta name=referrer content=no-referrer></head><body itemscope itemtype=http://schema.org/WebPage><header itemscope itemtype=http://schema.org/WPHeader id=l_header class="l_header auto shadow floatable blur show" style="opacity: 0"><div class=container><div id=wrapper><div class=nav-sub><p class=title></p><ul class="switcher nav-list-h m-phone" id=pjax-header-nav-list><li><a id=s-comment class="fa-solid fa-comments fa-fw" target=_self href="/" onclick="return false;" title=comment></a></li><li><a id=s-toc class="s-toc fa-solid fa-list fa-fw" target=_self href="/" onclick="return false;" title=toc></a></li></ul></div><div class=nav-main><a class="title flat-box" target=_self href="/">MOYUAN</a><div class="menu navigation"><ul class="nav-list-h m-pc"><li><a class="menuitem flat-box faa-parent animated-hover" href="/" title=首页 active-action=action-home>首页</a></li><li><a class="menuitem flat-box faa-parent animated-hover" href="/" onclick="return false;" title=归档>归档</a><ul class=list-v><li><a class="menuitem flat-box faa-parent animated-hover" href="/categories/" title=分类 active-action=action-categories>分类</a></li><li><a class="menuitem flat-box faa-parent animated-hover" href="/tags/" title=标签 active-action=action-tags>标签</a></li><li><a class="menuitem flat-box faa-parent animated-hover" href="/archives/" title=历程 active-action=action-archives>历程</a></li></ul></li><li><a class="menuitem flat-box faa-parent animated-hover" href="/friends/" title=友链 active-action=action-friends>友链</a></li><li><a class="menuitem flat-box faa-parent animated-hover" href="/about/" title=关于 active-action=action-about>关于</a></li><li><a class="menuitem flat-box faa-parent animated-hover" href="/mystic/" title=魔法屋 active-action=action-mystic>魔法屋</a></li><li><a class="menuitem flat-box header toggle-mode-btn" onclick=switchNightMode()><i class=fa-fw></i>夜间模式</a></li><li></li></ul></div><div class=m_search><form name=searchform class="form u-search-form"><i class="icon fa-solid fa-search fa-fw"></i> <input type=text class="input u-search-input" placeholder="你想找什么鸭 >_<"></form></div><ul class="switcher nav-list-h m-phone"><li><a class="s-search fa-solid fa-search fa-fw" target=_self href="/" onclick="return false;" title=search></a></li><li><a class="s-menu fa-solid fa-bars fa-fw" target=_self href="/" onclick="return false;" title=menu></a><ul class="menu-phone list-v navigation white-box"><li><a class="menuitem flat-box faa-parent animated-hover" href="/" title=首页 active-action=action-home>首页</a></li><li><a class="menuitem flat-box faa-parent animated-hover" href="/" onclick="return false;" title=归档>归档</a><ul class=list-v><li><a class="menuitem flat-box faa-parent animated-hover" href="/categories/" title=分类 active-action=action-categories>分类</a></li><li><a class="menuitem flat-box faa-parent animated-hover" href="/tags/" title=标签 active-action=action-tags>标签</a></li><li><a class="menuitem flat-box faa-parent animated-hover" href="/archives/" title=历程 active-action=action-archives>历程</a></li></ul></li><li><a class="menuitem flat-box faa-parent animated-hover" href="/friends/" title=友链 active-action=action-friends>友链</a></li><li><a class="menuitem flat-box faa-parent animated-hover" href="/about/" title=关于 active-action=action-about>关于</a></li><li><a class="menuitem flat-box faa-parent animated-hover" href="/mystic/" title=魔法屋 active-action=action-mystic>魔法屋</a></li><li><a class="menuitem flat-box header toggle-mode-btn" onclick=switchNightMode()><i class=fa-fw></i>夜间模式</a></li><li></li></ul></li></ul></div></div></div></header><div id=l_body><div id=l_cover></div><div id=safearea><div class=body-wrapper><div id=l_main><article itemscope itemtype=http://schema.org/Article class="article post white-box reveal md shadow floatable article-type-post" id=post itemprop=blogPost><link itemprop=mainEntityOfPage href="https://changakira.github.io/2024/05/23/wsl与图形化界面（Ubuntu24-04与xfce4为例）/"><span hidden itemprop=publisher itemscope itemtype=http://schema.org/Organization><meta itemprop=name content=是默元的博客></span> <span hidden itemprop=post itemscope itemtype=http://schema.org/Post><meta itemprop=name content=是默元的博客><meta itemprop=description content=是默元的博客></span> <span hidden><meta itemprop=image content=https://s2.loli.net/2023/07/21/PGyugoK3YMWkeba.png></span><div class=article-meta id=top><h1 class=title itemprop="name headline">wsl，xfce4与XLaunch的图形化界面</h1><div class=new-meta-box><div class="new-meta-item category"><i class="fa-solid fa-folder-open fa-fw" aria-hidden=true></i> <a class=category-link href="/categories/wsl/">wsl</a><span class=sep></span><a class=category-link href="/categories/xfce4/">xfce4</a> <span hidden itemprop=about itemscope itemtype=http://schema.org/Thing><a href="/categories/wsl/" itemprop=url><span itemprop=name>wsl</span></a></span> <span hidden itemprop=about itemscope itemtype=http://schema.org/Thing><a href="/categories/xfce4/" itemprop=url><span itemprop=name>xfce4</span></a></span></div><div class="new-meta-item date" itemprop="dateCreated datePublished" datetime=2024-05-23T17:24:24+08:00><a class=notlink><i class="fa-solid fa-calendar-alt fa-fw" aria-hidden=true></i><p>发布于：2024年5月23日</p></a></div><div class="new-meta-item browse"><a class=notlink><p><i class="fa-solid fa-eye fa-fw" aria-hidden=true></i> <span id=lc-pv data-title=wsl，xfce4与XLaunch的图形化界面 data-path="/2024/05/23/wsl%E4%B8%8E%E5%9B%BE%E5%BD%A2%E5%8C%96%E7%95%8C%E9%9D%A2%EF%BC%88Ubuntu24-04%E4%B8%8Exfce4%E4%B8%BA%E4%BE%8B%EF%BC%89/"><span id=number><i class="fa-solid fa-loader fa-spin fa-fw" aria-hidden=true></i></span></span> <span>次浏览</span></p></a></div></div></div><div id=layoutHelper-page-plugins></div><div id=post-body itemprop=articleBody><p>使用xfce4与XLaunch的小伙伴们，相信在究竟如何稳定打开图形化界面一定受过很多困扰。按照网上的教程，有时候可行，有时候哐哐报错。这里我摸索出来稳定的方法。</p><span id=more></span><p>已经安装好xfce4与XLaunch,只是不知道如何稳定打开图形化界面的同学，请点击右侧目录跳转至第3节。</p><psw>另注：这一篇文章中我尝试了使用volantis主题提供的标签插件，还有更改了插入图片的写法</psw><p>搭配食用~</p><div class=audio><audio controls><source src=/musics/ihztw-4ldhw-001.aac type=audio/mp3>Your browser does not support the audio tag.</audio></div><h2 id=1-WSL安装xfce4><a href=#1-WSL安装xfce4 class=headerlink title=1.WSL安装xfce4></a>1.WSL安装xfce4</h2><p>先更新apt-get</p><pre><code>sudo apt-get update &amp;&amp; sudo apt-get upgrade -y
+</code></pre><p>xorg是xfce桌面需要的一个基础依赖</p><pre><code>sudo apt-get install xorg
+</code></pre><p>安装XFCE桌面环境</p><pre><code>sudo apt-get install xfce4 -y
+</code></pre><p>xfce4-goodies是一个丰富某些功能的包。具体内容可以<a target=_blank rel=noopener href="https://www.jianshu.com/p/95c24f4d96e3#:~:text=Xfce4%2D-,goodies,-%E6%98%AF%E7%94%B1%E4%B8%8B%E9%9D%A2"><em>移步此处</em></a>。</p><pre><code>sudo apt-get install xfce4-goodies -y
+</code></pre><h2 id=2-安装XLaunch><a href=#2-安装XLaunch class=headerlink title=2.安装XLaunch></a>2.安装XLaunch</h2><div class="note info"><p>这是Windows软件</p></div><div class="note done"><p>默认安装即可</p></div><span class="btn center large"><a class=button target=_blank rel=noopener href="https://sourceforge.net/projects/vcxsrv/" title=去下载网站！><i class="fas fa-download"></i>去下载网站！</a></span><h2 id=3-打开图形化界面><a href=#3-打开图形化界面 class=headerlink title=3.打开图形化界面></a>3.打开图形化界面</h2><p>打开X-Launch软件，选择One large window，Display number选择0。</p><div galleryflag itemscope itemtype=http://schema.org/ImageGallery class=gallery data-group=default><div class=fancybox><a class=fancybox pjax-fancybox itemscope itemtype=http://schema.org/ImageObject itemprop=url target=_blank rel=noopener href=https://i0.hdslb.com/bfs/article/ff486af82d102b12b921bd3c61bbdb42481184837.png data-fancybox=default data-caption=X-Launch软件><img fancybox itemprop=contentUrl src=https://i0.hdslb.com/bfs/article/ff486af82d102b12b921bd3c61bbdb42481184837.png class=lazyload data-srcset=https://i0.hdslb.com/bfs/article/ff486af82d102b12b921bd3c61bbdb42481184837.png srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt=X-Launch软件></a><span class=image-caption>X-Launch软件</span></div></div><p>点击几次下一页，这里将最后一项勾选上，然后点下一页、完成。出现一个大的黑窗口。</p><div galleryflag itemscope itemtype=http://schema.org/ImageGallery class=gallery data-group=default><div class=fancybox><a class=fancybox pjax-fancybox itemscope itemtype=http://schema.org/ImageObject itemprop=url target=_blank rel=noopener href=https://i0.hdslb.com/bfs/article/e6c84de84ef6e9748670d59cdbc50615481184837.png data-fancybox=default data-caption=将最后一项勾选上><img fancybox itemprop=contentUrl src=https://i0.hdslb.com/bfs/article/e6c84de84ef6e9748670d59cdbc50615481184837.png class=lazyload data-srcset=https://i0.hdslb.com/bfs/article/e6c84de84ef6e9748670d59cdbc50615481184837.png srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt=将最后一项勾选上></a><span class=image-caption>将最后一项勾选上</span></div></div><p>Linux中输入</p><pre><code>export DISPLAY=localhost:0
+</code></pre><p>然后输入</p><pre><code>startxfce4
+</code></pre><p>等待完成后，就能在刚刚的黑窗口中看到图形化窗口了。</p><div galleryflag itemscope itemtype=http://schema.org/ImageGallery class=gallery data-group=default><div class=fancybox><a class=fancybox pjax-fancybox itemscope itemtype=http://schema.org/ImageObject itemprop=url target=_blank rel=noopener href=https://i0.hdslb.com/bfs/article/4cc6572051b5028536c91c851e058e2b481184837.png data-fancybox=default data-caption=linux中显示内容><img fancybox itemprop=contentUrl src=https://i0.hdslb.com/bfs/article/4cc6572051b5028536c91c851e058e2b481184837.png class=lazyload data-srcset=https://i0.hdslb.com/bfs/article/4cc6572051b5028536c91c851e058e2b481184837.png srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt=linux中显示内容></a><span class=image-caption>linux中显示内容</span></div></div><div galleryflag itemscope itemtype=http://schema.org/ImageGallery class=gallery data-group=default><div class=fancybox><a class=fancybox pjax-fancybox itemscope itemtype=http://schema.org/ImageObject itemprop=url target=_blank rel=noopener href=https://i0.hdslb.com/bfs/article/d83e41dcacaba56c1e19f7ac6b627dec481184837.png data-fancybox=default data-caption=桌面。悄悄告诉你，我的壁纸来自《风灵玉秀》><img fancybox itemprop=contentUrl src=https://i0.hdslb.com/bfs/article/d83e41dcacaba56c1e19f7ac6b627dec481184837.png class=lazyload data-srcset=https://i0.hdslb.com/bfs/article/d83e41dcacaba56c1e19f7ac6b627dec481184837.png srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt=桌面。悄悄告诉你，我的壁纸来自《风灵玉秀》></a><span class=image-caption>桌面。悄悄告诉你，我的壁纸来自《风灵玉秀》</span></div></div><h2 id=4-关闭图形化界面><a href=#4-关闭图形化界面 class=headerlink title=4.关闭图形化界面></a>4.关闭图形化界面</h2><p>直接点击右上角关闭，点击Exit。</p><div galleryflag itemscope itemtype=http://schema.org/ImageGallery class=gallery data-group=default><div class=fancybox><a class=fancybox pjax-fancybox itemscope itemtype=http://schema.org/ImageObject itemprop=url target=_blank rel=noopener href=https://i0.hdslb.com/bfs/article/076f8836ced01f762429cb705c76a12c481184837.png data-fancybox=default data-caption=点击Exit><img fancybox itemprop=contentUrl src=https://i0.hdslb.com/bfs/article/076f8836ced01f762429cb705c76a12c481184837.png class=lazyload data-srcset=https://i0.hdslb.com/bfs/article/076f8836ced01f762429cb705c76a12c481184837.png srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt=点击Exit></a><span class=image-caption>点击Exit</span></div></div><p>然后在Linux中按<kbd>CTRL</kbd> + <kbd>C</kbd>。</p><div galleryflag itemscope itemtype=http://schema.org/ImageGallery class=gallery data-group=default><div class=fancybox><a class=fancybox pjax-fancybox itemscope itemtype=http://schema.org/ImageObject itemprop=url target=_blank rel=noopener href=https://i0.hdslb.com/bfs/article/04965e67b5c14a97a812de50872126e9481184837.png data-fancybox=default data-caption=按Ctrl+C><img fancybox itemprop=contentUrl src=https://i0.hdslb.com/bfs/article/04965e67b5c14a97a812de50872126e9481184837.png class=lazyload data-srcset=https://i0.hdslb.com/bfs/article/04965e67b5c14a97a812de50872126e9481184837.png srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt=按Ctrl+C></a><span class=image-caption>按Ctrl+C</span></div></div><h2 id=5-总结><a href=#5-总结 class=headerlink title=5.总结></a>5.总结</h2><p>要再打开图形化界面，只要重复做3和4即可。</p></div><div class=footer></div><div class=article-meta id=bottom><div class=new-meta-box><div class="new-meta-item date" itemprop=dateModified datetime=2024-07-14T10:51:20+08:00><a class=notlink><i class="fa-solid fa-edit fa-fw" aria-hidden=true></i><p>更新于：2024年7月14日</p></a></div><div class="new-meta-item meta-tags"><a class=tag href="/tags/wsl/" rel=nofollow><i class="fa-solid fa-hashtag fa-fw" aria-hidden=true></i><p>wsl</p></a></div><div class="new-meta-item meta-tags"><a class=tag href="/tags/linux/" rel=nofollow><i class="fa-solid fa-hashtag fa-fw" aria-hidden=true></i><p>linux</p></a></div><div class="new-meta-item meta-tags"><a class=tag href="/tags/xfce4/" rel=nofollow><i class="fa-solid fa-hashtag fa-fw" aria-hidden=true></i><p>xfce4</p></a></div><span hidden itemprop=keywords>wsl linux xfce4</span><div class="new-meta-item share -mob-share-list"><div class="-mob-share-list share-body"><a class=-mob-share-qq rel="external nofollow noopener noreferrer noopener" target=_blank href="http://connect.qq.com/widget/shareqq/index.html?url=https://changakira.github.io/2024/05/23/wsl%E4%B8%8E%E5%9B%BE%E5%BD%A2%E5%8C%96%E7%95%8C%E9%9D%A2%EF%BC%88Ubuntu24-04%E4%B8%8Exfce4%E4%B8%BA%E4%BE%8B%EF%BC%89/&title=wsl，xfce4与XLaunch的图形化界面 - 是默元的博客&summary=使用xfce4与XLaunch的小伙伴们，相信在究竟如何稳定打开图形化界面一定受过很多困扰。按照网上的教程，有时候可行，有时候哐哐报错。这里我摸索出来稳定的方法。"><img src=https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qq.png class=lazyload data-srcset=https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qq.png srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a> <a class=-mob-share-weibo rel="external nofollow noopener noreferrer noopener" target=_blank href="http://service.weibo.com/share/share.php?url=https://changakira.github.io/2024/05/23/wsl%E4%B8%8E%E5%9B%BE%E5%BD%A2%E5%8C%96%E7%95%8C%E9%9D%A2%EF%BC%88Ubuntu24-04%E4%B8%8Exfce4%E4%B8%BA%E4%BE%8B%EF%BC%89/&title=wsl，xfce4与XLaunch的图形化界面 - 是默元的博客&summary=使用xfce4与XLaunch的小伙伴们，相信在究竟如何稳定打开图形化界面一定受过很多困扰。按照网上的教程，有时候可行，有时候哐哐报错。这里我摸索出来稳定的方法。"><img src=https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/weibo.png class=lazyload data-srcset=https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/weibo.png srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><div class=hoverbox><a class=share><img src=https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/wechat.png class=lazyload data-srcset=https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/wechat.png srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><div class=target><img src="data:image/png;base64,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"></div></div><a class=-mob-share-telegram rel="external nofollow noopener noreferrer noopener" target=_blank href="https://t.me/share/url?url=https://changakira.github.io/2024/05/23/wsl%E4%B8%8E%E5%9B%BE%E5%BD%A2%E5%8C%96%E7%95%8C%E9%9D%A2%EF%BC%88Ubuntu24-04%E4%B8%8Exfce4%E4%B8%BA%E4%BE%8B%EF%BC%89/&text=wsl，xfce4与XLaunch的图形化界面 - 是默元的博客"><img src=https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/telegram.png class=lazyload data-srcset=https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/telegram.png srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a></div></div></div></div><div class=prev-next><a class=prev href="/2024/05/23/wsl2%E7%9A%84%E7%BD%91%E7%BB%9C%E8%BF%9E%E6%8E%A5/"><p class=title><i class="fa-solid fa-chevron-left" aria-hidden=true></i>wsl2的网络连接</p><p class=content>忙完这段时间写</p></a> <a class=next href="/2024/05/23/hackrf%E5%9C%A8linux%E4%B8%8B/"><p class=title>hackrf在linux下<i class="fa-solid fa-chevron-right" aria-hidden=true></i></p><p class=content>忙完这段时间写 hackrf_transfer -r hackrf_copied.iq -f 95500000 -a 1 -l 16 -s 8000000 explorer.exe .</p></a></div></article><article class="post white-box shadow floatable" id=comments><span hidden><meta itemprop=discussionUrl content=/2024/05/23/wsl%E4%B8%8E%E5%9B%BE%E5%BD%A2%E5%8C%96%E7%95%8C%E9%9D%A2%EF%BC%88Ubuntu24-04%E4%B8%8Exfce4%E4%B8%BA%E4%BE%8B%EF%BC%89/index.html#comments></span><p ct><i class="fa-solid fa-comments"></i> 评论</p><p cst>评论区不是无人区喵</p><div id=layoutHelper-comments></div></article></div><aside id=l_side itemscope itemtype=http://schema.org/WPSideBar><div class="widget-sticky pjax"><section class="widget toc-wrapper desktop mobile" id=toc-div><header><i class="fa-solid fa-list fa-fw" aria-hidden=true></i><span class=name>本文目录</span></header><div class=content><ol class=toc><li class="toc-item toc-level-2"><a class=toc-link href=#1-WSL%E5%AE%89%E8%A3%85xfce4><span class=toc-text>1.WSL安装xfce4</span></a></li><li class="toc-item toc-level-2"><a class=toc-link href=#2-%E5%AE%89%E8%A3%85XLaunch><span class=toc-text>2.安装XLaunch</span></a></li><li class="toc-item toc-level-2"><a class=toc-link href=#3-%E6%89%93%E5%BC%80%E5%9B%BE%E5%BD%A2%E5%8C%96%E7%95%8C%E9%9D%A2><span class=toc-text>3.打开图形化界面</span></a></li><li class="toc-item toc-level-2"><a class=toc-link href=#4-%E5%85%B3%E9%97%AD%E5%9B%BE%E5%BD%A2%E5%8C%96%E7%95%8C%E9%9D%A2><span class=toc-text>4.关闭图形化界面</span></a></li><li class="toc-item toc-level-2"><a class=toc-link href=#5-%E6%80%BB%E7%BB%93><span class=toc-text>5.总结</span></a></li></ol></div></section></div><div class=pjax></div><div class=pjax></div><div class=pjax></div><div class=pjax></div><div class=pjax></div><div class=pjax></div><div class=pjax></div><div class=pjax></div></aside><pjax><script>
   window.pdata={}
   pdata.ispage=true;
   pdata.commentPath="";
@@ -3334,64 +2503,8 @@ hackrf_transfer -r hackrf_copied.iq -f 95500000 -a 1 -l 16 -s 8000000
   pdata.commentConfig={};
   //  see: /layout/_partial/scripts/_ctrl/coverCtrl.ejs
   
-</script>
-</pjax>
-        </div>
-        
-  
-  <footer class="footer clearfix"  itemscope itemtype="http://schema.org/WPFooter">
-    <br><br>
-    
-      
-        <div class="aplayer-container">
-          
- 
-        </div>
-      
-    
-      
-        <br>
-        <div class="social-wrapper" itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          
-            
-          
-            
-          
-            
-          
-        </div>
-      
-    
-      
-        <div><p>博客内容遵循 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</a></p>
-</div>
-      
-    
-      
-        本站使用
-        <a href="https://github.com/volantis-x/hexo-theme-volantis/#5.8.0" target="_blank" class="codename">Volantis</a>
-        作为主题，总访问量为
-          <span id="busuanzi_value_site_pv"><i class="fa-solid fa-loader fa-spin fa-fw" aria-hidden="true"></i></span>
-          次
-        
-      
-    
-    <!-- Custom Files footer begin-->
-    
-    
-
-    <!-- Custom Files footer end-->
-  </footer>
-
-
-<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js">
-</script>
-
-        <a id="s-top" class="fa-solid fa-arrow-up fa-fw" href="/" onclick="return false;" title="top"></a>
-      </div>
-    </div>
-    <div>
-      <script>
+</script></pjax></div><footer class="footer clearfix" itemscope itemtype=http://schema.org/WPFooter><br><br><div class=aplayer-container></div><br><div class=social-wrapper itemprop=about itemscope itemtype=http://schema.org/Thing></div><div><p>博客内容遵循 <a target=_blank rel=noopener href=https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh>署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</a></p></div>本站使用 <a href=https://github.com/volantis-x/hexo-theme-volantis/#5.8.0 target=_blank class=codename>Volantis</a> 作为主题，总访问量为 <span id=busuanzi_value_site_pv><i class="fa-solid fa-loader fa-spin fa-fw" aria-hidden=true></i></span> 次</footer><script async src=//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js>
+</script><a id=s-top class="fa-solid fa-arrow-up fa-fw" href="/" onclick="return false;" title=top></a></div></div><div><script>
   /******************** volantis.dom ********************************/
   // 页面选择器 将dom对象缓存起来 see: /source/js/app.js etc.
   volantis.dom.bodyAnchor = volantis.dom.$(document.getElementById("safearea")); // 页面主体
@@ -3402,9 +2515,7 @@ hackrf_transfer -r hackrf_copied.iq -f 95500000 -a 1 -l 16 -s 8000000
   volantis.dom.header = volantis.dom.$(document.getElementById('l_header')); // 移动端导航栏
   volantis.dom.search = volantis.dom.$(document.querySelector('#l_header .m_search')); // 搜索框 桌面端 移动端 1个
   volantis.dom.mPhoneList = volantis.dom.$(document.querySelectorAll('#l_header .m-phone .list-v')); //  手机端 子菜单 多个
-</script>
-
-<script>
+</script><script>
   
   volantis.css("https://unpkg.com/volantis-static@0.0.1654736714924/libs/@fortawesome/fontawesome-free/css/all.min.css");
   
@@ -3414,208 +2525,7 @@ hackrf_transfer -r hackrf_copied.iq -f 95500000 -a 1 -l 16 -s 8000000
   
   volantis.css("https://unpkg.com/volantis-static@0.0.1654736714924/libs/node-waves/dist/waves.min.css");
   
-</script>
-
-<!-- required -->
-
-
-<!-- internal -->
-
-<script src="/js/app.js"></script>
-
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div id="rightmenu-wrapper">
-  <ul class="list-v rightmenu" id="rightmenu-content">
-    
-  <li class='navigation menuNavigation-Content'>
-
-
-    <a class="nav icon-only fix-cursor-default" onclick="history.back()"><i class="fa-solid fa-arrow-left fa-fw"></i></a>
-
-
-
-    <a class="nav icon-only fix-cursor-default" onclick="history.forward()"><i class="fa-solid fa-arrow-right fa-fw"></i></a>
-
-
-
-    <a class="nav icon-only fix-cursor-default" onclick="window.location.reload()"><i class="fa-solid fa-redo fa-fw"></i></a>
-
-
-
-    <a class="nav icon-only fix-cursor-default" onclick="VolantisApp.scrolltoElement(volantis.dom.bodyAnchor)"><i class="fa-solid fa-arrow-up fa-fw"></i></a>
-
-
-  </li>
-
-
-    <hr class="menuLoad-Content" >
-
-
-
-  <li class="menuLoad-Content">
-    <span class="vlts-menu fix-cursor-default event" id="copyPaste" data-event="copyPaste" data-group="inputBox">
-      <i class="fa-solid fa-paste fa-fw"></i>
-      粘贴文本
-    </span>
-  </li>
-
-
-
-  <li class="menuLoad-Content">
-    <span class="vlts-menu fix-cursor-default event" id="searchWord" data-event="OpenSearch(__text__)" data-group="seletctText">
-      <i class="fa-solid fa-search fa-fw"></i>
-      站内搜索
-    </span>
-  </li>
-
-
-
-  <li class="menuLoad-Content">
-    <span class="vlts-menu fix-cursor-default event" id="bingSearch" data-event="window.open(`https://cn.bing.com/search?q=${__text__}`)" data-group="seletctText">
-      <i class="fa-solid fa-search fa-fw"></i>
-      必应搜索
-    </span>
-  </li>
-
-
-
-  <li class="menuLoad-Content">
-    <span class="vlts-menu fix-cursor-default event" id="googleSearch" data-event="window.open(`https://www.google.com/search?q=${__text__}`)" data-group="seletctText">
-      <i class="fa-solid fa-search fa-fw"></i>
-      谷歌搜索
-    </span>
-  </li>
-
-
-
-  <li class="menuLoad-Content">
-    <span class="vlts-menu fix-cursor-default event" id="baiduSearch" data-event="window.open(`https://www.baidu.com/s?wd=${__text__}`)" data-group="seletctText">
-      <i class="fa-solid fa-search fa-fw"></i>
-      百度搜索
-    </span>
-  </li>
-
-
-
-  <li class="menuLoad-Content">
-    <span class="vlts-menu fix-cursor-default event" id="CSDNSearch" data-event="window.open(`https://so.csdn.net/so/search?q=${__text__}`)" data-group="seletctText">
-      <i class="fa-solid fa-search fa-fw"></i>
-      CSDN搜索
-    </span>
-  </li>
-
-
-
-  <li class="menuLoad-Content">
-    <span class="vlts-menu fix-cursor-default event" id="openTab" data-event="window.open(__link__)" data-group="elementCheck">
-      <i class="fa-solid fa-external-link-square-alt fa-fw"></i>
-      新标签页打开
-    </span>
-  </li>
-
-
-
-  <li class="menuLoad-Content">
-    <span class="vlts-menu fix-cursor-default event" id="copyLink" data-event="copyLink" data-group="elementCheck">
-      <i class="fa-solid fa-link fa-fw"></i>
-      复制链接地址
-    </span>
-  </li>
-
-
-
-    <hr class="menuLoad-Content" >
-
-
-
-  <li class="menuLoad-Content">
-    <a class="vlts-menu fix-cursor-default" id="source_docs" target="_blank" rel="noopener" href="https://github.com/volantis-x/volantis-docs/" data-group="link">
-      <i class="fa-solid fa-code-branch fa-fw"></i>
-      本站源码
-    </a>
-  </li>
-
-
-
-    <hr class="menuLoad-Content" >
-
-
-
-  <li class="menuLoad-Content">
-    <span class="vlts-menu fix-cursor-default event" id="darkMode" data-event="volantis.dark.toggle()" data-group="darkMode">
-      <i class="fa-solid fa-moon fa-fw"></i>
-      暗黑模式
-    </span>
-  </li>
-
-
-
-  <li class="menuLoad-Content">
-    <span class="vlts-menu fix-cursor-default event" id="printMode" data-event="printMode" data-group="articlePage">
-      <i class="fa-solid fa-print fa-fw"></i>
-      打印页面
-    </span>
-  </li>
-
-
-
-  <li class="menuLoad-Content">
-    <span class="vlts-menu fix-cursor-default event" id="readMode" data-event="readMode" data-group="articlePage">
-      <i class="fa-solid fa-book-open fa-fw"></i>
-      阅读模式
-    </span>
-  </li>
-
-
-<div id="menuMusic">
-  <li class='music name menuOption-Content'>
-    <p class='nav music-title fix-cursor-default'></p>
-  </li>
-  <li class='music ctrl'>
-    <a class='nav icon-only backward fix-cursor-default' href="/" onclick="return false;" title="backward">
-      <i class='fa-solid fa-step-backward fa-fw'></i>
-    </a>
-    <a class='nav icon-only toggle fix-cursor-default' href="/" onclick="return false;" title="toggle">
-      <i class='fa-solid fa-play fa-fw'></i>
-    </a>
-    <a class='nav icon-only forward fix-cursor-default' href="/" onclick="return false;" title="forward">
-      <i class='fa-solid fa-step-forward fa-fw'></i>
-    </a>
-  </li>
-  <li class='music volume'>
-    <div class='nav volume'>
-      <div class="aplayer-volume-bar-wrap">
-        <div class="aplayer-volume-bar fix-cursor-pointer">
-          <div class="aplayer-volume"></div>
-          <i class='left fa-solid fa-volume-off fa-fw'></i>
-          <i class='right fa-solid fa-volume-up fa-fw'></i>
-        </div>
-      </div>
-    </div>
-  </li>
-</div>
-
-  </ul>
-</div>
-<script src="/js/plugins/rightMenus.js"></script>
-<script>
+</script><script src=/js/app.js></script><div id=rightmenu-wrapper><ul class="list-v rightmenu" id=rightmenu-content><li class="navigation menuNavigation-Content"><a class="nav icon-only fix-cursor-default" onclick=history.back()><i class="fa-solid fa-arrow-left fa-fw"></i></a> <a class="nav icon-only fix-cursor-default" onclick=history.forward()><i class="fa-solid fa-arrow-right fa-fw"></i></a> <a class="nav icon-only fix-cursor-default" onclick=window.location.reload()><i class="fa-solid fa-redo fa-fw"></i></a> <a class="nav icon-only fix-cursor-default" onclick=VolantisApp.scrolltoElement(volantis.dom.bodyAnchor)><i class="fa-solid fa-arrow-up fa-fw"></i></a></li><hr class=menuLoad-Content><li class=menuLoad-Content><span class="vlts-menu fix-cursor-default event" id=copyPaste data-event=copyPaste data-group=inputBox><i class="fa-solid fa-paste fa-fw"></i> 粘贴文本</span></li><li class=menuLoad-Content><span class="vlts-menu fix-cursor-default event" id=searchWord data-event=OpenSearch(__text__) data-group=seletctText><i class="fa-solid fa-search fa-fw"></i> 站内搜索</span></li><li class=menuLoad-Content><span class="vlts-menu fix-cursor-default event" id=bingSearch data-event="window.open(`https://cn.bing.com/search?q=${__text__}`)" data-group=seletctText><i class="fa-solid fa-search fa-fw"></i> 必应搜索</span></li><li class=menuLoad-Content><span class="vlts-menu fix-cursor-default event" id=googleSearch data-event="window.open(`https://www.google.com/search?q=${__text__}`)" data-group=seletctText><i class="fa-solid fa-search fa-fw"></i> 谷歌搜索</span></li><li class=menuLoad-Content><span class="vlts-menu fix-cursor-default event" id=baiduSearch data-event="window.open(`https://www.baidu.com/s?wd=${__text__}`)" data-group=seletctText><i class="fa-solid fa-search fa-fw"></i> 百度搜索</span></li><li class=menuLoad-Content><span class="vlts-menu fix-cursor-default event" id=CSDNSearch data-event="window.open(`https://so.csdn.net/so/search?q=${__text__}`)" data-group=seletctText><i class="fa-solid fa-search fa-fw"></i> CSDN搜索</span></li><li class=menuLoad-Content><span class="vlts-menu fix-cursor-default event" id=openTab data-event=window.open(__link__) data-group=elementCheck><i class="fa-solid fa-external-link-square-alt fa-fw"></i> 新标签页打开</span></li><li class=menuLoad-Content><span class="vlts-menu fix-cursor-default event" id=copyLink data-event=copyLink data-group=elementCheck><i class="fa-solid fa-link fa-fw"></i> 复制链接地址</span></li><hr class=menuLoad-Content><li class=menuLoad-Content><a class="vlts-menu fix-cursor-default" id=source_docs target=_blank rel=noopener href="https://github.com/volantis-x/volantis-docs/" data-group=link><i class="fa-solid fa-code-branch fa-fw"></i> 本站源码</a></li><hr class=menuLoad-Content><li class=menuLoad-Content><span class="vlts-menu fix-cursor-default event" id=darkMode data-event=volantis.dark.toggle() data-group=darkMode><i class="fa-solid fa-moon fa-fw"></i> 暗黑模式</span></li><li class=menuLoad-Content><span class="vlts-menu fix-cursor-default event" id=printMode data-event=printMode data-group=articlePage><i class="fa-solid fa-print fa-fw"></i> 打印页面</span></li><li class=menuLoad-Content><span class="vlts-menu fix-cursor-default event" id=readMode data-event=readMode data-group=articlePage><i class="fa-solid fa-book-open fa-fw"></i> 阅读模式</span></li><div id=menuMusic><li class="music name menuOption-Content"><p class="nav music-title fix-cursor-default"></p></li><li class="music ctrl"><a class="nav icon-only backward fix-cursor-default" href="/" onclick="return false;" title=backward><i class="fa-solid fa-step-backward fa-fw"></i></a> <a class="nav icon-only toggle fix-cursor-default" href="/" onclick="return false;" title=toggle><i class="fa-solid fa-play fa-fw"></i></a> <a class="nav icon-only forward fix-cursor-default" href="/" onclick="return false;" title=forward><i class="fa-solid fa-step-forward fa-fw"></i></a></li><li class="music volume"><div class="nav volume"><div class=aplayer-volume-bar-wrap><div class="aplayer-volume-bar fix-cursor-pointer"><div class=aplayer-volume></div><i class="left fa-solid fa-volume-off fa-fw"></i> <i class="right fa-solid fa-volume-up fa-fw"></i></div></div></div></li></div></ul></div><script src=/js/plugins/rightMenus.js></script><script>
   const RightMenusFunction = {};
   
 
@@ -3702,13 +2612,7 @@ hackrf_transfer -r hackrf_copied.iq -f 95500000 -a 1 -l 16 -s 8000000
 
 
 
-</script>
-
-
-
-<!-- rightmenu要在darkmode之前（ToggleButton） darkmode要在comments之前（volantis.dark.push）-->
-
-  <script>
+</script><script>
 const rootElement = document.documentElement;
 const darkModeStorageKey = "color-scheme";
 const rootElementDarkModeAttributeName = "color-scheme";
@@ -3821,12 +2725,7 @@ const darkModelListeners={
 }
 window.matchMedia('(prefers-color-scheme: dark)').addListener(darkModelListeners.dark)
 window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListeners.light)
-</script>
-
-
-
-
-<script>
+</script><script>
   function loadIssuesJS() {
     
       const sites_api = document.getElementById('sites-api');
@@ -3847,13 +2746,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     loadIssuesJS();
   })
 
-</script>
-
-
-
-
-  <script defer src="https://unpkg.com/volantis-static@0.0.1654736714924/libs/vanilla-lazyload/dist/lazyload.min.js"></script>
-<script>
+</script><script defer src=https://unpkg.com/volantis-static@0.0.1654736714924/libs/vanilla-lazyload/dist/lazyload.min.js></script><script>
   // https://www.npmjs.com/package/vanilla-lazyload
   // Set the options globally
   // to make LazyLoad self-initialize
@@ -3876,28 +2769,14 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
   document.addEventListener('pjax:complete', function () {
     lazyLoadInstance.update();
   });
-</script>
-
-
-
-
-  
-
-<script>
+</script><script>
   window.FPConfig = {
 	delay: 0,
 	ignoreKeywords: ["#"],
 	maxRPS: 6,
 	hoverDelay: 0
   };
-</script>
-<script defer src="https://unpkg.com/volantis-static@0.0.1654736714924/libs/flying-pages/flying-pages.min.js"></script>
-
-
-
-
-
-   <script type="text/javascript">
+</script><script defer src=https://unpkg.com/volantis-static@0.0.1654736714924/libs/flying-pages/flying-pages.min.js></script><script type=text/javascript>
   function pjax_scrollrebeal() {
     ScrollReveal().reveal("#l_main .reveal", {
       distance: "32px",
@@ -3921,14 +2800,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     "pjax_scrollrebeal",
     (setRequestAnimationFrame = false)
   );
-</script>
-
-
-
-
-
-
-      <script>
+</script><script>
   volantis.layoutHelper("comments",`<div id="giscus_container"></div>`)
 
   volantis.giscus = {};
@@ -3974,19 +2846,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
   pjax_giscus();
   volantis.pjax.push(pjax_giscus);
   volantis.dark.push(dark_giscus);
-</script>
-
-    
-
-
-
-
-  <script defer src="https://busuanzi.icodeq.com/busuanzi.pure.mini.js" data-pjax></script>
-
-
-<!-- optional -->
-
-  <script>
+</script><script defer src=https://busuanzi.icodeq.com/busuanzi.pure.mini.js data-pjax></script><script>
   const SearchServiceDataPathRoot = ("/" || "/").endsWith("/") ?
     "/" || "/" :
     "//" || "/";
@@ -4035,14 +2895,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
   document.querySelectorAll(".input.u-search-input").forEach((e) => {
     e.addEventListener("focus", loadSearchService, false);
   });
-</script>
-
-
-
-  
-<script src="https://unpkg.com/volantis-static@0.0.1654736714924/libs/node-waves/dist/waves.min.js"></script>
-
-<script type="text/javascript">
+</script><script src=https://unpkg.com/volantis-static@0.0.1654736714924/libs/node-waves/dist/waves.min.js></script><script type=text/javascript>
 document.addEventListener("DOMContentLoaded", function () {
   Waves.attach('.flat-btn', ['waves-button']);
   Waves.attach('.float-btn', ['waves-button', 'waves-float']);
@@ -4052,17 +2905,7 @@ document.addEventListener("DOMContentLoaded", function () {
   Waves.attach('.waves-image');
   Waves.init();
 });
-</script>
-
-
-
-  
-<script src="https://unpkg.com/volantis-static@0.0.1654736714924/libs/comment_typing/comment_typing.js"></script>
-
-
-
-
-  <script>
+</script><script src=https://unpkg.com/volantis-static@0.0.1654736714924/libs/comment_typing/comment_typing.js></script><script>
 
 
 
@@ -4076,12 +2919,7 @@ document.addEventListener("DOMContentLoaded", function () {
   volantis.requestAnimationFrame(pjax_highlightjs_copyCode)
   volantis.pjax.push(pjax_highlightjs_copyCode)
 
-</script>
-
-
-
-
-  <script defer>
+</script><script defer>
 
   const LCCounter = {
     app_id: 'JiYL52TqrJiOo8JwmfXrlxtv-gzGzoHsz',
@@ -4287,18 +3125,7 @@ document.addEventListener("DOMContentLoaded", function () {
   document.addEventListener('pjax:complete', function () {
     LCCounter.refreshCounter();
   });
-</script>
-
-
-
-
-
-
-
-
-
-
-  <script>
+</script><script>
   function load_swiper() {
     if (!document.querySelectorAll(".swiper-container")[0]) return;
     volantis.css("https://unpkg.com/volantis-static@0.0.1654736714924/libs/swiper/swiper-bundle.min.css");
@@ -4334,15 +3161,7 @@ document.addEventListener("DOMContentLoaded", function () {
       pjax_swiper();
     }
   });
-</script>
-
-
-<!-- pjax 标签必须存在于所有页面 否则 pjax error -->
-<pjax>
-
-</pjax>
-
-<script>
+</script><pjax></pjax><script>
   function listennSidebarTOC() {
     const navItems = document.querySelectorAll(".toc li");
     if (!navItems.length) return;
@@ -4451,11 +3270,7 @@ document.addEventListener("DOMContentLoaded", function () {
   document.addEventListener("pjax:success", ()=>{
     volantis.requestAnimationFrame(listennSidebarTOC)
   });
-</script>
-
-
-
-<script>
+</script><script>
   document.onreadystatechange = function () {
     if (document.readyState == 'complete') {
       // 页面加载完毕 样式加载失败，或是当前网速慢，或是开启了省流模式
@@ -4468,20 +3283,4 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     }
   }
-</script>
-
-
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"是默元的博客","url":"https://changakira.github.io/","logo":{"@type":"ImageObject","url":"https://s2.loli.net/2023/07/21/PGyugoK3YMWkeba.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Chang Akira","image":{"@type":"ImageObject","url":"https://s2.loli.net/2023/07/21/PGyugoK3YMWkeba.png"},"url":"https://changakira.github.io/","sameAs":["https://github.com/volantis-x"],"description":"是默元的博客"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://changakira.github.io/","name":"是默元的博客"}},{"@type":"ListItem","position":2,"item":{"@id":"https://changakira.github.io/categories/wsl/","name":"wsl"}},{"@type":"ListItem","position":2,"item":{"@id":"https://changakira.github.io/categories/xfce4/","name":"xfce4"}},{"@type":"ListItem","position":3,"item":{"@id":"https://changakira.github.io/2024/05/23/wsl与图形化界面（Ubuntu24-04与xfce4为例）/","name":"wsl，xfce4与XLaunch的图形化界面"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"是默元的博客","url":"https://changakira.github.io/","keywords":"默元","description":"是默元的博客","author":{"@type":"Person","name":"Chang Akira","image":{"@type":"ImageObject","url":"https://s2.loli.net/2023/07/21/PGyugoK3YMWkeba.png"},"url":"https://changakira.github.io/","description":"是默元的博客"},"publisher":{"@type":"Organization","name":"是默元的博客","url":"https://changakira.github.io/","logo":{"@type":"ImageObject","url":"https://s2.loli.net/2023/07/21/PGyugoK3YMWkeba.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://changakira.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"wsl，xfce4与XLaunch的图形化界面","description":"使用xfce4与XLaunch的小伙伴们，相信在究竟如何稳定打开图形化界面一定受过很多困扰。按照网上的教程，有时候可行，有时候哐哐报错。这里我摸索出来稳定的方法。","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://changakira.github.io/2024/05/23/wsl%E4%B8%8E%E5%9B%BE%E5%BD%A2%E5%8C%96%E7%95%8C%E9%9D%A2%EF%BC%88Ubuntu24-04%E4%B8%8Exfce4%E4%B8%BA%E4%BE%8B%EF%BC%89/"},"author":{"@type":"Person","name":"Chang Akira","image":{"@type":"ImageObject","url":"https://s2.loli.net/2023/07/21/PGyugoK3YMWkeba.png"},"url":"https://changakira.github.io/"},"publisher":{"@type":"Organization","name":"是默元的博客","logo":{"@type":"ImageObject","url":"https://s2.loli.net/2023/07/21/PGyugoK3YMWkeba.png","width":192,"height":192}},"url":"https://changakira.github.io/2024/05/23/wsl%E4%B8%8E%E5%9B%BE%E5%BD%A2%E5%8C%96%E7%95%8C%E9%9D%A2%EF%BC%88Ubuntu24-04%E4%B8%8Exfce4%E4%B8%BA%E4%BE%8B%EF%BC%89/","wordCount":81,"datePublished":"2024-05-23T09:24:24.000Z","dateModified":"2024-07-14T02:51:20.613Z","articleSection":"wsl","keywords":"wsl,linux,xfce4","image":{"@type":"ImageObject","url":"https://s2.loli.net/2023/07/21/PGyugoK3YMWkeba.png","width":192,"height":192}}]</script>
-
-
-
-      
-    </div>
-    <!-- import body_end begin-->
-    <!-- import body_end end-->
-    <!-- Custom Files bodyEnd begin-->
-    
-    <!-- Custom Files bodyEnd end-->
-    <!-- front-matter body_end begin -->
-    <!-- front-matter body_end end -->
-  <script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"scale":1.2,"jsonPath":"/live2dw/assets/weier.model.json"},"display":{"width":200,"height":400,"position":"left","hOffset":0,"vOffset":-20},"mobile":{"show":true,"scale":1},"react":{"opacity":0.7},"log":false});</script><script async>window.onload=function(){var a=document.createElement('script'),b=document.getElementsByTagName('script')[0];a.type='text/javascript',a.async=!0,a.src='/sw-register.js?v='+Date.now(),b.parentNode.insertBefore(a,b)};</script></body></html>
+</script><script type=application/ld+json>[{"@context":"http://schema.org","@type":"Organization","name":"是默元的博客","url":"https://changakira.github.io/","logo":{"@type":"ImageObject","url":"https://s2.loli.net/2023/07/21/PGyugoK3YMWkeba.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Chang Akira","image":{"@type":"ImageObject","url":"https://s2.loli.net/2023/07/21/PGyugoK3YMWkeba.png"},"url":"https://changakira.github.io/","sameAs":["https://github.com/volantis-x"],"description":"是默元的博客"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://changakira.github.io/","name":"是默元的博客"}},{"@type":"ListItem","position":2,"item":{"@id":"https://changakira.github.io/categories/wsl/","name":"wsl"}},{"@type":"ListItem","position":2,"item":{"@id":"https://changakira.github.io/categories/xfce4/","name":"xfce4"}},{"@type":"ListItem","position":3,"item":{"@id":"https://changakira.github.io/2024/05/23/wsl与图形化界面（Ubuntu24-04与xfce4为例）/","name":"wsl，xfce4与XLaunch的图形化界面"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"是默元的博客","url":"https://changakira.github.io/","keywords":"默元","description":"是默元的博客","author":{"@type":"Person","name":"Chang Akira","image":{"@type":"ImageObject","url":"https://s2.loli.net/2023/07/21/PGyugoK3YMWkeba.png"},"url":"https://changakira.github.io/","description":"是默元的博客"},"publisher":{"@type":"Organization","name":"是默元的博客","url":"https://changakira.github.io/","logo":{"@type":"ImageObject","url":"https://s2.loli.net/2023/07/21/PGyugoK3YMWkeba.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://changakira.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"wsl，xfce4与XLaunch的图形化界面","description":"使用xfce4与XLaunch的小伙伴们，相信在究竟如何稳定打开图形化界面一定受过很多困扰。按照网上的教程，有时候可行，有时候哐哐报错。这里我摸索出来稳定的方法。","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://changakira.github.io/2024/05/23/wsl%E4%B8%8E%E5%9B%BE%E5%BD%A2%E5%8C%96%E7%95%8C%E9%9D%A2%EF%BC%88Ubuntu24-04%E4%B8%8Exfce4%E4%B8%BA%E4%BE%8B%EF%BC%89/"},"author":{"@type":"Person","name":"Chang Akira","image":{"@type":"ImageObject","url":"https://s2.loli.net/2023/07/21/PGyugoK3YMWkeba.png"},"url":"https://changakira.github.io/"},"publisher":{"@type":"Organization","name":"是默元的博客","logo":{"@type":"ImageObject","url":"https://s2.loli.net/2023/07/21/PGyugoK3YMWkeba.png","width":192,"height":192}},"url":"https://changakira.github.io/2024/05/23/wsl%E4%B8%8E%E5%9B%BE%E5%BD%A2%E5%8C%96%E7%95%8C%E9%9D%A2%EF%BC%88Ubuntu24-04%E4%B8%8Exfce4%E4%B8%BA%E4%BE%8B%EF%BC%89/","wordCount":81,"datePublished":"2024-05-23T09:24:24.000Z","dateModified":"2024-07-14T02:51:20.613Z","articleSection":"wsl","keywords":"wsl,linux,xfce4","image":{"@type":"ImageObject","url":"https://s2.loli.net/2023/07/21/PGyugoK3YMWkeba.png","width":192,"height":192}}]</script></div><script src=/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"scale":1.2,"jsonPath":"/live2dw/assets/weier.model.json"},"display":{"width":200,"height":400,"position":"left","hOffset":0,"vOffset":-20},"mobile":{"show":true,"scale":1},"react":{"opacity":0.7},"log":false});</script><script async>window.onload=function(){var a=document.createElement('script'),b=document.getElementsByTagName('script')[0];a.type='text/javascript',a.async=!0,a.src='/sw-register.js?v='+Date.now(),b.parentNode.insertBefore(a,b)};</script></body></html>
