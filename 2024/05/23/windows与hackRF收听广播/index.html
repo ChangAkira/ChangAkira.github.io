@@ -2077,7 +2077,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1723035661291),
+    lastupdate: new Date(1723189574356),
     sidebar: {
       for_page: ["blogger","category","tagcloud","donate"],
       for_post: ["toc"],
@@ -2901,17 +2901,22 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 </script><script src=https://unpkg.com/volantis-static@0.0.1654736714924/libs/comment_typing/comment_typing.js></script><script>
 
+  volantis.css("https://unpkg.com/highlight.js@10.6.0/styles/vs2015.css");
 
 
-  function pjax_highlightjs_copyCode(){
+  volantis.js("https://gcore.jsdelivr.net/gh/highlightjs/cdn-release@10/build/highlight.min.js").then(()=>{
+    volantis.requestAnimationFrame(hljs.highlightAll)
+  })
+
+
+  function p_highlightjs_copyCode(){
     if (!(document.querySelector(".highlight .code pre") ||
       document.querySelector(".article pre code"))) {
       return;
     }
     VolantisApp.utilCopyCode(".highlight .code pre, .article pre code")
   }
-  volantis.requestAnimationFrame(pjax_highlightjs_copyCode)
-  volantis.pjax.push(pjax_highlightjs_copyCode)
+  volantis.requestAnimationFrame(p_highlightjs_copyCode)
 
 </script><script defer>
 
