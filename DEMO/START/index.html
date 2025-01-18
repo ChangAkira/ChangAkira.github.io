@@ -1,0 +1,45 @@
+<!DOCTYPE HTML><html><head><title>--第九章--</title><meta charset=utf-8><meta name=viewport content="width=device-width, initial-scale=1, user-scalable=no"><link rel=stylesheet href=../thetwo/assets/css/main.css><noscript><link rel=stylesheet href=../thetwo/assets/css/noscript.css></noscript></head><body class=is-preload><section id=five class="main style1"><div class=container><header class="major special"><h2>对话</h2></header><section><form id=chatForm><div class="row gtr-uniform gtr-50"><div class=col-12><textarea name=demo-message id=demo-message placeholder="Enter your message" rows=6></textarea></div><div class=col-12><ul class=actions><li><button type=submit id=send-button class=primary>Send Message</button></li><li><button type=reset>Reset</button></li></ul></div></div></form><div id=response-container></div></section></div></section><section id=footer><ul class=icons><li><a href=https://github.com/ChangAkira class="icon brands alt fa-github" target=_blank><span class=label>GitHub</span></a></li><li><a href=mailto://a259759666@163.com class="icon solid alt fa-envelope"><span class=label>envelope</span></a></li></ul><ul class=copyright><li>&copy; 第九章</li><li><a href=../infos/index.html target=_blank>团队主页</a></li></ul></section><script src=../thetwo/assets/js/jquery.min.js></script><script src=../thetwo/assets/js/jquery.scrolly.min.js></script><script src=../thetwo/assets/js/browser.min.js></script><script src=../thetwo/assets/js/breakpoints.min.js></script><script src=../thetwo/assets/js/util.js></script><script src=../thetwo/assets/js/main.js></script><script>
+				document.getElementById("chatForm").addEventListener("submit", async (event) => {
+					event.preventDefault();
+				
+					const userMessage = document.getElementById("demo-message").value;
+					const responseContainer = document.getElementById("response-container");
+					const apiUrl = "https://api.deepseek.com/chat/completions";
+					const apiKey = "sk-2bb1b37a7bcb4485bf791fd570095461"; // 替换为你的 API Key
+				
+					// 显示用户输入的消息，并显示加载中
+					responseContainer.innerHTML += `<p><strong>User:</strong> ${userMessage}</p>`;
+					responseContainer.innerHTML += `<p><em>Loading...</em></p>`;
+				
+					try {
+						const response = await fetch(apiUrl, {
+							method: "POST",
+							headers: {
+								"Authorization": `Bearer ${apiKey}`,
+								"Content-Type": "application/json"
+							},
+							body: JSON.stringify({
+								model: "deepseek-chat",
+								messages: [{ role: "user", content: userMessage }]
+							})
+						});
+				
+						if (!response.ok) {
+							throw new Error(`HTTP error! status: ${response.status}`);
+						}
+				
+						const data = await response.json();
+						const reply = data.choices[0].message.content;
+				
+						// 替换 "Loading..." 为 GPT 的回复
+						responseContainer.lastChild.innerHTML = `<strong>第九章:</strong> ${reply}`;
+					} catch (error) {
+						// 替换 "Loading..." 为错误消息
+						responseContainer.lastChild.innerHTML = `<strong>Error:</strong> ${error.message}`;
+					} finally {
+						// 清空输入框
+						document.getElementById("demo-message").value = "";
+					}
+				});
+				
+				</script><script async>window.onload=function(){var a=document.createElement('script'),b=document.getElementsByTagName('script')[0];a.type='text/javascript',a.async=!0,a.src='/sw-register.js?v='+Date.now(),b.parentNode.insertBefore(a,b)};</script></body></html>

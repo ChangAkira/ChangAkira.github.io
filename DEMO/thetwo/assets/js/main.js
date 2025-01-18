@@ -1,0 +1,1 @@
+!function(l){var x=l(window),o=l("body");breakpoints({xlarge:["1141px","1680px"],large:["981px","1140px"],medium:["737px","980px"],small:["481px","736px"],xsmall:["321px","480px"],xxsmall:[null,"320px"]}),x.on("load",function(){window.setTimeout(function(){o.removeClass("is-preload")},100)}),l(".scrolly").scrolly()}(jQuery);
