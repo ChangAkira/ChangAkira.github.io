@@ -1,1 +1,123 @@
-!function(s){var t,e=s(window),a=s("body"),l=s("#main"),i=(breakpoints({xlarge:["1281px","1680px"],large:["981px","1280px"],medium:["737px","980px"],small:["481px","736px"],xsmall:["361px","480px"],xxsmall:[null,"360px"]}),e.on("load",function(){window.setTimeout(function(){a.removeClass("is-preload")},100)}),s("#nav"));0<i.length&&(l.scrollex({mode:"top",enter:function(){i.addClass("alt")},leave:function(){i.removeClass("alt")}}),(t=i.find("a")).scrolly({speed:1e3,offset:function(){return i.height()}}).on("click",function(){var e=s(this);"#"==e.attr("href").charAt(0)&&(t.removeClass("active").removeClass("active-locked"),e.addClass("active").addClass("active-locked"))}).each(function(){var e=s(this),a=e.attr("href"),l=s(a);l.length<1||l.scrollex({mode:"middle",initialize:function(){browser.canUse("transition")&&l.addClass("inactive")},enter:function(){l.removeClass("inactive"),0==t.filter(".active-locked").length?(t.removeClass("active"),e.addClass("active")):e.hasClass("active-locked")&&e.removeClass("active-locked")}})})),s(".scrolly").scrolly({speed:1e3})}(jQuery);
+/*
+	Stellar by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+*/
+
+(function($) {
+
+	var	$window = $(window),
+		$body = $('body'),
+		$main = $('#main');
+
+	// Breakpoints.
+		breakpoints({
+			xlarge:   [ '1281px',  '1680px' ],
+			large:    [ '981px',   '1280px' ],
+			medium:   [ '737px',   '980px'  ],
+			small:    [ '481px',   '736px'  ],
+			xsmall:   [ '361px',   '480px'  ],
+			xxsmall:  [ null,      '360px'  ]
+		});
+
+	// Play initial animations on page load.
+		$window.on('load', function() {
+			window.setTimeout(function() {
+				$body.removeClass('is-preload');
+			}, 100);
+		});
+
+	// Nav.
+		var $nav = $('#nav');
+
+		if ($nav.length > 0) {
+
+			// Shrink effect.
+				$main
+					.scrollex({
+						mode: 'top',
+						enter: function() {
+							$nav.addClass('alt');
+						},
+						leave: function() {
+							$nav.removeClass('alt');
+						},
+					});
+
+			// Links.
+				var $nav_a = $nav.find('a');
+
+				$nav_a
+					.scrolly({
+						speed: 1000,
+						offset: function() { return $nav.height(); }
+					})
+					.on('click', function() {
+
+						var $this = $(this);
+
+						// External link? Bail.
+							if ($this.attr('href').charAt(0) != '#')
+								return;
+
+						// Deactivate all links.
+							$nav_a
+								.removeClass('active')
+								.removeClass('active-locked');
+
+						// Activate link *and* lock it (so Scrollex doesn't try to activate other links as we're scrolling to this one's section).
+							$this
+								.addClass('active')
+								.addClass('active-locked');
+
+					})
+					.each(function() {
+
+						var	$this = $(this),
+							id = $this.attr('href'),
+							$section = $(id);
+
+						// No section for this link? Bail.
+							if ($section.length < 1)
+								return;
+
+						// Scrollex.
+							$section.scrollex({
+								mode: 'middle',
+								initialize: function() {
+
+									// Deactivate section.
+										if (browser.canUse('transition'))
+											$section.addClass('inactive');
+
+								},
+								enter: function() {
+
+									// Activate section.
+										$section.removeClass('inactive');
+
+									// No locked links? Deactivate all links and activate this section's one.
+										if ($nav_a.filter('.active-locked').length == 0) {
+
+											$nav_a.removeClass('active');
+											$this.addClass('active');
+
+										}
+
+									// Otherwise, if this section's link is the one that's locked, unlock it.
+										else if ($this.hasClass('active-locked'))
+											$this.removeClass('active-locked');
+
+								}
+							});
+
+					});
+
+		}
+
+	// Scrolly.
+		$('.scrolly').scrolly({
+			speed: 1000
+		});
+
+})(jQuery);

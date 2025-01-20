@@ -1,4 +1,10 @@
-<!DOCTYPE HTML><html><head><title>--第九章--</title><meta charset=utf-8><meta name=viewport content="width=device-width, initial-scale=1, user-scalable=no"><style>
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>--第九章--</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <style>
         /* 重置样式 */
         * {
             margin: 0;
@@ -74,7 +80,27 @@
         #footer a:hover {
             text-decoration: underline;
         }
-    </style></head><body><section id=five><header class="major special"><h2>对话</h2></header><div id=response-container></div><div id=input-container><textarea id=demo-message placeholder="Enter your message"></textarea> <button id=send-button>Send</button></div></section><section id=footer><ul class=icons><li><a href=https://github.com/ChangAkira target=_blank>GitHub</a></li><li><a href=mailto://a259759666@163.com>邮箱</a></li></ul><p>&copy; 第九章 | <a href=../infos/index.html target=_blank>团队主页</a></p></section><script>
+    </style>
+</head>
+<body>
+    <section id="five">
+        <header class="major special">
+            <h2>对话</h2>
+        </header>
+        <div id="response-container"></div>
+        <div id="input-container">
+            <textarea id="demo-message" placeholder="Enter your message"></textarea>
+            <button id="send-button">Send</button>
+        </div>
+    </section>
+    <section id="footer">
+        <ul class="icons">
+            <li><a href="https://github.com/ChangAkira" target="_blank">GitHub</a></li>
+            <li><a href="mailto://a259759666@163.com">邮箱</a></li>
+        </ul>
+        <p>&copy; 第九章 | <a href="../infos/index.html" target="_blank">团队主页</a></p>
+    </section>
+    <script>
         const responseContainer = document.getElementById("response-container");
         const sendButton = document.getElementById("send-button");
         const messageInput = document.getElementById("demo-message");
@@ -121,4 +147,5 @@
                 messageInput.value = "";
             }
         });
-    </script><script async>window.onload=function(){var a=document.createElement('script'),b=document.getElementsByTagName('script')[0];a.type='text/javascript',a.async=!0,a.src='/sw-register.js?v='+Date.now(),b.parentNode.insertBefore(a,b)};</script></body></html>
+    </script>
+<script async>window.onload=function(){var a=document.createElement('script'),b=document.getElementsByTagName('script')[0];a.type='text/javascript',a.async=!0,a.src='/sw-register.js?v='+Date.now(),b.parentNode.insertBefore(a,b)};</script></body></html>

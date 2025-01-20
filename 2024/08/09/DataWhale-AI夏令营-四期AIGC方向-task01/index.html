@@ -1,4 +1,5 @@
-<!DOCTYPE html><script>
+<!DOCTYPE html>
+<script>
     function music_on() {
         var audio1 = document.getElementById('bg_music');
         if (audio1.paused) {
@@ -108,7 +109,9 @@
         }
     }
     BackTOP();
-</script><style>
+</script>
+ 
+<style>
     #RightDownBtn {
         position: fixed;
         left: 1.875rem;
@@ -237,7 +240,61 @@
         content: "";
         background: linear-gradient(#fefefe, #fffbe8)
     }
-</style><html lang=zh-CN><head hexo-theme=https://github.com/volantis-x/hexo-theme-volantis/#5.8.0><meta name=generator content="Hexo 6.3.0"><meta name=Volantis content=5.8.0><meta charset=utf-8><link rel=canonical href="https://moyuan.uno/2024/08/09/datawhale-ai夏令营-四期aigc方向-task01/"><meta http-equiv=x-dns-prefetch-control content=on><link rel=dns-prefetch href=https://unpkg.com><link rel=preconnect href=https://unpkg.com crossorigin><meta name=renderer content=webkit><meta name=force-rendering content=webkit><meta http-equiv=X-UA-Compatible content="IE=Edge,chrome=1"><meta http-equiv=Content-Security-Policy content="default-src 'self' https:; block-all-mixed-content; base-uri 'self' https:; form-action 'self' https:; worker-src 'self' https:; connect-src 'self' https: *; img-src 'self' data: https: *; media-src 'self' https: *; font-src 'self' data: https: *; frame-src 'self' https: *; manifest-src 'self' https: *; child-src https:; script-src 'self' https: 'unsafe-inline' *; style-src 'self' https: 'unsafe-inline' *;"><meta name=HandheldFriendly content=True><meta name=apple-mobile-web-app-capable content=yes><meta name=viewport content="width=device-width, initial-scale=1, maximum-scale=5"><meta content=black-translucent name=apple-mobile-web-app-status-bar-style><meta content="telephone=no" name=format-detection><link rel="shortcut icon" type=image/x-icon href=https://img1.imgtp.com/2023/07/21/PMqCVeD4.ico><link rel=preload href=/css/style.css as=style><link rel=preload href=https://unpkg.com/volantis-static@0.0.1654736714924/media/fonts/VarelaRound/VarelaRound-Regular.ttf as=font type=font/ttf crossorigin=anonymous><link rel=preload href=https://unpkg.com/volantis-static@0.0.1654736714924/media/fonts/UbuntuMono/UbuntuMono-Regular.ttf as=font type=font/ttf crossorigin=anonymous><title>DataWhaleX魔搭_AI夏令营_四期AIGC方向_task01 - 是默元的博客</title><meta name=keywords content=Datawhale_AI夏令营,笔记,默元><meta desc name=description content="DataWhaleX魔搭_AI夏令营_四期AIGC方向_task01 学习笔记 - Chang Akira - 是默元的博客"><meta property=og:type content=article><meta property=og:title content=DataWhaleX魔搭_AI夏令营_四期AIGC方向_task01><meta property=og:url content=https://moyuan.uno/2024/08/09/DataWhale-AI%E5%A4%8F%E4%BB%A4%E8%90%A5-%E5%9B%9B%E6%9C%9FAIGC%E6%96%B9%E5%90%91-task01/index.html><meta property=og:site_name content=是默元的博客><meta property=og:description content="DataWhaleX魔搭_AI夏令营_四期AIGC方向_task01 学习笔记"><meta property=og:locale content=zh_CN><meta property=og:image content=https://s2.loli.net/2023/07/21/PGyugoK3YMWkeba.png><meta property=article:published_time content=2024-08-09T01:18:31.000Z><meta property=article:modified_time content=2024-08-25T10:21:38.000Z><meta property=article:author content="Chang Akira"><meta property=article:tag content=Datawhale_AI夏令营><meta property=article:tag content=笔记><meta name=twitter:card content=summary><meta name=twitter:image content=https://s2.loli.net/2023/07/21/PGyugoK3YMWkeba.png><style>
+</style>
+<html lang="zh-CN">
+    <head hexo-theme='https://github.com/volantis-x/hexo-theme-volantis/#5.8.0'>
+  <meta name="generator" content="Hexo 6.3.0">
+  <meta name="Volantis" content="5.8.0">
+  <meta charset="utf-8">
+  <!-- SEO相关 -->
+  
+  <link rel="canonical" href="https://moyuan.uno/2024/08/09/datawhale-ai夏令营-四期aigc方向-task01/"/>
+  <!-- 渲染优化 -->
+    <meta http-equiv='x-dns-prefetch-control' content='on' />
+      <link rel='dns-prefetch' href='https://unpkg.com'>
+      <link rel="preconnect" href="https://unpkg.com" crossorigin>
+  <meta name="renderer" content="webkit">
+  <meta name="force-rendering" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta http-equiv="Content-Security-Policy" content=" default-src 'self' https:; block-all-mixed-content; base-uri 'self' https:; form-action 'self' https:; worker-src 'self' https:; connect-src 'self' https: *; img-src 'self' data: https: *; media-src 'self' https: *; font-src 'self' data: https: *; frame-src 'self' https: *; manifest-src 'self' https: *; child-src https:; script-src 'self' https: 'unsafe-inline' *; style-src 'self' https: 'unsafe-inline' *; ">
+  <meta name="HandheldFriendly" content="True" >
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+  <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
+  <meta content="telephone=no" name="format-detection">
+  <!-- import head_begin begin -->
+  <!-- import head_begin end -->
+  <!-- Custom Files headBegin begin-->
+  
+  <!-- Custom Files headBegin end-->
+  <!-- front-matter head_begin begin -->
+  <!-- front-matter head_begin end -->
+    <link rel="shortcut icon" type='image/x-icon' href="https://img1.imgtp.com/2023/07/21/PMqCVeD4.ico">
+  <link rel="preload" href="/css/style.css" as="style">
+  <link rel="preload" href="https://unpkg.com/volantis-static@0.0.1654736714924/media/fonts/VarelaRound/VarelaRound-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+<link rel="preload" href="https://unpkg.com/volantis-static@0.0.1654736714924/media/fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+
+  <!-- feed -->
+  <!-- 页面元数据 -->
+  <title>DataWhaleX魔搭_AI夏令营_四期AIGC方向_task01 - 是默元的博客</title>
+  <meta name="keywords" content="Datawhale_AI夏令营,笔记,默元">
+  <meta desc name="description" content="DataWhaleX魔搭_AI夏令营_四期AIGC方向_task01 学习笔记 - Chang Akira - 是默元的博客">
+  
+<meta property="og:type" content="article">
+<meta property="og:title" content="DataWhaleX魔搭_AI夏令营_四期AIGC方向_task01">
+<meta property="og:url" content="https://moyuan.uno/2024/08/09/DataWhale-AI%E5%A4%8F%E4%BB%A4%E8%90%A5-%E5%9B%9B%E6%9C%9FAIGC%E6%96%B9%E5%90%91-task01/index.html">
+<meta property="og:site_name" content="是默元的博客">
+<meta property="og:description" content="DataWhaleX魔搭_AI夏令营_四期AIGC方向_task01 学习笔记">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://s2.loli.net/2023/07/21/PGyugoK3YMWkeba.png">
+<meta property="article:published_time" content="2024-08-09T01:18:31.000Z">
+<meta property="article:modified_time" content="2024-08-25T10:21:38.000Z">
+<meta property="article:author" content="Chang Akira">
+<meta property="article:tag" content="Datawhale_AI夏令营">
+<meta property="article:tag" content="笔记">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://s2.loli.net/2023/07/21/PGyugoK3YMWkeba.png">
+  <style>
     /* 首屏样式 */
     #safearea {
   display: none;
@@ -2013,12 +2070,17 @@ ul.list-v >li>a:hover {
   }
 }
 
-  </style><link rel=stylesheet href=/css/style.css media=print onload="this.media='all';this.onload=null"><noscript><link rel=stylesheet href=/css/style.css></noscript><script>
+  </style>
+  <link rel="stylesheet" href="/css/style.css" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/css/style.css"></noscript>
+    <script>
       let userColorScheme=localStorage.getItem("color-scheme")
       if(userColorScheme){
         document.documentElement.setAttribute("color-scheme", userColorScheme);
       }
-    </script><script>
+    </script>
+  
+<script>
 if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMode))
     document.write(
 	'<style>'+
@@ -2047,7 +2109,11 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         `<span class="kill-c">微软已经于2016年终止了对 Internet Explorer (IE) 10 及更早版本的支持，<br/>继续使用存在极大的安全隐患，请使用当代主流的浏览器进行访问。</span><br/>`+
         `<a target="_blank" rel="noopener" href="https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/"><strong>了解详情 ></strong></a>`+
     '</div>');
-</script><noscript><style>
+</script>
+
+
+<noscript>
+	<style>
 		html{
 			overflow-x: hidden !important;
 			overflow-y: hidden !important;
@@ -2067,7 +2133,16 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 		#l_header,#l_body{
 			display: none;
 		}
-	</style><div class=kill-noscript><span class=kill-t><b>抱歉，您的浏览器无法访问本站</b></span><br><span class=kill-c>本页面需要浏览器支持（启用）JavaScript</span><br><a target=_blank rel=noopener href="https://www.baidu.com/s?wd=启用JavaScript"><strong>了解详情 ></strong></a></div></noscript><script>
+	</style>
+    <div class="kill-noscript">
+        <span class="kill-t"><b>抱歉，您的浏览器无法访问本站</b></span><br/>
+        <span class="kill-c">本页面需要浏览器支持（启用）JavaScript</span><br/>
+        <a target="_blank" rel="noopener" href="https://www.baidu.com/s?wd=启用JavaScript"><strong>了解详情 ></strong></a>
+    </div>
+</noscript>
+
+
+  <script>
   /************这个文件存放不需要重载的全局变量和全局函数*********/
   window.volantis = {}; // volantis 全局变量
   volantis.debug = "env"; // 调试模式
@@ -2077,7 +2152,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1737292418226),
+    lastupdate: new Date(1737344080975),
     sidebar: {
       for_page: ["blogger","webinfo","lastupdate","tagcloud"],
       for_post: ["toc","blogger","copyright"],
@@ -2494,11 +2569,809 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     img.onerror = null;
   }
   /******************************************************************************/
-</script><script src=/components/bilibili-card/bilibili-card.js></script><meta name=referrer content=no-referrer></head><body itemscope itemtype=http://schema.org/WebPage><header itemscope itemtype=http://schema.org/WPHeader id=l_header class="l_header auto shadow floatable blur show" style="opacity: 0"><div class=container><div id=wrapper><div class=nav-sub><p class=title></p><ul class="switcher nav-list-h m-phone" id=pjax-header-nav-list><li><a id=s-comment class="fa-solid fa-comments fa-fw" target=_self href="/" onclick="return false;" title=comment></a></li><li><a id=s-toc class="s-toc fa-solid fa-list fa-fw" target=_self href="/" onclick="return false;" title=toc></a></li></ul></div><div class=nav-main><a class="title flat-box" target=_self href="/"><span style=color:#c3bef0;font-weight:bold>MOYUAN</span></a><div class="menu navigation"><ul class="nav-list-h m-pc"><li><a class="menuitem flat-box faa-parent animated-hover" href="/" title=首页 active-action=action-home>首页</a></li><li><a class="menuitem flat-box faa-parent animated-hover" href="/" onclick="return false;" title=归档>归档</a><ul class=list-v><li><a class="menuitem flat-box faa-parent animated-hover" href="/categories/" title=分类 active-action=action-categories>分类</a></li><li><a class="menuitem flat-box faa-parent animated-hover" href="/tags/" title=标签 active-action=action-tags>标签</a></li><li><a class="menuitem flat-box faa-parent animated-hover" href="/archives/" title=历程 active-action=action-archives>历程</a></li></ul></li><li><a class="menuitem flat-box faa-parent animated-hover" href="/friends/" title=友链 active-action=action-friends>友链</a></li><li><a class="menuitem flat-box faa-parent animated-hover" href="/about/" title=关于 active-action=action-about>关于</a></li><li><a class="menuitem flat-box faa-parent animated-hover" href="/mystic/" title=魔法屋 active-action=action-mystic>魔法屋</a></li><li><a class="menuitem flat-box faa-parent animated-hover" href="/" onclick="return false;" title="“一” 系列">“一” 系列</a><ul class=list-v><li><a class="menuitem flat-box faa-parent animated-hover" href=/yi/cards/index.html title="一 / 一张纸" active-action=action-yicardsindexhtml>一 / 一张纸</a></li><li><a class="menuitem flat-box faa-parent animated-hover" href=/yi/books/index.html title="一 / 一本书" active-action=action-yibooksindexhtml>一 / 一本书</a></li><li><a class="menuitem flat-box faa-parent animated-hover" href=/yi/TV_series/index.html title="一 / 一部番" active-action=action-yiTV_seriesindexhtml>一 / 一部番</a></li></ul></li><li><a class="menuitem flat-box header toggle-mode-btn" onclick=switchNightMode()><i class=fa-fw></i>夜间模式</a></li><li></li></ul></div><div class=m_search><form name=searchform class="form u-search-form"><i class="icon fa-solid fa-search fa-fw"></i> <input type=text class="input u-search-input" placeholder="你想找什么鸭 >_<"></form></div><ul class="switcher nav-list-h m-phone"><li><a class="s-search fa-solid fa-search fa-fw" target=_self href="/" onclick="return false;" title=search></a></li><li><a class="s-menu fa-solid fa-bars fa-fw" target=_self href="/" onclick="return false;" title=menu></a><ul class="menu-phone list-v navigation white-box"><li><a class="menuitem flat-box faa-parent animated-hover" href="/" title=首页 active-action=action-home>首页</a></li><li><a class="menuitem flat-box faa-parent animated-hover" href="/" onclick="return false;" title=归档>归档</a><ul class=list-v><li><a class="menuitem flat-box faa-parent animated-hover" href="/categories/" title=分类 active-action=action-categories>分类</a></li><li><a class="menuitem flat-box faa-parent animated-hover" href="/tags/" title=标签 active-action=action-tags>标签</a></li><li><a class="menuitem flat-box faa-parent animated-hover" href="/archives/" title=历程 active-action=action-archives>历程</a></li></ul></li><li><a class="menuitem flat-box faa-parent animated-hover" href="/friends/" title=友链 active-action=action-friends>友链</a></li><li><a class="menuitem flat-box faa-parent animated-hover" href="/about/" title=关于 active-action=action-about>关于</a></li><li><a class="menuitem flat-box faa-parent animated-hover" href="/mystic/" title=魔法屋 active-action=action-mystic>魔法屋</a></li><li><a class="menuitem flat-box faa-parent animated-hover" href="/" onclick="return false;" title="“一” 系列">“一” 系列</a><ul class=list-v><li><a class="menuitem flat-box faa-parent animated-hover" href=/yi/cards/index.html title="一 / 一张纸" active-action=action-yicardsindexhtml>一 / 一张纸</a></li><li><a class="menuitem flat-box faa-parent animated-hover" href=/yi/books/index.html title="一 / 一本书" active-action=action-yibooksindexhtml>一 / 一本书</a></li><li><a class="menuitem flat-box faa-parent animated-hover" href=/yi/TV_series/index.html title="一 / 一部番" active-action=action-yiTV_seriesindexhtml>一 / 一部番</a></li></ul></li><li><a class="menuitem flat-box header toggle-mode-btn" onclick=switchNightMode()><i class=fa-fw></i>夜间模式</a></li><li></li></ul></li></ul></div></div></div></header><div id=l_body><div id=l_cover></div><div id=safearea><div class=body-wrapper><div id=l_main><article itemscope itemtype=http://schema.org/Article class="article post white-box reveal md shadow floatable article-type-post" id=post itemprop=blogPost><link itemprop=mainEntityOfPage href="https://moyuan.uno/2024/08/09/DataWhale-AI夏令营-四期AIGC方向-task01/"><span hidden itemprop=publisher itemscope itemtype=http://schema.org/Organization><meta itemprop=name content=是默元的博客></span> <span hidden itemprop=post itemscope itemtype=http://schema.org/Post><meta itemprop=name content=是默元的博客><meta itemprop=description content=是默元的博客></span> <span hidden><meta itemprop=image content=https://s2.loli.net/2023/07/21/PGyugoK3YMWkeba.png></span><div class=article-meta id=top><h1 class=title itemprop="name headline">DataWhaleX魔搭_AI夏令营_四期AIGC方向_task01</h1><div class=new-meta-box><div class="new-meta-item category"><i class="fa-solid fa-folder-open fa-fw" aria-hidden=true></i> <a class=category-link href="/categories/%E7%AC%94%E8%AE%B0/">笔记</a><span class=sep></span><a class=category-link href="/categories/%E7%AC%94%E8%AE%B0/AI/">AI</a> <span hidden itemprop=about itemscope itemtype=http://schema.org/Thing><a href="/categories/%E7%AC%94%E8%AE%B0/" itemprop=url><span itemprop=name>笔记</span></a></span> <span hidden itemprop=about itemscope itemtype=http://schema.org/Thing><a href="/categories/%E7%AC%94%E8%AE%B0/AI/" itemprop=url><span itemprop=name>AI</span></a></span></div><div class="new-meta-item browse"><a class=notlink><p><i class="fa-solid fa-eye fa-fw" aria-hidden=true></i> <span id=busuanzi_value_page_pv><i class="fa-solid fa-loader fa-spin fa-fw" aria-hidden=true></i></span> <span>次浏览</span></p></a></div><div class="new-meta-item wordcount"><a class=notlink><i class="fa-solid fa-keyboard fa-fw" aria-hidden=true></i><p>字数：5.6k 字</p></a></div><div class="new-meta-item readtime"><a class=notlink><i class="fa-solid fa-hourglass-half fa-fw" aria-hidden=true></i><p>时长：21 分钟</p></a></div></div></div><div id=layoutHelper-page-plugins></div><div id=post-body itemprop=articleBody><p>DataWhaleX魔搭_AI夏令营_四期AIGC方向_task01 学习笔记</p><span id=more></span><h2 id=AI生图><a href=#AI生图 class=headerlink title=AI生图></a>AI生图</h2><div class="note quote"><p><strong>学习主题介绍</strong></p><p>从零入门AI生图原理&amp;实践 是 Datawhale 2024 年 AI 夏令营第四期的学习活动（“AIGC”方向），基于魔搭社区“可图Kolors-LoRA风格故事挑战赛”开展的实践学习——</p><div class="note info"><p><strong></strong></p><p>适合想 入门并实践 AIGC文生图、工作流搭建、LoRA微调 的学习者参与</p></div><p>学习内容提要：从文生图实现方案逐渐进阶，教程偏重图像工作流、微调、图像优化等思路，最后会简单介绍AIGC应用方向、数字人技术（选学）</p></div><h2 id=比赛介绍><a href=#比赛介绍 class=headerlink title=比赛介绍></a>比赛介绍</h2><p>本次学习任务基于可图Kolors-LoRA风格故事挑战赛，该比赛同样由阿里云天池平台联合魔搭社区举办。进行学习任务，需要报名参加该比赛来更好地检验自己的学习成果。</p><h2 id=赛题内容><a href=#赛题内容 class=headerlink title=赛题内容></a>赛题内容</h2><ol><li><p>参赛者需在可图Kolors 模型的基础上训练LoRA 模型，生成无限风格，如水墨画风格、水彩风格、赛博朋克风格、日漫风格……</p></li><li><p>基于LoRA模型生成 8 张图片组成连贯故事，故事内容可自定义；基于8图故事，评估 LoRA 风格的美感度及连贯性</p></li></ol><details yellow open><summary>样例：偶像少女养成日记</summary><div class=content><div galleryflag itemscope itemtype=http://schema.org/ImageGallery class=gallery data-group=default><div class=fancybox><a class=fancybox pjax-fancybox itemscope itemtype=http://schema.org/ImageObject itemprop=url target=_blank rel=noopener href=https://i0.hdslb.com/bfs/article/6f52154dd9f7452b9fa2114907ad2857481184837.png@1e_1c.webp data-fancybox=default data-caption=大赛所给样例><img fancybox itemprop=contentUrl src=https://i0.hdslb.com/bfs/article/6f52154dd9f7452b9fa2114907ad2857481184837.png@1e_1c.webp alt=大赛所给样例></a><span class=image-caption>大赛所给样例</span></div></div></div></details><h2 id=对样例的想法与解说><a href=#对样例的想法与解说 class=headerlink title=对样例的想法与解说></a>对样例的想法与解说</h2><h3 id=由八图故事表现形式，联想到早期四格漫画><a href=#由八图故事表现形式，联想到早期四格漫画 class=headerlink title=由八图故事表现形式，联想到早期四格漫画></a>由八图故事表现形式，联想到早期四格漫画</h3><p>八图故事，顾名思义，由八张图片组成连贯的故事。其实我最初看到这个要求的时候，脑中立马闪过小时候很流行的“四格漫画”。</p><details green><summary>啥是四格漫画？</summary><div class=content><p>四格漫画，是以四个画面分格来完成一个小故事或一个创意点子的表现形式。</p><p>四格漫画短短几格就涵盖了一个事件的发生、情节转折及幽默的结局。让人看完不觉莞尔，会心一笑或捧腹大笑。</p><p>四格漫画着重点子创意，画面不需很复杂，角色也不需要太多，对白精简，让人容易轻松阅读。</p><p>四格漫画是一种古老的艺术表现形式，四格漫画在表现上的特点主要强调叙事。</p><p>早期的漫画除了传统的单幅外，就是四格讽刺漫画：开头，发展，高潮，结尾，所以是四格。六格和八格是后来才出现的，情节展开会比较多。其实四格漫画对格数已经没有限制。</p></div></details><p>当时的四格漫画大多画风简单而突出重点，富有表现力，故事情节简单而富有转折、诙谐幽默<del>冷幽默</del>。</p><details green><summary>早期四格漫画示例</summary><div class=content><div galleryflag itemscope itemtype=http://schema.org/ImageGallery class=gallery data-group=default><div class=fancybox><a class=fancybox pjax-fancybox itemscope itemtype=http://schema.org/ImageObject itemprop=url target=_blank rel=noopener href=https://i0.hdslb.com/bfs/article/4206f6d3cb2cb76cfdbe1fd67cb3ea6f481184837.png data-fancybox=default data-caption=早期四格漫画示例><img fancybox itemprop=contentUrl src=https://i0.hdslb.com/bfs/article/4206f6d3cb2cb76cfdbe1fd67cb3ea6f481184837.png alt=早期四格漫画示例></a><span class=image-caption>早期四格漫画示例</span></div></div><p><psw>赛尔号打钱！</psw></p></div></details><h3 id=早期四格漫画形式的借鉴意义><a href=#早期四格漫画形式的借鉴意义 class=headerlink title=早期四格漫画形式的借鉴意义></a>早期四格漫画形式的借鉴意义</h3><div class=tabs id=tab-思考1><ul class=nav-tabs><li class="tab active"><a class=#思考1-1>风格上</a></li><li class=tab><a class=#思考1-2>故事上</a></li></ul><div class=tab-content><div class="tab-pane active" id=思考1-1><p>而现在，我们用AI生成故事，也就不需要拘泥于漫画的表现风格了，赛题要求中也写道：</p><div class="note quote"><p>如水墨画风格、水彩风格、赛博朋克风格、日漫风格……</p></div><p>而我们要讲的故事所适合的风格，我想这是我们需要思考的。</p><p>如在交流群中，有一位同学想讲“指环王里一开头弗罗多的故事”，但生成的图片风格却是比较写实的，头发画的比较细腻，光线也打的较为柔和，整体全是人物近景，有背景的图片中，背景又虚化比较严重……导致该同学表示“生成的好像和我想的一点儿关系也没有，除了衣服配上了”，这就说明该同学存在的问题是描述细节多，而对整体风格要求可能较少。</p></div><div class=tab-pane id=思考1-2><p>风格上，我们不必拘泥于早期四格漫画形式，但在如何讲好一个故事上，我想四格漫画有很重要的参考意义。</p><ol><li><p>在早期四格漫画中，故事大多具有转折或幽默特点，四格中一般即起、承、转、结，前三格铺陈蓄势，第四格让人意想不到；</p></li><li><p>使用的对白尽量精简，不用对白只靠表情跟动作是最好也是最难的演出；但是，由于AI绘图很难绘制出正确的文字，所以这一点我们可以不予考虑（记得要在反向提示词中加入”text”以防万一），取而代之的是，我们可以在故事的描述文字上（示例中每张图片上方的文字）多做注意，做到文字简明、概括。</p></li><li><p>动作、表情、对白、情节安排必须符合各个角色设定的性格特征与一贯性。如果在仅仅八格的内容中就出现了角色前后形象大不一致（不是由于剧情发展而引起的正常转变）、甚至直接人设崩塌，这是绝对不能接受的。</p></li></ol></div></div></div><h3 id=样例是如何生成的？><a href=#样例是如何生成的？ class=headerlink title=样例是如何生成的？></a>样例是如何生成的？</h3><p>你可能使用过AI生成图片，那么对于我们要做的事情应该很清楚：给AI提示词。</p><div class="note guide clear"><p><strong>什么是 prompt ？</strong></p><p>在使用大语言模型时，使用 prompt 往往可以获得更好、更精确的结果。prompt直译为“提示语”。现在已经有专门研究大语言模型prompt的工作（prompt engineer）。</p><div class="tag link"><a class=link-card title="AI 科普：什么是Prompt？如何写Prompt" target=_blank rel=noopener href=https://base.feishu.cn/academy/ai/beginner-prompt><div class=left><img src=https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/256/safari.png></div><div class=right><p class=text>AI 科普：什么是Prompt？如何写Prompt</p><p class=url>https://base.feishu.cn/academy/ai/beginner-prompt</p></div></a></div><div class="tag link"><a class=link-card title="关于提示工程（Prompt Engineering）" target=_blank rel=noopener href=https://www.promptingguide.ai/zh><div class=left><img src=https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/256/safari.png></div><div class=right><p class=text>关于提示工程（Prompt Engineering）</p><p class=url>https://www.promptingguide.ai/zh</p></div></a></div></div><p>我们也可以简单地理解为在这次任务中，我们对于AI的要求。试想：我们在请人类作画时，尚且需要提出要求呢。</p><p>我们可以打开baseline.ipynb查看样例所给的prompt。</p><p>由于现在还没有按照教程打开魔搭社区notebook，且我们只是要先下载baseline.ipynb文件看一眼，所以我在本地新建一个临时文件夹进行了clone：</p><pre><code>git lfs install
+</script>
+
+  <!-- import head_end begin -->
+  <!-- import head_end end -->
+  <!-- Custom Files headEnd begin-->
+  
+  <!-- Custom Files headEnd end-->
+  <!-- front-matter head_end begin -->
+  <!-- front-matter head_end end -->
+<!-- hexo injector head_end start -->
+<script src="/components/bilibili-card/bilibili-card.js"></script>
+<meta name="referrer" content="no-referrer"/><!-- hexo injector head_end end --></head>
+  <body itemscope itemtype="http://schema.org/WebPage">
+    <!-- import body_begin begin-->
+    <!-- import body_begin end-->
+    <!-- Custom Files bodyBegin begin-->
+    
+    <!-- Custom Files bodyBegin end-->
+    <!-- front-matter body_begin begin -->
+    <!-- front-matter body_begin end -->
+    <header itemscope itemtype="http://schema.org/WPHeader" id="l_header" class="l_header auto shadow floatable blur show" style='opacity: 0' >
+  <div class='container'>
+  <div id='wrapper'>
+    <div class='nav-sub'>
+      <p class="title"></p>
+      <ul class='switcher nav-list-h m-phone' id="pjax-header-nav-list">
+        <li><a id="s-comment" class="fa-solid fa-comments fa-fw" target="_self"  href="/" onclick="return false;" title="comment"></a></li>
+        
+          <li><a id="s-toc" class="s-toc fa-solid fa-list fa-fw" target="_self"  href="/" onclick="return false;" title="toc"></a></li>
+        
+      </ul>
+    </div>
+		<div class="nav-main">
+      
+        
+        <a class="title flat-box" target="_self" href='/'>
+          
+          
+          
+            <span style="color:#c3bef0;font-weight:bold">MOYUAN</span>
+          
+        </a>
+      
+
+			<div class='menu navigation'>
+				<ul class='nav-list-h m-pc'>
+          
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover"
+                href="/" title="首页"
+                  
+                  
+                  
+                    active-action="action-home"
+                  >
+                  首页
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover"
+                 href="/" onclick="return false;" title="归档"
+                  
+                  
+                  >
+                  归档
+                </a>
+                
+                  <ul class="list-v">
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover"
+                href="/categories/" title="分类"
+                  
+                  
+                  
+                    active-action="action-categories"
+                  >
+                  分类
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover"
+                href="/tags/" title="标签"
+                  
+                  
+                  
+                    active-action="action-tags"
+                  >
+                  标签
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover"
+                href="/archives/" title="历程"
+                  
+                  
+                  
+                    active-action="action-archives"
+                  >
+                  历程
+                </a>
+                
+              </li>
+            
+          
+                    
+                  </ul>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover"
+                href="/friends/" title="友链"
+                  
+                  
+                  
+                    active-action="action-friends"
+                  >
+                  友链
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover"
+                href="/about/" title="关于"
+                  
+                  
+                  
+                    active-action="action-about"
+                  >
+                  关于
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover"
+                href="/mystic/" title="魔法屋"
+                  
+                  
+                  
+                    active-action="action-mystic"
+                  >
+                  魔法屋
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover"
+                 href="/" onclick="return false;" title="“一” 系列"
+                  
+                  
+                  >
+                  “一” 系列
+                </a>
+                
+                  <ul class="list-v">
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover"
+                href="/yi/cards/index.html" title="一 / 一张纸"
+                  
+                  
+                  
+                    active-action="action-yicardsindexhtml"
+                  >
+                  一 / 一张纸
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover"
+                href="/yi/books/index.html" title="一 / 一本书"
+                  
+                  
+                  
+                    active-action="action-yibooksindexhtml"
+                  >
+                  一 / 一本书
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover"
+                href="/yi/TV_series/index.html" title="一 / 一部番"
+                  
+                  
+                  
+                    active-action="action-yiTV_seriesindexhtml"
+                  >
+                  一 / 一部番
+                </a>
+                
+              </li>
+            
+          
+                    
+                  </ul>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box header toggle-mode-btn" onclick="switchNightMode()">
+                  <i class=' fa-fw'></i>夜间模式
+                </a>
+              <li>
+            
+          
+          
+				</ul>
+			</div>
+      
+      <div class="m_search">
+        <form name="searchform" class="form u-search-form">
+          <i class="icon fa-solid fa-search fa-fw"></i>
+          <input type="text" class="input u-search-input" placeholder="你想找什么鸭 >_<" />
+        </form>
+      </div>
+      
+
+			<ul class='switcher nav-list-h m-phone'>
+				
+					<li><a class="s-search fa-solid fa-search fa-fw" target="_self" href="/" onclick="return false;" title="search"></a></li>
+				
+				<li>
+          <a class="s-menu fa-solid fa-bars fa-fw" target="_self" href="/" onclick="return false;" title="menu"></a>
+          <ul class="menu-phone list-v navigation white-box">
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover"
+                href="/" title="首页"
+                  
+                  
+                  
+                    active-action="action-home"
+                  >
+                  首页
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover"
+                 href="/" onclick="return false;" title="归档"
+                  
+                  
+                  >
+                  归档
+                </a>
+                
+                  <ul class="list-v">
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover"
+                href="/categories/" title="分类"
+                  
+                  
+                  
+                    active-action="action-categories"
+                  >
+                  分类
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover"
+                href="/tags/" title="标签"
+                  
+                  
+                  
+                    active-action="action-tags"
+                  >
+                  标签
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover"
+                href="/archives/" title="历程"
+                  
+                  
+                  
+                    active-action="action-archives"
+                  >
+                  历程
+                </a>
+                
+              </li>
+            
+          
+                    
+                  </ul>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover"
+                href="/friends/" title="友链"
+                  
+                  
+                  
+                    active-action="action-friends"
+                  >
+                  友链
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover"
+                href="/about/" title="关于"
+                  
+                  
+                  
+                    active-action="action-about"
+                  >
+                  关于
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover"
+                href="/mystic/" title="魔法屋"
+                  
+                  
+                  
+                    active-action="action-mystic"
+                  >
+                  魔法屋
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover"
+                 href="/" onclick="return false;" title="“一” 系列"
+                  
+                  
+                  >
+                  “一” 系列
+                </a>
+                
+                  <ul class="list-v">
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover"
+                href="/yi/cards/index.html" title="一 / 一张纸"
+                  
+                  
+                  
+                    active-action="action-yicardsindexhtml"
+                  >
+                  一 / 一张纸
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover"
+                href="/yi/books/index.html" title="一 / 一本书"
+                  
+                  
+                  
+                    active-action="action-yibooksindexhtml"
+                  >
+                  一 / 一本书
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover"
+                href="/yi/TV_series/index.html" title="一 / 一部番"
+                  
+                  
+                  
+                    active-action="action-yiTV_seriesindexhtml"
+                  >
+                  一 / 一部番
+                </a>
+                
+              </li>
+            
+          
+                    
+                  </ul>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box header toggle-mode-btn" onclick="switchNightMode()">
+                  <i class=' fa-fw'></i>夜间模式
+                </a>
+              <li>
+            
+          
+            
+          </ul>
+        </li>
+			</ul>
+
+      <!-- Custom Files header begin -->
+      
+      <!-- Custom Files header end -->
+		</div>
+	</div>
+  </div>
+</header>
+
+    <div id="l_body">
+      <div id="l_cover">
+  
+      
+  
+</div>
+
+      <div id="safearea">
+        <div class="body-wrapper">
+          
+<div id="l_main" class=''>
+  <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow floatable article-type-post" id="post" itemscope itemprop="blogPost">
+  <link itemprop="mainEntityOfPage" href="https://moyuan.uno/2024/08/09/DataWhale-AI夏令营-四期AIGC方向-task01/">
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="是默元的博客">
+  </span>
+  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
+    <meta itemprop="name" content="是默元的博客">
+    <meta itemprop="description" content="是默元的博客">
+  </span>
+  
+
+
+  
+    <span hidden>
+      <meta itemprop="image" content="https://s2.loli.net/2023/07/21/PGyugoK3YMWkeba.png">
+    </span>
+  
+  <div class="article-meta" id="top">
+    
+    
+    
+      <h1 class="title" itemprop="name headline">
+        DataWhaleX魔搭_AI夏令营_四期AIGC方向_task01
+      </h1>
+      <div class='new-meta-box'>
+        
+          
+            
+  <div class='new-meta-item category'>
+    <i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i>
+    <a class="category-link" href="/categories/%E7%AC%94%E8%AE%B0/">笔记</a><span class="sep"></span><a class="category-link" href="/categories/%E7%AC%94%E8%AE%B0/AI/">AI</a>
+    
+      <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+        <a href="/categories/%E7%AC%94%E8%AE%B0/" itemprop="url"><span itemprop="name">笔记</span></a>
+      </span>
+    
+      <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+        <a href="/categories/%E7%AC%94%E8%AE%B0/AI/" itemprop="url"><span itemprop="name">AI</span></a>
+      </span>
+    
+  </div>
+
+
+          
+        
+          
+            
+
+
+<div class="new-meta-item browse">
+  <a class='notlink'>
+    <p>
+      <i class="fa-solid fa-eye fa-fw" aria-hidden="true"></i>
+      
+      <span id="busuanzi_value_page_pv"><i class="fa-solid fa-loader fa-spin fa-fw" aria-hidden="true"></i></span>
+      
+      <span>次浏览</span>
+    </p>
+  </a>
+</div>
+
+
+          
+        
+          
+            
+  <div class="new-meta-item wordcount">
+    <a class='notlink'>
+      <i class="fa-solid fa-keyboard fa-fw" aria-hidden="true"></i>
+      <p>字数：5.6k 字</p>
+    </a>
+  </div>
+  <div class="new-meta-item readtime">
+    <a class='notlink'>
+      <i class="fa-solid fa-hourglass-half fa-fw" aria-hidden="true"></i>
+      <p>时长：21 分钟</p>
+    </a>
+  </div>
+
+
+          
+        
+        <!-- Custom Files topMeta begin-->
+        
+        <!-- Custom Files topMeta end-->
+      </div>
+    
+  </div>
+
+
+  <div id="layoutHelper-page-plugins"></div>
+  <div id="post-body" itemprop="articleBody">
+    <p>DataWhaleX魔搭_AI夏令营_四期AIGC方向_task01 学习笔记</p>
+<span id="more"></span>
+
+<h2 id="AI生图"><a href="#AI生图" class="headerlink" title="AI生图"></a>AI生图</h2><div class="note quote"><p><strong>学习主题介绍</strong></p><p>从零入门AI生图原理&amp;实践 是 Datawhale 2024 年 AI 夏令营第四期的学习活动（“AIGC”方向），基于魔搭社区“可图Kolors-LoRA风格故事挑战赛”开展的实践学习——</p><div class="note info"><p><strong></strong></p><p>适合想 入门并实践 AIGC文生图、工作流搭建、LoRA微调 的学习者参与</p></div><p>学习内容提要：从文生图实现方案逐渐进阶，教程偏重图像工作流、微调、图像优化等思路，最后会简单介绍AIGC应用方向、数字人技术（选学）</p></div>
+
+<h2 id="比赛介绍"><a href="#比赛介绍" class="headerlink" title="比赛介绍"></a>比赛介绍</h2><p>本次学习任务基于可图Kolors-LoRA风格故事挑战赛，该比赛同样由阿里云天池平台联合魔搭社区举办。进行学习任务，需要报名参加该比赛来更好地检验自己的学习成果。</p>
+<h2 id="赛题内容"><a href="#赛题内容" class="headerlink" title="赛题内容"></a>赛题内容</h2><ol>
+<li><p>参赛者需在可图Kolors 模型的基础上训练LoRA 模型，生成无限风格，如水墨画风格、水彩风格、赛博朋克风格、日漫风格……</p>
+</li>
+<li><p>基于LoRA模型生成 8 张图片组成连贯故事，故事内容可自定义；基于8图故事，评估 LoRA 风格的美感度及连贯性</p>
+</li>
+</ol>
+<details yellow open><summary> 样例：偶像少女养成日记 </summary>
+              <div class='content'>
+              <div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://i0.hdslb.com/bfs/article/6f52154dd9f7452b9fa2114907ad2857481184837.png@1e_1c.webp' data-fancybox='default' data-caption='大赛所给样例'><img fancybox itemprop="contentUrl" src="https://i0.hdslb.com/bfs/article/6f52154dd9f7452b9fa2114907ad2857481184837.png@1e_1c.webp" alt="大赛所给样例"></a><span class='image-caption'>大赛所给样例</span></div></div>
+              </div>
+            </details>
+
+<h2 id="对样例的想法与解说"><a href="#对样例的想法与解说" class="headerlink" title="对样例的想法与解说"></a>对样例的想法与解说</h2><h3 id="由八图故事表现形式，联想到早期四格漫画"><a href="#由八图故事表现形式，联想到早期四格漫画" class="headerlink" title="由八图故事表现形式，联想到早期四格漫画"></a>由八图故事表现形式，联想到早期四格漫画</h3><p>八图故事，顾名思义，由八张图片组成连贯的故事。其实我最初看到这个要求的时候，脑中立马闪过小时候很流行的“四格漫画”。</p>
+<details green><summary> 啥是四格漫画？ </summary>
+              <div class='content'>
+              <p>四格漫画，是以四个画面分格来完成一个小故事或一个创意点子的表现形式。</p><p>四格漫画短短几格就涵盖了一个事件的发生、情节转折及幽默的结局。让人看完不觉莞尔，会心一笑或捧腹大笑。</p><p>四格漫画着重点子创意，画面不需很复杂，角色也不需要太多，对白精简，让人容易轻松阅读。</p><p>四格漫画是一种古老的艺术表现形式，四格漫画在表现上的特点主要强调叙事。</p><p>早期的漫画除了传统的单幅外，就是四格讽刺漫画：开头，发展，高潮，结尾，所以是四格。六格和八格是后来才出现的，情节展开会比较多。其实四格漫画对格数已经没有限制。</p>
+              </div>
+            </details>
+
+<p>当时的四格漫画大多画风简单而突出重点，富有表现力，故事情节简单而富有转折、诙谐幽默<del>冷幽默</del>。</p>
+<details green><summary> 早期四格漫画示例 </summary>
+              <div class='content'>
+              <div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://i0.hdslb.com/bfs/article/4206f6d3cb2cb76cfdbe1fd67cb3ea6f481184837.png' data-fancybox='default' data-caption='早期四格漫画示例'><img fancybox itemprop="contentUrl" src="https://i0.hdslb.com/bfs/article/4206f6d3cb2cb76cfdbe1fd67cb3ea6f481184837.png" alt="早期四格漫画示例"></a><span class='image-caption'>早期四格漫画示例</span></div></div><p><psw>赛尔号打钱！</psw></p>
+              </div>
+            </details>
+
+<h3 id="早期四格漫画形式的借鉴意义"><a href="#早期四格漫画形式的借鉴意义" class="headerlink" title="早期四格漫画形式的借鉴意义"></a>早期四格漫画形式的借鉴意义</h3><div class="tabs" id="tab-思考1"><ul class="nav-tabs"><li class="tab active"><a class="#思考1-1">风格上</a></li><li class="tab"><a class="#思考1-2">故事上</a></li></ul><div class="tab-content"><div class="tab-pane active" id="思考1-1"><p>而现在，我们用AI生成故事，也就不需要拘泥于漫画的表现风格了，赛题要求中也写道：</p>
+<div class="note quote"><p>如水墨画风格、水彩风格、赛博朋克风格、日漫风格……</p></div>
+
+<p>而我们要讲的故事所适合的风格，我想这是我们需要思考的。</p>
+<p>如在交流群中，有一位同学想讲“指环王里一开头弗罗多的故事”，但生成的图片风格却是比较写实的，头发画的比较细腻，光线也打的较为柔和，整体全是人物近景，有背景的图片中，背景又虚化比较严重……导致该同学表示“生成的好像和我想的一点儿关系也没有，除了衣服配上了”，这就说明该同学存在的问题是描述细节多，而对整体风格要求可能较少。</p></div><div class="tab-pane" id="思考1-2"><p>风格上，我们不必拘泥于早期四格漫画形式，但在如何讲好一个故事上，我想四格漫画有很重要的参考意义。</p>
+<ol>
+<li><p>在早期四格漫画中，故事大多具有转折或幽默特点，四格中一般即起、承、转、结，前三格铺陈蓄势，第四格让人意想不到；</p>
+</li>
+<li><p>使用的对白尽量精简，不用对白只靠表情跟动作是最好也是最难的演出；但是，由于AI绘图很难绘制出正确的文字，所以这一点我们可以不予考虑（记得要在反向提示词中加入”text”以防万一），取而代之的是，我们可以在故事的描述文字上（示例中每张图片上方的文字）多做注意，做到文字简明、概括。</p>
+</li>
+<li><p>动作、表情、对白、情节安排必须符合各个角色设定的性格特征与一贯性。如果在仅仅八格的内容中就出现了角色前后形象大不一致（不是由于剧情发展而引起的正常转变）、甚至直接人设崩塌，这是绝对不能接受的。</p>
+</li>
+</ol></div></div></div>
+
+<h3 id="样例是如何生成的？"><a href="#样例是如何生成的？" class="headerlink" title="样例是如何生成的？"></a>样例是如何生成的？</h3><p>你可能使用过AI生成图片，那么对于我们要做的事情应该很清楚：给AI提示词。</p>
+<div class="note guide clear"><p><strong>什么是 prompt ？</strong></p><p>在使用大语言模型时，使用 prompt 往往可以获得更好、更精确的结果。prompt直译为“提示语”。现在已经有专门研究大语言模型prompt的工作（prompt engineer）。</p><div class="tag link"><a class="link-card" title="AI 科普：什么是Prompt？如何写Prompt" target="_blank" rel="noopener" href="https://base.feishu.cn/academy/ai/beginner-prompt"><div class="left"><img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/256/safari.png"/></div><div class="right"><p class="text">AI 科普：什么是Prompt？如何写Prompt</p><p class="url">https://base.feishu.cn/academy/ai/beginner-prompt</p></div></a></div><div class="tag link"><a class="link-card" title="关于提示工程（Prompt Engineering）" target="_blank" rel="noopener" href="https://www.promptingguide.ai/zh"><div class="left"><img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/256/safari.png"/></div><div class="right"><p class="text">关于提示工程（Prompt Engineering）</p><p class="url">https://www.promptingguide.ai/zh</p></div></a></div></div>
+
+<p>我们也可以简单地理解为在这次任务中，我们对于AI的要求。试想：我们在请人类作画时，尚且需要提出要求呢。</p>
+<p>我们可以打开baseline.ipynb查看样例所给的prompt。</p>
+<p>由于现在还没有按照教程打开魔搭社区notebook，且我们只是要先下载baseline.ipynb文件看一眼，所以我在本地新建一个临时文件夹进行了clone：</p>
+<pre><code>git lfs install
 git clone https://www.modelscope.cn/datasets/maochase/kolors.git
-</code></pre><div galleryflag itemscope itemtype=http://schema.org/ImageGallery class=gallery data-group=default><div class=fancybox><a class=fancybox pjax-fancybox itemscope itemtype=http://schema.org/ImageObject itemprop=url target=_blank rel=noopener href=https://i0.hdslb.com/bfs/article/5486996d5d913879284737b25e8d4755481184837.png data-fancybox=default data-caption=本地clone><img fancybox itemprop=contentUrl src=https://i0.hdslb.com/bfs/article/5486996d5d913879284737b25e8d4755481184837.png alt=本地clone></a><span class=image-caption>本地clone</span></div></div><p>打开文件夹，找到baseline.ipynb文件并用notepad–等类似软件打开，在稍后面一点的位置，找到了八组prompt。去掉格式化字符”\n”等后内容如下：</p><div class=timeline><p class="p h2">8组prompt内容</p><div class=timenode><div class=meta><p></p><p>图片1</p><p></p></div><div class=body><div class=tabs id=tab-图片1><ul class=nav-tabs><li class="tab active"><a class=#图片1-1>prompt</a></li><li class=tab><a class=#图片1-2>negative_prompt</a></li></ul><div class=tab-content><div class="tab-pane active" id=图片1-1><p>二次元，一个紫色短发小女孩，在家中沙发上坐着，双手托着腮，很无聊，全身，粉色连衣裙</p></div><div class=tab-pane id=图片1-2><p>丑陋、变形、嘈杂、模糊、低对比度</p></div></div></div></div></div><div class=timenode><div class=meta><p></p><p>图片2</p><p></p></div><div class=body><div class=tabs id=tab-图片2><ul class=nav-tabs><li class="tab active"><a class=#图片2-1>prompt</a></li><li class=tab><a class=#图片2-2>negative_prompt</a></li></ul><div class=tab-content><div class="tab-pane active" id=图片2-1><p>二次元，日系动漫，演唱会的观众席，人山人海，一个紫色短发小女孩穿着粉色吊带漏肩连衣裙坐在演唱会的观众席，舞台上衣着华丽的歌星们在唱歌</p></div><div class=tab-pane id=图片2-2><p>丑陋、变形、嘈杂、模糊、低对比度</p></div></div></div></div></div><div class=timenode><div class=meta><p></p><p>图片3</p><p></p></div><div class=body><div class=tabs id=tab-图片3><ul class=nav-tabs><li class="tab active"><a class=#图片3-1>prompt</a></li><li class=tab><a class=#图片3-2>negative_prompt</a></li></ul><div class=tab-content><div class="tab-pane active" id=图片3-1><p>二次元，一个紫色短发小女孩穿着粉色吊带漏肩连衣裙坐在演唱会的观众席，露出憧憬的神情</p></div><div class=tab-pane id=图片3-2><p>丑陋、变形、嘈杂、模糊、低对比度，色情擦边</p></div></div></div></div></div><div class=timenode><div class=meta><p></p><p>图片4</p><p></p></div><div class=body><div class=tabs id=tab-图片4><ul class=nav-tabs><li class="tab active"><a class=#图片4-1>prompt</a></li><li class=tab><a class=#图片4-2>negative_prompt</a></li></ul><div class=tab-content><div class="tab-pane active" id=图片4-1><p>二次元，一个紫色短发小女孩穿着粉色吊带漏肩连衣裙，对着流星许愿，闭着眼睛，十指交叉，侧面</p></div><div class=tab-pane id=图片4-2><p>丑陋、变形、嘈杂、模糊、低对比度，扭曲的手指，多余的手指</p></div></div></div></div></div><div class=timenode><div class=meta><p></p><p>图片5</p><p></p></div><div class=body><div class=tabs id=tab-图片5><ul class=nav-tabs><li class="tab active"><a class=#图片5-1>prompt</a></li><li class=tab><a class=#图片5-2>negative_prompt</a></li></ul><div class=tab-content><div class="tab-pane active" id=图片5-1><p>二次元，一个紫色中等长度头发小女孩穿着粉色吊带漏肩连衣裙，在练习室练习唱歌</p></div><div class=tab-pane id=图片5-2><p>丑陋、变形、嘈杂、模糊、低对比度</p></div></div></div></div></div><div class=timenode><div class=meta><p></p><p>图片6</p><p></p></div><div class=body><div class=tabs id=tab-图片6><ul class=nav-tabs><li class="tab active"><a class=#图片6-1>prompt</a></li><li class=tab><a class=#图片6-2>negative_prompt</a></li></ul><div class=tab-content><div class="tab-pane active" id=图片6-1><p>二次元，一个紫色长发小女孩穿着粉色吊带漏肩连衣裙，在练习室练习唱歌，手持话筒</p></div><div class=tab-pane id=图片6-2><p>丑陋、变形、嘈杂、模糊、低对比度</p></div></div></div></div></div><div class=timenode><div class=meta><p></p><p>图片7</p><p></p></div><div class=body><div class=tabs id=tab-图片7><ul class=nav-tabs><li class="tab active"><a class=#图片7-1>prompt</a></li><li class=tab><a class=#图片7-2>negative_prompt</a></li></ul><div class=tab-content><div class="tab-pane active" id=图片7-1><p>二次元，紫色长发少女，穿着黑色连衣裙，试衣间，心情忐忑</p></div><div class=tab-pane id=图片7-2><p>丑陋、变形、嘈杂、模糊、低对比度</p></div></div></div></div></div><div class=timenode><div class=meta><p></p><p>图片8</p><p></p></div><div class=body><div class=tabs id=tab-图片8><ul class=nav-tabs><li class="tab active"><a class=#图片8-1>prompt</a></li><li class=tab><a class=#图片8-2>negative_prompt</a></li></ul><div class=tab-content><div class="tab-pane active" id=图片8-1><p>二次元，紫色长发少女，穿着黑色礼服，连衣裙，在台上唱歌</p></div><div class=tab-pane id=图片8-2><p>丑陋、变形、嘈杂、模糊、低对比度</p></div></div></div></div></div></div><p>我们再将大赛所给样例拿出来进行对照：</p><details yellow open><summary>样例：偶像少女养成日记</summary><div class=content><div galleryflag itemscope itemtype=http://schema.org/ImageGallery class=gallery data-group=default><div class=fancybox><a class=fancybox pjax-fancybox itemscope itemtype=http://schema.org/ImageObject itemprop=url target=_blank rel=noopener href=https://i0.hdslb.com/bfs/article/6f52154dd9f7452b9fa2114907ad2857481184837.png@1e_1c.webp data-fancybox=default data-caption=大赛所给样例><img fancybox itemprop=contentUrl src=https://i0.hdslb.com/bfs/article/6f52154dd9f7452b9fa2114907ad2857481184837.png@1e_1c.webp alt=大赛所给样例></a><span class=image-caption>大赛所给样例</span></div></div></div></details><p>这样一来，你是否理解了prompt、negative_prompt的作用呢？其中，negative_prompt为排除项，即negative_prompt中写上“多余的手指”，则AI生成的图片中就不会有多余的手指。</p><p>我们在写自己的prompt时，可以借助于一些prompt工具，如我使用的<a target=_blank rel=noopener href="http://www.atoolbox.net/Tool.php?Id=1101"><em>AI绘画提示词生成器</em></a>，预览如下：</p><iframe src="http://www.atoolbox.net/Tool.php?Id=1101" width=760 height=450></iframe><h3 id=样例存在哪些问题？><a href=#样例存在哪些问题？ class=headerlink title=样例存在哪些问题？></a>样例存在哪些问题？</h3><p>大赛所给样例只是最基本的完成情况，我们可以挑一挑其中存在的问题，在我们自己作画时避免。</p><p>首先是故事讲述的问题，这是一个极其平淡的故事。</p><p>其次，整个画面风格有些奇怪。这应该也是由于prompt对风格要求较少导致的。</p><h3 id=注意到图片4中negative-prompt多次出现手指><a href=#注意到图片4中negative-prompt多次出现手指 class=headerlink title=注意到图片4中negative_prompt多次出现手指></a>注意到图片4中negative_prompt多次出现手指</h3><p>首先我们看到：图片4的prompt中有 <code>十指交叉</code> 的要求。而即使图片4negative_prompt中排除了扭曲的手指，多余的手指，AI绘制出来的手指也稍显奇怪。</p><p>为什么AI总是画不好人的手呢？这是一个非常经典的问题，了解这个问题可以让我们对AI绘画的原理理解更深。</p><p>其实原因很简单：</p><ol><li>人手动作极多。人的手看似结构简单，只有五根指头，仿佛画好五根指头就可以了。然而，对于AI来说，人手做出的每个动作都是完全不同的。举个例子：我们先虚握拳头，让手围成一个圈，这是第一个动作；然后紧握拳头，这是第二个动作。对于人类来说，我们知道这两个动作是类似的，可能只是幅度的不同。然而对于AI来说，给它两张这样的动作图片，它将感到十分困惑：为什么手有时候是这样的，有时候是那样的？而这只是一个浅显的例子，在这个例子中，我们尚且可以告诉AI：第一个动作叫虚握，第二个动作叫实握，从而让AI理解。但是人手的动作实在太多了，我们既不可能给每个有细微差别的动作都起名，也不大可能准备如此海量的训练数据喂给AI。</li><li>人手空间变化多。人的手十分灵巧，关节很多、自由度很大，而我们训练生成图片的AI，使用的自然也是图片，这就导致一个问题：在照片中，当人手做出某个动作时，就可能有部分手指看不到，这就导致AI不清楚人类到底应该有几根手指。另一个严重的问题是使AI分不清楚各个手指的粗细关系。比如，同样是竖两根手指，比个正常的耶（✌），AI发现这两根手指差不多长。接着我们竖起来食指和小拇指，小拇指比食指短很多，AI就要变得困惑了。</li></ol><div class="note guide clear"><p><strong>那么，如果我们一直只喂给AI手完全打开的、正面的图片，AI是不是就不会画错了呢？</strong></p><p>是的，但AI也就只能画出手完全打开的、正面的图片了。</p></div><ol start=3><li>人手的细节非常复杂，包括指甲、指纹、皮肤褶皱等，这些需要很高的算力才能画出。</li></ol><div class="note quote"><p>同样的问题有时也会出现在AI试图绘画更小的特征时，比如耳朵，看起来像没有复杂软骨结构的肉质漩涡；或者牙齿，不正确地放在嘴里；或者瞳孔，变成了小山羊的斑点。AI可以掌握视觉模式，但无法掌握潜在的生物逻辑。</p></div><p>暂时地，AI还有很多东西都画不好。</p><h2 id=文生图的历史><a href=#文生图的历史 class=headerlink title=文生图的历史></a>文生图的历史</h2><p>（点击展开介绍）</p><details yellow><summary>早期探索（20世纪60年代-20世纪90年代）</summary><div class=content><p>文生图的概念最早出现于计算机视觉和图像处理的早期研究中。</p><p>早期的图像生成技术主要依赖于规则和模板匹配，通过预定义的规则将文本转换为简单的图形。</p><p>然而，由于计算能力和算法的限制，这一阶段的技术能力非常有限，生成的图像质量较低，应用场景也非常有限。</p></div></details><details yellow><summary>基于统计模型的方法（2000年代）</summary><div class=content><p>进入2000年代，随着统计模型和机器学习技术的发展，文生图技术开始得到更多关注。</p><p>研究者们开始利用概率图模型和统计语言模型来生成图像。尽管这一阶段的技术在生成图像的多样性和质量上有了一定提升，但由于模型的复杂性和计算资源的限制，生成的图像仍然较为粗糙，不够逼真。</p></div></details><details yellow><summary>深度学习的崛起（2010年代）</summary><div class=content><p>2010年代是文生图技术发展的一个重要转折点。</p><p>随着深度学习，尤其是卷积神经网络（CNN）和生成对抗网络（GAN）的发展，文生图技术取得了突破性进展。2014年，Goodfellow等人提出的GAN模型通过生成器和判别器的对抗训练，极大地提升了图像生成的质量。随后，各类变种GAN模型被提出，如DCGAN、Pix2Pix等，使得文生图技术在生成逼真图像方面达到了前所未有的高度。</p></div></details><details yellow><summary>大规模预训练模型（2020年代）</summary><div class=content><p>进入2020年代，大规模预训练模型如OpenAI的CLIP、DALL-E以及Stable Diffusion等的出现，标志着文生图技术进入了一个新的时代。</p><p>CLIP通过大规模的文本和图像配对数据训练，能够理解和生成高度一致的文本和图像；DALL-E和Stable Diffusion进一步提升了生成图像的创意和细节表现能力，使得通过简单的文本描述生成高质量、复杂图像成为可能。</p><p>这些技术的应用范围从艺术创作、广告设计到辅助医疗诊断，展现了广泛的商业价值和社会影响力。</p></div></details><h2 id=Task1-流程回顾><a href=#Task1-流程回顾 class=headerlink title="Task1 流程回顾"></a>Task1 流程回顾</h2><p>该部分内容详见<a target=_blank rel=noopener href=https://linklearner.com/activity/14/10/24><em>Task1学习手册</em></a>，以下仅作简要回顾。</p><h3 id=开通阿里云PAI-DSW试用><a href=#开通阿里云PAI-DSW试用 class=headerlink title=开通阿里云PAI-DSW试用></a>开通阿里云PAI-DSW试用</h3><div class="tag link"><a class=link-card title=阿里云免费试用云产品 target=_blank rel=noopener href="https://free.aliyun.com/?productCode=learn"><div class=left><img src=https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/256/safari.png></div><div class=right><p class=text>阿里云免费试用云产品</p><p class=url>https://free.aliyun.com/?productCode=learn</p></div></a></div><div class="tag link"><a class=link-card title=魔搭社区授权 target=_blank rel=noopener href=https://www.modelscope.cn/my/mynotebook/authorization><div class=left><img src=https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/256/safari.png></div><div class=right><p class=text>魔搭社区授权</p><p class=url>https://www.modelscope.cn/my/mynotebook/authorization</p></div></a></div><h3 id=报名赛事><a href=#报名赛事 class=headerlink title=报名赛事></a>报名赛事</h3><div class="tag link"><a class=link-card title=可图Kolors-LoRA风格故事挑战赛 target=_blank rel=noopener href=https://tianchi.aliyun.com/competition/entrance/532254><div class=left><img src=https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/256/safari.png></div><div class=right><p class=text>可图Kolors-LoRA风格故事挑战赛</p><p class=url>https://tianchi.aliyun.com/competition/entrance/532254</p></div></a></div><h3 id=在魔搭社区创建实例><a href=#在魔搭社区创建实例 class=headerlink title=在魔搭社区创建实例></a>在魔搭社区创建实例</h3><div class="tag link"><a class=link-card title=魔搭社区-个人云账号授权实例 target=_blank rel=noopener href=https://www.modelscope.cn/my/mynotebook/authorization><div class=left><img src=https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/256/safari.png></div><div class=right><p class=text>魔搭社区-个人云账号授权实例</p><p class=url>https://www.modelscope.cn/my/mynotebook/authorization</p></div></a></div><div class="note todo"><p>如果 在魔搭无法授权 或 点击【打开】无法打开，可到阿里云控制台创建 &amp; 打开实例</p></div><div class="note todo"><p>如果之前试用的额度已经过期，可使用魔搭的免费Notebook实例</p></div><h3 id=跑代码！><a href=#跑代码！ class=headerlink title=跑代码！></a>跑代码！</h3><h4 id=下载baseline文件><a href=#下载baseline文件 class=headerlink title=下载baseline文件></a>下载baseline文件</h4><pre><code>git lfs install
+</code></pre>
+<div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://i0.hdslb.com/bfs/article/5486996d5d913879284737b25e8d4755481184837.png' data-fancybox='default' data-caption='本地clone'><img fancybox itemprop="contentUrl" src="https://i0.hdslb.com/bfs/article/5486996d5d913879284737b25e8d4755481184837.png" alt="本地clone"></a><span class='image-caption'>本地clone</span></div></div>
+
+<p>打开文件夹，找到baseline.ipynb文件并用notepad–等类似软件打开，在稍后面一点的位置，找到了八组prompt。去掉格式化字符”\n”等后内容如下：</p>
+<div class="timeline"><p class='p h2'>8组prompt内容</p>
+<div class="timenode"><div class="meta"><p><p>图片1</p>
+</p></div><div class="body"><div class="tabs" id="tab-图片1"><ul class="nav-tabs"><li class="tab active"><a class="#图片1-1">prompt</a></li><li class="tab"><a class="#图片1-2">negative_prompt</a></li></ul><div class="tab-content"><div class="tab-pane active" id="图片1-1"><p>二次元，一个紫色短发小女孩，在家中沙发上坐着，双手托着腮，很无聊，全身，粉色连衣裙</p></div><div class="tab-pane" id="图片1-2"><p>丑陋、变形、嘈杂、模糊、低对比度</p></div></div></div></div></div>
+
+<div class="timenode"><div class="meta"><p><p>图片2</p>
+</p></div><div class="body"><div class="tabs" id="tab-图片2"><ul class="nav-tabs"><li class="tab active"><a class="#图片2-1">prompt</a></li><li class="tab"><a class="#图片2-2">negative_prompt</a></li></ul><div class="tab-content"><div class="tab-pane active" id="图片2-1"><p>二次元，日系动漫，演唱会的观众席，人山人海，一个紫色短发小女孩穿着粉色吊带漏肩连衣裙坐在演唱会的观众席，舞台上衣着华丽的歌星们在唱歌</p></div><div class="tab-pane" id="图片2-2"><p>丑陋、变形、嘈杂、模糊、低对比度</p></div></div></div></div></div>
+
+<div class="timenode"><div class="meta"><p><p>图片3</p>
+</p></div><div class="body"><div class="tabs" id="tab-图片3"><ul class="nav-tabs"><li class="tab active"><a class="#图片3-1">prompt</a></li><li class="tab"><a class="#图片3-2">negative_prompt</a></li></ul><div class="tab-content"><div class="tab-pane active" id="图片3-1"><p>二次元，一个紫色短发小女孩穿着粉色吊带漏肩连衣裙坐在演唱会的观众席，露出憧憬的神情</p></div><div class="tab-pane" id="图片3-2"><p>丑陋、变形、嘈杂、模糊、低对比度，色情擦边</p></div></div></div></div></div>
+
+<div class="timenode"><div class="meta"><p><p>图片4</p>
+</p></div><div class="body"><div class="tabs" id="tab-图片4"><ul class="nav-tabs"><li class="tab active"><a class="#图片4-1">prompt</a></li><li class="tab"><a class="#图片4-2">negative_prompt</a></li></ul><div class="tab-content"><div class="tab-pane active" id="图片4-1"><p>二次元，一个紫色短发小女孩穿着粉色吊带漏肩连衣裙，对着流星许愿，闭着眼睛，十指交叉，侧面</p></div><div class="tab-pane" id="图片4-2"><p>丑陋、变形、嘈杂、模糊、低对比度，扭曲的手指，多余的手指</p></div></div></div></div></div>
+
+<div class="timenode"><div class="meta"><p><p>图片5</p>
+</p></div><div class="body"><div class="tabs" id="tab-图片5"><ul class="nav-tabs"><li class="tab active"><a class="#图片5-1">prompt</a></li><li class="tab"><a class="#图片5-2">negative_prompt</a></li></ul><div class="tab-content"><div class="tab-pane active" id="图片5-1"><p>二次元，一个紫色中等长度头发小女孩穿着粉色吊带漏肩连衣裙，在练习室练习唱歌</p></div><div class="tab-pane" id="图片5-2"><p>丑陋、变形、嘈杂、模糊、低对比度</p></div></div></div></div></div>
+
+<div class="timenode"><div class="meta"><p><p>图片6</p>
+</p></div><div class="body"><div class="tabs" id="tab-图片6"><ul class="nav-tabs"><li class="tab active"><a class="#图片6-1">prompt</a></li><li class="tab"><a class="#图片6-2">negative_prompt</a></li></ul><div class="tab-content"><div class="tab-pane active" id="图片6-1"><p>二次元，一个紫色长发小女孩穿着粉色吊带漏肩连衣裙，在练习室练习唱歌，手持话筒</p></div><div class="tab-pane" id="图片6-2"><p>丑陋、变形、嘈杂、模糊、低对比度</p></div></div></div></div></div>
+
+<div class="timenode"><div class="meta"><p><p>图片7</p>
+</p></div><div class="body"><div class="tabs" id="tab-图片7"><ul class="nav-tabs"><li class="tab active"><a class="#图片7-1">prompt</a></li><li class="tab"><a class="#图片7-2">negative_prompt</a></li></ul><div class="tab-content"><div class="tab-pane active" id="图片7-1"><p>二次元，紫色长发少女，穿着黑色连衣裙，试衣间，心情忐忑</p></div><div class="tab-pane" id="图片7-2"><p>丑陋、变形、嘈杂、模糊、低对比度</p></div></div></div></div></div>
+
+<div class="timenode"><div class="meta"><p><p>图片8</p>
+</p></div><div class="body"><div class="tabs" id="tab-图片8"><ul class="nav-tabs"><li class="tab active"><a class="#图片8-1">prompt</a></li><li class="tab"><a class="#图片8-2">negative_prompt</a></li></ul><div class="tab-content"><div class="tab-pane active" id="图片8-1"><p>二次元，紫色长发少女，穿着黑色礼服，连衣裙，在台上唱歌</p></div><div class="tab-pane" id="图片8-2"><p>丑陋、变形、嘈杂、模糊、低对比度</p></div></div></div></div></div>
+</div>
+
+<p>我们再将大赛所给样例拿出来进行对照：</p>
+<details yellow open><summary> 样例：偶像少女养成日记 </summary>
+              <div class='content'>
+              <div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://i0.hdslb.com/bfs/article/6f52154dd9f7452b9fa2114907ad2857481184837.png@1e_1c.webp' data-fancybox='default' data-caption='大赛所给样例'><img fancybox itemprop="contentUrl" src="https://i0.hdslb.com/bfs/article/6f52154dd9f7452b9fa2114907ad2857481184837.png@1e_1c.webp" alt="大赛所给样例"></a><span class='image-caption'>大赛所给样例</span></div></div>
+              </div>
+            </details>
+
+<p>这样一来，你是否理解了prompt、negative_prompt的作用呢？其中，negative_prompt为排除项，即negative_prompt中写上“多余的手指”，则AI生成的图片中就不会有多余的手指。</p>
+<p>我们在写自己的prompt时，可以借助于一些prompt工具，如我使用的<a target="_blank" rel="noopener" href="http://www.atoolbox.net/Tool.php?Id=1101"> <em>AI绘画提示词生成器</em> </a>，预览如下：</p>
+<iframe src="http://www.atoolbox.net/Tool.php?Id=1101" width="760" height="450"></iframe>
+
+<h3 id="样例存在哪些问题？"><a href="#样例存在哪些问题？" class="headerlink" title="样例存在哪些问题？"></a>样例存在哪些问题？</h3><p>大赛所给样例只是最基本的完成情况，我们可以挑一挑其中存在的问题，在我们自己作画时避免。</p>
+<p>首先是故事讲述的问题，这是一个极其平淡的故事。</p>
+<p>其次，整个画面风格有些奇怪。这应该也是由于prompt对风格要求较少导致的。</p>
+<h3 id="注意到图片4中negative-prompt多次出现手指"><a href="#注意到图片4中negative-prompt多次出现手指" class="headerlink" title="注意到图片4中negative_prompt多次出现手指"></a>注意到图片4中negative_prompt多次出现手指</h3><p>首先我们看到：图片4的prompt中有 <code>十指交叉</code> 的要求。而即使图片4negative_prompt中排除了扭曲的手指，多余的手指，AI绘制出来的手指也稍显奇怪。</p>
+<p>为什么AI总是画不好人的手呢？这是一个非常经典的问题，了解这个问题可以让我们对AI绘画的原理理解更深。</p>
+<p>其实原因很简单：</p>
+<ol>
+<li>人手动作极多。人的手看似结构简单，只有五根指头，仿佛画好五根指头就可以了。然而，对于AI来说，人手做出的每个动作都是完全不同的。举个例子：我们先虚握拳头，让手围成一个圈，这是第一个动作；然后紧握拳头，这是第二个动作。对于人类来说，我们知道这两个动作是类似的，可能只是幅度的不同。然而对于AI来说，给它两张这样的动作图片，它将感到十分困惑：为什么手有时候是这样的，有时候是那样的？而这只是一个浅显的例子，在这个例子中，我们尚且可以告诉AI：第一个动作叫虚握，第二个动作叫实握，从而让AI理解。但是人手的动作实在太多了，我们既不可能给每个有细微差别的动作都起名，也不大可能准备如此海量的训练数据喂给AI。</li>
+<li>人手空间变化多。人的手十分灵巧，关节很多、自由度很大，而我们训练生成图片的AI，使用的自然也是图片，这就导致一个问题：在照片中，当人手做出某个动作时，就可能有部分手指看不到，这就导致AI不清楚人类到底应该有几根手指。另一个严重的问题是使AI分不清楚各个手指的粗细关系。比如，同样是竖两根手指，比个正常的耶（✌），AI发现这两根手指差不多长。接着我们竖起来食指和小拇指，小拇指比食指短很多，AI就要变得困惑了。</li>
+</ol>
+<div class="note guide clear"><p><strong>那么，如果我们一直只喂给AI手完全打开的、正面的图片，AI是不是就不会画错了呢？</strong></p><p>是的，但AI也就只能画出手完全打开的、正面的图片了。</p></div>
+
+<ol start="3">
+<li>人手的细节非常复杂，包括指甲、指纹、皮肤褶皱等，这些需要很高的算力才能画出。</li>
+</ol>
+<div class="note quote"><p>同样的问题有时也会出现在AI试图绘画更小的特征时，比如耳朵，看起来像没有复杂软骨结构的肉质漩涡；或者牙齿，不正确地放在嘴里；或者瞳孔，变成了小山羊的斑点。AI可以掌握视觉模式，但无法掌握潜在的生物逻辑。</p></div>
+
+<p>暂时地，AI还有很多东西都画不好。</p>
+<h2 id="文生图的历史"><a href="#文生图的历史" class="headerlink" title="文生图的历史"></a>文生图的历史</h2><p>（点击展开介绍）</p>
+<details yellow><summary> 早期探索（20世纪60年代-20世纪90年代） </summary>
+              <div class='content'>
+              <p>文生图的概念最早出现于计算机视觉和图像处理的早期研究中。</p><p>早期的图像生成技术主要依赖于规则和模板匹配，通过预定义的规则将文本转换为简单的图形。</p><p>然而，由于计算能力和算法的限制，这一阶段的技术能力非常有限，生成的图像质量较低，应用场景也非常有限。</p>
+              </div>
+            </details>
+
+<details yellow><summary> 基于统计模型的方法（2000年代） </summary>
+              <div class='content'>
+              <p>进入2000年代，随着统计模型和机器学习技术的发展，文生图技术开始得到更多关注。</p><p>研究者们开始利用概率图模型和统计语言模型来生成图像。尽管这一阶段的技术在生成图像的多样性和质量上有了一定提升，但由于模型的复杂性和计算资源的限制，生成的图像仍然较为粗糙，不够逼真。</p>
+              </div>
+            </details>
+
+<details yellow><summary> 深度学习的崛起（2010年代） </summary>
+              <div class='content'>
+              <p>2010年代是文生图技术发展的一个重要转折点。</p><p>随着深度学习，尤其是卷积神经网络（CNN）和生成对抗网络（GAN）的发展，文生图技术取得了突破性进展。2014年，Goodfellow等人提出的GAN模型通过生成器和判别器的对抗训练，极大地提升了图像生成的质量。随后，各类变种GAN模型被提出，如DCGAN、Pix2Pix等，使得文生图技术在生成逼真图像方面达到了前所未有的高度。</p>
+              </div>
+            </details>
+
+<details yellow><summary> 大规模预训练模型（2020年代） </summary>
+              <div class='content'>
+              <p>进入2020年代，大规模预训练模型如OpenAI的CLIP、DALL-E以及Stable Diffusion等的出现，标志着文生图技术进入了一个新的时代。</p><p>CLIP通过大规模的文本和图像配对数据训练，能够理解和生成高度一致的文本和图像；DALL-E和Stable Diffusion进一步提升了生成图像的创意和细节表现能力，使得通过简单的文本描述生成高质量、复杂图像成为可能。</p><p>这些技术的应用范围从艺术创作、广告设计到辅助医疗诊断，展现了广泛的商业价值和社会影响力。</p>
+              </div>
+            </details>
+
+<h2 id="Task1-流程回顾"><a href="#Task1-流程回顾" class="headerlink" title="Task1 流程回顾"></a>Task1 流程回顾</h2><p>该部分内容详见<a target="_blank" rel="noopener" href="https://linklearner.com/activity/14/10/24"> <em>Task1学习手册</em> </a>，以下仅作简要回顾。</p>
+<h3 id="开通阿里云PAI-DSW试用"><a href="#开通阿里云PAI-DSW试用" class="headerlink" title="开通阿里云PAI-DSW试用"></a>开通阿里云PAI-DSW试用</h3><div class="tag link"><a class="link-card" title="阿里云免费试用云产品" target="_blank" rel="noopener" href="https://free.aliyun.com/?productCode=learn"><div class="left"><img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/256/safari.png"/></div><div class="right"><p class="text">阿里云免费试用云产品</p><p class="url">https://free.aliyun.com/?productCode=learn</p></div></a></div>
+
+
+<div class="tag link"><a class="link-card" title="魔搭社区授权" target="_blank" rel="noopener" href="https://www.modelscope.cn/my/mynotebook/authorization"><div class="left"><img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/256/safari.png"/></div><div class="right"><p class="text">魔搭社区授权</p><p class="url">https://www.modelscope.cn/my/mynotebook/authorization</p></div></a></div>
+
+<h3 id="报名赛事"><a href="#报名赛事" class="headerlink" title="报名赛事"></a>报名赛事</h3><div class="tag link"><a class="link-card" title="可图Kolors-LoRA风格故事挑战赛" target="_blank" rel="noopener" href="https://tianchi.aliyun.com/competition/entrance/532254"><div class="left"><img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/256/safari.png"/></div><div class="right"><p class="text">可图Kolors-LoRA风格故事挑战赛</p><p class="url">https://tianchi.aliyun.com/competition/entrance/532254</p></div></a></div>
+
+<h3 id="在魔搭社区创建实例"><a href="#在魔搭社区创建实例" class="headerlink" title="在魔搭社区创建实例"></a>在魔搭社区创建实例</h3><div class="tag link"><a class="link-card" title="魔搭社区-个人云账号授权实例" target="_blank" rel="noopener" href="https://www.modelscope.cn/my/mynotebook/authorization"><div class="left"><img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/256/safari.png"/></div><div class="right"><p class="text">魔搭社区-个人云账号授权实例</p><p class="url">https://www.modelscope.cn/my/mynotebook/authorization</p></div></a></div>
+
+<div class="note todo"><p>如果 在魔搭无法授权 或 点击【打开】无法打开，可到阿里云控制台创建 &amp; 打开实例</p></div>
+
+<div class="note todo"><p>如果之前试用的额度已经过期，可使用魔搭的免费Notebook实例</p></div>
+
+<h3 id="跑代码！"><a href="#跑代码！" class="headerlink" title="跑代码！"></a>跑代码！</h3><h4 id="下载baseline文件"><a href="#下载baseline文件" class="headerlink" title="下载baseline文件"></a>下载baseline文件</h4><pre><code>git lfs install
 git clone https://www.modelscope.cn/datasets/maochase/kolors.git
-</code></pre><div galleryflag itemscope itemtype=http://schema.org/ImageGallery class=gallery data-group=default><div class=fancybox><a class=fancybox pjax-fancybox itemscope itemtype=http://schema.org/ImageObject itemprop=url target=_blank rel=noopener href=https://i0.hdslb.com/bfs/article/9c48484367066f5ff14a3c94159bf8b8481184837.png data-fancybox=default data-caption=下载baseline文件><img fancybox itemprop=contentUrl src=https://i0.hdslb.com/bfs/article/9c48484367066f5ff14a3c94159bf8b8481184837.png alt=下载baseline文件></a><span class=image-caption>下载baseline文件</span></div></div><h4 id=安装环境，然后重启kernel><a href=#安装环境，然后重启kernel class=headerlink title=安装环境，然后重启kernel></a>安装环境，然后重启kernel</h4><p>打开baseline文件，运行第一块儿代码。</p><div galleryflag itemscope itemtype=http://schema.org/ImageGallery class=gallery data-group=default><div class=fancybox><a class=fancybox pjax-fancybox itemscope itemtype=http://schema.org/ImageObject itemprop=url target=_blank rel=noopener href=https://i0.hdslb.com/bfs/article/59ce803eb8d0c20f7f2887dd5d1cdb50481184837.png data-fancybox=default data-caption=运行第一块儿代码，安装环境><img fancybox itemprop=contentUrl src=https://i0.hdslb.com/bfs/article/59ce803eb8d0c20f7f2887dd5d1cdb50481184837.png alt=运行第一块儿代码，安装环境></a><span class=image-caption>运行第一块儿代码，安装环境</span></div></div><div class="note guide clear"><p><strong>安装 Data-Juicer 和 DiffSynth-Studio</strong></p><p>Data-Juicer：数据处理和转换工具，旨在简化数据的提取、转换和加载过程</p><p>DiffSynth-Studio：高效微调训练大模型工具</p></div><div galleryflag itemscope itemtype=http://schema.org/ImageGallery class=gallery data-group=default><div class=fancybox><a class=fancybox pjax-fancybox itemscope itemtype=http://schema.org/ImageObject itemprop=url target=_blank rel=noopener href=https://i0.hdslb.com/bfs/article/781c864eba9ecfbbee3170011251e413481184837.png data-fancybox=default data-caption=完成><img fancybox itemprop=contentUrl src=https://i0.hdslb.com/bfs/article/781c864eba9ecfbbee3170011251e413481184837.png alt=完成></a><span class=image-caption>完成</span></div></div><p>然后重启kernel。最上方点击这个按钮。</p><div galleryflag itemscope itemtype=http://schema.org/ImageGallery class=gallery data-group=default><div class=fancybox><a class=fancybox pjax-fancybox itemscope itemtype=http://schema.org/ImageObject itemprop=url target=_blank rel=noopener href=https://i0.hdslb.com/bfs/article/22a83c31fd8ea500e77d972fee7eabdd481184837.png data-fancybox=default data-caption=这个按钮><img fancybox itemprop=contentUrl src=https://i0.hdslb.com/bfs/article/22a83c31fd8ea500e77d972fee7eabdd481184837.png alt=这个按钮></a><span class=image-caption>这个按钮</span></div></div><p>认准鼠标悬停时显示 <code>restart</code> 的那个。</p><h4 id=调整prompt><a href=#调整prompt class=headerlink title=调整prompt></a>调整prompt</h4><p>但不要运行这部分代码块儿。</p><h4 id=依次顺序运行剩余的代码块><a href=#依次顺序运行剩余的代码块 class=headerlink title=依次顺序运行剩余的代码块></a>依次顺序运行剩余的代码块</h4><p>需要一个一个去点代码框左上角执行按钮。</p><div class="note success"><p>为节省时间，以上两步可同时进行，即在运行前面的代码块儿同时修改prompt。</p></div><div class="note danger"><p>但要注意代码块儿执行需要按顺序执行。</p></div><p>代码块按照功能主要分成这几类：</p><ol><li>使用Data-Juicer处理数据，整理训练数据文件</li><li>使用DiffSynth-Studio在基础模型上，使用前面整理好的数据文件进行训练微调</li><li>加载训练微调后的模型</li><li>使用微调后的模型，生成用户指定的prompt提示词的图片</li></ol><h3 id=上传结果><a href=#上传结果 class=headerlink title=上传结果></a>上传结果</h3><div class="tag link"><a class=link-card title=魔搭社区-模型库 target=_blank rel=noopener href=https://www.modelscope.cn/models/create><div class=left><img src=https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/256/safari.png></div><div class=right><p class=text>魔搭社区-模型库</p><p class=url>https://www.modelscope.cn/models/create</p></div></a></div><h3 id=关闭实例><a href=#关闭实例 class=headerlink title=关闭实例></a>关闭实例</h3><h3 id=代码一个小提示><a href=#代码一个小提示 class=headerlink title=代码一个小提示></a>代码一个小提示</h3><pre><code>images = [np.array(Image.open(&quot;&#123;i&#125;.jpg&quot;)) for i in range(1, 9)],
+</code></pre>
+<div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://i0.hdslb.com/bfs/article/9c48484367066f5ff14a3c94159bf8b8481184837.png' data-fancybox='default' data-caption='下载baseline文件'><img fancybox itemprop="contentUrl" src="https://i0.hdslb.com/bfs/article/9c48484367066f5ff14a3c94159bf8b8481184837.png" alt="下载baseline文件"></a><span class='image-caption'>下载baseline文件</span></div></div>
+
+<h4 id="安装环境，然后重启kernel"><a href="#安装环境，然后重启kernel" class="headerlink" title="安装环境，然后重启kernel"></a>安装环境，然后重启kernel</h4><p>打开baseline文件，运行第一块儿代码。</p>
+<div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://i0.hdslb.com/bfs/article/59ce803eb8d0c20f7f2887dd5d1cdb50481184837.png' data-fancybox='default' data-caption='运行第一块儿代码，安装环境'><img fancybox itemprop="contentUrl" src="https://i0.hdslb.com/bfs/article/59ce803eb8d0c20f7f2887dd5d1cdb50481184837.png" alt="运行第一块儿代码，安装环境"></a><span class='image-caption'>运行第一块儿代码，安装环境</span></div></div>
+
+<div class="note guide clear"><p><strong>安装 Data-Juicer 和 DiffSynth-Studio</strong></p><p>Data-Juicer：数据处理和转换工具，旨在简化数据的提取、转换和加载过程</p><p>DiffSynth-Studio：高效微调训练大模型工具</p></div>
+
+<div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://i0.hdslb.com/bfs/article/781c864eba9ecfbbee3170011251e413481184837.png' data-fancybox='default' data-caption='完成'><img fancybox itemprop="contentUrl" src="https://i0.hdslb.com/bfs/article/781c864eba9ecfbbee3170011251e413481184837.png" alt="完成"></a><span class='image-caption'>完成</span></div></div>
+
+<p>然后重启kernel。最上方点击这个按钮。</p>
+<div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://i0.hdslb.com/bfs/article/22a83c31fd8ea500e77d972fee7eabdd481184837.png' data-fancybox='default' data-caption='这个按钮'><img fancybox itemprop="contentUrl" src="https://i0.hdslb.com/bfs/article/22a83c31fd8ea500e77d972fee7eabdd481184837.png" alt="这个按钮"></a><span class='image-caption'>这个按钮</span></div></div>
+
+<p>认准鼠标悬停时显示 <code>restart</code> 的那个。</p>
+<h4 id="调整prompt"><a href="#调整prompt" class="headerlink" title="调整prompt"></a>调整prompt</h4><p>但不要运行这部分代码块儿。</p>
+<h4 id="依次顺序运行剩余的代码块"><a href="#依次顺序运行剩余的代码块" class="headerlink" title="依次顺序运行剩余的代码块"></a>依次顺序运行剩余的代码块</h4><p>需要一个一个去点代码框左上角执行按钮。</p>
+<div class="note success"><p>为节省时间，以上两步可同时进行，即在运行前面的代码块儿同时修改prompt。</p></div>
+
+<div class="note danger"><p>但要注意代码块儿执行需要按顺序执行。</p></div>
+
+<p>代码块按照功能主要分成这几类：</p>
+<ol>
+<li>使用Data-Juicer处理数据，整理训练数据文件</li>
+<li>使用DiffSynth-Studio在基础模型上，使用前面整理好的数据文件进行训练微调</li>
+<li>加载训练微调后的模型</li>
+<li>使用微调后的模型，生成用户指定的prompt提示词的图片</li>
+</ol>
+<h3 id="上传结果"><a href="#上传结果" class="headerlink" title="上传结果"></a>上传结果</h3><div class="tag link"><a class="link-card" title="魔搭社区-模型库" target="_blank" rel="noopener" href="https://www.modelscope.cn/models/create"><div class="left"><img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/256/safari.png"/></div><div class="right"><p class="text">魔搭社区-模型库</p><p class="url">https://www.modelscope.cn/models/create</p></div></a></div>
+
+<h3 id="关闭实例"><a href="#关闭实例" class="headerlink" title="关闭实例"></a>关闭实例</h3><h3 id="代码一个小提示"><a href="#代码一个小提示" class="headerlink" title="代码一个小提示"></a>代码一个小提示</h3><pre><code>images = [np.array(Image.open(&quot;&#123;i&#125;.jpg&quot;)) for i in range(1, 9)],
 image = np.concatenate([
     np.concatenate(images[0:2], axis=1),
     np.concatenate(images[2:4], axis=1),
@@ -2507,8 +3380,15 @@ image = np.concatenate([
 ], axis=0),
 image = Image.fromarray(image).resize((1024, 2048)),
 image
-</code></pre><p>这是最后一段代码，运行完这段代码后，将在主界面显示我们八张图片组成的故事。这是因为在python中，输入变量的名称回车，会返回变量的值。</p><div galleryflag itemscope itemtype=http://schema.org/ImageGallery class=gallery data-group=default><div class=fancybox><a class=fancybox pjax-fancybox itemscope itemtype=http://schema.org/ImageObject itemprop=url target=_blank rel=noopener href=https://i0.hdslb.com/bfs/article/dd34d387f219718f423f44ed4a421ebe481184837.png data-fancybox=default data-caption=输入变量名称i，返回i的值><img fancybox itemprop=contentUrl src=https://i0.hdslb.com/bfs/article/dd34d387f219718f423f44ed4a421ebe481184837.png alt=输入变量名称i，返回i的值></a><span class=image-caption>输入变量名称i，返回i的值</span></div></div><p>而这段代码中，变量名称就是image。我们还可以在下面补上一句：</p><pre><code>image.save(&quot;all.jpg&quot;)
-</code></pre><p>这样它还会将我们的八图组成的图片保存为”all.jpg”。</p><h2 id=部分代码解读><a href=#部分代码解读 class=headerlink title=部分代码解读></a>部分代码解读</h2><pre><code>!pip install simple-aesthetics-predictor
+</code></pre>
+<p>这是最后一段代码，运行完这段代码后，将在主界面显示我们八张图片组成的故事。这是因为在python中，输入变量的名称回车，会返回变量的值。</p>
+<div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://i0.hdslb.com/bfs/article/dd34d387f219718f423f44ed4a421ebe481184837.png' data-fancybox='default' data-caption='输入变量名称i，返回i的值'><img fancybox itemprop="contentUrl" src="https://i0.hdslb.com/bfs/article/dd34d387f219718f423f44ed4a421ebe481184837.png" alt="输入变量名称i，返回i的值"></a><span class='image-caption'>输入变量名称i，返回i的值</span></div></div>
+
+<p>而这段代码中，变量名称就是image。我们还可以在下面补上一句：</p>
+<pre><code>image.save(&quot;all.jpg&quot;)
+</code></pre>
+<p>这样它还会将我们的八图组成的图片保存为”all.jpg”。</p>
+<h2 id="部分代码解读"><a href="#部分代码解读" class="headerlink" title="部分代码解读"></a>部分代码解读</h2><pre><code>!pip install simple-aesthetics-predictor
 
 !pip install -v -e data-juicer
 
@@ -2516,7 +3396,9 @@ image
 !pip install peft lightning pandas torchvision
 
 !pip install -e DiffSynth-Studio
-</code></pre><p>我们上文已经提到，这部分是安装环境。</p><pre><code>#下载数据集
+</code></pre>
+<p>我们上文已经提到，这部分是安装环境。</p>
+<pre><code>#下载数据集
 from modelscope.msdatasets import MsDataset
 
 ds = MsDataset.load(
@@ -2540,7 +3422,9 @@ with open(&quot;./data/data-juicer/input/metadata.jsonl&quot;, &quot;w&quot;) as
         f.write(json.dumps(metadata))
         f.write(&quot;\n&quot;)
         
-</code></pre><p>下载数据集。</p><pre><code>data_juicer_config = &quot;&quot;&quot;
+</code></pre>
+<p>下载数据集。</p>
+<pre><code>data_juicer_config = &quot;&quot;&quot;
 # global parameters
 project_name: &#39;data-process&#39;
 dataset_path: &#39;./data/data-juicer/input/metadata.jsonl&#39;  # path to your dataset directory or file
@@ -2592,7 +3476,9 @@ data_frame[&quot;file_name&quot;] = file_names
 data_frame[&quot;text&quot;] = texts
 data_frame.to_csv(&quot;./data/lora_dataset_processed/train/metadata.csv&quot;, index=False, encoding=&quot;utf-8-sig&quot;)
 data_frame
-</code></pre><p>处理数据集，保存数据处理结果。</p><pre><code># 下载模型
+</code></pre>
+<p>处理数据集，保存数据处理结果。</p>
+<pre><code># 下载模型
 from diffsynth import download_models
 download_models([&quot;Kolors&quot;, &quot;SDXL-vae-fp16-fix&quot;])
 
@@ -2615,7 +3501,11 @@ python DiffSynth-Studio/examples/train/kolors/train_kolors_lora.py \
 &quot;&quot;&quot;.strip()
 
 os.system(cmd)
-</code></pre><p>lora微调。</p><div class="note quote"><p>Stable Diffusion中的Lora（LoRA）模型是一种轻量级的微调方法，它代表了“Low-Rank Adaptation”，即低秩适应。Lora不是指单一的具体模型，而是指一类通过特定微调技术应用于基础模型的扩展应用。在Stable Diffusion这一文本到图像合成模型的框架下，Lora被用来对预训练好的大模型进行针对性优化，以实现对特定主题、风格或任务的精细化控制。</p></div><pre><code>from diffsynth import ModelManager, SDXLImagePipeline
+</code></pre>
+<p>lora微调。</p>
+<div class="note quote"><p>Stable Diffusion中的Lora（LoRA）模型是一种轻量级的微调方法，它代表了“Low-Rank Adaptation”，即低秩适应。Lora不是指单一的具体模型，而是指一类通过特定微调技术应用于基础模型的扩展应用。在Stable Diffusion这一文本到图像合成模型的框架下，Lora被用来对预训练好的大模型进行针对性优化，以实现对特定主题、风格或任务的精细化控制。</p></div>
+
+<pre><code>from diffsynth import ModelManager, SDXLImagePipeline
 from peft import LoraConfig, inject_adapter_in_model
 import torch
 
@@ -2649,7 +3539,9 @@ pipe.unet = load_lora(
     lora_alpha=2.0, # lora_alpha can control the weight of LoRA.
     lora_path=&quot;models/lightning_logs/version_0/checkpoints/epoch=0-step=500.ckpt&quot;
 )
-</code></pre><p>加载微调好的模型。</p><pre><code>torch.manual_seed(0)
+</code></pre>
+<p>加载微调好的模型。</p>
+<pre><code>torch.manual_seed(0)
 image = pipe(
     prompt=&quot;二次元，一个紫色短发小女孩，在家中沙发上坐着，双手托着腮，很无聊，全身，粉色连衣裙&quot;,
     negative_prompt=&quot;丑陋、变形、嘈杂、模糊、低对比度&quot;,
@@ -2657,7 +3549,318 @@ image = pipe(
     num_inference_steps=50, height=1024, width=1024,
 )
 image.save(&quot;1.jpg&quot;)
-</code></pre><p>图片生成（改变种子值重复8次）。</p><p>最后是我们上一节中提到的将8张图片合为一张。</p><h2 id=思考><a href=#思考 class=headerlink title=思考></a>思考</h2><div class="note guide clear"><p>这个图片的风格能不能修改，能不能微调出来一个其他风格类型的图片？</p></div><details green><summary>点击展开</summary><div class=content><p>尽管比赛要求要不同的风格、我们也在注意不同风格的尝试，但经过不断的调整和观察对比大家的结果，我认为如果不对代码部分进行其它调整的话，这个图片的风格是不会改变的，即一直倾向于二次元风格。我认为这可能与训练数据有关。</p><p>而在上文代码解读中， <code>下载数据集</code> 部分里也写明了我们训练的数据只有“二次元”。</p></div></details><h2 id=结果展示><a href=#结果展示 class=headerlink title=结果展示></a>结果展示</h2><div class="checkbox red checked"><input type=checkbox checked><p>自己写了prompt</p></div><div class="checkbox times green checked"><input type=checkbox checked><p>组成故事</p></div><div class="checkbox times yellow checked"><input type=checkbox checked><p>无明显bug</p></div><div class="checkbox blue checked"><input type=checkbox checked><p>效果满意</p></div><p>我的第一张图片是测试上文中提到的prompt生产工具，按照自己喜好选了几个prompt生成的。接下来7张图都是调整prompt试图生成一张《孤独摇滚》中的波奇。没有进行连贯故事的尝试，<psw>因为我还没想好故事。</psw></p><div galleryflag itemscope itemtype=http://schema.org/ImageGallery class=gallery data-group=default><div class=fancybox><a class=fancybox pjax-fancybox itemscope itemtype=http://schema.org/ImageObject itemprop=url target=_blank rel=noopener href=https://i0.hdslb.com/bfs/article/2ec0ca49650f204a4525b23b315afee6481184837.jpg data-fancybox=default data-caption=all.jpg><img fancybox itemprop=contentUrl src=https://i0.hdslb.com/bfs/article/2ec0ca49650f204a4525b23b315afee6481184837.jpg alt=all.jpg></a><span class=image-caption>all.jpg</span></div></div><p>画风崩坏还是挺严重的。</p><p>从效果上看，第6张与波奇最为接近，但同时第6张也是作画bug最大的一张：手臂不协调、手指数量不正确、吉他那儿有不明意义的大幅色块儿。</p><p>关于发卡：从一开始我就没指望AI能正确理解波奇的发卡长什么样子，但是画成这样还是让我很惊喜了。整体的氛围也很像《孤独摇滚》。</p></div><div class=footer><div class=references><section class=header><i class="fa-solid fa-quote-left fa-fw" aria-hidden=true></i> <span>参考资料</span></section><section class=body><ul><li><a href=https://linklearner.com/activity/14/10/24 rel="external nofollow noopener noreferrer" target=_blank>学习手册</a></li></ul></section></div></div><div class=article-meta id=bottom><div class=new-meta-box><div class="new-meta-item meta-tags"><a class=tag href="/tags/Datawhale-AI%E5%A4%8F%E4%BB%A4%E8%90%A5/" rel=nofollow><i class="fa-solid fa-hashtag fa-fw" aria-hidden=true></i><p>Datawhale_AI夏令营</p></a></div><div class="new-meta-item meta-tags"><a class=tag href="/tags/%E7%AC%94%E8%AE%B0/" rel=nofollow><i class="fa-solid fa-hashtag fa-fw" aria-hidden=true></i><p>笔记</p></a></div><span hidden itemprop=keywords>Datawhale_AI夏令营 笔记</span><div class="new-meta-item date" itemprop="dateCreated datePublished" datetime=2024-08-09T09:18:31+08:00><a class=notlink><i class="fa-solid fa-calendar-alt fa-fw" aria-hidden=true></i><p>发布于：2024年8月9日</p></a></div><div class="new-meta-item date" itemprop=dateModified datetime=2024-08-25T18:21:38+08:00><a class=notlink><i class="fa-solid fa-edit fa-fw" aria-hidden=true></i><p>更新于：2024年8月25日</p></a></div></div></div><div class=prev-next><a class=prev href="/2024/08/14/DataWhaleX%E9%AD%94%E6%90%AD-AI%E5%A4%8F%E4%BB%A4%E8%90%A5-%E5%9B%9B%E6%9C%9FAIGC%E6%96%B9%E5%90%91-task02/"><p class=title><i class="fa-solid fa-chevron-left" aria-hidden=true></i>DataWhaleX魔搭_AI夏令营_四期AIGC方向_task02</p><p class=content>DataWhaleX魔搭_AI夏令营_四期AIGC方向_task02 学习笔记 接上文。 task01 学习笔记local/2024/08/09/DataWhale-AI夏令营-四期AIGC...</p></a> <a class=next href="/2024/08/07/hexo%E7%BD%91%E7%AB%99%E8%AE%BF%E9%97%AE%E9%80%9F%E5%BA%A6%E4%BC%98%E5%8C%96/"><p class=title>hexo网站访问速度优化<i class="fa-solid fa-chevron-right" aria-hidden=true></i></p><p class=content>哈哈，真是越来越慢了呢……（😊 本文关于hexo-offline-popup、gulp4。效果……有确实是有的…… 这类教程文章真的很多，我不多介绍，可以参考下面的文章（精挑细选！） he...</p></a></div></article><article class="post white-box shadow floatable" id=comments><span hidden><meta itemprop=discussionUrl content=/2024/08/09/DataWhale-AI%E5%A4%8F%E4%BB%A4%E8%90%A5-%E5%9B%9B%E6%9C%9FAIGC%E6%96%B9%E5%90%91-task01/index.html#comments></span><p ct><i class="fa-solid fa-comments"></i> 评论</p><p cst>评论区不是无人区喵</p><div id=layoutHelper-comments></div></article></div><aside id=l_side itemscope itemtype=http://schema.org/WPSideBar><section class="widget blogger desktop mobile pjax"><div class=content><a class="avatar flat-box rectangle" href="/about/"><img no-lazy src=/class_2/图片/头像.jpg></a><div class=text><h2>沉默哒！新年！</h2><p><span id=jinrishici-sentence>是默元的博客</span></p><script src=https://sdk.jinrishici.com/v2/browser/jinrishici.js charset=utf-8></script></div><div class=social-wrapper><a href=https://space.bilibili.com/481184837 class="social fab fa-bilibili flat-btn" target=_blank rel="external nofollow noopener noreferrer"></a> <a href=mailto:a259759666@163.com class="social fa-solid fa-envelope flat-btn" target=_blank rel="external nofollow noopener noreferrer"></a> <a href=https://github.com/ChangAkira class="social fab fa-github flat-btn" target=_blank rel="external nofollow noopener noreferrer"></a></div></div></section><div class="widget-sticky pjax"><section class="widget toc-wrapper desktop mobile" id=toc-div><header><i class="fa-solid fa-list fa-fw" aria-hidden=true></i><span class=name>本文目录</span></header><div class=content><ol class=toc><li class="toc-item toc-level-2"><a class=toc-link href=#AI%E7%94%9F%E5%9B%BE><span class=toc-text>AI生图</span></a></li><li class="toc-item toc-level-2"><a class=toc-link href=#%E6%AF%94%E8%B5%9B%E4%BB%8B%E7%BB%8D><span class=toc-text>比赛介绍</span></a></li><li class="toc-item toc-level-2"><a class=toc-link href=#%E8%B5%9B%E9%A2%98%E5%86%85%E5%AE%B9><span class=toc-text>赛题内容</span></a></li><li class="toc-item toc-level-2"><a class=toc-link href=#%E5%AF%B9%E6%A0%B7%E4%BE%8B%E7%9A%84%E6%83%B3%E6%B3%95%E4%B8%8E%E8%A7%A3%E8%AF%B4><span class=toc-text>对样例的想法与解说</span></a><ol class=toc-child><li class="toc-item toc-level-3"><a class=toc-link href=#%E7%94%B1%E5%85%AB%E5%9B%BE%E6%95%85%E4%BA%8B%E8%A1%A8%E7%8E%B0%E5%BD%A2%E5%BC%8F%EF%BC%8C%E8%81%94%E6%83%B3%E5%88%B0%E6%97%A9%E6%9C%9F%E5%9B%9B%E6%A0%BC%E6%BC%AB%E7%94%BB><span class=toc-text>由八图故事表现形式，联想到早期四格漫画</span></a></li><li class="toc-item toc-level-3"><a class=toc-link href=#%E6%97%A9%E6%9C%9F%E5%9B%9B%E6%A0%BC%E6%BC%AB%E7%94%BB%E5%BD%A2%E5%BC%8F%E7%9A%84%E5%80%9F%E9%89%B4%E6%84%8F%E4%B9%89><span class=toc-text>早期四格漫画形式的借鉴意义</span></a></li><li class="toc-item toc-level-3"><a class=toc-link href=#%E6%A0%B7%E4%BE%8B%E6%98%AF%E5%A6%82%E4%BD%95%E7%94%9F%E6%88%90%E7%9A%84%EF%BC%9F><span class=toc-text>样例是如何生成的？</span></a></li><li class="toc-item toc-level-3"><a class=toc-link href=#%E6%A0%B7%E4%BE%8B%E5%AD%98%E5%9C%A8%E5%93%AA%E4%BA%9B%E9%97%AE%E9%A2%98%EF%BC%9F><span class=toc-text>样例存在哪些问题？</span></a></li><li class="toc-item toc-level-3"><a class=toc-link href=#%E6%B3%A8%E6%84%8F%E5%88%B0%E5%9B%BE%E7%89%874%E4%B8%ADnegative-prompt%E5%A4%9A%E6%AC%A1%E5%87%BA%E7%8E%B0%E6%89%8B%E6%8C%87><span class=toc-text>注意到图片4中negative_prompt多次出现手指</span></a></li></ol></li><li class="toc-item toc-level-2"><a class=toc-link href=#%E6%96%87%E7%94%9F%E5%9B%BE%E7%9A%84%E5%8E%86%E5%8F%B2><span class=toc-text>文生图的历史</span></a></li><li class="toc-item toc-level-2"><a class=toc-link href=#Task1-%E6%B5%81%E7%A8%8B%E5%9B%9E%E9%A1%BE><span class=toc-text>Task1 流程回顾</span></a><ol class=toc-child><li class="toc-item toc-level-3"><a class=toc-link href=#%E5%BC%80%E9%80%9A%E9%98%BF%E9%87%8C%E4%BA%91PAI-DSW%E8%AF%95%E7%94%A8><span class=toc-text>开通阿里云PAI-DSW试用</span></a></li><li class="toc-item toc-level-3"><a class=toc-link href=#%E6%8A%A5%E5%90%8D%E8%B5%9B%E4%BA%8B><span class=toc-text>报名赛事</span></a></li><li class="toc-item toc-level-3"><a class=toc-link href=#%E5%9C%A8%E9%AD%94%E6%90%AD%E7%A4%BE%E5%8C%BA%E5%88%9B%E5%BB%BA%E5%AE%9E%E4%BE%8B><span class=toc-text>在魔搭社区创建实例</span></a></li><li class="toc-item toc-level-3"><a class=toc-link href=#%E8%B7%91%E4%BB%A3%E7%A0%81%EF%BC%81><span class=toc-text>跑代码！</span></a><ol class=toc-child><li class="toc-item toc-level-4"><a class=toc-link href=#%E4%B8%8B%E8%BD%BDbaseline%E6%96%87%E4%BB%B6><span class=toc-text>下载baseline文件</span></a></li><li class="toc-item toc-level-4"><a class=toc-link href=#%E5%AE%89%E8%A3%85%E7%8E%AF%E5%A2%83%EF%BC%8C%E7%84%B6%E5%90%8E%E9%87%8D%E5%90%AFkernel><span class=toc-text>安装环境，然后重启kernel</span></a></li><li class="toc-item toc-level-4"><a class=toc-link href=#%E8%B0%83%E6%95%B4prompt><span class=toc-text>调整prompt</span></a></li><li class="toc-item toc-level-4"><a class=toc-link href=#%E4%BE%9D%E6%AC%A1%E9%A1%BA%E5%BA%8F%E8%BF%90%E8%A1%8C%E5%89%A9%E4%BD%99%E7%9A%84%E4%BB%A3%E7%A0%81%E5%9D%97><span class=toc-text>依次顺序运行剩余的代码块</span></a></li></ol></li><li class="toc-item toc-level-3"><a class=toc-link href=#%E4%B8%8A%E4%BC%A0%E7%BB%93%E6%9E%9C><span class=toc-text>上传结果</span></a></li><li class="toc-item toc-level-3"><a class=toc-link href=#%E5%85%B3%E9%97%AD%E5%AE%9E%E4%BE%8B><span class=toc-text>关闭实例</span></a></li><li class="toc-item toc-level-3"><a class=toc-link href=#%E4%BB%A3%E7%A0%81%E4%B8%80%E4%B8%AA%E5%B0%8F%E6%8F%90%E7%A4%BA><span class=toc-text>代码一个小提示</span></a></li></ol></li><li class="toc-item toc-level-2"><a class=toc-link href=#%E9%83%A8%E5%88%86%E4%BB%A3%E7%A0%81%E8%A7%A3%E8%AF%BB><span class=toc-text>部分代码解读</span></a></li><li class="toc-item toc-level-2"><a class=toc-link href=#%E6%80%9D%E8%80%83><span class=toc-text>思考</span></a></li><li class="toc-item toc-level-2"><a class=toc-link href=#%E7%BB%93%E6%9E%9C%E5%B1%95%E7%A4%BA><span class=toc-text>结果展示</span></a></li></ol></div></section></div><div class=pjax></div><div class=pjax></div><div class=pjax></div><div class=pjax></div><div class=pjax></div><div class=pjax></div><div class=pjax></div></aside><pjax><script>
+</code></pre>
+<p>图片生成（改变种子值重复8次）。</p>
+<p>最后是我们上一节中提到的将8张图片合为一张。</p>
+<h2 id="思考"><a href="#思考" class="headerlink" title="思考"></a>思考</h2><div class="note guide clear"><p>这个图片的风格能不能修改，能不能微调出来一个其他风格类型的图片？</p></div>
+
+<details green><summary> 点击展开 </summary>
+              <div class='content'>
+              <p>尽管比赛要求要不同的风格、我们也在注意不同风格的尝试，但经过不断的调整和观察对比大家的结果，我认为如果不对代码部分进行其它调整的话，这个图片的风格是不会改变的，即一直倾向于二次元风格。我认为这可能与训练数据有关。</p><p>而在上文代码解读中， <code>下载数据集</code> 部分里也写明了我们训练的数据只有“二次元”。</p>
+              </div>
+            </details>
+
+<h2 id="结果展示"><a href="#结果展示" class="headerlink" title="结果展示"></a>结果展示</h2><div class='checkbox red checked'><input type="checkbox" checked="checked"/>
+            <p>自己写了prompt</p>
+            </div>
+
+<div class='checkbox times green checked'><input type="checkbox" checked="checked"/>
+            <p>组成故事</p>
+            </div>
+
+<div class='checkbox times yellow checked'><input type="checkbox" checked="checked"/>
+            <p>无明显bug</p>
+            </div>
+
+<div class='checkbox blue checked'><input type="checkbox" checked="checked"/>
+            <p>效果满意</p>
+            </div>
+
+<p>我的第一张图片是测试上文中提到的prompt生产工具，按照自己喜好选了几个prompt生成的。接下来7张图都是调整prompt试图生成一张《孤独摇滚》中的波奇。没有进行连贯故事的尝试，<psw>因为我还没想好故事。</psw></p>
+<div galleryFlag itemscope itemtype="http://schema.org/ImageGallery" class="gallery " data-group='default'><div class='fancybox'><a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://i0.hdslb.com/bfs/article/2ec0ca49650f204a4525b23b315afee6481184837.jpg' data-fancybox='default' data-caption='all.jpg'><img fancybox itemprop="contentUrl" src="https://i0.hdslb.com/bfs/article/2ec0ca49650f204a4525b23b315afee6481184837.jpg" alt="all.jpg"></a><span class='image-caption'>all.jpg</span></div></div>
+
+<p>画风崩坏还是挺严重的。</p>
+<p>从效果上看，第6张与波奇最为接近，但同时第6张也是作画bug最大的一张：手臂不协调、手指数量不正确、吉他那儿有不明意义的大幅色块儿。</p>
+<p>关于发卡：从一开始我就没指望AI能正确理解波奇的发卡长什么样子，但是画成这样还是让我很惊喜了。整体的氛围也很像《孤独摇滚》。</p>
+
+  </div>
+  
+  
+    
+    <div class='footer'>
+       <!-- 参考资料、相关资料等 -->
+      
+        <div class='references'>
+          <section class='header'>
+            
+              <i class="fa-solid fa-quote-left fa-fw" aria-hidden="true"></i>
+            
+            <span>参考资料</span>
+          </section>
+          <section class='body'>
+            <ul>
+              
+                <li>
+                  <a href="https://linklearner.com/activity/14/10/24" rel="external nofollow noopener noreferrer" target="_blank">
+                  学习手册
+                  </a>
+                </li>
+              
+            </ul>
+          </section>
+        </div>
+      
+       <!-- 相关文章 -->
+      
+      <!-- 版权声明组件 -->
+      
+      <!-- 打赏组件 -->
+      
+    </div>
+  
+  
+    
+
+
+  <div class='article-meta' id="bottom">
+    <div class='new-meta-box'>
+      
+        
+          
+  
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Datawhale-AI%E5%A4%8F%E4%BB%A4%E8%90%A5/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>Datawhale_AI夏令营</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E7%AC%94%E8%AE%B0/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>笔记</p></a></div>
+  <span hidden itemprop="keywords">Datawhale_AI夏令营 笔记</span>
+
+
+        
+      
+        
+          <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2024-08-09T09:18:31+08:00">
+  <a class='notlink'>
+    <i class="fa-solid fa-calendar-alt fa-fw" aria-hidden="true"></i>
+    <p>发布于：2024年8月9日</p>
+  </a>
+</div>
+
+        
+      
+        
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2024-08-25T18:21:38+08:00">
+  <a class='notlink'>
+    <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
+    <p>更新于：2024年8月25日</p>
+  </a>
+</div>
+
+        
+      
+    </div>
+    <!-- Custom Files bottomMeta begin -->
+    
+    <!-- Custom Files bottomMeta end -->
+  </div>
+
+
+  
+  
+
+  
+    <div class="prev-next">
+      
+        <a class='prev' href='/2024/08/14/DataWhaleX%E9%AD%94%E6%90%AD-AI%E5%A4%8F%E4%BB%A4%E8%90%A5-%E5%9B%9B%E6%9C%9FAIGC%E6%96%B9%E5%90%91-task02/'>
+          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>DataWhaleX魔搭_AI夏令营_四期AIGC方向_task02</p>
+          <p class='content'>DataWhaleX魔搭_AI夏令营_四期AIGC方向_task02 学习笔记
+
+
+接上文。
+task01 学习笔记local/2024/08/09/DataWhale-AI夏令营-四期AIGC...</p>
+        </a>
+      
+      
+        <a class='next' href='/2024/08/07/hexo%E7%BD%91%E7%AB%99%E8%AE%BF%E9%97%AE%E9%80%9F%E5%BA%A6%E4%BC%98%E5%8C%96/'>
+          <p class='title'>hexo网站访问速度优化<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>哈哈，真是越来越慢了呢……（😊
+本文关于hexo-offline-popup、gulp4。效果……有确实是有的……
+
+
+这类教程文章真的很多，我不多介绍，可以参考下面的文章（精挑细选！）
+he...</p>
+        </a>
+      
+    </div>
+  
+  <!-- Custom Files postEnd begin-->
+  
+  <!-- Custom Files postEnd end-->
+</article>
+
+
+  
+
+
+  <article class="post white-box shadow floatable" id="comments">
+    <span hidden>
+      <meta itemprop="discussionUrl" content="/2024/08/09/DataWhale-AI%E5%A4%8F%E4%BB%A4%E8%90%A5-%E5%9B%9B%E6%9C%9FAIGC%E6%96%B9%E5%90%91-task01/index.html#comments">
+    </span>
+    <p ct><i class='fa-solid fa-comments'></i> 评论</p>
+    
+      <p cst>评论区不是无人区喵</p>
+    
+
+    <div id="layoutHelper-comments"></div>
+
+  </article>
+
+
+
+
+
+
+</div>
+<aside id='l_side' itemscope itemtype="http://schema.org/WPSideBar">
+  
+
+  
+    
+    
+      
+    
+  
+
+  
+    
+    
+      
+<section class="widget blogger desktop mobile pjax">
+  <div class='content'>
+    
+      
+        <a class='avatar flat-box rectangle' href='/about/'>
+          <img no-lazy src='/class_2/图片/头像.jpg'/>
+        </a>
+      
+    
+    
+      <div class='text'>
+        
+          <h2>沉默哒！新年！</h2>
+        
+        
+        
+          <p><span id="jinrishici-sentence">是默元的博客</span></p>
+          <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
+        
+      </div>
+    
+    
+      <div class="social-wrapper">
+        
+          
+            <a href="https://space.bilibili.com/481184837"
+              class="social fab fa-bilibili flat-btn"
+              target="_blank"
+              rel="external nofollow noopener noreferrer">
+              
+            </a>
+          
+        
+          
+            <a href="mailto:a259759666@163.com"
+              class="social fa-solid fa-envelope flat-btn"
+              target="_blank"
+              rel="external nofollow noopener noreferrer">
+              
+            </a>
+          
+        
+          
+            <a href="https://github.com/ChangAkira"
+              class="social fab fa-github flat-btn"
+              target="_blank"
+              rel="external nofollow noopener noreferrer">
+              
+            </a>
+          
+        
+      </div>
+    
+  </div>
+</section>
+
+    
+  
+
+  
+
+
+<div class="widget-sticky pjax">
+
+  
+  
+
+
+  <section class="widget toc-wrapper desktop mobile " id="toc-div" >
+    
+  <header>
+    
+      <i class="fa-solid fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
+    
+  </header>
+
+
+    <div class='content'>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#AI%E7%94%9F%E5%9B%BE"><span class="toc-text">AI生图</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%AF%94%E8%B5%9B%E4%BB%8B%E7%BB%8D"><span class="toc-text">比赛介绍</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%B5%9B%E9%A2%98%E5%86%85%E5%AE%B9"><span class="toc-text">赛题内容</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AF%B9%E6%A0%B7%E4%BE%8B%E7%9A%84%E6%83%B3%E6%B3%95%E4%B8%8E%E8%A7%A3%E8%AF%B4"><span class="toc-text">对样例的想法与解说</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%94%B1%E5%85%AB%E5%9B%BE%E6%95%85%E4%BA%8B%E8%A1%A8%E7%8E%B0%E5%BD%A2%E5%BC%8F%EF%BC%8C%E8%81%94%E6%83%B3%E5%88%B0%E6%97%A9%E6%9C%9F%E5%9B%9B%E6%A0%BC%E6%BC%AB%E7%94%BB"><span class="toc-text">由八图故事表现形式，联想到早期四格漫画</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%97%A9%E6%9C%9F%E5%9B%9B%E6%A0%BC%E6%BC%AB%E7%94%BB%E5%BD%A2%E5%BC%8F%E7%9A%84%E5%80%9F%E9%89%B4%E6%84%8F%E4%B9%89"><span class="toc-text">早期四格漫画形式的借鉴意义</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A0%B7%E4%BE%8B%E6%98%AF%E5%A6%82%E4%BD%95%E7%94%9F%E6%88%90%E7%9A%84%EF%BC%9F"><span class="toc-text">样例是如何生成的？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A0%B7%E4%BE%8B%E5%AD%98%E5%9C%A8%E5%93%AA%E4%BA%9B%E9%97%AE%E9%A2%98%EF%BC%9F"><span class="toc-text">样例存在哪些问题？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B3%A8%E6%84%8F%E5%88%B0%E5%9B%BE%E7%89%874%E4%B8%ADnegative-prompt%E5%A4%9A%E6%AC%A1%E5%87%BA%E7%8E%B0%E6%89%8B%E6%8C%87"><span class="toc-text">注意到图片4中negative_prompt多次出现手指</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%96%87%E7%94%9F%E5%9B%BE%E7%9A%84%E5%8E%86%E5%8F%B2"><span class="toc-text">文生图的历史</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Task1-%E6%B5%81%E7%A8%8B%E5%9B%9E%E9%A1%BE"><span class="toc-text">Task1 流程回顾</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BC%80%E9%80%9A%E9%98%BF%E9%87%8C%E4%BA%91PAI-DSW%E8%AF%95%E7%94%A8"><span class="toc-text">开通阿里云PAI-DSW试用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8A%A5%E5%90%8D%E8%B5%9B%E4%BA%8B"><span class="toc-text">报名赛事</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9C%A8%E9%AD%94%E6%90%AD%E7%A4%BE%E5%8C%BA%E5%88%9B%E5%BB%BA%E5%AE%9E%E4%BE%8B"><span class="toc-text">在魔搭社区创建实例</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%B7%91%E4%BB%A3%E7%A0%81%EF%BC%81"><span class="toc-text">跑代码！</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%8B%E8%BD%BDbaseline%E6%96%87%E4%BB%B6"><span class="toc-text">下载baseline文件</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AE%89%E8%A3%85%E7%8E%AF%E5%A2%83%EF%BC%8C%E7%84%B6%E5%90%8E%E9%87%8D%E5%90%AFkernel"><span class="toc-text">安装环境，然后重启kernel</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%B0%83%E6%95%B4prompt"><span class="toc-text">调整prompt</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BE%9D%E6%AC%A1%E9%A1%BA%E5%BA%8F%E8%BF%90%E8%A1%8C%E5%89%A9%E4%BD%99%E7%9A%84%E4%BB%A3%E7%A0%81%E5%9D%97"><span class="toc-text">依次顺序运行剩余的代码块</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%8A%E4%BC%A0%E7%BB%93%E6%9E%9C"><span class="toc-text">上传结果</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%B3%E9%97%AD%E5%AE%9E%E4%BE%8B"><span class="toc-text">关闭实例</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BB%A3%E7%A0%81%E4%B8%80%E4%B8%AA%E5%B0%8F%E6%8F%90%E7%A4%BA"><span class="toc-text">代码一个小提示</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%83%A8%E5%88%86%E4%BB%A3%E7%A0%81%E8%A7%A3%E8%AF%BB"><span class="toc-text">部分代码解读</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%80%9D%E8%80%83"><span class="toc-text">思考</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%93%E6%9E%9C%E5%B1%95%E7%A4%BA"><span class="toc-text">结果展示</span></a></li></ol>
+    </div>
+  </section>
+
+  
+
+</div>
+
+
+<!-- 没有 pjax 占位会报错 万恶的 pjax -->
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
+
+  <!-- Custom Files side begin -->
+  
+  <!-- Custom Files side end -->
+</aside>
+
+
+
+
+          <!--此文件用来存放一些不方便取值的变量-->
+<!--思路大概是将值藏到重加载的区域内-->
+
+<pjax>
+<script>
   window.pdata={}
   pdata.ispage=true;
   pdata.commentPath="";
@@ -2665,8 +3868,71 @@ image.save(&quot;1.jpg&quot;)
   pdata.commentConfig={};
   //  see: /layout/_partial/scripts/_ctrl/coverCtrl.ejs
   
-</script></pjax></div><footer class="footer clearfix" itemscope itemtype=http://schema.org/WPFooter><br><br><div class=aplayer-container><meting-js theme=#1BCDFC autoplay=false volume=0.7 loop=all order=list fixed=true list-max-height=320px server=netease type=playlist id=12504687882 list-folded=true></meting-js></div><div><p>博客内容遵循 <a target=_blank rel=noopener href=https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh>署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</a></p></div><div><p>世界那么大，感谢遇到你！</p></div><div><p><a target=_blank rel=noopener href="https://beian.miit.gov.cn/" title="陕ICP备 2024054863号-1">陕ICP备 2024054863号-1</a></p></div></footer><script async src=//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js>
-</script><a id=s-top class="fa-solid fa-arrow-up fa-fw" href="/" onclick="return false;" title=top></a></div></div><div><script>
+</script>
+</pjax>
+        </div>
+        
+  
+  <footer class="footer clearfix"  itemscope itemtype="http://schema.org/WPFooter">
+    <br><br>
+    
+      
+        <div class="aplayer-container">
+          
+
+  
+    <meting-js
+      theme='#1BCDFC'
+      autoplay='false'
+      volume='0.7'
+      loop='all'
+      order='list'
+      fixed='true'
+      list-max-height='320px'
+      server='netease'
+      type='playlist'
+      id='12504687882'
+      list-folded='true'>
+    </meting-js>
+  
+
+        </div>
+      
+    
+      
+        <div><p>博客内容遵循 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</a></p>
+</div>
+      
+    
+      
+        
+          <div><p>世界那么大，感谢遇到你！</p>
+</div>
+        
+      
+    
+      
+        
+          <div><p><a target="_blank" rel="noopener" href="https://beian.miit.gov.cn/" title="陕ICP备 2024054863号-1">陕ICP备 2024054863号-1</a></p>
+</div>
+        
+      
+    
+    <!-- Custom Files footer begin-->
+    
+    
+
+    <!-- Custom Files footer end-->
+  </footer>
+
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+        <a id="s-top" class="fa-solid fa-arrow-up fa-fw" href="/" onclick="return false;" title="top"></a>
+      </div>
+    </div>
+    <div>
+      <script>
   /******************** volantis.dom ********************************/
   // 页面选择器 将dom对象缓存起来 see: /source/js/app.js etc.
   volantis.dom.bodyAnchor = volantis.dom.$(document.getElementById("safearea")); // 页面主体
@@ -2677,7 +3943,9 @@ image.save(&quot;1.jpg&quot;)
   volantis.dom.header = volantis.dom.$(document.getElementById('l_header')); // 移动端导航栏
   volantis.dom.search = volantis.dom.$(document.querySelector('#l_header .m_search')); // 搜索框 桌面端 移动端 1个
   volantis.dom.mPhoneList = volantis.dom.$(document.querySelectorAll('#l_header .m-phone .list-v')); //  手机端 子菜单 多个
-</script><script>
+</script>
+
+<script>
   
   volantis.css("https://unpkg.com/volantis-static@0.0.1654736714924/libs/@fortawesome/fontawesome-free/css/all.min.css");
   
@@ -2687,7 +3955,217 @@ image.save(&quot;1.jpg&quot;)
   
   volantis.css("https://unpkg.com/volantis-static@0.0.1654736714924/libs/node-waves/dist/waves.min.css");
   
-</script><script src=/js/app.js></script><div id=rightmenu-wrapper><ul class="list-v rightmenu" id=rightmenu-content><li class="navigation menuNavigation-Content"><a class="nav icon-only fix-cursor-default" onclick=history.back()><i class="fa-solid fa-arrow-left fa-fw"></i></a> <a class="nav icon-only fix-cursor-default" onclick=history.forward()><i class="fa-solid fa-arrow-right fa-fw"></i></a> <a class="nav icon-only fix-cursor-default" onclick=window.location.reload()><i class="fa-solid fa-redo fa-fw"></i></a> <a class="nav icon-only fix-cursor-default" onclick=VolantisApp.scrolltoElement(volantis.dom.bodyAnchor)><i class="fa-solid fa-arrow-up fa-fw"></i></a></li><hr class=menuLoad-Content><li class=menuLoad-Content><span class="vlts-menu fix-cursor-default event" id=copyPaste data-event=copyPaste data-group=inputBox><i class="fa-solid fa-paste fa-fw"></i> 粘贴文本</span></li><li class=menuLoad-Content><span class="vlts-menu fix-cursor-default event" id=copyText data-event=copyText data-group=seletctText><i class="fa-solid fa-copy fa-fw"></i> 复制文本</span></li><li class=menuLoad-Content><span class="vlts-menu fix-cursor-default event" id=searchWord data-event=OpenSearch(__text__) data-group=seletctText><i class="fa-solid fa-search fa-fw"></i> 站内搜索</span></li><li class=menuLoad-Content><span class="vlts-menu fix-cursor-default event" id=bingSearch data-event="window.open(`https://cn.bing.com/search?q=${__text__}`)" data-group=seletctText><i class="fa-solid fa-search fa-fw"></i> 必应搜索</span></li><li class=menuLoad-Content><span class="vlts-menu fix-cursor-default event" id=googleSearch data-event="window.open(`https://www.google.com/search?q=${__text__}`)" data-group=seletctText><i class="fa-solid fa-search fa-fw"></i> 谷歌搜索</span></li><li class=menuLoad-Content><span class="vlts-menu fix-cursor-default event" id=baiduSearch data-event="window.open(`https://www.baidu.com/s?wd=${__text__}`)" data-group=seletctText><i class="fa-solid fa-search fa-fw"></i> 百度搜索</span></li><li class=menuLoad-Content><span class="vlts-menu fix-cursor-default event" id=CSDNSearch data-event="window.open(`https://so.csdn.net/so/search?q=${__text__}`)" data-group=seletctText><i class="fa-solid fa-search fa-fw"></i> CSDN搜索</span></li><li class=menuLoad-Content><span class="vlts-menu fix-cursor-default event" id=openTab data-event=window.open(__link__) data-group=elementCheck><i class="fa-solid fa-external-link-square-alt fa-fw"></i> 新标签页打开</span></li><li class=menuLoad-Content><span class="vlts-menu fix-cursor-default event" id=copyLink data-event=copyLink data-group=elementCheck><i class="fa-solid fa-link fa-fw"></i> 复制链接地址</span></li><hr class=menuLoad-Content><li class=menuLoad-Content><a class="vlts-menu fix-cursor-default" id=source_docs target=_blank rel=noopener href="https://github.com/volantis-x/volantis-docs/" data-group=link><i class="fa-solid fa-code-branch fa-fw"></i> 本站源码</a></li><hr class=menuLoad-Content><li class=menuLoad-Content><span class="vlts-menu fix-cursor-default event" id=darkMode data-event=volantis.dark.toggle() data-group=darkMode><i class="fa-solid fa-moon fa-fw"></i> 暗黑模式</span></li><li class=menuLoad-Content><span class="vlts-menu fix-cursor-default event" id=printMode data-event=printMode data-group=articlePage><i class="fa-solid fa-print fa-fw"></i> 打印页面</span></li><li class=menuLoad-Content><span class="vlts-menu fix-cursor-default event" id=readMode data-event=readMode data-group=articlePage><i class="fa-solid fa-book-open fa-fw"></i> 阅读模式</span></li><div id=menuMusic><li class="music name menuOption-Content"><p class="nav music-title fix-cursor-default"></p></li><li class="music ctrl"><a class="nav icon-only backward fix-cursor-default" href="/" onclick="return false;" title=backward><i class="fa-solid fa-step-backward fa-fw"></i></a> <a class="nav icon-only toggle fix-cursor-default" href="/" onclick="return false;" title=toggle><i class="fa-solid fa-play fa-fw"></i></a> <a class="nav icon-only forward fix-cursor-default" href="/" onclick="return false;" title=forward><i class="fa-solid fa-step-forward fa-fw"></i></a></li><li class="music volume"><div class="nav volume"><div class=aplayer-volume-bar-wrap><div class="aplayer-volume-bar fix-cursor-pointer"><div class=aplayer-volume></div><i class="left fa-solid fa-volume-off fa-fw"></i> <i class="right fa-solid fa-volume-up fa-fw"></i></div></div></div></li></div></ul></div><script src=/js/plugins/rightMenus.js></script><script>
+</script>
+
+<!-- required -->
+
+
+<!-- internal -->
+
+<script src="/js/app.js"></script>
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="rightmenu-wrapper">
+  <ul class="list-v rightmenu" id="rightmenu-content">
+    
+  <li class='navigation menuNavigation-Content'>
+
+
+    <a class="nav icon-only fix-cursor-default" onclick="history.back()"><i class="fa-solid fa-arrow-left fa-fw"></i></a>
+
+
+
+    <a class="nav icon-only fix-cursor-default" onclick="history.forward()"><i class="fa-solid fa-arrow-right fa-fw"></i></a>
+
+
+
+    <a class="nav icon-only fix-cursor-default" onclick="window.location.reload()"><i class="fa-solid fa-redo fa-fw"></i></a>
+
+
+
+    <a class="nav icon-only fix-cursor-default" onclick="VolantisApp.scrolltoElement(volantis.dom.bodyAnchor)"><i class="fa-solid fa-arrow-up fa-fw"></i></a>
+
+
+  </li>
+
+
+    <hr class="menuLoad-Content" >
+
+
+
+  <li class="menuLoad-Content">
+    <span class="vlts-menu fix-cursor-default event" id="copyPaste" data-event="copyPaste" data-group="inputBox">
+      <i class="fa-solid fa-paste fa-fw"></i>
+      粘贴文本
+    </span>
+  </li>
+
+
+
+  <li class="menuLoad-Content">
+    <span class="vlts-menu fix-cursor-default event" id="copyText" data-event="copyText" data-group="seletctText">
+      <i class="fa-solid fa-copy fa-fw"></i>
+      复制文本
+    </span>
+  </li>
+
+
+
+  <li class="menuLoad-Content">
+    <span class="vlts-menu fix-cursor-default event" id="searchWord" data-event="OpenSearch(__text__)" data-group="seletctText">
+      <i class="fa-solid fa-search fa-fw"></i>
+      站内搜索
+    </span>
+  </li>
+
+
+
+  <li class="menuLoad-Content">
+    <span class="vlts-menu fix-cursor-default event" id="bingSearch" data-event="window.open(`https://cn.bing.com/search?q=${__text__}`)" data-group="seletctText">
+      <i class="fa-solid fa-search fa-fw"></i>
+      必应搜索
+    </span>
+  </li>
+
+
+
+  <li class="menuLoad-Content">
+    <span class="vlts-menu fix-cursor-default event" id="googleSearch" data-event="window.open(`https://www.google.com/search?q=${__text__}`)" data-group="seletctText">
+      <i class="fa-solid fa-search fa-fw"></i>
+      谷歌搜索
+    </span>
+  </li>
+
+
+
+  <li class="menuLoad-Content">
+    <span class="vlts-menu fix-cursor-default event" id="baiduSearch" data-event="window.open(`https://www.baidu.com/s?wd=${__text__}`)" data-group="seletctText">
+      <i class="fa-solid fa-search fa-fw"></i>
+      百度搜索
+    </span>
+  </li>
+
+
+
+  <li class="menuLoad-Content">
+    <span class="vlts-menu fix-cursor-default event" id="CSDNSearch" data-event="window.open(`https://so.csdn.net/so/search?q=${__text__}`)" data-group="seletctText">
+      <i class="fa-solid fa-search fa-fw"></i>
+      CSDN搜索
+    </span>
+  </li>
+
+
+
+  <li class="menuLoad-Content">
+    <span class="vlts-menu fix-cursor-default event" id="openTab" data-event="window.open(__link__)" data-group="elementCheck">
+      <i class="fa-solid fa-external-link-square-alt fa-fw"></i>
+      新标签页打开
+    </span>
+  </li>
+
+
+
+  <li class="menuLoad-Content">
+    <span class="vlts-menu fix-cursor-default event" id="copyLink" data-event="copyLink" data-group="elementCheck">
+      <i class="fa-solid fa-link fa-fw"></i>
+      复制链接地址
+    </span>
+  </li>
+
+
+
+    <hr class="menuLoad-Content" >
+
+
+
+  <li class="menuLoad-Content">
+    <a class="vlts-menu fix-cursor-default" id="source_docs" target="_blank" rel="noopener" href="https://github.com/volantis-x/volantis-docs/" data-group="link">
+      <i class="fa-solid fa-code-branch fa-fw"></i>
+      本站源码
+    </a>
+  </li>
+
+
+
+    <hr class="menuLoad-Content" >
+
+
+
+  <li class="menuLoad-Content">
+    <span class="vlts-menu fix-cursor-default event" id="darkMode" data-event="volantis.dark.toggle()" data-group="darkMode">
+      <i class="fa-solid fa-moon fa-fw"></i>
+      暗黑模式
+    </span>
+  </li>
+
+
+
+  <li class="menuLoad-Content">
+    <span class="vlts-menu fix-cursor-default event" id="printMode" data-event="printMode" data-group="articlePage">
+      <i class="fa-solid fa-print fa-fw"></i>
+      打印页面
+    </span>
+  </li>
+
+
+
+  <li class="menuLoad-Content">
+    <span class="vlts-menu fix-cursor-default event" id="readMode" data-event="readMode" data-group="articlePage">
+      <i class="fa-solid fa-book-open fa-fw"></i>
+      阅读模式
+    </span>
+  </li>
+
+
+<div id="menuMusic">
+  <li class='music name menuOption-Content'>
+    <p class='nav music-title fix-cursor-default'></p>
+  </li>
+  <li class='music ctrl'>
+    <a class='nav icon-only backward fix-cursor-default' href="/" onclick="return false;" title="backward">
+      <i class='fa-solid fa-step-backward fa-fw'></i>
+    </a>
+    <a class='nav icon-only toggle fix-cursor-default' href="/" onclick="return false;" title="toggle">
+      <i class='fa-solid fa-play fa-fw'></i>
+    </a>
+    <a class='nav icon-only forward fix-cursor-default' href="/" onclick="return false;" title="forward">
+      <i class='fa-solid fa-step-forward fa-fw'></i>
+    </a>
+  </li>
+  <li class='music volume'>
+    <div class='nav volume'>
+      <div class="aplayer-volume-bar-wrap">
+        <div class="aplayer-volume-bar fix-cursor-pointer">
+          <div class="aplayer-volume"></div>
+          <i class='left fa-solid fa-volume-off fa-fw'></i>
+          <i class='right fa-solid fa-volume-up fa-fw'></i>
+        </div>
+      </div>
+    </div>
+  </li>
+</div>
+
+  </ul>
+</div>
+<script src="/js/plugins/rightMenus.js"></script>
+<script>
   const RightMenusFunction = {};
   
 
@@ -2780,7 +4258,13 @@ image.save(&quot;1.jpg&quot;)
 
 
 
-</script><script>
+</script>
+
+
+
+<!-- rightmenu要在darkmode之前（ToggleButton） darkmode要在comments之前（volantis.dark.push）-->
+
+  <script>
 const rootElement = document.documentElement;
 const darkModeStorageKey = "color-scheme";
 const rootElementDarkModeAttributeName = "color-scheme";
@@ -2893,7 +4377,12 @@ const darkModelListeners={
 }
 window.matchMedia('(prefers-color-scheme: dark)').addListener(darkModelListeners.dark)
 window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListeners.light)
-</script><script>
+</script>
+
+
+
+
+<script>
   function loadIssuesJS() {
     
       const sites_api = document.getElementById('sites-api');
@@ -2914,14 +4403,30 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     loadIssuesJS();
   })
 
-</script><script>
+</script>
+
+
+
+
+
+
+  
+
+<script>
   window.FPConfig = {
 	delay: 0,
 	ignoreKeywords: ["#"],
 	maxRPS: 6,
 	hoverDelay: 0
   };
-</script><script defer src=https://unpkg.com/volantis-static@0.0.1654736714924/libs/flying-pages/flying-pages.min.js></script><script type=text/javascript>
+</script>
+<script defer src="https://unpkg.com/volantis-static@0.0.1654736714924/libs/flying-pages/flying-pages.min.js"></script>
+
+
+
+
+
+   <script type="text/javascript">
   function pjax_scrollrebeal() {
     ScrollReveal().reveal("#l_main .reveal", {
       distance: "32px",
@@ -2945,7 +4450,12 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     "pjax_scrollrebeal",
     (setRequestAnimationFrame = false)
   );
-</script><script>
+</script>
+
+
+
+
+  <script>
   volantis.css("https://unpkg.com/volantis-static@0.0.1654736714924/libs/aplayer/dist/APlayer.min.css");
   (async () => {
     // APlayer 需要在  MetingJS 之前加载
@@ -3018,7 +4528,12 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     SetAPlayerPlugin();
   });
   volantis.pjax.push(SetAPlayerPlugin);
-</script><script>
+</script>
+
+
+
+
+      <script>
   volantis.layoutHelper("comments",`<div id="giscus_container"></div>`)
 
   volantis.giscus = {};
@@ -3064,7 +4579,19 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
   pjax_giscus();
   volantis.pjax.push(pjax_giscus);
   volantis.dark.push(dark_giscus);
-</script><script defer src=https://gcore.jsdelivr.net/gh/volantis-x/cdn-busuanzi@2.3/js/busuanzi.pure.mini.js data-pjax></script><script>
+</script>
+
+    
+
+
+
+
+  <script defer src="https://gcore.jsdelivr.net/gh/volantis-x/cdn-busuanzi@2.3/js/busuanzi.pure.mini.js" data-pjax></script>
+
+
+<!-- optional -->
+
+  <script>
   const SearchServiceDataPathRoot = ("/" || "/").endsWith("/") ?
     "/" || "/" :
     "//" || "/";
@@ -3113,7 +4640,14 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
   document.querySelectorAll(".input.u-search-input").forEach((e) => {
     e.addEventListener("focus", loadSearchService, false);
   });
-</script><script src=https://unpkg.com/volantis-static@0.0.1654736714924/libs/node-waves/dist/waves.min.js></script><script type=text/javascript>
+</script>
+
+
+
+  
+<script src="https://unpkg.com/volantis-static@0.0.1654736714924/libs/node-waves/dist/waves.min.js"></script>
+
+<script type="text/javascript">
 document.addEventListener("DOMContentLoaded", function () {
   Waves.attach('.flat-btn', ['waves-button']);
   Waves.attach('.float-btn', ['waves-button', 'waves-float']);
@@ -3123,7 +4657,17 @@ document.addEventListener("DOMContentLoaded", function () {
   Waves.attach('.waves-image');
   Waves.init();
 });
-</script><script src=https://unpkg.com/volantis-static@0.0.1654736714924/libs/comment_typing/comment_typing.js></script><script>
+</script>
+
+
+
+  
+<script src="https://unpkg.com/volantis-static@0.0.1654736714924/libs/comment_typing/comment_typing.js"></script>
+
+
+
+
+  <script>
 
   volantis.css("https://unpkg.com/highlight.js@10.6.0/styles/vs2015.css");
 
@@ -3142,7 +4686,22 @@ document.addEventListener("DOMContentLoaded", function () {
   }
   volantis.requestAnimationFrame(p_highlightjs_copyCode)
 
-</script><script>
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <script>
   function load_swiper() {
     if (!document.querySelectorAll(".swiper-container")[0]) return;
     volantis.css("https://unpkg.com/volantis-static@0.0.1654736714924/libs/swiper/swiper-bundle.min.css");
@@ -3178,7 +4737,15 @@ document.addEventListener("DOMContentLoaded", function () {
       pjax_swiper();
     }
   });
-</script><pjax></pjax><script>
+</script>
+
+
+<!-- pjax 标签必须存在于所有页面 否则 pjax error -->
+<pjax>
+
+</pjax>
+
+<script>
   function listennSidebarTOC() {
     const navItems = document.querySelectorAll(".toc li");
     if (!navItems.length) return;
@@ -3287,7 +4854,11 @@ document.addEventListener("DOMContentLoaded", function () {
   document.addEventListener("pjax:success", ()=>{
     volantis.requestAnimationFrame(listennSidebarTOC)
   });
-</script><script>
+</script>
+
+
+
+<script>
   document.onreadystatechange = function () {
     if (document.readyState == 'complete') {
       // 页面加载完毕 样式加载失败，或是当前网速慢，或是开启了省流模式
@@ -3300,4 +4871,20 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     }
   }
-</script><script type=application/ld+json>[{"@context":"http://schema.org","@type":"Organization","name":"是默元的博客","url":"https://moyuan.uno/","logo":{"@type":"ImageObject","url":"https://s2.loli.net/2023/07/21/PGyugoK3YMWkeba.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Chang Akira","image":{"@type":"ImageObject","url":"https://s2.loli.net/2023/07/21/PGyugoK3YMWkeba.png"},"url":"https://moyuan.uno/","sameAs":["https://github.com/volantis-x"],"description":"是默元的博客"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://moyuan.uno/","name":"是默元的博客"}},{"@type":"ListItem","position":2,"item":{"@id":"https://moyuan.uno/categories/笔记/","name":"笔记"}},{"@type":"ListItem","position":2,"item":{"@id":"https://moyuan.uno/categories/笔记/AI/","name":"AI"}},{"@type":"ListItem","position":3,"item":{"@id":"https://moyuan.uno/2024/08/09/DataWhale-AI夏令营-四期AIGC方向-task01/","name":"DataWhaleX魔搭_AI夏令营_四期AIGC方向_task01"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"是默元的博客","url":"https://moyuan.uno/","keywords":"默元","description":"是默元的博客","author":{"@type":"Person","name":"Chang Akira","image":{"@type":"ImageObject","url":"https://s2.loli.net/2023/07/21/PGyugoK3YMWkeba.png"},"url":"https://moyuan.uno/","description":"是默元的博客"},"publisher":{"@type":"Organization","name":"是默元的博客","url":"https://moyuan.uno/","logo":{"@type":"ImageObject","url":"https://s2.loli.net/2023/07/21/PGyugoK3YMWkeba.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://moyuan.uno?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"DataWhaleX魔搭_AI夏令营_四期AIGC方向_task01","description":"DataWhaleX魔搭_AI夏令营_四期AIGC方向_task01 学习笔记","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://moyuan.uno/2024/08/09/DataWhale-AI%E5%A4%8F%E4%BB%A4%E8%90%A5-%E5%9B%9B%E6%9C%9FAIGC%E6%96%B9%E5%90%91-task01/"},"author":{"@type":"Person","name":"Chang Akira","image":{"@type":"ImageObject","url":"https://s2.loli.net/2023/07/21/PGyugoK3YMWkeba.png"},"url":"https://moyuan.uno/"},"publisher":{"@type":"Organization","name":"是默元的博客","logo":{"@type":"ImageObject","url":"https://s2.loli.net/2023/07/21/PGyugoK3YMWkeba.png","width":192,"height":192}},"url":"https://moyuan.uno/2024/08/09/DataWhale-AI%E5%A4%8F%E4%BB%A4%E8%90%A5-%E5%9B%9B%E6%9C%9FAIGC%E6%96%B9%E5%90%91-task01/","wordCount":39,"datePublished":"2024-08-09T01:18:31.000Z","dateModified":"2024-08-25T10:21:38.000Z","articleSection":"笔记","keywords":"Datawhale_AI夏令营,笔记","image":{"@type":"ImageObject","url":"https://s2.loli.net/2023/07/21/PGyugoK3YMWkeba.png","width":192,"height":192}}]</script></div><script async>window.onload=function(){var a=document.createElement('script'),b=document.getElementsByTagName('script')[0];a.type='text/javascript',a.async=!0,a.src='/sw-register.js?v='+Date.now(),b.parentNode.insertBefore(a,b)};</script></body></html>
+</script>
+
+
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"是默元的博客","url":"https://moyuan.uno/","logo":{"@type":"ImageObject","url":"https://s2.loli.net/2023/07/21/PGyugoK3YMWkeba.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Chang Akira","image":{"@type":"ImageObject","url":"https://s2.loli.net/2023/07/21/PGyugoK3YMWkeba.png"},"url":"https://moyuan.uno/","sameAs":["https://github.com/volantis-x"],"description":"是默元的博客"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://moyuan.uno/","name":"是默元的博客"}},{"@type":"ListItem","position":2,"item":{"@id":"https://moyuan.uno/categories/笔记/","name":"笔记"}},{"@type":"ListItem","position":2,"item":{"@id":"https://moyuan.uno/categories/笔记/AI/","name":"AI"}},{"@type":"ListItem","position":3,"item":{"@id":"https://moyuan.uno/2024/08/09/DataWhale-AI夏令营-四期AIGC方向-task01/","name":"DataWhaleX魔搭_AI夏令营_四期AIGC方向_task01"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"是默元的博客","url":"https://moyuan.uno/","keywords":"默元","description":"是默元的博客","author":{"@type":"Person","name":"Chang Akira","image":{"@type":"ImageObject","url":"https://s2.loli.net/2023/07/21/PGyugoK3YMWkeba.png"},"url":"https://moyuan.uno/","description":"是默元的博客"},"publisher":{"@type":"Organization","name":"是默元的博客","url":"https://moyuan.uno/","logo":{"@type":"ImageObject","url":"https://s2.loli.net/2023/07/21/PGyugoK3YMWkeba.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://moyuan.uno?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"DataWhaleX魔搭_AI夏令营_四期AIGC方向_task01","description":"DataWhaleX魔搭_AI夏令营_四期AIGC方向_task01 学习笔记","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://moyuan.uno/2024/08/09/DataWhale-AI%E5%A4%8F%E4%BB%A4%E8%90%A5-%E5%9B%9B%E6%9C%9FAIGC%E6%96%B9%E5%90%91-task01/"},"author":{"@type":"Person","name":"Chang Akira","image":{"@type":"ImageObject","url":"https://s2.loli.net/2023/07/21/PGyugoK3YMWkeba.png"},"url":"https://moyuan.uno/"},"publisher":{"@type":"Organization","name":"是默元的博客","logo":{"@type":"ImageObject","url":"https://s2.loli.net/2023/07/21/PGyugoK3YMWkeba.png","width":192,"height":192}},"url":"https://moyuan.uno/2024/08/09/DataWhale-AI%E5%A4%8F%E4%BB%A4%E8%90%A5-%E5%9B%9B%E6%9C%9FAIGC%E6%96%B9%E5%90%91-task01/","wordCount":39,"datePublished":"2024-08-09T01:18:31.000Z","dateModified":"2024-08-25T10:21:38.000Z","articleSection":"笔记","keywords":"Datawhale_AI夏令营,笔记","image":{"@type":"ImageObject","url":"https://s2.loli.net/2023/07/21/PGyugoK3YMWkeba.png","width":192,"height":192}}]</script>
+
+
+
+      
+    </div>
+    <!-- import body_end begin-->
+    <!-- import body_end end-->
+    <!-- Custom Files bodyEnd begin-->
+    
+    <!-- Custom Files bodyEnd end-->
+    <!-- front-matter body_end begin -->
+    <!-- front-matter body_end end -->
+  <script async>window.onload=function(){var a=document.createElement('script'),b=document.getElementsByTagName('script')[0];a.type='text/javascript',a.async=!0,a.src='/sw-register.js?v='+Date.now(),b.parentNode.insertBefore(a,b)};</script></body></html>

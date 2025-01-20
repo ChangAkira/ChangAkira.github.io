@@ -1,4 +1,9 @@
-<!DOCTYPE html><html><head><meta name=viewport content="width=device-width, initial-scale=1"><base target=_blank><style>
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<base target="_blank" />
+<style>
 .collapsible {
   background-color: #777;
   color: white;
@@ -21,7 +26,26 @@
   overflow: hidden;
   background-color: #f1f1f1;
 }
-</style></head><h1>Qt旧版本（以5.7.1.0为例）连接mysql数据库 代码部分</h1><body><p>该部分内容（按钮，折叠）师承W3schools的<a href=https://www.w3ccoo.com/howto/howto_js_collapsible.asp>这一篇文章</a>。我在<a href="https://changakira.github.io/2023/07/23/BeginYourCreattiveMindFromHere/?keyword=markdown">如何使用hexo搭建个人博客的文章</a>中推荐过该网站。</p><p>事实上，你现在所看到的这个网页是使用html标记语言写的，因为hexo的主题会覆盖一些我们自定义的html样式，所以我们需要让拥有自定义样式的html文件跳过渲染。你可以在<a href="https://changakira.github.io/2024/07/12/html-posts/">这一篇文章中</a>学习它。我的魔法屋也将计划以这样的形式建设。</p><h2>在QT中打印当前QT版本支持的数据库代码</h2><button type=button class=collapsible>查看/隐藏 untitled.pro 代码</button><div class=content><pre><code>	QT += core sql
+</style>
+</head>
+
+<h1>Qt旧版本（以5.7.1.0为例）连接mysql数据库 代码部分</h1>
+
+
+<body>
+
+
+
+
+<p>该部分内容（按钮，折叠）师承W3schools的<a href="https://www.w3ccoo.com/howto/howto_js_collapsible.asp">这一篇文章</a>。我在<a href="https://changakira.github.io/2023/07/23/BeginYourCreattiveMindFromHere/?keyword=markdown">如何使用hexo搭建个人博客的文章</a>中推荐过该网站。</p>
+
+<p>事实上，你现在所看到的这个网页是使用html标记语言写的，因为hexo的主题会覆盖一些我们自定义的html样式，所以我们需要让拥有自定义样式的html文件跳过渲染。你可以在<a href="https://changakira.github.io/2024/07/12/html-posts/">这一篇文章中</a>学习它。我的魔法屋也将计划以这样的形式建设。</p>
+
+<h2>在QT中打印当前QT版本支持的数据库代码</h2>
+
+<button type="button" class="collapsible">查看/隐藏 untitled.pro 代码</button>
+<div class="content">
+  <pre><code>	QT += core sql
 	QT -= gui
 
 	CONFIG += c++11
@@ -43,7 +67,11 @@
 	# You can also make your code fail to compile if you use deprecated APIs.
 	# In order to do so, uncomment the following line.
 	# You can also select to disable deprecated APIs only up to a certain version of Qt.
-	#DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0  </code></pre></div><button type=button class=collapsible>查看/隐藏 main.cpp 代码</button><div class=content><pre><code>	#include &lt;QCoreApplication&gt;
+	#DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0  </code></pre>
+</div>
+<button type="button" class="collapsible">查看/隐藏 main.cpp 代码</button>
+<div class="content">
+  <pre><code>	#include &lt;QCoreApplication&gt;
 	#include &lt;QtSql/QSqlDatabase&gt;
 	#include &lt;QDebug&gt;
 
@@ -52,7 +80,14 @@
 		QCoreApplication a(argc, argv);
 		qDebug() &lt;&lt; QSqlDatabase::drivers();
 		return a.exec();
-	}	</code></pre></div><h2>检查是否可以成功连接数据库代码</h2><p>untitled.pro 代码无需更改，或可以删去<code>QT += sql</code>。</p><button type=button class=collapsible>查看/隐藏 main.cpp 代码</button><div class=content><pre><code>	#include &lt;QCoreApplication&gt;
+	}	</code></pre>
+</div>
+
+<h2>检查是否可以成功连接数据库代码</h2>
+<p> untitled.pro 代码无需更改，或可以删去<code>QT += sql</code>。</p>
+<button type="button" class="collapsible">查看/隐藏 main.cpp 代码</button>
+<div class="content">
+<pre><code>	#include &lt;QCoreApplication&gt;
 	#include &lt;QtSql/QSqlDatabase&gt;
 	#include &lt;QDebug&gt;
 
@@ -72,7 +107,12 @@
 		}
 		exit(0);
 		return a.exec();
-	}</code></pre></div><p>这里将上一步在QT中打印当前QT版本支持的数据库代码删掉了。不删除，直接添加新的代码也是可以的，两部分不影响。</p><script>
+	}</code></pre>
+</div>
+<p>这里将上一步在QT中打印当前QT版本支持的数据库代码删掉了。不删除，直接添加新的代码也是可以的，两部分不影响。</p>
+
+
+<script>
 var coll = document.getElementsByClassName("collapsible");
 var i;
 
@@ -87,9 +127,13 @@ for (i = 0; i < coll.length; i++) {
     }
   });
 }
-</script><script>
+</script>
+<script>
   ((window.gitter = {}).chat = {}).options = {
     //room替换成自己的聊天室名称即可，room的名称规则是：username/roomname
     room: 'xetlab/community'
   };
-</script><script src=https://sidecar.gitter.im/dist/sidecar.v1.js async defer></script><script async>window.onload=function(){var a=document.createElement('script'),b=document.getElementsByTagName('script')[0];a.type='text/javascript',a.async=!0,a.src='/sw-register.js?v='+Date.now(),b.parentNode.insertBefore(a,b)};</script></body></html>
+</script>
+<script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
+
+<script async>window.onload=function(){var a=document.createElement('script'),b=document.getElementsByTagName('script')[0];a.type='text/javascript',a.async=!0,a.src='/sw-register.js?v='+Date.now(),b.parentNode.insertBefore(a,b)};</script></body></html>
