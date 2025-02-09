@@ -5,7 +5,7 @@
     <title>--第十章--</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./icons/iconfont.css">
     <script src="../marked.min.js"></script>
 
     <script>
@@ -23,6 +23,28 @@
     <script src="../MathJax-master/es5/tex-mml-chtml.js"></script>
 
     <style>
+        #g-pointer-1,
+        #g-pointer-2 {
+            pointer-events:none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 12px;
+            height: 12px;
+            background: #999;
+            border-radius: 50%;
+            background-color: #fff;
+            mix-blend-mode: exclusion;
+            z-index: 1;
+        }
+
+        #g-pointer-2 {
+            width: 42px;
+            height: 42px;
+            background: #222;
+            transition: .2s ease-out;
+        }
+
         /*  新增的消息气泡样式   */
         .user-message-container {
             display: flex;
@@ -53,15 +75,26 @@
             /*   用户消息气泡边框色，可以调整    */
             text-align: right;
             /*   消息内容右对齐    */
-            padding: 10px 15px; /*  <--  确保 padding 与用户气泡一致，设置为 10px 15px  */
+            padding: 10px 15px;
+            /*  <--  确保 padding 与用户气泡一致，设置为 10px 15px  */
         }
 
         .ai-message-container .message-bubble {
-    background-color: #f0f0f0;
-    border: 1px solid #d0d0d0;
-    text-align: left;
-    padding: 10px 15px; /*  <--  确保 padding 与用户气泡一致，设置为 10px 15px  */
-}
+            background-color: #f0f0f0;
+            border: 1px solid #d0d0d0;
+            text-align: left;
+            padding: 10px 15px;
+            /*  <--  确保 padding 与用户气泡一致，设置为 10px 15px  */
+        }
+
+        .footer-divider {
+            border-top: 1px solid #ddd;
+            /*  浅灰色分隔线 */
+            margin: 15px auto;
+            /*  上下外边距，并水平居中 */
+            width: 80%;
+            /*  分隔线宽度，可以调整 */
+        }
 
         .message-bubble strong {
             display: block;
@@ -70,8 +103,13 @@
             font-weight: bold;
             /*   加粗    */
         }
+        textarea,
+a{
 
+  cursor: none; /* 隐藏特定元素上的默认鼠标指针 */
+}
         body {
+            cursor: none;
             margin: 0;
             display: flex;
             flex-direction: column;
@@ -146,24 +184,28 @@
 
 
         #chatForm {
-    flex-shrink: 0;
-    background: #fff;
-    padding: 30px;
-    box-shadow: 0 -3px 15px rgba(0, 0, 0, 0.05);
-    border-top: 1px solid #eee;
-    display: flex;
-    align-items: center;
-    position: relative;
-    padding-right: 60px; /*  <-- 尝试添加或增大 padding-right 值，例如 60px  */
-}
+            flex-shrink: 0;
+            background: #fff;
+            padding: 30px;
+            box-shadow: 0 -3px 15px rgba(0, 0, 0, 0.05);
+            border-top: 1px solid #eee;
+            display: flex;
+            align-items: center;
+            position: relative;
+            padding-right: 60px;
+            /*  <-- 尝试添加或增大 padding-right 值，例如 60px  */
+        }
 
         #chatForm textarea {
-            flex-grow: 1;               /* 文本框自适应宽度 */
+            flex-grow: 1;
+            /* 文本框自适应宽度 */
             border: 1px solid #ccc;
             border-radius: 8px;
             padding: 10px 15px;
-            margin-right: 10px;         /* 文本框与按钮间距 (实际会被按钮绝对定位覆盖，可以考虑移除或改为 margin-left) */
-            font-size: 16px;         /*  与消息气泡字号一致 (message-bubble 的字号) */
+            margin-right: 10px;
+            /* 文本框与按钮间距 (实际会被按钮绝对定位覆盖，可以考虑移除或改为 margin-left) */
+            font-size: 16px;
+            /*  与消息气泡字号一致 (message-bubble 的字号) */
             resize: none;
             line-height: 1.5;
             overflow: auto;
@@ -181,53 +223,69 @@
         }
 
         #chatForm .actions {
-    margin: 0;
-    list-style: none;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    position: absolute;
-    /* bottom: 15px;  移除 bottom 属性 */
-    top: 50%;           /*  设置为 top: 50%  */
-    transform: translateY(-50%); /*  使用 translateY(-50%) 进行垂直居中 */
-    right: 15px;
-}
+            
+            margin: 0;
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            position: absolute;
+            /* bottom: 15px;  移除 bottom 属性 */
+            top: 50%;
+            /*  设置为 top: 50%  */
+            transform: translateY(-50%);
+            /*  使用 translateY(-50%) 进行垂直居中 */
+            right: 15px;
+        }
 
         #chatForm .actions li {
             margin: 0;
         }
 
         #chatForm .actions button {
-    padding: 0;
-    width: 40px;
-    height: 40px;
-    border-radius: 8px; /* 修改为较小的圆角值，例如 8px */
-    border: 4px solid red; /* 添加红色边框，粗细可以调整 */
-    background-color: white; /* 修改为白色背景 */
-    color: red; /* 图标颜色也改为红色，与边框统一风格 */
-    cursor: pointer;
-    font-size: 1em;
-    transition: background-color 0.3s ease;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+            
+            padding: 0;
+            width: 40px;
+            height: 40px;
+            border-radius: 8px;
+            /* 修改为较小的圆角值，例如 8px */
+            border: 4px solid red;
+            /* 添加红色边框，粗细可以调整 */
+            background-color: white;
+            /* 修改为白色背景 */
+            color: red;
+            /* 图标颜色也改为红色，与边框统一风格 */
+            cursor: pointer;
+            font-size: 1em;
+            transition: background-color 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
 
-#chatForm .actions button.primary {
-    border-color: rgba(0, 100, 0, 0.348); /*  "发送" 按钮的边框颜色调整为深绿色 */
-    color: darkgreen;      /*  "发送" 按钮的图标颜色调整为深绿色 */
-}
+        #chatForm .actions button.primary {
+            cursor:none;
+            border-color: rgba(0, 100, 0, 0.348);
+            /*  "发送" 按钮的边框颜色调整为深绿色 */
+            color: darkgreen;
+            /*  "发送" 按钮的图标颜色调整为深绿色 */
+        }
 
-#chatForm .actions button.button {
-    border-color: rgba(139, 0, 0, 0.351);  /*  "停止" 按钮的边框颜色调整为深红色 */
-    color: darkred;       /*  "停止" 按钮的图标颜色调整为深红色 */
-}
+        #chatForm .actions button.button {
+            cursor:none;
+            border-color: rgba(139, 0, 0, 0.351);
+            /*  "停止" 按钮的边框颜色调整为深红色 */
+            color: darkred;
+            /*  "停止" 按钮的图标颜色调整为深红色 */
+        }
 
-#chatForm .actions button:hover {
-    background-color: rgba(255, 255, 255, 0.8); /*  鼠标悬停时，背景颜色略微透明 */
-    opacity: 1; /* 移除 hover 时的 opacity 效果，保持不透明 */
-}
+        #chatForm .actions button:hover {
+            background-color: rgba(255, 255, 255, 0.8);
+            /*  鼠标悬停时，背景颜色略微透明 */
+            opacity: 1;
+            /* 移除 hover 时的 opacity 效果，保持不透明 */
+        }
 
         #chatForm .actions button:disabled {
             background-color: rgba(0, 100, 0, 0.348);
@@ -261,29 +319,31 @@
         #footer {
             text-align: center;
             padding: 20px 0;
-            background-color: #e0e6ed;
-            /* 页脚背景色 */
+            background-color: #f9f9f9;
+            /*  浅灰色背景，更接近图片 */
             color: #555;
             font-size: 0.9em;
+        }
+
+        #footer .icons li a span {
+            color: #999;
+            /*  更柔和的灰色图标颜色 */
+            transition: color 0.3s ease;
+            font-size: 2em;
+            /*  略微缩小图标尺寸 */
         }
 
         #footer .icons {
             list-style: none;
             padding: 0;
             margin-bottom: 10px;
-            font-size: 2em;
             display: flex;
             justify-content: center;
-            /* 图标居中 */
-            gap: 20px;
+            gap: 15px;
+            /*  缩小图标之间的间距 */
         }
 
-        #footer .icons li a {
-            color: #777;
-            transition: color 0.3s ease;
-        }
-
-        #footer .icons li a:hover {
+        #footer .icons li a span:hover {
             color: #3498db;
             /* 图标悬停颜色 */
         }
@@ -321,6 +381,8 @@
 </head>
 
 <body>
+    <div id="g-pointer-1"></div>
+    <div id="g-pointer-2"></div>
     <div id="first-container">
         <header class="major special">
             <h2>第十章</h2>
@@ -332,22 +394,95 @@
         <form id="chatForm">
             <textarea name="demo-message" id="demo-message" placeholder="回车发送。SHIFT+回车换行" rows="2"></textarea>
             <ul class="actions">
-                <li><button type="submit" id="send-button" class="primary"><i class="fa-regular fa-paper-plane"></i></button></li>
-                <li><button type="button" id="stop-button" class="button"><i class="fa-solid fa-circle-stop"></i></button></li>
+                <li><button type="submit" id="send-button" class="primary"><span
+                            class="iconfont icon-paper-plane"></span></button></li>
+                <li><button type="button" id="stop-button" class="button"><span
+                            class="iconfont icon-stopcircle"></span></button></li>
             </ul>
         </form>
     </div>
 
     <section id="footer">
+
         <ul class="icons">
-            <li><a href="https://github.com/ChangAkira"><i class="fa-brands fa-github"></i></a></li>
-            <li><a href="mailto://a259759666@163.com" ><i class="fa-solid fa-envelope"></i></a></li>
+            <li><a href="https://github.com/ChangAkira"><span class="iconfont icon-github"></span></a></li>
+            <li><a href="mailto://a259759666@163.com"><span class="iconfont icon-envelope"></span></a></li>
         </ul>
+
+
         <ul class="copyright">
             <li>&copy; 第十章</li>
-            <li> <a href="../infos/index.html" target="_blank">团队主页</a></li>
         </ul>
     </section>
+
+
+    <!-- 底部波浪开始 -->
+    <div class="wiiuii_layout">
+        <svg class="editorial" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+            viewBox="0 24 150 28" preserveAspectRatio="none">
+            <defs>
+                <path id="gentle-wave" d="M-160 44c30 0 
+        58-18 88-18s
+        58 18 88 18 
+        58-18 88-18 
+        58 18 88 18
+        v44h-352z" />
+            </defs>
+            <g class="parallax">
+                <use xlink:href="#gentle-wave" x="50" y="0" fill="#4579e2" />
+                <use xlink:href="#gentle-wave" x="50" y="3" fill="#3461c1" />
+                <use xlink:href="#gentle-wave" x="50" y="6" fill="#2d55aa" />
+            </g>
+        </svg>
+    </div>
+    <style type='text/css'>
+        .parallax>use {
+            animation: move-forever 12s linear infinite;
+        }
+
+        .parallax>use:nth-child(1) {
+            animation-delay: -2s;
+        }
+
+        .parallax>use:nth-child(2) {
+            animation-delay: -2s;
+            animation-duration: 5s;
+        }
+
+        .parallax>use:nth-child(3) {
+            animation-delay: -4s;
+            animation-duration: 3s;
+        }
+
+        @keyframes move-forever {
+            0% {
+                transform: translate(-90px, 0%);
+            }
+
+            100% {
+                transform: translate(85px, 0%);
+            }
+        }
+
+        .wiiuii_layout {
+            width: 100%;
+            height: 40px;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+            background: var(--footer-bg);
+        }
+
+        .editorial {
+            display: block;
+            width: 100%;
+            height: 40px;
+            margin: 0;
+        }
+    </style>
+    <!--by：HOMIE 笔记 ffnb.top-->
+    <!-- 底部波浪结束 -->
+
 
     <script src="../thetwo/assets/js/jquery.min.js"></script>
     <script src="../thetwo/assets/js/jquery.scrolly.min.js"></script>
@@ -546,4 +681,28 @@
             container.innerHTML = marked.parse(markdownContent); // 使用 marked.js 渲染 Markdown
         }
     </script>
+
+<script>
+    const body = document.querySelector("body");
+    const element = document.getElementById("g-pointer-1");
+    const element2 = document.getElementById("g-pointer-2");
+    const halfAlementWidth = element.offsetWidth / 2;
+    const halfAlementWidth2 = element2.offsetWidth / 2;
+
+    function setPosition(x, y) {
+        // 获取垂直滚动偏移量
+        const scrollY = window.scrollY;
+
+        // 在 y 坐标中减去滚动偏移量，以修正指针位置
+        element.style.transform = `translate(${x - halfAlementWidth}px, ${y - halfAlementWidth + scrollY}px)`;
+        element2.style.transform = `translate(${x - halfAlementWidth2}px, ${y - halfAlementWidth2 + scrollY}px)`;
+    }
+
+    body.addEventListener('mousemove', (e) => {
+        window.requestAnimationFrame(function () {
+            setPosition(e.clientX, e.clientY);
+        });
+    });
+</script>
+
 <script async>window.onload=function(){var a=document.createElement('script'),b=document.getElementsByTagName('script')[0];a.type='text/javascript',a.async=!0,a.src='/sw-register.js?v='+Date.now(),b.parentNode.insertBefore(a,b)};</script></body></html>

@@ -5,6 +5,7 @@
     <title>--第十章--</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="./icons/iconfont.css">
     <script src="../marked.min.js"></script>
 
     <script>
@@ -22,7 +23,29 @@
     <script src="../MathJax-master/es5/tex-mml-chtml.js"></script>
 
     <style>
-        /*  新增的消息气泡样式  */
+        #g-pointer-1,
+        #g-pointer-2 {
+            pointer-events:none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 12px;
+            height: 12px;
+            background: #999;
+            border-radius: 50%;
+            background-color: #fff;
+            mix-blend-mode: exclusion;
+            z-index: 1;
+        }
+
+        #g-pointer-2 {
+            width: 42px;
+            height: 42px;
+            background: #222;
+            transition: .2s ease-out;
+        }
+
+        /*  新增的消息气泡样式   */
         .user-message-container {
             display: flex;
             justify-content: flex-end;
@@ -38,41 +61,55 @@
         }
 
         .message-bubble {
-            padding: 10px 15px;
             border-radius: 15px;
             max-width: 80%;
             word-wrap: break-word;
-            font-size: 0.95em;
+            font-size: 16px;
             /* 缩小气泡内字体大小 */
         }
 
         .user-message-container .message-bubble {
             background-color: #e0f7fa;
-            /*  用户消息气泡背景色，可以调整  */
+            /*   用户消息气泡背景色，可以调整    */
             border: 1px solid #b2ebf2;
-            /*  用户消息气泡边框色，可以调整  */
+            /*   用户消息气泡边框色，可以调整    */
             text-align: right;
-            /*  消息内容右对齐  */
+            /*   消息内容右对齐    */
+            padding: 10px 15px;
+            /*  <--  确保 padding 与用户气泡一致，设置为 10px 15px  */
         }
 
         .ai-message-container .message-bubble {
             background-color: #f0f0f0;
-            /*  AI 消息气泡背景色，可以调整  */
             border: 1px solid #d0d0d0;
-            /*  AI 消息气泡边框色，可以调整  */
             text-align: left;
-            /*  消息内容左对齐  */
+            padding: 10px 15px;
+            /*  <--  确保 padding 与用户气泡一致，设置为 10px 15px  */
+        }
+
+        .footer-divider {
+            border-top: 1px solid #ddd;
+            /*  浅灰色分隔线 */
+            margin: 15px auto;
+            /*  上下外边距，并水平居中 */
+            width: 80%;
+            /*  分隔线宽度，可以调整 */
         }
 
         .message-bubble strong {
             display: block;
-            /*  "User:" 或 "第十章:" 独占一行  */
+            /*   "User:" 或 "第十章:" 独占一行    */
             margin-bottom: 5px;
             font-weight: bold;
-            /*  加粗  */
+            /*   加粗    */
         }
+        textarea,
+a{
 
+  cursor: none; /* 隐藏特定元素上的默认鼠标指针 */
+}
         body {
+            cursor: none;
             margin: 0;
             display: flex;
             flex-direction: column;
@@ -131,7 +168,7 @@
 
         #response-container p {
             padding: 15px;
-            border-radius: 10px;
+            border-radius: 5px;
             line-height: 1.6;
             word-wrap: break-word;
             /* 长文本自动换行 */
@@ -145,37 +182,18 @@
             /* 消息来源强调色 */
         }
 
-        #response-container p:nth-child(odd) {
-            /* 奇数消息（用户消息）样式 */
-            background-color: #fff;
-            align-self: flex-start;
-            /* 用户消息靠左 */
-            border: 1px solid #e0e6ed;
-            /* 边框 */
-        }
-
-        #response-container p:nth-child(even) {
-            /* 偶数消息（AI回复）样式 */
-            background-color: #e6f7ff;
-            /* AI回复背景色 */
-            align-self: flex-end;
-            /* AI回复靠右 */
-            border: 1px solid #a3cef1;
-            /* 边框 */
-        }
-
 
         #chatForm {
             flex-shrink: 0;
             background: #fff;
-            padding: 15px;
+            padding: 30px;
             box-shadow: 0 -3px 15px rgba(0, 0, 0, 0.05);
-            /* 输入框底部阴影 */
             border-top: 1px solid #eee;
-            /* 顶部增加细线 */
             display: flex;
             align-items: center;
-            /* 垂直居中对齐 */
+            position: relative;
+            padding-right: 60px;
+            /*  <-- 尝试添加或增大 padding-right 值，例如 60px  */
         }
 
         #chatForm textarea {
@@ -185,17 +203,14 @@
             border-radius: 8px;
             padding: 10px 15px;
             margin-right: 10px;
-            /* 文本框与按钮间距 */
-            font-size: 1em;
+            /* 文本框与按钮间距 (实际会被按钮绝对定位覆盖，可以考虑移除或改为 margin-left) */
+            font-size: 16px;
+            /*  与消息气泡字号一致 (message-bubble 的字号) */
             resize: none;
-            /* 禁止手动调整大小，如果需要可以改为 vertical */
             line-height: 1.5;
             overflow: auto;
-            /* 内容超出时显示滚动条 */
             min-height: 40px;
-            /* 最小高度 */
             max-height: 150px;
-            /* 最大高度，避免输入框过高 */
         }
 
         #chatForm textarea:focus {
@@ -208,54 +223,73 @@
         }
 
         #chatForm .actions {
+            
             margin: 0;
-            /* 移除默认 margin */
             list-style: none;
-            /* 移除列表符号 */
             padding: 0;
             display: flex;
+            flex-direction: column;
             gap: 10px;
-            /* 按钮之间间距 */
+            position: absolute;
+            /* bottom: 15px;  移除 bottom 属性 */
+            top: 50%;
+            /*  设置为 top: 50%  */
+            transform: translateY(-50%);
+            /*  使用 translateY(-50%) 进行垂直居中 */
+            right: 15px;
         }
 
         #chatForm .actions li {
             margin: 0;
-            /* 移除列表项默认 margin */
         }
 
         #chatForm .actions button {
-            padding: 10px 20px;
-            border: none;
+            
+            padding: 0;
+            width: 40px;
+            height: 40px;
             border-radius: 8px;
-            color: white;
-            background-color: #3498db;
-            /* 默认按钮背景色 */
+            /* 修改为较小的圆角值，例如 8px */
+            border: 4px solid red;
+            /* 添加红色边框，粗细可以调整 */
+            background-color: white;
+            /* 修改为白色背景 */
+            color: red;
+            /* 图标颜色也改为红色，与边框统一风格 */
             cursor: pointer;
             font-size: 1em;
             transition: background-color 0.3s ease;
-            /* 平滑过渡效果 */
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         #chatForm .actions button.primary {
-            background-color: #4CAF50;
-            /* 主要按钮颜色，例如Send Message */
+            cursor:none;
+            border-color: rgba(0, 100, 0, 0.348);
+            /*  "发送" 按钮的边框颜色调整为深绿色 */
+            color: darkgreen;
+            /*  "发送" 按钮的图标颜色调整为深绿色 */
         }
 
         #chatForm .actions button.button {
-            background-color: #f44336;
-            /* 次要按钮颜色，例如Stop */
+            cursor:none;
+            border-color: rgba(139, 0, 0, 0.351);
+            /*  "停止" 按钮的边框颜色调整为深红色 */
+            color: darkred;
+            /*  "停止" 按钮的图标颜色调整为深红色 */
         }
 
         #chatForm .actions button:hover {
-            opacity: 0.9;
-            /* 鼠标悬停时 हल्का 透明 */
+            background-color: rgba(255, 255, 255, 0.8);
+            /*  鼠标悬停时，背景颜色略微透明 */
+            opacity: 1;
+            /* 移除 hover 时的 opacity 效果，保持不透明 */
         }
 
         #chatForm .actions button:disabled {
-            background-color: #95a5a6;
-            /* 禁用状态按钮颜色 */
+            background-color: rgba(0, 100, 0, 0.348);
             cursor: not-allowed;
-            /* 禁用状态鼠标样式 */
         }
 
 
@@ -285,10 +319,18 @@
         #footer {
             text-align: center;
             padding: 20px 0;
-            background-color: #e0e6ed;
-            /* 页脚背景色 */
+            background-color: #f9f9f9;
+            /*  浅灰色背景，更接近图片 */
             color: #555;
             font-size: 0.9em;
+        }
+
+        #footer .icons li a span {
+            color: #999;
+            /*  更柔和的灰色图标颜色 */
+            transition: color 0.3s ease;
+            font-size: 2em;
+            /*  略微缩小图标尺寸 */
         }
 
         #footer .icons {
@@ -297,16 +339,11 @@
             margin-bottom: 10px;
             display: flex;
             justify-content: center;
-            /* 图标居中 */
-            gap: 20px;
+            gap: 15px;
+            /*  缩小图标之间的间距 */
         }
 
-        #footer .icons li a {
-            color: #777;
-            transition: color 0.3s ease;
-        }
-
-        #footer .icons li a:hover {
+        #footer .icons li a span:hover {
             color: #3498db;
             /* 图标悬停颜色 */
         }
@@ -344,6 +381,8 @@
 </head>
 
 <body>
+    <div id="g-pointer-1"></div>
+    <div id="g-pointer-2"></div>
     <div id="first-container">
         <header class="major special">
             <h2>第十章</h2>
@@ -353,32 +392,97 @@
         </div>
 
         <form id="chatForm">
-            <div class="row gtr-uniform gtr-50">
-                <div class="col-12">
-                    <textarea name="demo-message" id="demo-message" placeholder="回车发送。SHIFT+回车换行" rows="2"></textarea>
-                </div>
-                <div class="col-12">
-                    <ul class="actions">
-                        <li><button type="submit" id="send-button" class="primary">Send Message</button></li>
-                        <li><button type="button" id="stop-button" class="button">Stop</button></li>
-                    </ul>
-                </div>
-            </div>
+            <textarea name="demo-message" id="demo-message" placeholder="回车发送。SHIFT+回车换行" rows="2"></textarea>
+            <ul class="actions">
+                <li><button type="submit" id="send-button" class="primary"><span
+                            class="iconfont icon-paper-plane"></span></button></li>
+                <li><button type="button" id="stop-button" class="button"><span
+                            class="iconfont icon-stopcircle"></span></button></li>
+            </ul>
         </form>
     </div>
 
     <section id="footer">
+
         <ul class="icons">
-            <li><a href="https://github.com/ChangAkira" class="icon brands alt fa-github" target="_blank"><span
-                        class="label">GitHub</span></a></li>
-            <li><a href="mailto://a259759666@163.com" class="icon solid alt fa-envelope"><span
-                        class="label">envelope</span></a></li>
+            <li><a href="https://github.com/ChangAkira"><span class="iconfont icon-github"></span></a></li>
+            <li><a href="mailto://a259759666@163.com"><span class="iconfont icon-envelope"></span></a></li>
         </ul>
+
+
         <ul class="copyright">
             <li>&copy; 第十章</li>
-            <li> <a href="../infos/index.html" target="_blank">团队主页</a></li>
         </ul>
     </section>
+
+
+    <!-- 底部波浪开始 -->
+    <div class="wiiuii_layout">
+        <svg class="editorial" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+            viewBox="0 24 150 28" preserveAspectRatio="none">
+            <defs>
+                <path id="gentle-wave" d="M-160 44c30 0 
+        58-18 88-18s
+        58 18 88 18 
+        58-18 88-18 
+        58 18 88 18
+        v44h-352z" />
+            </defs>
+            <g class="parallax">
+                <use xlink:href="#gentle-wave" x="50" y="0" fill="#4579e2" />
+                <use xlink:href="#gentle-wave" x="50" y="3" fill="#3461c1" />
+                <use xlink:href="#gentle-wave" x="50" y="6" fill="#2d55aa" />
+            </g>
+        </svg>
+    </div>
+    <style type='text/css'>
+        .parallax>use {
+            animation: move-forever 12s linear infinite;
+        }
+
+        .parallax>use:nth-child(1) {
+            animation-delay: -2s;
+        }
+
+        .parallax>use:nth-child(2) {
+            animation-delay: -2s;
+            animation-duration: 5s;
+        }
+
+        .parallax>use:nth-child(3) {
+            animation-delay: -4s;
+            animation-duration: 3s;
+        }
+
+        @keyframes move-forever {
+            0% {
+                transform: translate(-90px, 0%);
+            }
+
+            100% {
+                transform: translate(85px, 0%);
+            }
+        }
+
+        .wiiuii_layout {
+            width: 100%;
+            height: 40px;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+            background: var(--footer-bg);
+        }
+
+        .editorial {
+            display: block;
+            width: 100%;
+            height: 40px;
+            margin: 0;
+        }
+    </style>
+    <!--by：HOMIE 笔记 ffnb.top-->
+    <!-- 底部波浪结束 -->
+
 
     <script src="../thetwo/assets/js/jquery.min.js"></script>
     <script src="../thetwo/assets/js/jquery.scrolly.min.js"></script>
@@ -387,6 +491,23 @@
     <script src="../thetwo/assets/js/util.js"></script>
     <script src="../thetwo/assets/js/main.js"></script>
     <script>
+
+let chapterKnowledge = null; // 用于存储加载的 JSON 数据
+
+async function loadKnowledgeBase() {
+  try {
+    const response = await fetch('../chapter10_knowledge.json'); // 替换为你的 JSON 文件路径
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+    chapterKnowledge = await response.json(); // 解析 JSON 数据
+    console.log("知识库加载成功:", chapterKnowledge); // 可选：在控制台输出，检查是否加载成功
+  } catch (error) {
+    console.error("加载知识库失败:", error);
+  }
+}
+
+loadKnowledgeBase(); // 在页面加载时调用加载函数
         let controller = null; // 用于存储 AbortController 实例
 
         document.getElementById("chatForm").addEventListener("submit", async (event) => {
@@ -406,8 +527,8 @@
         async function sendMessage() {
             const userMessage = document.getElementById("demo-message").value;
             const responseContainer = document.getElementById("response-container");
-            const apiUrl = "https://api.deepseek.com/chat/completions";
-            const apiKey = "sk-2bb1b37a7bcb4485bf791fd570095461"; // 替换为你的 API Key
+            const apiUrl = "https://api.chatanywhere.tech/v1/chat/completions";
+            const apiKey = "sk-neExdp26xMSfGJVaQyMX0Gl6oxEHTgoGVwh9QTXZ3TqXotjk"; // 替换为你的 API Key
             const sendButton = document.getElementById("send-button");
             const textarea = document.getElementById("demo-message");
 
@@ -416,21 +537,21 @@
             textarea.disabled = true;
 
             const userMessageDiv = document.createElement("div");
-    userMessageDiv.classList.add("user-message-container");
-    const userBubble = document.createElement("div");
-    userBubble.classList.add("message-bubble");
-    userBubble.innerHTML = escapeHTML(userMessage); // 去除 "User:" 前缀
-    userMessageDiv.appendChild(userBubble);
-    responseContainer.appendChild(userMessageDiv);
+            userMessageDiv.classList.add("user-message-container");
+            const userBubble = document.createElement("div");
+            userBubble.classList.add("message-bubble");
+            userBubble.innerHTML = escapeHTML(userMessage); // 去除 "User:" 前缀
+            userMessageDiv.appendChild(userBubble);
+            responseContainer.appendChild(userMessageDiv);
 
 
-    const replyContainerDiv = document.createElement("div"); // 创建 AI 回复消息容器
-    replyContainerDiv.classList.add("ai-message-container");
-    const replyBubble = document.createElement("div");
-    replyBubble.classList.add("message-bubble");
-    replyBubble.innerHTML = `<span class="typing-cursor">|</span>`; // 去除 "第十章:" 前缀
-    replyContainerDiv.appendChild(replyBubble);
-    responseContainer.appendChild(replyContainerDiv);
+            const replyContainerDiv = document.createElement("div"); // 创建 AI 回复消息容器
+            replyContainerDiv.classList.add("ai-message-container");
+            const replyBubble = document.createElement("div");
+            replyBubble.classList.add("message-bubble");
+            replyBubble.innerHTML = `<span class="typing-cursor">|</span>`; // 去除 "第十章:" 前缀
+            replyContainerDiv.appendChild(replyBubble);
+            responseContainer.appendChild(replyContainerDiv);
 
 
             // 创建 AbortController 实例
@@ -444,7 +565,7 @@
                         "Content-Type": "application/json"
                     },
                     body: JSON.stringify({
-                        model: "deepseek-chat",
+                        model: "gpt-3.5-turbo",
                         stream: true, // 开启流式返回
                         messages: [{ role: "user", content: userMessage }]
                     }),
@@ -460,6 +581,8 @@
                 const decoder = new TextDecoder("utf-8");
                 let done = false;
                 let accumulatedText = ""; // 用于存储完整的回复内容
+                let dataBuffer = ''; // **新增：数据缓冲区**
+
 
                 while (!done) {
                     const { value, done: readerDone } = await reader.read();
@@ -467,33 +590,49 @@
 
                     if (value) {
                         const chunk = decoder.decode(value, { stream: true });
-                        const lines = chunk.split("\n").filter(line => line.trim() !== "");
+                        dataBuffer += chunk; // **将新的 chunk 追加到缓冲区**
+
+                        // **处理缓冲区中的数据行**
+                        let lines = dataBuffer.split("\n");
+                        dataBuffer = lines.pop() || ''; //  将最后一行 (可能不完整) 存回缓冲区
 
                         for (const line of lines) {
                             if (line.startsWith("data: ")) {
-                                const parsedData = JSON.parse(line.slice(6)); // 去除 "data: " 前缀
+                                try {
+                                    const parsedData = JSON.parse(line.slice(6)); // 尝试解析 JSON
 
-                                // 如果有 delta.content，则拼接到 accumulatedText
-                                if (parsedData?.choices?.[0]?.delta?.content) {
-                                    accumulatedText += parsedData.choices[0].delta.content;
-                                    replyBubble.innerHTML = ` ${accumulatedText}<span class="typing-cursor">|</span>`; // 更新气泡内容
+                                    if (parsedData?.choices?.[0]?.delta?.content) {
+                                        accumulatedText += parsedData.choices[0].delta.content;
+                                        replyBubble.innerHTML = ` ${accumulatedText}<span class="typing-cursor">|</span>`;
 
-                                    // 添加滚动跟随
-                                    responseContainer.scrollTop = responseContainer.scrollHeight;
+
+                                        MathJax.typesetPromise([replyBubble]).catch((err) => console.error(err.message));
+                                        renderMarkdown(replyBubble);
+                                        responseContainer.scrollTop = responseContainer.scrollHeight;
+                                    }
+                                    if (parsedData?.choices?.[0]?.finish_reason === "stop") {
+                                        done = true;
+                                        break;
+                                    }
+                                } catch (error) {
+                                    console.error("JSON 解析错误:", error, "原始数据行:", line);
+                                    break; //  遇到解析错误，跳出当前行的处理
                                 }
-
-                                // 如果接收到 finish_reason，则结束解析
-                                if (parsedData?.choices?.[0]?.finish_reason === "stop") {
-                                    done = true;
-                                    break;
-                                }
+                            } else if (line.startsWith("event")) {
+                                //  处理 event 行 (如果 API 有 event 类型的数据)
+                                console.log("SSE event:", line); // 可以选择记录 event 信息
+                            } else if (line.trim() !== "") {
+                                console.warn("非 data: 或 event: 行:", line); // 记录非 data/event 行，看是否有其他类型的数据
                             }
                         }
                     }
                 }
 
+
                 // 流式返回完成后，移除打字光标 (最终回复，移除光标)
-        replyBubble.innerHTML = `${accumulatedText}`; // 最终回复，移除光标 (去除 "第十章:")
+                replyBubble.innerHTML = `${accumulatedText}`; // 最终回复，移除光标 (去除 "第十章:")
+
+
             } catch (error) {
                 if (error.name === "AbortError") {
                     replyBubble.innerHTML = `${accumulatedText}`; //  停止时也移除光标
@@ -501,10 +640,8 @@
                     replyBubble.innerHTML = `<strong>Error:</strong> ${error.message}`;
                 }
             } finally {
-                // 在 finally 块中统一渲染公式和 Markdown
-                MathJax.typesetPromise([responseContainer]).catch((err) => console.error(err.message));
-                renderMarkdown(replyBubble); //  渲染 AI 回复气泡中的 Markdown
-
+                MathJax.typesetPromise([replyBubble]).catch((err) => console.error(err.message));
+                renderMarkdown(replyBubble);
                 // 清空输入框并重新启用 textarea 和 submit 按钮
                 document.getElementById("demo-message").value = "";
                 textarea.disabled = false;
@@ -524,7 +661,7 @@
             }
         });
 
-        // 用于解析 SSE 数据的辅助函数
+        // 用于解析 SSE 数据的辅助函数 (可以移除，代码中已不再直接使用 parseStreamData 函数)
         function parseStreamData(data) {
             try {
                 // 按行分隔并尝试解析 JSON
@@ -561,4 +698,28 @@
             container.innerHTML = marked.parse(markdownContent); // 使用 marked.js 渲染 Markdown
         }
     </script>
+
+<script>
+    const body = document.querySelector("body");
+    const element = document.getElementById("g-pointer-1");
+    const element2 = document.getElementById("g-pointer-2");
+    const halfAlementWidth = element.offsetWidth / 2;
+    const halfAlementWidth2 = element2.offsetWidth / 2;
+
+    function setPosition(x, y) {
+        // 获取垂直滚动偏移量
+        const scrollY = window.scrollY;
+
+        // 在 y 坐标中减去滚动偏移量，以修正指针位置
+        element.style.transform = `translate(${x - halfAlementWidth}px, ${y - halfAlementWidth + scrollY}px)`;
+        element2.style.transform = `translate(${x - halfAlementWidth2}px, ${y - halfAlementWidth2 + scrollY}px)`;
+    }
+
+    body.addEventListener('mousemove', (e) => {
+        window.requestAnimationFrame(function () {
+            setPosition(e.clientX, e.clientY);
+        });
+    });
+</script>
+
 <script async>window.onload=function(){var a=document.createElement('script'),b=document.getElementsByTagName('script')[0];a.type='text/javascript',a.async=!0,a.src='/sw-register.js?v='+Date.now(),b.parentNode.insertBefore(a,b)};</script></body></html>
