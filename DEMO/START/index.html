@@ -516,7 +516,15 @@ a{
     sendButton.disabled = true;
     textarea.disabled = true;
 
-    // ... (用户消息显示代码 -  与之前代码相同，省略) ...
+    //  !!!  用户消息气泡显示代码  !!!
+    const userMessageDiv = document.createElement("div");
+    userMessageDiv.classList.add("user-message-container");
+    const userBubble = document.createElement("div");
+    userBubble.classList.add("message-bubble");
+    userBubble.innerHTML = escapeHTML(userMessage); //  确保 escapeHTML 函数存在且正确
+    userMessageDiv.appendChild(userBubble);
+    responseContainer.appendChild(userMessageDiv);
+    //  !!!  用户消息气泡显示代码  !!!
 
     const replyContainerDiv = document.createElement("div");
     replyContainerDiv.classList.add("ai-message-container");
@@ -542,24 +550,40 @@ a{
             throw new Error(`HTTP error! status: ${response.status}`);
         }
 
-        //  !!!  使用 ReadableStream 读取流式响应 !!!
+        //  !!!  使用 ReadableStream 读取流式响应，并解析 SSE 数据 !!!
         const reader = response.body.getReader();
         const decoder = new TextDecoder();
-        let aiReplyText = ""; // 用于累积 AI 回复文本
+        let aiReplyText = "";
 
-        while (true) { // 循环读取数据块
-            const { done, value } = await reader.read(); // 读取数据块
-            if (done) { // 流读取完成
+        while (true) {
+            const { done, value } = await reader.read();
+            if (done) {
                 console.log("Stream finished");
                 break;
             }
-            // value is a Uint8Array
-            const textChunk = decoder.decode(value, { stream: true }); // 解码为文本
-            aiReplyText += textChunk; // 累积文本
-            replyBubble.innerHTML =  aiReplyText + `<span class="typing-cursor">|</span>`; // 逐步显示，添加 typing cursor
-            MathJax.typesetPromise([replyBubble]).catch((err) => console.error(err.message)); // MathJax渲染
-            renderMarkdown(replyBubble); // Markdown渲染
-            responseContainer.scrollTop = responseContainer.scrollHeight; // 滚动到底部
+            const textChunk = decoder.decode(value, { stream: true });
+            const lines = textChunk.split('\n\n').filter(line => line.startsWith("data: "));
+            for (const line of lines) {
+                const jsonString = line.substring(6);
+                if (jsonString === "[DONE]") {
+                    console.log("SSE stream done signal received");
+                    reader.cancel();
+                    return;
+                }
+                try {
+                    const jsonData = JSON.parse(jsonString);
+                    if (jsonData?.choices?.[0]?.delta?.content) {
+                        const contentChunk = jsonData.choices[0].delta.content;
+                        aiReplyText += contentChunk;
+                        replyBubble.innerHTML = aiReplyText + `<span class="typing-cursor">|</span>`;
+                        MathJax.typesetPromise([replyBubble]).catch((err) => console.error(err.message));
+                        renderMarkdown(replyBubble);
+                        responseContainer.scrollTop = responseContainer.scrollHeight;
+                    }
+                } catch (error) {
+                    console.error("JSON 解析错误:", error, "原始数据:", jsonString);
+                }
+            }
         }
         //  !!!  循环结束后，移除 typing cursor，并最终设置回复内容 !!!
         replyBubble.innerHTML = aiReplyText;
@@ -574,17 +598,11 @@ a{
             replyBubble.innerHTML = `<strong>Error:</strong> ${error.message}`;
         }
     } finally {
-        MathJax.typesetPromise([replyBubble]).catch((err) => console.error(err.message));
-        renderMarkdown(replyBubble);
-        // 清空输入框并重新启用 textarea 和 submit 按钮
-        document.getElementById("demo-message").value = "";
-        textarea.disabled = false;
         sendButton.disabled = false;
-
-        // 重置 AbortController
-        controller = null;
-
+        textarea.disabled = false;
+        textarea.value = "";
         responseContainer.scrollTop = responseContainer.scrollHeight;
+        controller = null;
     }
 }
 

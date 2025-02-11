@@ -1,3 +1,4 @@
+import json  #  !!!  首先，确保导入 json 库 !!!
 from flask import Flask, request, jsonify, stream_with_context, Response
 import requests
 import os
@@ -23,21 +24,24 @@ def chat():
     }
     data = {
         "model": MODEL_NAME,
-        "stream": True,  #  !!!  设置为 True 开启流模式 !!!
+        "stream": True,
         "messages": [{"role": "user", "content": user_message}]
     }
 
-    def generate():  #  !!!  定义生成器函数 !!!
+    def generate():
         try:
-            with requests.post(API_URL, headers=headers, json=data, stream=True) as response: #  !!!  requests 也设置 stream=True !!!
+            with requests.post(API_URL, headers=headers, json=data, stream=True) as response:
                 response.raise_for_status()
-                for line in response.iter_lines(): #  !!!  逐行迭代流式响应 !!!
+                for line in response.iter_lines():
                     if line:
-                        decoded_line = line.decode('utf-8') # 解码
-                        #  !!!  假设 API 返回的是 Server-Sent Events 格式，或者类似的 JSON 结构，需要根据实际API格式解析 !!!
-                        #  !!!  这里只是一个简单的示例，假设每行就是一个 JSON 字符串 !!!
-                        yield f"data: {decoded_line}\n\n" #  !!!  SSE 格式 !!!
+                        decoded_line = line.decode('utf-8')
+                        yield f"data: {decoded_line}\n\n"
         except requests.exceptions.RequestException as e:
-            yield f"data: {\"error\": \"API 请求出错\", \"details\": \"{str(e)}\"}\n\n" #  !!! 流式返回错误信息 !!!
+            #  !!!  修改为使用 json.dumps() 生成 JSON 字符串 !!!
+            error_message = {"error": "API请求出错", "details": str(e)} #  构建 Python 字典
+            yield f"data: {json.dumps(error_message)}\n\n" #  使用 json.dumps() 将字典转换为 JSON 字符串
 
-    return Response(stream_with_context(generate()), mimetype='text/event-stream') #  !!!  使用 Response 和 stream_with_context 返回流式响应 !!!
+    return Response(stream_with_context(generate()), mimetype='text/event-stream')
+
+if __name__ == '__main__':
+    app.run(debug=True, port=5000)
