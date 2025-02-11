@@ -556,33 +556,37 @@ a{
         let aiReplyText = "";
 
         while (true) {
-            const { done, value } = await reader.read();
-            if (done) {
-                console.log("Stream finished");
-                break;
+        const { done, value } = await reader.read();
+        if (done) {
+            console.log("Stream finished");
+            break;
+        }
+        const textChunk = decoder.decode(value, { stream: true });
+        const lines = textChunk.split('\n\n').filter(line => line.startsWith("data: "));
+        for (const line of lines) {
+            let jsonString = line.substring(6); // 去除 "data: " 前缀， 确保这行代码在 JSON.parse 前执行
+
+            if (jsonString === "[DONE]") {
+                console.log("SSE stream done signal received");
+                reader.cancel();
+                return;
             }
-            const textChunk = decoder.decode(value, { stream: true });
-            const lines = textChunk.split('\n\n').filter(line => line.startsWith("data: "));
-            for (const line of lines) {
-                const jsonString = line.substring(6);
-                if (jsonString === "[DONE]") {
-                    console.log("SSE stream done signal received");
-                    reader.cancel();
-                    return;
+            try {
+                //  !!!  增强错误日志： 在 JSON.parse 前打印 jsonString 的值 !!!
+                console.log("尝试解析 JSON 字符串:", jsonString); //  新增日志
+                const jsonData = JSON.parse(jsonString);
+                if (jsonData?.choices?.[0]?.delta?.content) {
+                    const contentChunk = jsonData.choices[0].delta.content;
+                    aiReplyText += contentChunk;
+                    replyBubble.innerHTML = aiReplyText + `<span class="typing-cursor">|</span>`;
+                    MathJax.typesetPromise([replyBubble]).catch((err) => console.error(err.message));
+                    renderMarkdown(replyBubble);
+                    responseContainer.scrollTop = responseContainer.scrollHeight;
                 }
-                try {
-                    const jsonData = JSON.parse(jsonString);
-                    if (jsonData?.choices?.[0]?.delta?.content) {
-                        const contentChunk = jsonData.choices[0].delta.content;
-                        aiReplyText += contentChunk;
-                        replyBubble.innerHTML = aiReplyText + `<span class="typing-cursor">|</span>`;
-                        MathJax.typesetPromise([replyBubble]).catch((err) => console.error(err.message));
-                        renderMarkdown(replyBubble);
-                        responseContainer.scrollTop = responseContainer.scrollHeight;
-                    }
-                } catch (error) {
-                    console.error("JSON 解析错误:", error, "原始数据:", jsonString);
-                }
+            } catch (error) {
+                //  !!!  增强错误日志： 打印原始数据和 JSON 解析错误信息 !!!
+                console.error("JSON 解析错误:", error, "原始数据:", jsonString); //  增强错误日志，包含原始数据
+            }
             }
         }
         //  !!!  循环结束后，移除 typing cursor，并最终设置回复内容 !!!
