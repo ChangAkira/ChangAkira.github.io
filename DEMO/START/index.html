@@ -508,134 +508,87 @@ a{
 
         // 发送消息的函数
         async function sendMessage() {
-            const userMessage = document.getElementById("demo-message").value;
-            const responseContainer = document.getElementById("response-container");
-            const apiUrl = "https://api.chatanywhere.tech/v1/chat/completions";
-            const apiKey = "sk-neExdp26xMSfGJVaQyMX0Gl6oxEHTgoGVwh9QTXZ3TqXotjk"; // 替换为你的 API Key
-            const sendButton = document.getElementById("send-button");
-            const textarea = document.getElementById("demo-message");
+    const userMessage = document.getElementById("demo-message").value;
+    const responseContainer = document.getElementById("response-container");
+    //  !!!  前端代码中移除 API_URL 和 API_KEY  !!!
+    // const apiUrl = "https://####";  //  移除
+    // const apiKey = "sk-#####"; // 替换为你的 API Key  //  移除
+    const sendButton = document.getElementById("send-button");
+    const textarea = document.getElementById("demo-message");
 
-            // 禁用 submit 按钮和 textarea
-            sendButton.disabled = true;
-            textarea.disabled = true;
+    // 禁用 submit 按钮和 textarea
+    sendButton.disabled = true;
+    textarea.disabled = true;
 
-            const userMessageDiv = document.createElement("div");
-            userMessageDiv.classList.add("user-message-container");
-            const userBubble = document.createElement("div");
-            userBubble.classList.add("message-bubble");
-            userBubble.innerHTML = escapeHTML(userMessage); // 去除 "User:" 前缀
-            userMessageDiv.appendChild(userBubble);
-            responseContainer.appendChild(userMessageDiv);
-
-
-            const replyContainerDiv = document.createElement("div"); // 创建 AI 回复消息容器
-            replyContainerDiv.classList.add("ai-message-container");
-            const replyBubble = document.createElement("div");
-            replyBubble.classList.add("message-bubble");
-            replyBubble.innerHTML = `<span class="typing-cursor">|</span>`; // 去除 "第十章:" 前缀
-            replyContainerDiv.appendChild(replyBubble);
-            responseContainer.appendChild(replyContainerDiv);
+    const userMessageDiv = document.createElement("div");
+    userMessageDiv.classList.add("user-message-container");
+    const userBubble = document.createElement("div");
+    userBubble.classList.add("message-bubble");
+    userBubble.innerHTML = escapeHTML(userMessage); // 去除 "User:" 前缀
+    userMessageDiv.appendChild(userBubble);
+    responseContainer.appendChild(userMessageDiv);
 
 
-            // 创建 AbortController 实例
-            controller = new AbortController();
-
-            try {
-                const response = await fetch(apiUrl, {
-                    method: "POST",
-                    headers: {
-                        "Authorization": `Bearer ${apiKey}`,
-                        "Content-Type": "application/json"
-                    },
-                    body: JSON.stringify({
-                        model: "gpt-3.5-turbo",
-                        stream: true, // 开启流式返回
-                        messages: [{ role: "user", content: userMessage }]
-                    }),
-                    signal: controller.signal // 绑定 AbortController 的信号
-                });
-
-                if (!response.ok) {
-                    throw new Error(`HTTP error! status: ${response.status}`);
-                }
-
-                // 使用流式解析
-                const reader = response.body.getReader();
-                const decoder = new TextDecoder("utf-8");
-                let done = false;
-                let accumulatedText = ""; // 用于存储完整的回复内容
-                let dataBuffer = ''; // **新增：数据缓冲区**
+    const replyContainerDiv = document.createElement("div"); // 创建 AI 回复消息容器
+    replyContainerDiv.classList.add("ai-message-container");
+    const replyBubble = document.createElement("div");
+    replyBubble.classList.add("message-bubble");
+    replyBubble.innerHTML = `<span class="typing-cursor">|</span>`; // 去除 "第十章:" 前缀
+    replyContainerDiv.appendChild(replyBubble);
+    responseContainer.appendChild(replyContainerDiv);
 
 
-                while (!done) {
-                    const { value, done: readerDone } = await reader.read();
-                    done = readerDone;
+    // 创建 AbortController 实例
+    controller = new AbortController();
 
-                    if (value) {
-                        const chunk = decoder.decode(value, { stream: true });
-                        dataBuffer += chunk; // **将新的 chunk 追加到缓冲区**
+    try {
+        //  !!!  修改 fetch 请求的 URL 为后端 API 端点  '/api/chat' !!!
+        const response = await fetch('/api/chat', {  //  请求后端 API
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({ message: userMessage }), //  只发送用户消息
+            signal: controller.signal // 绑定 AbortController 的信号
+        });
 
-                        // **处理缓冲区中的数据行**
-                        let lines = dataBuffer.split("\n");
-                        dataBuffer = lines.pop() || ''; //  将最后一行 (可能不完整) 存回缓冲区
-
-                        for (const line of lines) {
-                            if (line.startsWith("data: ")) {
-                                try {
-                                    const parsedData = JSON.parse(line.slice(6)); // 尝试解析 JSON
-
-                                    if (parsedData?.choices?.[0]?.delta?.content) {
-                                        accumulatedText += parsedData.choices[0].delta.content;
-                                        replyBubble.innerHTML = ` ${accumulatedText}<span class="typing-cursor">|</span>`;
-
-
-                                        MathJax.typesetPromise([replyBubble]).catch((err) => console.error(err.message));
-                                        renderMarkdown(replyBubble);
-                                        responseContainer.scrollTop = responseContainer.scrollHeight;
-                                    }
-                                    if (parsedData?.choices?.[0]?.finish_reason === "stop") {
-                                        done = true;
-                                        break;
-                                    }
-                                } catch (error) {
-                                    console.error("JSON 解析错误:", error, "原始数据行:", line);
-                                    break; //  遇到解析错误，跳出当前行的处理
-                                }
-                            } else if (line.startsWith("event")) {
-                                //  处理 event 行 (如果 API 有 event 类型的数据)
-                                console.log("SSE event:", line); // 可以选择记录 event 信息
-                            } else if (line.trim() !== "") {
-                                console.warn("非 data: 或 event: 行:", line); // 记录非 data/event 行，看是否有其他类型的数据
-                            }
-                        }
-                    }
-                }
-
-
-                // 流式返回完成后，移除打字光标 (最终回复，移除光标)
-                replyBubble.innerHTML = `${accumulatedText}`; // 最终回复，移除光标 (去除 "第十章:")
-
-
-            } catch (error) {
-                if (error.name === "AbortError") {
-                    replyBubble.innerHTML = `${accumulatedText}`; //  停止时也移除光标
-                } else {
-                    replyBubble.innerHTML = `<strong>Error:</strong> ${error.message}`;
-                }
-            } finally {
-                MathJax.typesetPromise([replyBubble]).catch((err) => console.error(err.message));
-                renderMarkdown(replyBubble);
-                // 清空输入框并重新启用 textarea 和 submit 按钮
-                document.getElementById("demo-message").value = "";
-                textarea.disabled = false;
-                sendButton.disabled = false;
-
-                // 重置 AbortController
-                controller = null;
-
-                responseContainer.scrollTop = responseContainer.scrollHeight;
-            }
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
         }
+
+        const data = await response.json(); //  解析 JSON 响应
+
+        //  !!!  从后端 API 响应中获取 AI 回复内容 (假设后端返回的 JSON 结构是 { "choices": [...] }) !!!
+        if (data?.choices?.[0]?.message?.content) {
+            const aiReplyText = data.choices[0].message.content.trim(); // 获取 AI 回复文本
+            replyBubble.innerHTML = ` ${aiReplyText}`; //  显示 AI 回复 (去除 "第十章:")
+        } else if (data?.error) {
+            replyBubble.innerHTML = `<strong>Error:</strong> ${data.error}`; // 显示错误信息
+        } else {
+            replyBubble.innerHTML = `<strong>Error:</strong> 未知错误，API 响应格式不正确`; // 处理未知响应格式
+        }
+
+
+    } catch (error) {
+        if (error.name === "AbortError") {
+            replyBubble.innerHTML = `请求已停止`;
+        } else {
+            replyBubble.innerHTML = `<strong>Error:</strong> ${error.message}`;
+        }
+    } finally {
+        MathJax.typesetPromise([replyBubble]).catch((err) => console.error(err.message));
+        renderMarkdown(replyBubble);
+        // 清空输入框并重新启用 textarea 和 submit 按钮
+        document.getElementById("demo-message").value = "";
+        textarea.disabled = false;
+        sendButton.disabled = false;
+
+        // 重置 AbortController
+        controller = null;
+
+        responseContainer.scrollTop = responseContainer.scrollHeight;
+    }
+}
 
         // 添加 STOP 按钮的点击事件
         document.getElementById("stop-button").addEventListener("click", () => {

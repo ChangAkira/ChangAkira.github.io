@@ -491,23 +491,6 @@ a{
     <script src="../thetwo/assets/js/util.js"></script>
     <script src="../thetwo/assets/js/main.js"></script>
     <script>
-
-let chapterKnowledge = null; // 用于存储加载的 JSON 数据
-
-async function loadKnowledgeBase() {
-  try {
-    const response = await fetch('../chapter10_knowledge.json'); // 替换为你的 JSON 文件路径
-    if (!response.ok) {
-      throw new Error(`HTTP error! status: ${response.status}`);
-    }
-    chapterKnowledge = await response.json(); // 解析 JSON 数据
-    console.log("知识库加载成功:", chapterKnowledge); // 可选：在控制台输出，检查是否加载成功
-  } catch (error) {
-    console.error("加载知识库失败:", error);
-  }
-}
-
-loadKnowledgeBase(); // 在页面加载时调用加载函数
         let controller = null; // 用于存储 AbortController 实例
 
         document.getElementById("chatForm").addEventListener("submit", async (event) => {
