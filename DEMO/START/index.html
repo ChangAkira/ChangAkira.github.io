@@ -525,7 +525,7 @@ a{
     userMessageDiv.appendChild(userBubble);
     responseContainer.appendChild(userMessageDiv);
     //  !!!  用户消息气泡显示代码  !!!  检查结束  !!!
-    
+
     const replyContainerDiv = document.createElement("div"); // AI 回复消息容器
     replyContainerDiv.classList.add("ai-message-container");
     const replyBubble = document.createElement("div");
@@ -576,9 +576,9 @@ a{
 
 
                 if (jsonString === "[DONE]") {
-                    console.log("SSE stream done signal received, 循环将要退出并 return"); //  !!!  日志 3: 接收到 [DONE] 信号， 循环退出日志 !!!
+                    console.log("SSE stream done signal received, 循环将要退出并 break"); //  !!!  日志 3: 接收到 [DONE] 信号， 循环退出日志 !!!
                     reader.cancel();
-                    return;
+                    break;
                 }
                 try {
                     const jsonData = JSON.parse(jsonString);
