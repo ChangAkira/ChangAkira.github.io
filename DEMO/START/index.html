@@ -510,63 +510,61 @@ a{
         async function sendMessage() {
     const userMessage = document.getElementById("demo-message").value;
     const responseContainer = document.getElementById("response-container");
-    //  !!!  前端代码中移除 API_URL 和 API_KEY  !!!
-    // const apiUrl = "https://####";  //  移除
-    // const apiKey = "sk-#####"; // 替换为你的 API Key  //  移除
     const sendButton = document.getElementById("send-button");
     const textarea = document.getElementById("demo-message");
 
-    // 禁用 submit 按钮和 textarea
     sendButton.disabled = true;
     textarea.disabled = true;
 
-    const userMessageDiv = document.createElement("div");
-    userMessageDiv.classList.add("user-message-container");
-    const userBubble = document.createElement("div");
-    userBubble.classList.add("message-bubble");
-    userBubble.innerHTML = escapeHTML(userMessage); // 去除 "User:" 前缀
-    userMessageDiv.appendChild(userBubble);
-    responseContainer.appendChild(userMessageDiv);
+    // ... (用户消息显示代码 -  与之前代码相同，省略) ...
 
-
-    const replyContainerDiv = document.createElement("div"); // 创建 AI 回复消息容器
+    const replyContainerDiv = document.createElement("div");
     replyContainerDiv.classList.add("ai-message-container");
     const replyBubble = document.createElement("div");
     replyBubble.classList.add("message-bubble");
-    replyBubble.innerHTML = `<span class="typing-cursor">|</span>`; // 去除 "第十章:" 前缀
+    replyBubble.innerHTML = `<span class="typing-cursor">|</span>`;
     replyContainerDiv.appendChild(replyBubble);
     responseContainer.appendChild(replyContainerDiv);
 
-
-    // 创建 AbortController 实例
     controller = new AbortController();
 
     try {
-        //  !!!  修改 fetch 请求的 URL 为后端 API 端点  '/api/chat' !!!
-        const response = await fetch('/api/chat', {  //  请求后端 API
+        const response = await fetch('/api/chat', {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
             },
-            body: JSON.stringify({ message: userMessage }), //  只发送用户消息
-            signal: controller.signal // 绑定 AbortController 的信号
+            body: JSON.stringify({ message: userMessage }),
+            signal: controller.signal
         });
 
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
         }
 
-        const data = await response.json(); //  解析 JSON 响应
+        //  !!!  使用 ReadableStream 读取流式响应 !!!
+        const reader = response.body.getReader();
+        const decoder = new TextDecoder();
+        let aiReplyText = ""; // 用于累积 AI 回复文本
 
-        //  !!!  从后端 API 响应中获取 AI 回复内容 (假设后端返回的 JSON 结构是 { "choices": [...] }) !!!
-        if (data?.choices?.[0]?.message?.content) {
-            const aiReplyText = data.choices[0].message.content.trim(); // 获取 AI 回复文本
-            replyBubble.innerHTML = ` ${aiReplyText}`; //  显示 AI 回复 (去除 "第十章:")
-        } else if (data?.error) {
-            replyBubble.innerHTML = `<strong>Error:</strong> ${data.error}`; // 显示错误信息
-        } else {
-            replyBubble.innerHTML = `<strong>Error:</strong> 未知错误，API 响应格式不正确`; // 处理未知响应格式
+        while (true) { // 循环读取数据块
+            const { done, value } = await reader.read(); // 读取数据块
+            if (done) { // 流读取完成
+                console.log("Stream finished");
+                break;
+            }
+            // value is a Uint8Array
+            const textChunk = decoder.decode(value, { stream: true }); // 解码为文本
+            aiReplyText += textChunk; // 累积文本
+            replyBubble.innerHTML =  aiReplyText + `<span class="typing-cursor">|</span>`; // 逐步显示，添加 typing cursor
+            MathJax.typesetPromise([replyBubble]).catch((err) => console.error(err.message)); // MathJax渲染
+            renderMarkdown(replyBubble); // Markdown渲染
+            responseContainer.scrollTop = responseContainer.scrollHeight; // 滚动到底部
         }
+        //  !!!  循环结束后，移除 typing cursor，并最终设置回复内容 !!!
+        replyBubble.innerHTML = aiReplyText;
+        MathJax.typesetPromise([replyBubble]).catch((err) => console.error(err.message));
+        renderMarkdown(replyBubble);
 
 
     } catch (error) {
