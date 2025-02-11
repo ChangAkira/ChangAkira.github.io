@@ -611,9 +611,6 @@ a{
             replyBubble.innerHTML = `<strong>Error:</strong> ${error.message}`;
         }
     } finally {
-        replyBubble.innerHTML = aiReplyText;
-        MathJax.typesetPromise([replyBubble]).catch((err) => console.error(err.message));
-        renderMarkdown(replyBubble);
         sendButton.disabled = false;
         textarea.disabled = false;
         textarea.value = "";
