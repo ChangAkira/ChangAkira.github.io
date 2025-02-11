@@ -516,17 +516,17 @@ a{
     sendButton.disabled = true;
     textarea.disabled = true;
 
-    //  !!!  用户消息气泡显示代码  !!!
-    const userMessageDiv = document.createElement("div");
+      //  !!!  用户消息气泡显示代码  !!!  请检查这部分代码是否完整且正确  !!!
+      const userMessageDiv = document.createElement("div");
     userMessageDiv.classList.add("user-message-container");
     const userBubble = document.createElement("div");
     userBubble.classList.add("message-bubble");
     userBubble.innerHTML = escapeHTML(userMessage); //  确保 escapeHTML 函数存在且正确
     userMessageDiv.appendChild(userBubble);
     responseContainer.appendChild(userMessageDiv);
-    //  !!!  用户消息气泡显示代码  !!!
-
-    const replyContainerDiv = document.createElement("div");
+    //  !!!  用户消息气泡显示代码  !!!  检查结束  !!!
+    
+    const replyContainerDiv = document.createElement("div"); // AI 回复消息容器
     replyContainerDiv.classList.add("ai-message-container");
     const replyBubble = document.createElement("div");
     replyBubble.classList.add("message-bubble");
@@ -550,58 +550,58 @@ a{
             throw new Error(`HTTP error! status: ${response.status}`);
         }
 
-        //  !!!  使用 ReadableStream 读取流式响应，并解析 SSE 数据 !!!
         const reader = response.body.getReader();
         const decoder = new TextDecoder();
         let aiReplyText = "";
 
         while (true) {
-        const { done, value } = await reader.read();
-        if (done) {
-            console.log("Stream finished");
-            break;
-        }
-        const textChunk = decoder.decode(value, { stream: true });
-        const lines = textChunk.split('\n\n').filter(line => line.startsWith("data: "));
-        for (const line of lines) {
-            //  !!!  处理双重 "data: data: " 前缀 !!!
-            let jsonString = line; // 默认jsonString为原始行
-            if (line.startsWith("data: data: ")) { // 检查是否以 "data: data: " 开头
-                jsonString = line.substring(12); // 如果是，去除前 12 个字符 ("data: data: ")
-            } else if (line.startsWith("data: ")) { // 兼容处理，如果只是以 "data: " 开头 (理论上不应出现双重前缀，但作为备选)
-                jsonString = line.substring(6); // 如果只是 "data: " 开头，去除前 6 个字符 ("data: ")
+            const { done, value } = await reader.read();
+            console.log("reader.read() 返回:", { done, value }); //  !!!  日志 1: 打印 reader.read() 返回值 !!!
+            if (done) {
+                console.log("Stream finished - done is true, 循环将要退出"); //  !!!  日志 2: done 为 true， 循环退出日志 !!!
+                break;
             }
-
-
-            //  !!!  日志 (保留，方便调试) !!!
-            console.log("原始 SSE 数据行 (substring 前):", line);
-            console.log("substring 处理后的 JSON 字符串:", jsonString);
-
-
-            if (jsonString === "[DONE]") {
-                console.log("SSE stream done signal received");
-                reader.cancel();
-                return;
-            }
-            try {
-                const jsonData = JSON.parse(jsonString);
-                if (jsonData?.choices?.[0]?.delta?.content) {
-                    const contentChunk = jsonData.choices[0].delta.content;
-                    aiReplyText += contentChunk;
-                    replyBubble.innerHTML = aiReplyText + `<span class="typing-cursor">|</span>`;
-                    MathJax.typesetPromise([replyBubble]).catch((err) => console.error(err.message));
-                    renderMarkdown(replyBubble);
-                    responseContainer.scrollTop = responseContainer.scrollHeight;
+            const textChunk = decoder.decode(value, { stream: true });
+            const lines = textChunk.split('\n\n').filter(line => line.startsWith("data: "));
+            for (const line of lines) {
+                let jsonString = line;
+                if (line.startsWith("data: data: ")) {
+                    jsonString = line.substring(12);
+                } else if (line.startsWith("data: ")) {
+                    jsonString = line.substring(6);
                 }
-            } catch (error) {
-                console.error("JSON 解析错误:", error, "原始数据:", jsonString);
-            }
+
+                console.log("原始 SSE 数据行 (substring 前):", line);
+                console.log("substring 处理后的 JSON 字符串:", jsonString);
+
+
+                if (jsonString === "[DONE]") {
+                    console.log("SSE stream done signal received, 循环将要退出并 return"); //  !!!  日志 3: 接收到 [DONE] 信号， 循环退出日志 !!!
+                    reader.cancel();
+                    return;
+                }
+                try {
+                    const jsonData = JSON.parse(jsonString);
+                    if (jsonData?.choices?.[0]?.delta?.content) {
+                        const contentChunk = jsonData.choices[0].delta.content;
+                        aiReplyText += contentChunk;
+                        replyBubble.innerHTML = aiReplyText + `<span class="typing-cursor">|</span>`;
+                        MathJax.typesetPromise([replyBubble]).catch((err) => console.error(err.message));
+                        renderMarkdown(replyBubble);
+                        responseContainer.scrollTop = responseContainer.scrollHeight;
+                    }
+                } catch (error) {
+                    console.error("JSON 解析错误:", error, "原始数据:", jsonString);
+                }
             }
         }
-        //  !!!  循环结束后，移除 typing cursor，并最终设置回复内容 !!!
+
+        //  !!!  移除 typing cursor 代码  !!!
+        console.log("准备移除 typing cursor, replyBubble.innerHTML 设置为:", aiReplyText); //  !!!  日志 4:  移除光标代码执行日志 !!!
         replyBubble.innerHTML = aiReplyText;
         MathJax.typesetPromise([replyBubble]).catch((err) => console.error(err.message));
         renderMarkdown(replyBubble);
+        console.log("typing cursor 移除代码 执行完成"); //  !!!  日志 5:  移除光标代码完成日志 !!!
 
 
     } catch (error) {
@@ -618,7 +618,6 @@ a{
         controller = null;
     }
 }
-
         // 添加 STOP 按钮的点击事件
         document.getElementById("stop-button").addEventListener("click", () => {
             if (controller) {
