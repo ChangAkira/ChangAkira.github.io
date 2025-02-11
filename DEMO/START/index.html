@@ -564,13 +564,19 @@ a{
         const textChunk = decoder.decode(value, { stream: true });
         const lines = textChunk.split('\n\n').filter(line => line.startsWith("data: "));
         for (const line of lines) {
-            //  !!!  增强日志 1: 打印原始的 line (substring 之前) !!!
-            console.log("原始 SSE 数据行 (substring 前):", line); // 新增日志
+            //  !!!  处理双重 "data: data: " 前缀 !!!
+            let jsonString = line; // 默认jsonString为原始行
+            if (line.startsWith("data: data: ")) { // 检查是否以 "data: data: " 开头
+                jsonString = line.substring(8); // 如果是，去除前 8 个字符 ("data: data: ")
+            } else if (line.startsWith("data: ")) { // 兼容处理，如果只是以 "data: " 开头 (理论上不应出现双重前缀，但作为备选)
+                jsonString = line.substring(6); // 如果只是 "data: " 开头，去除前 6 个字符 ("data: ")
+            }
 
-            let jsonString = line.substring(6); // 去除 "data: " 前缀
 
-            //  !!!  增强日志 2: 打印 substring 之后的 jsonString !!!
-            console.log("substring(6) 处理后的 JSON 字符串:", jsonString); // 新增日志
+            //  !!!  日志 (保留，方便调试) !!!
+            console.log("原始 SSE 数据行 (substring 前):", line);
+            console.log("substring 处理后的 JSON 字符串:", jsonString);
+
 
             if (jsonString === "[DONE]") {
                 console.log("SSE stream done signal received");
@@ -581,16 +587,15 @@ a{
                 const jsonData = JSON.parse(jsonString);
                 if (jsonData?.choices?.[0]?.delta?.content) {
                     const contentChunk = jsonData.choices[0].delta.content;
-                        aiReplyText += contentChunk;
-                        replyBubble.innerHTML = aiReplyText + `<span class="typing-cursor">|</span>`;
-                        MathJax.typesetPromise([replyBubble]).catch((err) => console.error(err.message));
-                        renderMarkdown(replyBubble);
-                        responseContainer.scrollTop = responseContainer.scrollHeight;
-                    }
-                } catch (error) {
-                    //  !!!  错误日志 (与之前相同) !!!
-                    console.error("JSON 解析错误:", error, "原始数据:", jsonString);
+                    aiReplyText += contentChunk;
+                    replyBubble.innerHTML = aiReplyText + `<span class="typing-cursor">|</span>`;
+                    MathJax.typesetPromise([replyBubble]).catch((err) => console.error(err.message));
+                    renderMarkdown(replyBubble);
+                    responseContainer.scrollTop = responseContainer.scrollHeight;
                 }
+            } catch (error) {
+                console.error("JSON 解析错误:", error, "原始数据:", jsonString);
+            }
             }
         }
         //  !!!  循环结束后，移除 typing cursor，并最终设置回复内容 !!!
