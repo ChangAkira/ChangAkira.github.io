@@ -7,7 +7,7 @@ app = Flask(__name__)
 
 API_KEY = os.environ.get("CHAT_API_KEY")
 API_URL = os.environ.get("CHAT_API_URL")
-MODEL_NAME = "gpt-3.5-turbo"
+MODEL_NAME = os.environ.get("CHAT_MODEL")
 
 if not API_KEY or not API_URL:
     raise ValueError("API_KEY 或 API_URL 环境变量未设置！")
