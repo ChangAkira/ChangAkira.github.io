@@ -567,7 +567,7 @@ a{
             //  !!!  处理双重 "data: data: " 前缀 !!!
             let jsonString = line; // 默认jsonString为原始行
             if (line.startsWith("data: data: ")) { // 检查是否以 "data: data: " 开头
-                jsonString = line.substring(8); // 如果是，去除前 8 个字符 ("data: data: ")
+                jsonString = line.substring(12); // 如果是，去除前 12 个字符 ("data: data: ")
             } else if (line.startsWith("data: ")) { // 兼容处理，如果只是以 "data: " 开头 (理论上不应出现双重前缀，但作为备选)
                 jsonString = line.substring(6); // 如果只是 "data: " 开头，去除前 6 个字符 ("data: ")
             }
