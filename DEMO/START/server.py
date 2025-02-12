@@ -9,7 +9,7 @@ import csv # 确保 csv 库已导入
 
 app = Flask(__name__)
 # 加载 Sentence-BERT 模型
-model_path = '../all-MiniLM-L6-v2'  # 本地模型路径
+model_path = '/www/wwwroot/moyuan/DEMO/all-MiniLM-L6-v2'  # 本地模型路径
 model = SentenceTransformer(model_path)
 
 # 加载知识向量和 FAISS 索引
