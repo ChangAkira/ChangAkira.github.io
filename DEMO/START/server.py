@@ -9,7 +9,7 @@ import csv # 确保 csv 库已导入
 
 app = Flask(__name__)
 # 加载 Sentence-BERT 模型
-model_path = '/www/wwwroot/moyuan/DEMO/all-MiniLM-L6-v2'  # 本地模型路径
+model_path = '/www/wwwroot/moyuan/DEMO/models/all-MiniLM-L6-v2'  # 本地模型路径
 model = SentenceTransformer(model_path)
 
 # 加载知识向量和 FAISS 索引
@@ -85,7 +85,7 @@ def chat():
     # 2. 构建 RAG Prompt
     context_knowledge = ""
     if knowledge_results: # 只有当检索到知识时才添加到 Prompt 中
-        context_knowledge += "以下是一些可能相关的代数或通用知识，请参考它们来更好地回答用户的问题，但请注意你的回答仍然需要流畅自然，不要直接照搬知识库内容：\n" # Prompt 指示
+        context_knowledge += "以下是一些可能相关的代数或通用知识，请参考它们来更好地回答用户的问题，如果你认为参考知识与用户所问问题关联度较低，则自己回答。请注意你的回答仍然需要流畅自然，不要直接照搬所给知识内容：\n" # Prompt 指示
         for result in knowledge_results:
             context_knowledge += f"知识名称: {result['名称']}\n知识描述: {result['描述']}\n---\n" # 拼接知识条目信息
     rag_prompt = f"{context_knowledge}用户问题：{user_message}\n答案：" # 构建完整的 RAG Prompt
