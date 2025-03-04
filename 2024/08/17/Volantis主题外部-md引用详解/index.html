@@ -2151,7 +2151,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1741070764990),
+    lastupdate: new Date(1741085966186),
     sidebar: {
       for_page: ["blogger","webinfo","lastupdate","tagcloud"],
       for_post: ["toc","blogger","copyright"],
@@ -3236,11 +3236,11 @@ skip_render:
 
 <p>效果如下：</p>
 
-  <div id="md-0f46c2c2-2b16-c545-bce6-caca56dd0207" class="tag-md markdown-body"></div>
+  <div id="md-fc673e42-68a8-df19-8068-1f39ed798840" class="tag-md markdown-body"></div>
   <script>
   (()=>{
     volantis.css("https://unpkg.com/volantis-static@0.0.1654736714924/libs/github-markdown-css/github-markdown.css");
-    const contentEl = document.getElementById("md-0f46c2c2-2b16-c545-bce6-caca56dd0207");
+    const contentEl = document.getElementById("md-fc673e42-68a8-df19-8068-1f39ed798840");
     const loadMarkdown = (url) => {
       if (!window.fetch) {
         contentEl.innerHTML =
@@ -3300,7 +3300,7 @@ skip_render:
 <p>效果如下。</p>
 <details ><summary> 用 folding 套一下的 md 显示 </summary>
               <div class='content'>
-              <div id="md-11416fb3-f978-9c84-96a7-6878a84ae4c6" class="tag-md markdown-body"></div><script>(()=>{  volantis.css("https://unpkg.com/volantis-static@0.0.1654736714924/libs/github-markdown-css/github-markdown.css");  const contentEl = document.getElementById("md-11416fb3-f978-9c84-96a7-6878a84ae4c6");  const loadMarkdown = (url) => {    if (!window.fetch) {      contentEl.innerHTML =        '<div style="font-size: 24px"><p>Your browser outdated. Please use the latest version of Chrome or Firefox!</p><p>您的浏览器版本过低，请使用最新版的 Chrome 或 Firefox 浏览器！</p></div>';    } else {      contentEl.innerHTML =        '<div style="font-size: 24px">Loading ... | 加载中。。。</div>';      fetch(url, { method: "GET" })        .then((resp) => {          return Promise.all([            resp.ok,            resp.status,            resp.text(),            resp.headers,          ]);        })        .then(([ok, status, data, headers]) => {          if (ok) {            return {              ok,              status,              data,              headers,            };          } else {            throw new Error(JSON.stringify(json.error));          }        })        .then((resp) => {          let data = marked.parse(resp.data);          contentEl.innerHTML = data;        })        .catch((error) => {          console.log(error);          contentEl.innerHTML =            '<div style="font-size: 24px"><p>There was a problem loading the file!</p><p>加载文件时出现问题！</p></div>';        });    };  };  volantis.js("https://unpkg.com/volantis-static@0.0.1654736714924/libs/marked/marked.min.js").then(()=>{    loadMarkdown("/md/md_example.md?t=" + new Date().getTime());  })})();</script>
+              <div id="md-5b337e90-13c8-0b00-ac75-9a4367ef232d" class="tag-md markdown-body"></div><script>(()=>{  volantis.css("https://unpkg.com/volantis-static@0.0.1654736714924/libs/github-markdown-css/github-markdown.css");  const contentEl = document.getElementById("md-5b337e90-13c8-0b00-ac75-9a4367ef232d");  const loadMarkdown = (url) => {    if (!window.fetch) {      contentEl.innerHTML =        '<div style="font-size: 24px"><p>Your browser outdated. Please use the latest version of Chrome or Firefox!</p><p>您的浏览器版本过低，请使用最新版的 Chrome 或 Firefox 浏览器！</p></div>';    } else {      contentEl.innerHTML =        '<div style="font-size: 24px">Loading ... | 加载中。。。</div>';      fetch(url, { method: "GET" })        .then((resp) => {          return Promise.all([            resp.ok,            resp.status,            resp.text(),            resp.headers,          ]);        })        .then(([ok, status, data, headers]) => {          if (ok) {            return {              ok,              status,              data,              headers,            };          } else {            throw new Error(JSON.stringify(json.error));          }        })        .then((resp) => {          let data = marked.parse(resp.data);          contentEl.innerHTML = data;        })        .catch((error) => {          console.log(error);          contentEl.innerHTML =            '<div style="font-size: 24px"><p>There was a problem loading the file!</p><p>加载文件时出现问题！</p></div>';        });    };  };  volantis.js("https://unpkg.com/volantis-static@0.0.1654736714924/libs/marked/marked.min.js").then(()=>{    loadMarkdown("/md/md_example.md?t=" + new Date().getTime());  })})();</script>
               </div>
             </details>
 
